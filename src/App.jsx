@@ -1,5 +1,11 @@
+import BrandingNavBar from './components/BrandingNavBar';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <BrandingNavBar />
+    </>
+  );
 }
 
 export default App;
