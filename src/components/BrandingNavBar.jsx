@@ -43,7 +43,6 @@ function BrandingNavBar() {
           <ul>
             {bandingNavLinks.map((l) => {
               if (l.id === 'tracks') {
-                console.log('object');
                 return (
                   <li key={l.id}>
                     <a
