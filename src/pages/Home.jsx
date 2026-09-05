@@ -16,7 +16,6 @@ function Home() {
       type: 'lines',
       ignore: '.gradient-text',
     });
-    // const tl = gsap.timeline();
 
     gsap.from('.hero1', {
       duration: 1,
