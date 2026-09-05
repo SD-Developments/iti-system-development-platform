@@ -1,3 +1,8 @@
+// import { Box, Edges, OrbitControls } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import ITILogoModel from '../components/3dModels/Iti-logo';
+
 function Home() {
   return (
     // <>
@@ -78,7 +83,36 @@ function Home() {
     //   </main>
     // </>
 
-    <></>
+    <>
+      <div className="bg-green-300 w-full h-screen">
+        {/* position = > This determines where the camera is located in 3D space. */}
+        {/* fov (Field Of View) = > It controls how wide the camera can see. (zoom) */}
+        {/* near = > This defines the closest distance from the camera that will be rendered. */}
+        {/* far = > This defines the furthest distance from the camera that will be rendered. */}
+
+        <Canvas className="canvas" camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100 }}>
+          {/* position -> x, y , z */}
+          {/* <Box position={[0, 0, 0]} scale={1.3} material-color="#87152b"> */}
+          {/* adds border to the box model */}
+          {/* <Edges color="white" lineWidth={5} />
+          </Box> */}
+          {/* it's black because there's no lightness   (we need sun for reflictions) */}
+          {/*Ambient light is basically general light coming from everywhere. Higher intensity → brighter object.*/}
+          <ambientLight intensity={1} />
+          {/* The light has a direction. for shadowing */}
+          <directionalLight position={[10, 5, 15]} intensity={1} />
+          {/* this component generated form glb using npx gltfjsx iti-logo.glb */}
+          <ITILogoModel position={[0, 0, 0]} scale={1.3} />
+          {/* gives you mouse control over that camera. */}
+          <OrbitControls
+            target={[0, 0, 0]}
+            enableZoom={true}
+            enablePan={true}
+            enableRotate={true}
+          />
+        </Canvas>
+      </div>
+    </>
   );
 }
 
