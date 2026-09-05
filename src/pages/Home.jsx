@@ -25,6 +25,7 @@ function Home() {
     });
     gsap.from(titleSplit.lines, {
       y: 100,
+      delay: 1,
       opacity: 0,
       duration: 0.2,
       stagger: 0.5,
