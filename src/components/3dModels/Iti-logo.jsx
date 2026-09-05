@@ -4,11 +4,14 @@ Command: npx gltfjsx@6.5.3 iti-logo.glb
 */
 
 import { useGLTF } from '@react-three/drei';
+import { useRef } from 'react';
 
 export default function ITILogoModel(props) {
   const { nodes, materials } = useGLTF('/3d/iti-logo.glb');
+  const groupRef = useRef(null);
+
   return (
-    <group {...props} dispose={null}>
+    <group ref={groupRef} {...props} dispose={null}>
       <mesh
         geometry={nodes.I_dot.geometry}
         material={materials['Material.002']}

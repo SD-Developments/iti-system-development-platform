@@ -173,7 +173,7 @@ body {
   }
 
   nav {
-    @apply fixed z-50 w-full px-7;
+    @apply fixed z-50 w-full px-7 text-accent-foreground;
 
     div {
       @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-2 lg:px-0 px-5 container mx-auto;
@@ -203,4 +203,16 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #87152b;
   border-radius: 5px;
+}
+
+.title-gradient {
+  display: inline-block;
+
+  background: linear-gradient(to right, #87152b, #ffb2b6, #fcd34d);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }

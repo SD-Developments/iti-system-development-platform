@@ -57,7 +57,7 @@ function BrandingNavBar() {
               return (
                 <li key={l.id}>
                   <a
-                    className="bg-transparent text-sm p-3 rounded-lg transition-all hover:bg-muted"
+                    className="bg-transparent p-3 rounded-lg transition-all hover:bg-muted"
                     href="#"
                   >
                     {l.title}
