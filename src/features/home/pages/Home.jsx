@@ -1,10 +1,7 @@
-import { PresentationControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
-import { ITILogoModel } from '../../../components/3dModels/Iti-logo';
-import * as THREE from 'three';
+import ItiModel from '../../../components/3dModels/Iti-model';
 
 function Home() {
   useGSAP(() => {
@@ -47,16 +44,22 @@ function Home() {
     <>
       <main>
         <section className="relative w-full overflow-hidden bg-black text-white h-dvh flex justify-center items-center">
+          <img
+            alt="herobg"
+            className=" w-full h-full object-cover scale-100 transition-transform duration-1000 absolute inset-0 z-1 opacity-50"
+            src="/images/herobg.png"
+          />
           <div className="absolute inset-0 z-0">
             <img
               alt="Young Egyptian software engineering students collaborating in ITI Smart Village developer studio"
               className="w-full h-full object-cover scale-100 transition-transform duration-1000"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeseTrw9fKR-RtuWB8uU27t7PHC7W5q85YPiFl9cbRdqSXuXmxLjWqsNVXMHqFcKNP5Bm5v7yv-slsPOWJPjC26n41gq5nDf27goBa0BZrOz4IELr07eAtXIwKVeiBRlmA8wIuOk15DvFACxTeU6_Y1RRwhyBg9c0D9EEKEOdkjAnn3X23UAmm9z-XqlEgDY4nUSTf133pZcmdMMb3chIJrbnBBCnNqueqhdBhCp_46lrTzM1mW1jxJg"
             />
+
             <div className="absolute inset-0 bg-linear-to-r from-[#090d16]/90 via-[#090d16]/75 to-pribg-primary/40"></div>
             <div className="absolute inset-0 bg-linear-to-l from-[#0f172a] via-[#0f172a]/30 to-black/40"></div>
           </div>
-          <div className="hero1  w-1/2 px-7 py-24 lg:py-32 z-10 h-full">
+          <div className="hero1  w-1/2 px-7 py-8 z-10 h-full">
             <div className="max-w-3xl flex flex-col items-start gap-7">
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
@@ -64,7 +67,7 @@ function Home() {
                   EGYPT'S FLAGSHIP SOFTWARE ENGINEERING COMMUNITY • ITI SD
                 </span>
               </div>
-              <h1 className="titleheading font-display-hero text-4xl sm:text-5xl lg:text-[64px] font-black text-white tracking-tight leading-[1.05]">
+              <h1 className="titleheading font-display-hero text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.05]">
                 BUILDING THE NEXT GENERATION OF{' '}
                 <span className="gradient-wrap inline-block">
                   <span className="gradient-text  text-transparent bg-clip-text bg-linear-to-r from-primary via-[#ffb2b6] to-amber-300">
@@ -124,43 +127,7 @@ function Home() {
               </div>
             </div>
           </div>
-
-          <div className="w-1/2 h-full z-10 ">
-            <Canvas
-              className="w-1/2 canvas"
-              camera={{
-                position: [0, 0, 5],
-                fov: 50,
-                near: 0.1,
-                far: 100,
-              }}
-            >
-              <ambientLight intensity={1.2} />
-              <directionalLight position={[10, 5, 10]} intensity={2} color="#ffffff" />
-              <directionalLight position={[-10, 3, 5]} intensity={1} color="#ffb0b5" />
-              <PresentationControls
-                // Determines what area responds to dragging.
-                global={false}
-                cursor={true}
-                // This controls whether the object returns/snaps to its original rotation when you stop dragging.
-                snap={true}
-                // Controls how strongly the model responds to dragging.
-                speed={5}
-                rotation={[
-                  THREE.MathUtils.degToRad(-10),
-                  THREE.MathUtils.degToRad(25),
-                  THREE.MathUtils.degToRad(0),
-                ]}
-                // It controls vertical rotation.
-                polar={[-Math.PI * 2, Math.PI * 2]}
-                // This controls horizontal rotation.
-                azimuth={[-Math.PI * 2, Math.PI * 2]}
-              >
-                <ITILogoModel position={[0, 0, 0]} scale={1.5} />
-              </PresentationControls>
-              {/* <LogoBaseModel position={[0, 0, 0]} scale={1} /> */}
-            </Canvas>
-          </div>
+          <ItiModel />
         </section>
       </main>
     </>
