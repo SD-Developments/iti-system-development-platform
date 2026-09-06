@@ -49,6 +49,7 @@ function Home() {
             className=" w-full h-full object-cover scale-100 transition-transform duration-1000 absolute inset-0 z-1 opacity-50"
             src="/images/herobg.png"
           />
+
           <div className="absolute inset-0 z-0">
             <img
               alt="Young Egyptian software engineering students collaborating in ITI Smart Village developer studio"
