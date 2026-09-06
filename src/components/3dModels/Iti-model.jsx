@@ -16,8 +16,8 @@ function ItiModel() {
             far: 100,
           }}
         >
-          <ambientLight intensity={1.2} />
-          <directionalLight position={[10, 5, 10]} intensity={2} color="#ffffff" />
+          <ambientLight intensity={1} />
+          <directionalLight position={[10, 5, 10]} intensity={1} color="#ffffff" />
           <directionalLight position={[-10, 3, 5]} intensity={1} color="#ffb0b5" />
           <PresentationControls
             // Determines what area responds to dragging.
