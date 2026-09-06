@@ -40,26 +40,20 @@ function ItiModel() {
           <directionalLight position={[17, 6, 15]} intensity={1} color="#ffffff" />
           <directionalLight position={[-20, 3, 5]} intensity={1} color="#ffb0b5" />
           <PresentationControls
-            // Determines what area responds to dragging.
             global={false}
             cursor={true}
-            // This controls whether the object returns/snaps to its original rotation when you stop dragging.
             snap={true}
-            // Controls how strongly the model responds to dragging.
             speed={5}
             rotation={[
               THREE.MathUtils.degToRad(-10),
               THREE.MathUtils.degToRad(25),
               THREE.MathUtils.degToRad(0),
             ]}
-            // It controls vertical rotation.
-            polar={[-Math.PI * 2, Math.PI * 2]}
-            // This controls horizontal rotation.
-            azimuth={[-Math.PI * 2, Math.PI * 2]}
+            polar={[-0.25, 0.25]}
+            azimuth={[-0.5, 0.5]}
           >
             <ITILogoModel position={[0, 0, 0]} scale={1.5} />
           </PresentationControls>
-          {/* <LogoBaseModel position={[0, 0, 0]} scale={1} /> */}
         </Canvas>
       </div>
     </>
