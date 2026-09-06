@@ -1,12 +1,10 @@
 import { useRef } from 'react';
 import { NavLink } from 'react-router';
-
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
 import { Search, ChevronDown, Command, ArrowRight, Menu } from 'lucide-react';
-
 import { bandingNavLinks } from '../constants';
+import clsx from 'clsx';
 
 function BrandingNavBar() {
   const navRef = useRef(null);
@@ -56,24 +54,20 @@ function BrandingNavBar() {
                 to={link.path}
                 end={link.path === '/'}
                 className={({ isActive }) =>
-                  `
-                    relative flex items-center
+                  clsx(
+                    `relative flex items-center
                     whitespace-nowrap
                     rounded-lg
                     px-3 py-2
-
                     text-sm
                     font-medium
-
                     transition-all
-                    duration-200
-
-                    ${
-                      isActive
-                        ? 'bg-primary/10 text-primary'
-                        : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                    duration-200`,
+                    {
+                      'bg-primary/10 text-primary': isActive,
+                      'text-muted-foreground hover:bg-muted hover:text-foreground': !isActive,
                     }
-                  `
+                  )
                 }
               >
                 {({ isActive }) => (
