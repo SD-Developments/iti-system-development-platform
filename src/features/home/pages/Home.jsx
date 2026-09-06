@@ -1,7 +1,8 @@
 // import { Box, Edges, OrbitControls } from '@react-three/drei';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import ITILogoModel from '../components/3dModels/Iti-logo';
+// import ITILogoModel from '../components/3dModels/Iti-logo';
+import ITILogoModel from '../../../components/3dModels/Iti-logo';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';

@@ -1,74 +1,263 @@
+import { useRef } from 'react';
+import { NavLink } from 'react-router';
+
 import { useGSAP } from '@gsap/react';
-import { bandingNavLinks } from '../constants';
 import gsap from 'gsap';
 
+import { Search, ChevronDown, Command, ArrowRight, Menu } from 'lucide-react';
+
+import { bandingNavLinks } from '../constants';
+
 function BrandingNavBar() {
-  useGSAP(() => {
-    gsap.from('nav', {
-      y: -100,
-      duration: 1,
-    });
+  const navRef = useRef(null);
 
-    // let tlNav = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: 'nav',
-    //     start: 'top top',
-    //     end: '+=500',
-    //     scrub: true,
-    //   },
-    // });
+  useGSAP(
+    () => {
+      gsap.from(navRef.current, {
+        y: -100,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+      });
+    },
+    { scope: navRef }
+  );
 
-    // tlNav.fromTo(
-    //   'nav',
-    //   {
-    //     backgroundColor: 'transparent',
-    //   },
-    //   {
-    //     backgroundColor: '#ffffff',
-    //   }
-    // );
-  }, []);
   return (
-    <>
-      <nav className="bg-background">
-        <div>
-          <a className="flex items-center gap-1" href="#home">
-            <img src="images/iti-logo.svg" className="w-10" alt="" />
-            <p className="flex-col leading-5 justify-start items-center border-l-3 pl-2 border-gray-400">
-              <span className="block  text-muted-foreground">System</span>
-              <span className="block">Development</span>
-            </p>
-          </a>
+    <nav
+      ref={navRef}
+      className="
+        sticky top-0 z-50
+        w-full
+        border-b border-border/70
+        bg-background/95
+        backdrop-blur-md
+      "
+    >
+      <div className="flex h-20 w-full items-center px-6 xl:px-8">
+        {/* ================= Logo ================= */}
+        <NavLink to="/" className="flex shrink-0 items-center gap-1">
+          <img src="images/iti-logo.svg" className="w-10" alt="ITI Logo" />
 
-          <ul>
-            {bandingNavLinks.map((l) => {
-              if (l.id === 'tracks') {
-                return (
-                  <li key={l.id}>
-                    <a
-                      href="#"
-                      className="bg-primary text-primary-foreground p-3 rounded-lg transition-all hover:bg-primary/70"
-                    >
-                      {l.title}
-                    </a>
-                  </li>
-                );
-              }
-              return (
-                <li key={l.id}>
-                  <a
-                    className="bg-transparent p-3 rounded-lg transition-all hover:bg-muted"
-                    href="#"
-                  >
-                    {l.title}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          {/* Logo - بدون تغيير الشكل */}
+          <p className="flex-col leading-5 justify-start items-center border-l-3 pl-2 border-gray-400">
+            <span className="block text-muted-foreground">System</span>
+
+            <span className="block">Development</span>
+          </p>
+        </NavLink>
+
+        {/* ================= Desktop Navigation ================= */}
+
+        <ul className="ml-8 hidden items-center gap-1 xl:flex">
+          {bandingNavLinks.map((link) => (
+            <li key={link.id}>
+              <NavLink
+                to={link.path}
+                end={link.path === '/'}
+                className={({ isActive }) =>
+                  `
+                    relative flex items-center
+                    whitespace-nowrap
+                    rounded-lg
+                    px-3 py-2
+
+                    text-sm
+                    font-medium
+
+                    transition-all
+                    duration-200
+
+                    ${
+                      isActive
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                    }
+                  `
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    {isActive && <span className="mr-2 h-1.5 w-1.5 rounded-full bg-primary" />}
+
+                    {link.title}
+                  </>
+                )}
+              </NavLink>
+            </li>
+          ))}
+
+          {/* ================= More ================= */}
+
+          <li>
+            <button
+              type="button"
+              className="
+                flex items-center gap-1
+                rounded-lg
+                px-3 py-2
+
+                text-sm
+                font-medium
+                text-muted-foreground
+
+                transition-all
+                duration-200
+
+                hover:bg-muted
+                hover:text-foreground
+              "
+            >
+              More
+              <ChevronDown size={16} />
+            </button>
+          </li>
+        </ul>
+
+        {/* ================= Right Side ================= */}
+
+        <div className="ml-auto flex items-center gap-3">
+          {/* Search */}
+          <div
+            className="
+              hidden
+              h-11
+              w-57.5
+              shrink-0
+              items-center
+              gap-2
+              rounded-xl
+              border
+              border-border
+              bg-muted/40
+              px-3
+              2xl:flex
+            "
+          >
+            <Search size={18} className="shrink-0 text-muted-foreground" />
+
+            <input
+              type="text"
+              placeholder="Search..."
+              className="
+                h-full
+                min-w-0
+                flex-1
+                bg-transparent
+                text-sm
+                text-foreground
+                outline-none
+                placeholder:text-muted-foreground
+              "
+            />
+
+            <span
+              className="
+                flex
+                shrink-0
+                items-center
+                gap-1
+                rounded-md
+                border
+                border-border
+                bg-background
+                px-1.5
+                py-1
+                text-[10px]
+                text-muted-foreground
+              "
+            >
+              <Command size={11} />K
+            </span>
+          </div>
+
+          {/* Profile */}
+          <button
+            type="button"
+            className="
+              flex
+              h-11
+              w-11
+              items-center
+              justify-center
+              rounded-full
+              border-2
+              border-primary/20
+              bg-muted
+              text-sm
+              font-semibold
+              transition-all
+              hover:border-primary
+              hover:scale-105
+            "
+          >
+            SD
+          </button>
+
+          {/* Explore Intakes */}
+          <NavLink
+            to="/intakes"
+            className="
+              hidden
+              items-center
+              gap-2
+
+              rounded-xl
+
+              bg-primary
+
+              px-5
+              py-3
+
+              text-sm
+              font-semibold
+
+              text-primary-foreground
+
+              shadow-sm
+
+              transition-all
+              duration-200
+
+              hover:bg-primary/90
+              hover:shadow-md
+
+              2xl:flex
+            "
+          >
+            Explore Intakes
+            <ArrowRight size={17} />
+          </NavLink>
+
+          {/* Mobile Menu */}
+
+          <button
+            type="button"
+            className="
+              flex
+              h-11
+              w-11
+
+              items-center
+              justify-center
+
+              rounded-lg
+
+              border
+              border-border
+
+              transition-all
+
+              hover:bg-muted
+
+              xl:hidden
+            "
+          >
+            <Menu size={21} />
+          </button>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }
 
