@@ -1,11 +1,10 @@
-// import { Box, Edges, OrbitControls } from '@react-three/drei';
-import { OrbitControls } from '@react-three/drei';
+import { PresentationControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-// import ITILogoModel from '../components/3dModels/Iti-logo';
-import ITILogoModel from '../../../components/3dModels/Iti-logo';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
+import { ITILogoModel } from '../../../components/3dModels/Iti-logo';
+import * as THREE from 'three';
 
 function Home() {
   useGSAP(() => {
@@ -54,7 +53,7 @@ function Home() {
               className="w-full h-full object-cover scale-100 transition-transform duration-1000"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeseTrw9fKR-RtuWB8uU27t7PHC7W5q85YPiFl9cbRdqSXuXmxLjWqsNVXMHqFcKNP5Bm5v7yv-slsPOWJPjC26n41gq5nDf27goBa0BZrOz4IELr07eAtXIwKVeiBRlmA8wIuOk15DvFACxTeU6_Y1RRwhyBg9c0D9EEKEOdkjAnn3X23UAmm9z-XqlEgDY4nUSTf133pZcmdMMb3chIJrbnBBCnNqueqhdBhCp_46lrTzM1mW1jxJg"
             />
-            <div className="absolute inset-0 bg-linear-to-r from-[#090d16]/90 via-[#090d16]/75 to-[#87152b]/40"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-[#090d16]/90 via-[#090d16]/75 to-pribg-primary/40"></div>
             <div className="absolute inset-0 bg-linear-to-l from-[#0f172a] via-[#0f172a]/30 to-black/40"></div>
           </div>
           <div className="hero1  w-1/2 px-7 py-24 lg:py-32 z-10 h-full">
@@ -80,7 +79,7 @@ function Home() {
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2 w-full">
                 <a
-                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#87152b] hover:bg-[#640019] text-white font-semibold text-sm transition-all duration-200 shadow-xl hover:shadow-[#87152b]/40 border border-white/10 group"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-primary hover:bg-[#640019] text-white font-semibold text-sm transition-all duration-200 shadow-xl hover:shadow-pribg-primary/40 border border-white/10 group"
                   href="#pathways"
                 >
                   <span className="">Explore Programs</span>
@@ -128,23 +127,38 @@ function Home() {
 
           <div className="w-1/2 h-full z-10 ">
             <Canvas
-              className="   w-1/2 canvas"
-              camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100 }}
+              className="w-1/2 canvas"
+              camera={{
+                position: [0, 0, 5],
+                fov: 50,
+                near: 0.1,
+                far: 100,
+              }}
             >
               <ambientLight intensity={1.2} />
-
-              <directionalLight position={[4, 6, -5]} intensity={2} />
-
-              <directionalLight position={[4, -2, 3]} intensity={1.5} />
-
-              <ITILogoModel position={[0, 0, 0]} scale={2} />
-              {/* gives you mouse control over that camera. */}
-              <OrbitControls
-                target={[0, 0, 0]}
-                enableZoom={true}
-                enablePan={true}
-                enableRotate={true}
-              />
+              <directionalLight position={[10, 5, 10]} intensity={2} color="#ffffff" />
+              <directionalLight position={[-10, 3, 5]} intensity={1} color="#ffb0b5" />
+              <PresentationControls
+                // Determines what area responds to dragging.
+                global={false}
+                cursor={true}
+                // This controls whether the object returns/snaps to its original rotation when you stop dragging.
+                snap={true}
+                // Controls how strongly the model responds to dragging.
+                speed={5}
+                rotation={[
+                  THREE.MathUtils.degToRad(-10),
+                  THREE.MathUtils.degToRad(25),
+                  THREE.MathUtils.degToRad(0),
+                ]}
+                // It controls vertical rotation.
+                polar={[-Math.PI * 2, Math.PI * 2]}
+                // This controls horizontal rotation.
+                azimuth={[-Math.PI * 2, Math.PI * 2]}
+              >
+                <ITILogoModel position={[0, 0, 0]} scale={1.5} />
+              </PresentationControls>
+              {/* <LogoBaseModel position={[0, 0, 0]} scale={1} /> */}
             </Canvas>
           </div>
         </section>

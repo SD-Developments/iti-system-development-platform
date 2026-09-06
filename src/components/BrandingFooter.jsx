@@ -2,73 +2,9 @@ import { NavLink } from 'react-router';
 
 import { Terminal, Code2, PlayCircle, Globe } from 'lucide-react';
 import SdLogo from './SdLogo';
+import { academicPathways, departmentLinks, technicalTracks } from '../constants';
 
 function BrandingFooter() {
-  const academicPathways = [
-    {
-      title: '9-Month Professional Diploma',
-      path: '/programs',
-    },
-    {
-      title: '4-Month Intensive Accelerator',
-      path: '/programs',
-    },
-    {
-      title: 'Summer Tech Academies',
-      path: '/programs',
-    },
-    {
-      title: 'Undergraduate Hackathons',
-      path: '/events',
-    },
-  ];
-
-  const technicalTracks = [
-    {
-      title: 'Full Stack & Cloud DevOps',
-      path: '/tracks',
-    },
-    {
-      title: 'Applied Machine Learning & GenAI',
-      path: '/tracks',
-    },
-    {
-      title: 'Mobile Solutions Architecture',
-      path: '/tracks',
-    },
-    {
-      title: 'Enterprise Java & Cloud Native',
-      path: '/tracks',
-    },
-    {
-      title: 'Embedded Software & RTOS',
-      path: '/tracks',
-    },
-  ];
-
-  const departmentLinks = [
-    {
-      title: 'The SD Culture',
-      path: '/about',
-    },
-    {
-      title: 'Smart Village (HQ)',
-      path: '/branches',
-    },
-    {
-      title: 'Creativa Centers',
-      path: '/branches',
-    },
-    {
-      title: 'Capstones Showcase',
-      path: '/projects',
-    },
-    {
-      title: 'Alumni Stories',
-      path: '/about',
-    },
-  ];
-
   return (
     <footer className="w-full border-t border-[#dae2fd] bg-white">
       {/* ================= Main Footer ================= */}

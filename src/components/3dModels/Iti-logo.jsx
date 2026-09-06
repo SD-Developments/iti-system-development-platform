@@ -4,14 +4,11 @@ Command: npx gltfjsx@6.5.3 iti-logo.glb
 */
 
 import { useGLTF } from '@react-three/drei';
-import { useRef } from 'react';
 
-export default function ITILogoModel(props) {
+export function ITILogoModel(props) {
   const { nodes, materials } = useGLTF('/3d/iti-logo.glb');
-  const groupRef = useRef(null);
-
   return (
-    <group ref={groupRef} {...props} dispose={null}>
+    <group {...props} dispose={null}>
       <mesh
         geometry={nodes.I_dot.geometry}
         material={materials['Material.002']}
@@ -23,13 +20,6 @@ export default function ITILogoModel(props) {
         geometry={nodes.T_head.geometry}
         material={materials['Material.002']}
         position={[0.117, 0.291, -0.008]}
-      />
-      <mesh
-        geometry={nodes.i_negative.geometry}
-        material={materials['Material.002']}
-        position={[0.454, 0.289, 0.111]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.918}
       />
       <mesh
         geometry={nodes.I_letter.geometry}

@@ -1,8 +1,11 @@
 import { useRef } from 'react';
 import { NavLink } from 'react-router';
+
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+
 import { Search, ChevronDown, Command, ArrowRight, Menu } from 'lucide-react';
+
 import { bandingNavLinks } from '../constants';
 import clsx from 'clsx';
 
@@ -32,7 +35,7 @@ function BrandingNavBar() {
         backdrop-blur-md
       "
     >
-      <div className="flex h-20 w-full items-center px-6 xl:px-8">
+      <div className="flex py-3 w-full items-center px-6 xl:px-8">
         {/* ================= Logo ================= */}
         <NavLink to="/" className="flex shrink-0 items-center gap-1">
           <img src="images/iti-logo.svg" className="w-10" alt="ITI Logo" />
