@@ -6,8 +6,9 @@ import { Search, ChevronDown, Command, ArrowRight, Menu } from 'lucide-react';
 import { bandingNavLinks } from '../constants';
 import clsx from 'clsx';
 import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from './ui/avatar';
-import logo from '../assets/images/iti_sd_logo.svg';
+
 import avatar1 from '../assets/images/avatar1.png';
+import SdLogo from './SdLogo';
 
 function BrandingNavBar() {
   const navRef = useRef(null);
@@ -37,17 +38,8 @@ function BrandingNavBar() {
     >
       <div className="flex py-2 w-full items-center px-6 xl:px-8">
         {/* ================= Logo ================= */}
-        <NavLink to="/" className="flex shrink-0 items-center gap-1">
-          <img src={logo} className="w-16" alt="ITI Logo" />
 
-          {/* Logo - بدون تغيير الشكل */}
-          <p className="flex-col justify-start items-center border-l-3 pl-2 text-xl font-semibold leading-5 border-gray-400">
-            <span className="block text-sd-red">ITI</span>
-            <span className="block text-muted-foreground">System</span>
-            <span className="block">Development</span>
-          </p>
-        </NavLink>
-
+        <SdLogo></SdLogo>
         {/* ================= Desktop Navigation ================= */}
 
         <ul className="ml-8 hidden items-center gap-1 xl:flex">
@@ -171,27 +163,6 @@ function BrandingNavBar() {
           </div>
 
           {/* Profile */}
-          {/* <button
-            type="button"
-            className="
-              flex
-              h-11
-              w-11
-              items-center
-              justify-center
-              rounded-full
-              border-2
-              border-primary/20
-              bg-muted
-              text-sm
-              font-semibold
-              transition-all
-              hover:border-primary
-              hover:scale-105
-            "
-          >
-            SD
-          </button> */}
           <Avatar>
             <AvatarImage src={avatar1} alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
