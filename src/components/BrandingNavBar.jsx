@@ -8,6 +8,7 @@ import { Search, ChevronDown, Command, ArrowRight, Menu } from 'lucide-react';
 
 import { bandingNavLinks } from '../constants';
 import clsx from 'clsx';
+import logo from '../assets/images/iti_sd_logo.svg';
 
 function BrandingNavBar() {
   const navRef = useRef(null);
@@ -35,15 +36,15 @@ function BrandingNavBar() {
         backdrop-blur-md
       "
     >
-      <div className="flex py-3 w-full items-center px-6 xl:px-8">
+      <div className="flex py-2 w-full items-center px-6 xl:px-8">
         {/* ================= Logo ================= */}
         <NavLink to="/" className="flex shrink-0 items-center gap-1">
-          <img src="images/iti-logo.svg" className="w-10" alt="ITI Logo" />
+          <img src={logo} className="w-16" alt="ITI Logo" />
 
           {/* Logo - بدون تغيير الشكل */}
-          <p className="flex-col leading-5 justify-start items-center border-l-3 pl-2 border-gray-400">
+          <p className="flex-col justify-start items-center border-l-3 pl-2 text-xl font-semibold leading-5 border-gray-400">
+            <span className="block text-sd-red">ITI</span>
             <span className="block text-muted-foreground">System</span>
-
             <span className="block">Development</span>
           </p>
         </NavLink>
