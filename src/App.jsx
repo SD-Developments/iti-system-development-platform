@@ -9,8 +9,7 @@ import BranchesPage from './features/branches/pages/BranchesPage';
 import ProjectsPage from './features/projects/pages/ProjectsPage';
 import EventsPage from './features/events/pages/EventsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
-// import MainLayout from './layouts/mainLayout';
-import MainLayout from './layouts/mainLayout';
+import MainLayout from './layouts/MainLayout';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function App() {
