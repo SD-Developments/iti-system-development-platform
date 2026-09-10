@@ -216,7 +216,7 @@ function HeroVisual({ type }) {
             key={title}
             className="rounded-[22px] border border-border bg-card shadow-lg shadow-foreground/5"
           >
-            <div className="h-40 bg-gradient-to-br from-secondary to-accent/10" />
+            <div className="h-40 bg-linear-to-br from-secondary to-accent/10" />
 
             <div className="p-4 font-bold text-card-foreground">{title}</div>
           </div>
@@ -227,7 +227,7 @@ function HeroVisual({ type }) {
 
   return (
     <div className="relative min-h-117.5 w-full max-w-180">
-      <div className="ml-auto flex h-100 w-full items-center justify-center rounded-[28px] bg-gradient-to-br from-secondary to-accent/15 text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
+      <div className="ml-auto flex h-100 w-full items-center justify-center rounded-[28px] bg-linear-to-br from-secondary to-accent/15 text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
         Student / Project Image
       </div>
 
