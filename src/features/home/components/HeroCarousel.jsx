@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { heorHomeSlides } from '@/constants';
 import clsx from 'clsx';
 import { ArrowRight, BookOpen, Code2, Layers3, MapPin } from 'lucide-react';
@@ -57,11 +56,10 @@ function HeroCarousel() {
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Button className="min-h-13">
+            <button className="inline-flex min-h-13 items-center justify-center gap-2 rounded-[14px] bg-primary px-6 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition hover:-translate-y-0.5">
               {slide.primaryCta}
               <ArrowRight size={18} />
-            </Button>
-
+            </button>
             <button
               className={clsx(
                 'inline-flex min-h-13 items-center justify-center rounded-[14px] border border-accent px-6 font-bold transition hover:-translate-y-0.5',
