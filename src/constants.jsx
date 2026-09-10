@@ -440,3 +440,278 @@ export const activities = [
 ];
 
 export const partnersHome = ['Microsoft', 'IBM', 'Oracle', 'Valeo', 'Vodafone', 'Orange'];
+
+export const heroStats = [
+  {
+    value: '1,200+',
+    label: 'Instructional Lab Hours',
+    featured: false,
+  },
+  {
+    value: '94.8%',
+    label: 'Direct 90d Placement',
+    featured: true,
+  },
+  {
+    value: '11 Hubs',
+    label: 'Governorates Served',
+    featured: false,
+  },
+];
+
+export const diplomaPhases = [
+  {
+    label: 'PHASE 01 • FOUNDATIONS',
+    title: 'Algorithms & OOP',
+    description: 'Data structures, memory management, design patterns, and relational modeling.',
+  },
+  {
+    label: 'PHASE 02 • SPECIALIZATION',
+    title: 'Enterprise Stacks',
+    description: 'Microservices, cloud-native DevOps, distributed messaging, CI/CD pipelines.',
+  },
+  {
+    label: 'PHASE 03 • CAPSTONE',
+    title: 'Live Defense',
+    description: '8-week industry sponsored MVP defended before multinational engineering juries.',
+  },
+];
+
+export const diplomaTracks = [
+  'Full Stack .NET Core',
+  'MEARN & TypeScript',
+  'Cloud Native DevOps & K8s',
+  'Embedded Linux & Automotive RTOS',
+  'AI Platform Engineering',
+];
+
+export const itpTracks = [
+  {
+    category: 'FRONTEND ENGINEERING',
+    hours: '500h',
+    title: 'Modern Web with Angular & React',
+    description:
+      'State management (NgRx / Redux), RxJS observables, WebSockets, accessibility, progressive web apps, and performance audits.',
+    outcome: 'Frontend Engineer',
+  },
+  {
+    category: 'BACKEND ARCHITECTURE',
+    hours: '500h',
+    title: 'Python Enterprise & FastApi',
+    description:
+      'Asynchronous microservices, Dockerized packaging, PostgreSQL caching layers, OAuth2 security, and production test suites.',
+    outcome: 'Backend Specialist',
+  },
+  {
+    category: 'CROSS-PLATFORM',
+    hours: '500h',
+    title: 'Flutter & Dart Mobile Architecture',
+    description:
+      'Bloc/Cubit patterns, native platform channels, offline persistence, automated CI/CD for App Store & Play Store deployments.',
+    outcome: 'Mobile App Dev',
+  },
+  {
+    category: 'RELIABILITY & QUALITY',
+    hours: '500h',
+    title: 'Software Quality Assurance Automation',
+    description:
+      'Selenium, Cypress, Playwright, API performance benchmarking with JMeter, CI pipeline integration, and ISTQB certification.',
+    outcome: 'QA Automation Lead',
+  },
+];
+
+export const summerFeatures = [
+  {
+    icon: 'terminal',
+    title: 'Professional Git & CLI',
+    description:
+      'Branching models, pull requests, semantic versioning, and Linux environment commands.',
+  },
+  {
+    icon: 'architecture',
+    title: 'Modern Web Architecture',
+    description:
+      'HTML5/CSS3 semantics, modern JS (ES6+), responsive layouts, and REST client integration.',
+  },
+  {
+    icon: 'dataset',
+    title: 'Algorithms in Production',
+    description:
+      'Real-time problem solving, algorithmic complexity analysis, and competitive programming clinics.',
+  },
+  {
+    icon: 'cloud_circle',
+    title: 'Cloud Primer & Docker',
+    description:
+      'Containerization principles, building micro-containers, and deploying serverless functions.',
+  },
+];
+
+export const summerStats = [
+  {
+    value: '4,500+',
+    label: 'Students Trained Yearly',
+    featured: true,
+  },
+  {
+    value: '32',
+    label: 'Partner Universities',
+  },
+  {
+    value: '120h',
+    label: 'Average Intensive Track',
+  },
+  {
+    value: '0 EGP',
+    label: 'Fully Sponsored',
+    teal: true,
+  },
+];
+
+export const tenets = [
+  {
+    number: 'TENET 01',
+    icon: 'terminal',
+    title: 'Production Sprints over Lectures',
+    description:
+      '70% of contact hours are spent inside IDEs, pair-programming, and resolving production telemetry under simulated latency constraints.',
+    footer: 'Zero Toy Homework →',
+    type: 'primary',
+  },
+  {
+    number: 'TENET 02',
+    icon: 'groups',
+    title: 'Peer Architecture Defenses',
+    description:
+      'Students regularly defend their database schemas, thread safety, and API payloads before fellow cohorts and department staff.',
+    footer: 'Rigorous Code Reviews →',
+    type: 'teal',
+  },
+  {
+    number: 'TENET 03',
+    icon: 'engineering',
+    title: 'Industry CTO Mentorship',
+    description:
+      'Curricula are directly co-architected with leading enterprise software architects from IBM, Microsoft, Vodafone, and regional tech giants.',
+    footer: 'Live Industry SLAs →',
+    type: 'navy',
+  },
+  {
+    number: 'TENET 04',
+    icon: 'military_tech',
+    title: 'Zero-Tuition Meritocracy',
+    description:
+      'Every single accepted candidate receives a 100% government scholarship funded by MCIT. Admission is decided strictly by competitive technical capability.',
+    footer: '100% Funded Fellowships →',
+    type: 'teal',
+  },
+];
+
+export const comparisonPrograms = [
+  {
+    type: 'primary',
+    badge: 'FLAGSHIP DIPLOMA',
+    eyebrow: '9-MONTH RESIDENCY',
+    title: 'Professional Software Diploma',
+    description:
+      'The flagship postgraduate immersion preparing engineers for top-tier enterprise roles.',
+    specs: [
+      ['Contact Hours', '1,200+ Hours'],
+      ['Duration & Schedule', '9 Mo • Mon-Fri 8:30-16:30'],
+      ['Target Audience', 'STEM University Grads (< 5y post grad)'],
+      ['Capstone Requirement', 'Enterprise Production MVP + CTO Jury Defense'],
+      ['Branch Availability', '11 Branches Nationwide'],
+    ],
+    career: 'Senior-Ready Junior',
+    action: 'Apply for 9-Month Intake 45',
+    href: '#intake-status',
+  },
+  {
+    type: 'teal',
+    badge: null,
+    eyebrow: '4-MONTH ACCELERATOR',
+    title: 'Intensive Training (ITP)',
+    description:
+      'High-velocity tech skills transfer focused directly on rapid corporate deployment.',
+    specs: [
+      ['Contact Hours', '500+ Hours'],
+      ['Duration & Schedule', '4 Mo • Hybrid Sprints'],
+      ['Target Audience', 'Graduates pivoting to specialized stacks'],
+      ['Capstone Requirement', 'Production Sprint Deployment (CI/CD)'],
+      ['Branch Availability', 'Selected Regional Hubs'],
+    ],
+    career: 'Direct Role Specialist',
+    action: 'Explore 4-Month Tracks',
+    href: '#four-month',
+  },
+  {
+    type: 'neutral',
+    badge: null,
+    eyebrow: 'PRE-GRADUATION CAMPS',
+    title: 'Summer Tech Academies',
+    description:
+      'Foundational industry workshops and clean code coaching for undergraduate talent.',
+    specs: [
+      ['Contact Hours', '120 – 180 Hours'],
+      ['Duration & Schedule', '4 to 8 Weeks • July–Aug'],
+      ['Target Audience', 'Active university undergraduates (Y2–Y4)'],
+      ['Capstone Requirement', 'Summer Hackathon Showcase & Repo'],
+      ['Branch Availability', '32 Universities + ITI Hubs'],
+    ],
+    career: 'Diploma Fast-Track',
+    action: 'View Summer Schedule',
+    href: '#summer-camps',
+  },
+];
+
+export const hiringPartners = ['MICROSOFT', 'VALEO', 'DELL TECH', 'FAWRY', 'VODAFONE', 'INSTABUG'];
+
+export const testimonials = [
+  {
+    initials: 'OA',
+    quote:
+      "The 9-Month Diploma didn't teach me just syntax; it gave me the architectural stamina to design distributed systems handling 40,000 requests/second at Fawry.",
+    name: 'Omar Abdelrahman',
+    role: 'Lead Architect, Fawry • Intake 39',
+    type: 'primary',
+  },
+  {
+    initials: 'SE',
+    quote:
+      'Moving from civil engineering to cloud DevOps seemed impossible until the 4-Month ITP. The hands-on Kubernetes clusters we built in class were identical to real production.',
+    name: 'Sara El-Sayed',
+    role: 'Site Reliability Eng, Dell • ITP Round 14',
+    type: 'teal',
+  },
+  {
+    initials: 'KM',
+    quote:
+      'Attending the ITI Summer Camp at Mansoura University in my third year completely redirected my trajectory. I graduated with professional Git workflows already in my DNA.',
+    name: 'Karim Mahmoud',
+    role: 'Senior Mobile Eng, Instabug • Mansoura Hub',
+    type: 'neutral',
+  },
+];
+
+export const faqs = [
+  {
+    question: 'What are the precise admission qualifications for the 9-Month Diploma?',
+    answer:
+      "Applicants must hold a recognized Bachelor's degree (primarily from Engineering, Computer Science, Information Systems, Science, or related disciplines). Strong graduates from other faculties showing demonstrated logical ability and documented technical projects are actively considered. Candidates must have graduated within the past 5 years and hold an overall grade of 'Good' or above.",
+  },
+  {
+    question: 'Are all academic tracks 100% tuition-free?',
+    answer:
+      "Yes, unconditionally. Every student admitted into the 9-Month Professional Diploma, 4-Month Intensive Program, or University Summer Camps is awarded a full government fellowship sponsored by Egypt's Ministry of Communications and Information Technology (MCIT). Students in the 9-Month Diploma also receive a monthly stipend.",
+  },
+  {
+    question: 'How does the 3-stage entrance examination work?',
+    answer:
+      'Candidates complete three sequential gates: (1) Standardized English Proficiency & Cognitive IQ Assessment, (2) Technical Examination covering fundamental programming logic, data structures, algorithms, and OOP paradigms, and (3) An in-depth technical and personal interview conducted by ITI department heads and senior enterprise software partners.',
+  },
+  {
+    question: 'Can students apply to ITI regional branches across governorates?',
+    answer:
+      'Absolutely. In addition to our flagship headquarters at Smart Village (Giza), ITI operates complete software development departments across Alexandria, Mansoura, Assiut, Aswan, Ismailia (Suez Canal), Minya, Menofia, Qena, and Sohag. All branches adhere to identical curriculum benchmarks and project jury defenses.',
+  },
+];
