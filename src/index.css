@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @import 'tailwindcss';
-
 @import 'tw-animate-css';
-
 @import 'shadcn/tailwind.css';
-
 @import '@fontsource-variable/geist';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -20,6 +16,8 @@
 
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-secondary2: var(--secondary2);
 
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
@@ -40,14 +38,12 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 
-  /* Chart colors */
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  /* Sidebar */
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -57,28 +53,22 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* =======================================================
-     SD BRAND COLORS
-     ======================================================= */
-
   --color-sd-red: var(--sd-red);
   --color-sd-navy: var(--sd-navy);
   --color-sd-teal: var(--sd-teal);
   --color-sd-gray: var(--sd-gray);
   --color-sd-white: var(--sd-white);
+  --color-sd-bg-light: var(--sd-bg-light);
 
-  /* Typography */
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --font-mono: var(--font-mono);
 
-  /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* Shadows */
   --shadow-2xs: var(--shadow-2xs);
   --shadow-xs: var(--shadow-xs);
   --shadow-sm: var(--shadow-sm);
@@ -88,24 +78,14 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
-/* =========================================================
-   LIGHT THEME + BRAND SYSTEM
-   ========================================================= */
-
 :root {
-  /* =======================================================
-     OFFICIAL SD BRAND PALETTE
-     ======================================================= */
-
   --sd-red: #e03531;
   --sd-navy: #082b3e;
   --sd-teal: #00b0b0;
   --sd-gray: #687888;
   --sd-white: #fefefe;
 
-  /* =======================================================
-     SEMANTIC UI COLORS
-     ======================================================= */
+  --sd-bg-light: #f6f9fa;
 
   --background: #fefefe;
   --foreground: #082b3e;
@@ -120,91 +100,61 @@
   --primary-foreground: #ffffff;
 
   --secondary: #e8f8f8;
+  --secondary2: #e0f7f7;
   --secondary-foreground: #082b3e;
-
-  --muted: #f3f6f7;
-  --muted-foreground: #687888;
 
   --accent: #00b0b0;
   --accent-foreground: #ffffff;
+
+  --muted: #f3f6f7;
+  --muted-foreground: #687888;
 
   --destructive: #d91f1f;
   --destructive-foreground: #ffffff;
 
   --border: #dfe7ea;
   --input: #dfe7ea;
-  --ring: #f02f2f;
+  --ring: #e03531;
 
-  /* =======================================================
-     CHART COLORS
-     ======================================================= */
-
-  --chart-1: #f02f2f;
+  --chart-1: #e03531;
   --chart-2: #00b0b0;
   --chart-3: #082b3e;
   --chart-4: #687888;
   --chart-5: #8bdede;
 
-  /* =======================================================
-     SIDEBAR
-     ======================================================= */
-
   --sidebar: #f5f8f9;
   --sidebar-foreground: #082b3e;
 
-  --sidebar-primary: #f02f2f;
+  --sidebar-primary: #e03531;
   --sidebar-primary-foreground: #ffffff;
 
   --sidebar-accent: #e8f8f8;
   --sidebar-accent-foreground: #082b3e;
 
   --sidebar-border: #dfe7ea;
-  --sidebar-ring: #f02f2f;
+  --sidebar-ring: #e03531;
 
-  /* =======================================================
-     TYPOGRAPHY
-     ======================================================= */
+  --scrollbar-track: #f3f6f7;
 
-  /* Main font used across the entire website */
   --font-sans:
     'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Headings use the same family according to Stitch */
   --font-heading:
     'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Technical / system-oriented typography */
   --font-mono:
     'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* =======================================================
-     RADIUS
-     ======================================================= */
-
   --radius: 0.75rem;
 
-  /* =======================================================
-     SHADOWS
-     ======================================================= */
-
   --shadow-2xs: 0 1px 0 0 rgba(8, 43, 62, 0.04);
-
   --shadow-xs: 0 1px 2px 0 rgba(8, 43, 62, 0.05);
-
   --shadow-sm: 0 1px 3px 0 rgba(8, 43, 62, 0.08), 0 1px 2px -1px rgba(8, 43, 62, 0.08);
-
   --shadow-md: 0 4px 6px -1px rgba(8, 43, 62, 0.08), 0 2px 4px -2px rgba(8, 43, 62, 0.08);
-
   --shadow-lg: 0 10px 15px -3px rgba(8, 43, 62, 0.1), 0 4px 6px -4px rgba(8, 43, 62, 0.08);
-
   --shadow-xl: 0 20px 25px -5px rgba(8, 43, 62, 0.1), 0 8px 10px -6px rgba(8, 43, 62, 0.08);
-
   --shadow-2xl: 0 25px 50px -12px rgba(8, 43, 62, 0.15);
 }
-
-/* =========================================================
-   DARK THEME
-   ========================================================= */
 
 .dark {
   --background: #061e2b;
@@ -220,13 +170,16 @@
   --primary-foreground: #ffffff;
 
   --secondary: rgba(0, 176, 176, 0.18);
-  --secondary-foreground: #8bdede;
 
-  --muted: #0d3548;
-  --muted-foreground: #aebbc4;
+  --secondary2: #153648;
+
+  --secondary-foreground: #8bdede;
 
   --accent: #00b0b0;
   --accent-foreground: #ffffff;
+
+  --muted: #0d3548;
+  --muted-foreground: #aebbc4;
 
   --destructive: #ff5a5a;
   --destructive-foreground: #ffffff;
@@ -234,6 +187,8 @@
   --border: #1d4658;
   --input: #1d4658;
   --ring: #f02f2f;
+
+  --sd-bg-light: #153648;
 
   --chart-1: #f02f2f;
   --chart-2: #00b0b0;
@@ -253,6 +208,8 @@
   --sidebar-border: #1d4658;
   --sidebar-ring: #f02f2f;
 
+  --scrollbar-track: #0d3548;
+
   --shadow-2xs: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 
   --shadow-xs: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
@@ -267,6 +224,7 @@
 
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
+
 /* =========================================================
    GLOBAL
    ========================================================= */
@@ -288,9 +246,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings use the same Plus Jakarta Sans family,
-   matching the Stitch design system. */
-
 h1,
 h2,
 h3,
@@ -299,8 +254,6 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
-
-/* Technical / system-oriented content */
 
 code,
 pre,
@@ -328,7 +281,7 @@ samp {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f6f7;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -345,11 +298,11 @@ samp {
    ========================================================= */
 
 @utility flex-center {
-  @apply flex justify-center items-center;
+  @apply flex items-center justify-center;
 }
 
 @utility col-center {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col items-center justify-center;
 }
 
 @utility abs-center {
@@ -358,6 +311,7 @@ samp {
 
 @utility text-gradient {
   background: linear-gradient(135deg, var(--sd-red) 0%, var(--sd-teal) 100%);
+
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
