@@ -28,7 +28,7 @@ function BrandingNavBar() {
     <nav
       ref={navRef}
       className="
-        sticky top-0 z-50
+        fixed top-0 z-50
         w-full
         border-b border-border/70
         bg-background/95
@@ -67,7 +67,7 @@ function BrandingNavBar() {
                     transition-all
                     duration-200`,
                     {
-                      'bg-primary/10 text-primary': isActive,
+                      'bg-primary/10 text-primary dark:text-sd-teal dark:bg-sd-teal/10': isActive,
                       'text-muted-foreground hover:bg-muted hover:text-foreground': !isActive,
                     }
                   )
@@ -75,7 +75,9 @@ function BrandingNavBar() {
               >
                 {({ isActive }) => (
                   <>
-                    {isActive && <span className="mr-2 h-1.5 w-1.5 rounded-full bg-primary" />}
+                    {isActive && (
+                      <span className="mr-2 h-1.5 w-1.5 rounded-full bg-primary dark:bg-sd-teal" />
+                    )}
 
                     {link.title}
                   </>

@@ -1,13 +1,10 @@
-import HeroCarousel from '../../../components/HeroCarousel';
+import HeroCarousel from '../components/HeroCarousel';
 
 function Home() {
   return (
     <>
-      <main>
-        <section className="flex-center h-screen">
-          <HeroCarousel />
-        </section>
-      </main>
+      <HeroCarousel />
+      <section className="h-screen bg-red-700"> </section>
     </>
   );
 }

@@ -12,7 +12,7 @@ const MainLayout = () => {
         <main className="flex-1">
           <Outlet />
         </main>
-        <BrandingFooter></BrandingFooter>
+        <BrandingFooter />
       </div>
     </>
   );

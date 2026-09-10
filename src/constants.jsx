@@ -252,3 +252,74 @@ export const aiInitiatives = [
     description: 'Kubernetes, Terraform IaC, and resilient distributed microservices.',
   },
 ];
+
+export const heorHomeSlides = [
+  {
+    id: 1,
+    eyebrow: 'PEOPLE • SKILLS • SOLUTIONS',
+    title: (
+      <>
+        ITI <br />
+        System <br />
+        Development
+      </>
+    ),
+    subtitle: (
+      <>
+        Learn. <span className="text-[#14B8A6]">Build.</span> Collaborate.{' '}
+        <span className="text-[#C62828]">Ship.</span>
+      </>
+    ),
+    description:
+      'Develop real engineering capability through intensive programs, practical projects, and collaborative learning.',
+    primaryCta: 'Explore SD',
+    secondaryCta: 'See What We Build',
+    theme: 'light',
+    visual: 'students',
+  },
+  {
+    id: 2,
+    eyebrow: 'PROGRAMS',
+    title: (
+      <>
+        Two Programs. <br />
+        One Future.
+      </>
+    ),
+    subtitle: 'Choose the learning journey that fits your goals.',
+    description:
+      'Explore intensive professional programs with multiple tracks, branches, projects, and real-world learning experiences.',
+    primaryCta: 'Explore Programs',
+    secondaryCta: 'Compare Programs',
+    theme: 'light',
+    visual: 'programs',
+  },
+  {
+    id: 3,
+    eyebrow: 'PROJECTS',
+    title: <>Built at SD</>,
+    subtitle: 'Real projects. Real impact.',
+    description:
+      'Explore graduation projects built by students and see how learning turns into working systems.',
+    primaryCta: 'See Projects',
+    secondaryCta: 'Featured Project',
+    theme: 'dark',
+    visual: 'project',
+  },
+  {
+    id: 4,
+    eyebrow: 'ACTIVITIES',
+    title: (
+      <>
+        More Than <br />a Classroom.
+      </>
+    ),
+    subtitle: 'Learn through community, collaboration, and experience.',
+    description:
+      'Tech talks, workshops, hackathons, company visits, competitions, and community activities.',
+    primaryCta: 'Explore Activities',
+    secondaryCta: 'Inside SD',
+    theme: 'light',
+    visual: 'activities',
+  },
+];
