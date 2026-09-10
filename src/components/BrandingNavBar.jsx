@@ -9,6 +9,7 @@ import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from './ui/avatar';
 
 import avatar1 from '../assets/images/avatar1.png';
 import SdLogo from './SdLogo';
+import { Button } from './ui/button';
 
 function BrandingNavBar() {
   const navRef = useRef(null);
@@ -168,6 +169,8 @@ function BrandingNavBar() {
             <AvatarFallback>CN</AvatarFallback>
             <AvatarBadge className="bg-green-600 dark:bg-green-800" />
           </Avatar>
+
+          <Button></Button>
 
           {/* Explore Intakes */}
           <NavLink
