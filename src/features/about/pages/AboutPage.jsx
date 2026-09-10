@@ -207,7 +207,7 @@ const AboutPage = () => {
                         ITI Smart Village HQ.
                       </p>
 
-                      <span className="mt-1 block font-mono text-[11px] text-sd-teal">
+                      <span className="mt-2 block font-mono text-[11px] text-sd-teal">
                         Intake Residency • Collaborative Pair-Programming in Action
                       </span>
                     </div>
