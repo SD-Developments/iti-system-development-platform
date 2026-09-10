@@ -1,14 +1,13 @@
 import { useRef } from 'react';
 import { NavLink } from 'react-router';
-
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
 import { Search, ChevronDown, Command, ArrowRight, Menu } from 'lucide-react';
-
 import { bandingNavLinks } from '../constants';
 import clsx from 'clsx';
+import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from './ui/avatar';
 import logo from '../assets/images/iti_sd_logo.svg';
+import avatar1 from '../assets/images/avatar1.png';
 
 function BrandingNavBar() {
   const navRef = useRef(null);
@@ -170,7 +169,7 @@ function BrandingNavBar() {
           </div>
 
           {/* Profile */}
-          <button
+          {/* <button
             type="button"
             className="
               flex
@@ -190,7 +189,12 @@ function BrandingNavBar() {
             "
           >
             SD
-          </button>
+          </button> */}
+          <Avatar>
+            <AvatarImage src={avatar1} alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+            <AvatarBadge className="bg-green-600 dark:bg-green-800" />
+          </Avatar>
 
           {/* Explore Intakes */}
           <NavLink

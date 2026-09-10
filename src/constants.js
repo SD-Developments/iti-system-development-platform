@@ -161,3 +161,94 @@ export const pipelineStages = [
     items: ['Live System Stress Tests', 'Architectural Defense', 'Direct Career Placement'],
   },
 ];
+
+export const milestones = [
+  {
+    year: 'YEAR 1993',
+    variant: 'primary',
+    title: 'Establishment of ITI',
+    meta: 'COHORT 01 FOUNDING',
+    description:
+      "The Information Technology Institute is founded as Egypt's flagship national institution for high-level computing sciences, laying the groundwork for specialized software engineering tracks.",
+  },
+  {
+    year: 'YEAR 2005',
+    variant: 'secondary',
+    title: 'Autonomous SD Department & Open Source Labs',
+    meta: 'ENTERPRISE SCALE',
+    description:
+      'Software Development is officially established as a dedicated specialized department. Pioneer labs launch enterprise Java, C++, and Linux open-source development tracks.',
+  },
+  {
+    year: 'YEAR 2015',
+    variant: 'neutral',
+    title: 'Regional Expansion Across Egypt',
+    meta: 'DELTA & ALEXANDRIA',
+    description:
+      'Scaling beyond the Smart Village headquarters, launching active SD specialized hubs in Alexandria and Upper Egypt to decentralize elite technology education.',
+  },
+  {
+    year: 'YEAR 2020',
+    variant: 'neutral',
+    title: 'Creativa Innovation Hubs Rollout',
+    meta: '11 SATELLITE CAMPUSES',
+    description:
+      'Nationwide rollout across university-embedded Creativa Centers in Aswan, Minya, Mansoura, Assiut, Menofia, and Suez, connecting local youth directly with international software markets.',
+  },
+  {
+    year: '2024 - 2025',
+    variant: 'primary',
+    title: 'AI Native Systems & 15,000+ Alumni Milestone',
+    meta: 'CURRENT ACTIVE MANDATE',
+    description:
+      'Full department curricula overhaul focusing on AI-augmented engineering, cloud-native architectures, micro-frontends, and global remote developer workforce acceleration.',
+    featured: true,
+  },
+];
+
+export const leaders = [
+  {
+    name: 'Eng. Bassem Mostafa',
+    role: 'Head of Software Development Dept.',
+    description:
+      '20+ years steering mission-critical cloud architectures and leading national developer programs.',
+    image:
+      'https://lh3.googleusercontent.com/aida/AEtjO1VQ20EmfSOAn8Rdhv7vSNIAZctxyzkHdU9w1yvnz5WW9LzUKg-Cba0k2LX4rqUAkJefaICOJH0D7aDiTdA4entstbUarKt-TJ_ahWh4emf4OOAm-ZfjzOdFGNgKtwkEQiS-4IGcaK3f7JVVJMaGscCMuNm81N6ZNGDgWGuiThyAOsXPEt9otE0HWuPAkKHQwU4C2Jlb7qh_RFa-1U9JWmh-8CSlEVlelK3vvABCUeSzGgT22T5cb7_vC-lj',
+    alt: 'Eng. Bassem Mostafa, Head of Software Development Dept.',
+  },
+  {
+    name: 'Dr. Hoda Abdel-Salam',
+    role: 'Principal Software Architect',
+    description:
+      'Specialist in distributed microservices, algorithmic verification, and open-source ecosystems.',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBdb2kwC9qyVUSTrHy6us_QkZwL_CJJbdG4xpMWbB8iYR-k_HokInGGz8bpa62Oj3JPzy1ghTKW-OeW0DIsWAsNnelzFRkig2m_DXXgGcSOXDbMp23YUR-TMfW1OYu68dPZYvez7dFEGYJCfWNNjSGoHDU-aysQ8aeTfSLS8fZ_X2n6nUUw3LgteMfeVyXreZFWo5t7UDlBRFCZQeFhg9bMfkEtD0TvBqtl7tU6SlJZqAA5auRFaKgPVQ',
+    alt: 'Dr. Hoda Abdel-Salam, Principal Software Architect',
+  },
+  {
+    name: 'Eng. Tamer Soliman',
+    role: 'Director of Industry Integration',
+    description:
+      'Former Enterprise Tech Director linking hiring partners and startup scale-ups with SD cohorts.',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBMmrTO9vy_ZFyPK1Rue-6883PlM_BmXXKopf9wgWhzAWE_3WDXgoTOLdcq6vcPB-1QdA_CruGKskKl8rifX15Jjbtz9HR147gSlrazs-8HpTVyh7TSRvKvCxTKFdOE1J9CduVvkRJFY7N3W57yLUYoVq8PRXthktGB1obh6BhEAwdBWTTXEifclYfImS3ORIIKQIJNU7pymCADyqBI-Gt35-cY891oSSpbd3vx1cL_S6Qtl0J5RP4qnA',
+    alt: 'Eng. Tamer Soliman, Director of Industry Integration',
+  },
+];
+
+export const partners = ['MICROSOFT', 'VALEO', 'DELL TECH', 'FAWRY', 'VODAFONE', 'IBM', 'INSTABUG'];
+
+export const aiInitiatives = [
+  {
+    title: 'AI Pair-Programming',
+    description: 'Harnessing LLM copilot agents with test-first defensive verification.',
+  },
+  {
+    title: 'RAG Architectures',
+    description: 'Vector DBs, embedding indexing, and intelligent context injection.',
+  },
+  {
+    title: 'Cloud Orchestration',
+    description: 'Kubernetes, Terraform IaC, and resilient distributed microservices.',
+  },
+];
