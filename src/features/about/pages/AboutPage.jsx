@@ -5,8 +5,6 @@ import about2 from '../../../assets/images/about2.png';
 import { coreValues, pipelineStages } from '../../../constants';
 
 const AboutPage = () => {
-
-
   const [milestones] = useState([
     {
       year: 'YEAR 1993',
@@ -107,25 +105,20 @@ const AboutPage = () => {
   ]);
   return (
     <>
-      <main className="w-full bg-[#FEFEFE] text-[#082B3E]">
+      <main className="w-full ">
         <div className="flex w-full flex-col">
           {/* =====================================================
             SECTION 1 — HERO
         ===================================================== */}
-          <section className="w-full border-b border-[#e2eaee] bg-[#f6f9fa] pb-16 pt-8">
+          <section className="w-full border-b border-[#e2eaee]  pb-16 pt-8">
             <div className="mx-auto max-w-7xl px-4 md:px-6">
-              {/* Breadcrumb */}
-              <div className="mb-6 flex items-center gap-2 font-mono text-[13px] text-[#687888]">
+              <div className="mb-6 flex items-center gap-2 font-mono text-[13px] ">
                 <NavLink to="/" className="transition-colors hover:text-[#F02F2F]">
                   Home
                 </NavLink>
-
                 <span className="text-[#687888]/50">/</span>
-
                 <span className="font-semibold text-[#F02F2F]">About SD</span>
-
                 <span className="text-[#687888]/50">/</span>
-
                 <span className="text-[#687888]">Strategic Overview & Legacy</span>
               </div>
 
@@ -211,7 +204,6 @@ const AboutPage = () => {
                 <div className="flex flex-col gap-4 lg:col-span-6">
                   <div className="flex items-center gap-2 font-mono text-[12px] font-bold uppercase tracking-wider text-[#F02F2F]">
                     <span className="material-symbols-outlined text-sm">code_blocks</span>
-
                     <span>The Bedrock of Digital Egypt</span>
                   </div>
 
