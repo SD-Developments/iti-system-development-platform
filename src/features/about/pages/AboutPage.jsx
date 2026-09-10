@@ -21,7 +21,7 @@ const AboutPage = () => {
               SECTION 1 — HERO
           ===================================================== */}
 
-          <section className="w-full border-b border-border bg-background pb-16 pt-8">
+          <section className="w-full border-b border-border bg-background pb-16 pt-24">
             <div className="mx-auto max-w-7xl px-4 md:px-6">
               <div className="mb-6 flex items-center gap-2 font-mono text-[13px] text-muted-foreground">
                 <NavLink to="/" className="transition-colors hover:text-primary">
