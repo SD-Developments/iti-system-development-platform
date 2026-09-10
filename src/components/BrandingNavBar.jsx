@@ -28,7 +28,7 @@ function BrandingNavBar() {
     <nav
       ref={navRef}
       className="
-        fixed top-0 z-50
+        sticky top-0 z-50
         w-full
         border-b border-border/70
         bg-background/95
@@ -128,7 +128,7 @@ function BrandingNavBar() {
               border-border
               bg-muted/40
               px-3
-              2xl:flex
+              lg:flex
             "
           >
             <Search size={18} className="shrink-0 text-muted-foreground" />
@@ -219,7 +219,7 @@ function BrandingNavBar() {
               hover:bg-primary/90
               hover:shadow-md
 
-              2xl:flex
+              xl:flex
             "
           >
             Explore Intakes
