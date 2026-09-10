@@ -58,7 +58,9 @@ const ProgramsPage = () => {
 
                 <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-[54px] lg:leading-15.5">
                   Transformative Learning Pathways in{' '}
-                  <span className="relative inline-block text-primary">Software Craft</span>
+                  <span className="relative inline-block text-primary underline-sketch">
+                    Software Craft
+                  </span>
                 </h1>
 
                 <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
