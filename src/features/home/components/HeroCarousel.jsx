@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { ArrowRight, BookOpen, Code2, Layers3, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import hero1 from '../../../assets/images/hero1.png';
-import hero2 from '../../../assets/images/requra.png';
+import hero2 from '../../../assets/images/Requra.png';
 
 function HeroCarousel() {
   const [currSlide, setCurrSlide] = useState(0);
