@@ -1,8 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
-import ItiModel from '../../../components/3dModels/Iti-model';
-import HeroBranding from '../../../components/HeroBranding';
+import HeroCarousel from '../../../components/HeroCarousel';
 
 function Home() {
   useGSAP(() => {
@@ -44,9 +43,8 @@ function Home() {
   return (
     <>
       <main>
-        <section className="relative w-full overflow-hidden bg-black text-white h-dvh flex justify-center items-center">
-          <HeroBranding />
-          <ItiModel />
+        <section className="flex-center h-screen">
+          <HeroCarousel />
         </section>
       </main>
     </>

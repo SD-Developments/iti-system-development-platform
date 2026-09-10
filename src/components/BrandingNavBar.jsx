@@ -28,7 +28,7 @@ function BrandingNavBar() {
     <nav
       ref={navRef}
       className="
-        sticky top-0 z-50
+        fixed top-0 z-50
         w-full
         border-b border-border/70
         bg-background/95

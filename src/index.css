@@ -11,30 +11,43 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
+  /* Chart colors */
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+
+  /* Sidebar */
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -44,15 +57,28 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-sans: 'Geist Variable', sans-serif;
-  --font-heading: var(--font-sans);
+  /* =======================================================
+     SD BRAND COLORS
+     ======================================================= */
+
+  --color-sd-red: var(--sd-red);
+  --color-sd-navy: var(--sd-navy);
+  --color-sd-teal: var(--sd-teal);
+  --color-sd-gray: var(--sd-gray);
+  --color-sd-white: var(--sd-white);
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
   --font-mono: var(--font-mono);
 
+  /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
+  /* Shadows */
   --shadow-2xs: var(--shadow-2xs);
   --shadow-xs: var(--shadow-xs);
   --shadow-sm: var(--shadow-sm);
@@ -60,15 +86,16 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* =========================================================
+   LIGHT THEME + BRAND SYSTEM
+   ========================================================= */
+
 :root {
-  /* -------------------------
-     Official SD Brand Colors
-     ------------------------- */
+  /* =======================================================
+     OFFICIAL SD BRAND PALETTE
+     ======================================================= */
 
   --sd-red: #f02f2f;
   --sd-navy: #082b3e;
@@ -76,83 +103,89 @@
   --sd-gray: #687888;
   --sd-white: #fefefe;
 
-  /* -------------------------
-     Semantic Colors
-     ------------------------- */
+  /* =======================================================
+     SEMANTIC UI COLORS
+     ======================================================= */
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #fefefe;
+  --foreground: #082b3e;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: #082b3e;
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --popover: #ffffff;
+  --popover-foreground: #082b3e;
 
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: #f02f2f;
+  --primary-foreground: #ffffff;
 
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary: #e8f8f8;
+  --secondary-foreground: #082b3e;
 
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --muted: #f3f6f7;
+  --muted-foreground: #687888;
 
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: #00b0b0;
+  --accent-foreground: #ffffff;
 
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: #d91f1f;
   --destructive-foreground: #ffffff;
 
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #dfe7ea;
+  --input: #dfe7ea;
+  --ring: #f02f2f;
 
-  /* -------------------------
-     Charts
-     ------------------------- */
+  /* =======================================================
+     CHART COLORS
+     ======================================================= */
 
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --chart-1: #f02f2f;
+  --chart-2: #00b0b0;
+  --chart-3: #082b3e;
+  --chart-4: #687888;
+  --chart-5: #8bdede;
 
-  /* -------------------------
-     Sidebar
-     ------------------------- */
+  /* =======================================================
+     SIDEBAR
+     ======================================================= */
 
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #f5f8f9;
+  --sidebar-foreground: #082b3e;
 
-  /* -------------------------
-     Typography
-     ------------------------- */
+  --sidebar-primary: #f02f2f;
+  --sidebar-primary-foreground: #ffffff;
 
+  --sidebar-accent: #e8f8f8;
+  --sidebar-accent-foreground: #082b3e;
+
+  --sidebar-border: #dfe7ea;
+  --sidebar-ring: #f02f2f;
+
+  /* =======================================================
+     TYPOGRAPHY
+     ======================================================= */
+
+  /* Main font used across the entire website */
   --font-sans:
     'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
+  /* Headings use the same family according to Stitch */
   --font-heading:
     'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
+  /* Technical / system-oriented typography */
   --font-mono:
     'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* -------------------------
-     Radius
-     ------------------------- */
+  /* =======================================================
+     RADIUS
+     ======================================================= */
 
-  --radius: 0.625rem;
+  --radius: 0.75rem;
 
-  /* -------------------------
-     Shadows
-     ------------------------- */
+  /* =======================================================
+     SHADOWS
+     ======================================================= */
 
   --shadow-2xs: 0 1px 0 0 rgba(8, 43, 62, 0.04);
 
@@ -170,52 +203,55 @@
 }
 
 /* =========================================================
-   DARK MODE
+   DARK THEME
    ========================================================= */
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --background: #061e2b;
+  --foreground: #fefefe;
 
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
+  --card: #082b3e;
+  --card-foreground: #fefefe;
 
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
+  --popover: #082b3e;
+  --popover-foreground: #fefefe;
 
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: #f02f2f;
+  --primary-foreground: #ffffff;
 
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary: rgba(0, 176, 176, 0.18);
+  --secondary-foreground: #8bdede;
 
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
+  --muted: #0d3548;
+  --muted-foreground: #aebbc4;
 
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --accent: #00b0b0;
+  --accent-foreground: #ffffff;
 
-  --destructive: oklch(0.704 0.191 22.216);
+  --destructive: #ff5a5a;
   --destructive-foreground: #ffffff;
 
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --border: #1d4658;
+  --input: #1d4658;
+  --ring: #f02f2f;
 
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --chart-1: #f02f2f;
+  --chart-2: #00b0b0;
+  --chart-3: #8bdede;
+  --chart-4: #687888;
+  --chart-5: #ffffff;
 
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar: #061e2b;
+  --sidebar-foreground: #fefefe;
+
+  --sidebar-primary: #f02f2f;
+  --sidebar-primary-foreground: #ffffff;
+
+  --sidebar-accent: #0d3548;
+  --sidebar-accent-foreground: #fefefe;
+
+  --sidebar-border: #1d4658;
+  --sidebar-ring: #f02f2f;
 
   --shadow-2xs: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 
@@ -231,7 +267,6 @@
 
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
-
 /* =========================================================
    GLOBAL
    ========================================================= */
@@ -337,22 +372,9 @@ samp {
   );
 }
 
-@utility btnbtn {
-  @apply p-5 border border-2 border-red-500;
-}
-
 /* =========================================================
    COMPONENT LAYER
    ========================================================= */
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
-  }
 }
