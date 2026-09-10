@@ -363,13 +363,15 @@ samp {
   color: transparent;
 }
 
-@utility radial-gradient {
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 176, 176, 0.18) 0%,
-    rgba(8, 43, 62, 0.08) 45%,
-    transparent 75%
-  );
+@utility bg-grid {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility slider-btn {
+  @apply flex h-10 w-10 items-center justify-center rounded-full border  border-muted bg-background text-foreground shadow-xl inset-shadow-sm inset-shadow-gray-500;
 }
 
 /* =========================================================
