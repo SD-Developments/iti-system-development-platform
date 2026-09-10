@@ -1,11 +1,12 @@
+import GlanceHomeSection from '../components/GlanceHomeSection';
 import HeroCarousel from '../components/HeroCarousel';
 
 function Home() {
   return (
     <>
-      <main>
+      <main className="bg-background text-foreground">
         <HeroCarousel />
-        <section className="h-screen bg-red-700"> </section>
+        <GlanceHomeSection />
       </main>
     </>
   );

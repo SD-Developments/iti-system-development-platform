@@ -2,6 +2,8 @@ import { heorHomeSlides } from '@/constants';
 import clsx from 'clsx';
 import { ArrowRight, BookOpen, Code2, Layers3, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import hero1 from '../../../assets/images/hero1.png';
+import hero2 from '../../../assets/images/requra.png';
 
 function HeroCarousel() {
   const [currSlide, setCurrSlide] = useState(0);
@@ -16,12 +18,7 @@ function HeroCarousel() {
   }, []);
 
   return (
-    <section
-      className={clsx('relative min-h-screen w-full py-20', {
-        'bg-foreground text-background': slide.theme === 'dark',
-        'bg-background text-foreground': slide.theme === 'light',
-      })}
-    >
+    <section className={clsx('relative min-h-screen w-full py-20 bg-background text-foreground')}>
       <div className="mx-auto flex w-[90%] flex-col items-center lg:flex-row">
         <div className="my-5 w-full lg:w-1/2">
           <div className="mb-7 text-md font-semibold tracking-wider text-muted-foreground">
@@ -38,19 +35,13 @@ function HeroCarousel() {
           </h1>
 
           <div
-            className={clsx('mt-7 text-[22px] leading-snug md:text-[28px]', {
-              'text-background/80': slide.theme === 'dark',
-              'text-muted-foreground': slide.theme === 'light',
-            })}
+            className={clsx('mt-7 text-[22px] leading-snug md:text-[28px] text-muted-foreground')}
           >
             {slide.subtitle}
           </div>
 
           <p
-            className={clsx('mt-6 max-w-140 text-base leading-8 md:text-lg', {
-              'text-background/70': slide.theme === 'dark',
-              'text-muted-foreground': slide.theme === 'light',
-            })}
+            className={clsx('mt-6 max-w-140 text-muted-foreground text-base leading-8 md:text-lg')}
           >
             {slide.description}
           </p>
@@ -62,11 +53,7 @@ function HeroCarousel() {
             </button>
             <button
               className={clsx(
-                'inline-flex min-h-13 items-center justify-center rounded-[14px] border border-accent px-6 font-bold transition hover:-translate-y-0.5',
-                {
-                  'text-background': slide.theme === 'dark',
-                  'text-foreground': slide.theme === 'light',
-                }
+                'inline-flex text-foreground min-h-13 items-center justify-center rounded-[14px] border border-accent px-6 font-bold transition hover:-translate-y-0.5'
               )}
             >
               {slide.secondaryCta}
@@ -169,23 +156,30 @@ function HeroVisual({ type }) {
         </div>
 
         <div className="p-6">
-          <span className="inline-block rounded-full bg-accent/10 px-3 py-2 text-xs font-bold text-accent">
-            Graduation Project
-          </span>
-
-          <h3 className="mt-6 text-5xl font-bold text-sd-white">Requra.AI</h3>
-
-          <p className="mt-3 text-sd-white/60">AI Requirements Engineering Platform</p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {['React', '.NET', 'Python', 'AI'].map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-accent/20 px-3 py-1.5 text-xs text-accent"
-              >
-                {tag}
+          <div className="flex items-center">
+            <div className="w-1/2">
+              <span className="inline-block rounded-full bg-accent/10 px-3 py-2 text-xs font-bold text-accent">
+                Graduation Project
               </span>
-            ))}
+
+              <h3 className="mt-6 text-5xl font-bold text-sd-white">Requra.AI</h3>
+
+              <p className="mt-3 text-sd-white/60">AI Requirements Engineering Platform</p>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {['React', '.NET', 'JavaScript', 'AI'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-accent/20 px-3 py-1.5 text-xs text-accent"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="w-1/2 rounded-3xl">
+              <img src={hero2} className="rounded-3xl object-cover w-full h-full" alt="" />
+            </div>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -214,7 +208,10 @@ function HeroVisual({ type }) {
             key={title}
             className="rounded-[22px] border border-border bg-card shadow-lg shadow-foreground/5"
           >
-            <div className="h-40 bg-linear-to-br from-secondary to-accent/10" />
+            <div className="h-40 relative">
+              <div className="absolute rounded-t-[22px] bg-linear-to-br from-secondary/10 to-accent/50 w-full h-full"></div>
+              <img src={hero1} className="rounded-t-[22px] w-full h-full object-cover" alt="" />
+            </div>
 
             <div className="p-4 font-bold text-card-foreground">{title}</div>
           </div>
@@ -225,12 +222,13 @@ function HeroVisual({ type }) {
 
   return (
     <div className="relative min-h-117.5 w-full max-w-180">
-      <div className="ml-auto flex h-100 w-full items-center justify-center rounded-[28px] bg-linear-to-br from-secondary to-accent/15 text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
-        Student / Project Image
+      <div className="relative ml-auto flex h-100 w-full items-center justify-center rounded-[28px] text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
+        <div className="absolute inset-0 bg-linear-to-tl rounded-[28px] from-secondary/10 to-accent/50" />
+        <img src={hero1} className="h-full w-full rounded-[28px] object-cover" alt="" />{' '}
       </div>
 
       <div className="absolute left-0 top-16 flex flex-wrap gap-2 rounded-2xl bg-card/95 p-3 shadow-xl backdrop-blur">
-        {['.NET', 'React', 'Python', 'Cloud'].map((tag) => (
+        {['.NET', 'React', 'JavaScript', 'AI'].map((tag) => (
           <span
             key={tag}
             className="rounded-full bg-muted px-3 py-2 text-xs font-bold text-foreground"

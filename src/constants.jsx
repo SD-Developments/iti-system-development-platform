@@ -1,3 +1,5 @@
+import { BriefcaseBusiness, Code2, Presentation, Trophy } from 'lucide-react';
+
 export const bandingNavLinks = [
   {
     id: 'home',
@@ -323,3 +325,118 @@ export const heorHomeSlides = [
     visual: 'activities',
   },
 ];
+
+export const programs = [
+  {
+    code: 'PTP',
+    duration: '9 Months',
+    title: 'Professional Training Program',
+    description:
+      'An intensive development journey combining technical foundations, specialization, teamwork, and real graduation projects.',
+    tracks: 'Multiple Tracks',
+    branches: 'Multiple Branches',
+    href: '/programs/ptp',
+    featured: true,
+  },
+  {
+    code: 'ITP',
+    duration: '4 Months',
+    title: 'Intensive Training Program',
+    description:
+      'A focused, accelerated program designed around specialized technical skills and practical software development.',
+    tracks: 'Multiple Tracks',
+    branches: 'Multiple Branches',
+    href: '/programs/itp',
+    featured: false,
+  },
+];
+
+export const tracks = [
+  {
+    title: 'Full Stack Development',
+    description: 'Build modern applications from frontend experiences to scalable backend systems.',
+    technologies: ['React', '.NET', 'SQL', 'Cloud'],
+    program: 'PTP',
+    branches: '8 Branches',
+  },
+  {
+    title: 'Mobile Development',
+    description: 'Design and build modern mobile experiences across multiple platforms.',
+    technologies: ['Flutter', 'Android', 'iOS', 'API'],
+    program: 'PTP / ITP',
+    branches: '6 Branches',
+  },
+  {
+    title: 'Cloud & DevOps',
+    description: 'Build, deploy, automate, and operate modern software platforms.',
+    technologies: ['Docker', 'Kubernetes', 'CI/CD', 'Cloud'],
+    program: 'PTP',
+    branches: '5 Branches',
+  },
+  {
+    title: 'Embedded Systems',
+    description: 'Develop reliable software for hardware, devices, and real-time environments.',
+    technologies: ['C/C++', 'RTOS', 'ARM', 'IoT'],
+    program: 'PTP / ITP',
+    branches: '4 Branches',
+  },
+];
+
+export const projects = [
+  {
+    title: 'Requra.AI',
+    category: 'AI Requirements Engineering',
+    description:
+      'An intelligent platform that supports requirements analysis, generation, and collaboration.',
+    technologies: ['React', '.NET', 'Python', 'AI'],
+    meta: 'PTP · Smart Village',
+    image: '/images/projects/requra.jpg',
+  },
+  {
+    title: 'Smart Campus',
+    category: 'Campus Management Platform',
+    description:
+      'A unified digital platform connecting students, instructors, sessions, and academic operations.',
+    technologies: ['Angular', '.NET', 'SQL'],
+    meta: 'PTP · Alexandria',
+    image: '/images/projects/smart-campus.jpg',
+  },
+  {
+    title: 'HealthConnect',
+    category: 'Digital Healthcare',
+    description:
+      'A healthcare solution designed around accessible digital services and structured patient journeys.',
+    technologies: ['React', 'Node.js', 'Cloud'],
+    meta: 'ITP · Mansoura',
+    image: '/images/projects/health-connect.jpg',
+  },
+];
+
+export const activities = [
+  {
+    title: 'Tech Talks',
+    description: 'Learn directly from engineers and technology leaders.',
+    icon: Presentation,
+    image: '/images/activities/tech-talk.jpg',
+  },
+  {
+    title: 'Hackathons',
+    description: 'Solve challenges, experiment, and build under pressure.',
+    icon: Trophy,
+    image: '/images/activities/hackathon.jpg',
+  },
+  {
+    title: 'Workshops',
+    description: 'Hands-on sessions focused on practical engineering skills.',
+    icon: Code2,
+    image: '/images/activities/workshop.jpg',
+  },
+  {
+    title: 'Company Visits',
+    description: 'Experience technology teams and working environments.',
+    icon: BriefcaseBusiness,
+    image: '/images/activities/company-visit.jpg',
+  },
+];
+
+export const partnersHome = ['Microsoft', 'IBM', 'Oracle', 'Valeo', 'Vodafone', 'Orange'];
