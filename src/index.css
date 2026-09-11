@@ -324,11 +324,38 @@ samp {
 }
 
 @utility slider-btn {
-  @apply flex h-10 w-10 items-center justify-center rounded-full border  border-muted bg-background text-foreground shadow-xl inset-shadow-sm inset-shadow-gray-500;
+  @apply flex h-10 w-10 items-center justify-center rounded-full border border-muted bg-background text-foreground shadow-xl inset-shadow-sm inset-shadow-gray-500;
 }
 
 @utility shadowbox {
   box-shadow: 7px -6px 8px 0px #00000033;
+}
+
+@utility underline-sketch {
+  &::after {
+    content: '';
+    position: absolute;
+    left: -2%;
+    right: -2%;
+    bottom: -7px;
+    height: 4px;
+    background-color: color-mix(in srgb, var(--sd-red) 30%, transparent);
+    border-radius: 50%;
+    transform: rotate(-1deg);
+  }
+}
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sd-teal) transparent;
+}
+
+@utility scrollbar-hidden {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* =========================================================
@@ -339,6 +366,7 @@ samp {
   button {
     cursor: pointer;
   }
+
   a {
     cursor: pointer;
   }

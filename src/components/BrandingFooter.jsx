@@ -13,9 +13,9 @@ function BrandingFooter() {
           {/* ================= Brand Section ================= */}
           <div className="flex flex-col gap-4 lg:col-span-4">
             {/* Brand */}
-            <NavLink to="/" className="flex w-fit items-center gap-3">
-              <SdLogo></SdLogo>
-            </NavLink>
+            {/* <NavLink to="/" className="flex w-fit items-center gap-3"> */}
+            <SdLogo></SdLogo>
+            {/* </NavLink> */}
 
             {/* Description */}
             <p className="max-w-md text-sm leading-7 text-[#545f73]">

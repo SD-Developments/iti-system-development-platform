@@ -1,12 +1,16 @@
-import { Button } from '@/components/ui/button';
-
+import Month4Section from '../components/Month4Section';
+import Month9Section from '../components/Month9Section';
+import ProgramsHeroSection from '../components/ProgramsHeroSection';
+import SummerSection from '../components/SummerSection';
 const ProgramsPage = () => {
   return (
     <>
-      <h1 className="bg-lime-400 text-black w-3 mx-auto my-5">
-        Programs Page
-        <Button variant="stle1">fkasjfilas</Button>
-      </h1>
+      <main className="w-full bg-background text-foreground">
+        <ProgramsHeroSection></ProgramsHeroSection>
+        <Month9Section></Month9Section>
+        <Month4Section></Month4Section>
+        <SummerSection></SummerSection>
+      </main>
     </>
   );
 };
