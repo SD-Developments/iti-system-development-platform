@@ -344,10 +344,10 @@ const Month9Section = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border/30">
                 <img
                   alt="ITI Software Residency Studio"
-                  className="w-full h-[380px] object-cover object-center transform hover:scale-[1.02] transition-transform duration-700"
+                  className="w-full h-95 object-cover object-center transform hover:scale-[1.02] transition-transform duration-700"
                   src="https://lh3.googleusercontent.com/aida/AEtjO1VlMej462q0aT54f6rASDRinUaYZ7Kg88UT9Clowor0onXvTqp5ozosak0zqn1WkVuTvE3SG-aPvkr95PxyJC_0pipTho-agMuxdjsZbbw6vaJ-ZPQ7KnpHlzRIGRf6yL8ae98VWzKj1QDqDpQjGaJYa44ALUxtr0oTzDMpTPgK3hqwYjLh3sG8UYjoVcbgpiZlbM35p_NfaHhwh_f9GUn154utNHJtMcatGEoqme7F48Qe5aioo_7ObOev"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-sd-navy/85 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-sd-navy/85 via-transparent to-transparent"></div>
                 <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-card/95 backdrop-blur-md border border-border/40 flex items-center justify-between shadow-lg">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-sd-navy/10 text-primary flex items-center justify-center shrink-0">
