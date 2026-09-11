@@ -364,6 +364,9 @@ export const programs = [
 export const projects = [
   {
     title: 'Requra.AI',
+    track: '.NET Enterprise + AI',
+    program: 'PTP',
+    branch: 'Smart Village',
     category: 'AI Requirements Engineering',
     description:
       'An intelligent platform that supports requirements analysis, generation, and collaboration.',
@@ -373,6 +376,9 @@ export const projects = [
   },
   {
     title: 'Smart Campus',
+    track: '.NET Enterprise + AI',
+    program: 'PTP',
+    branch: 'Smart Village',
     category: 'Campus Management Platform',
     description:
       'A unified digital platform connecting students, instructors, sessions, and academic operations.',
@@ -382,6 +388,9 @@ export const projects = [
   },
   {
     title: 'HealthConnect',
+    track: '.NET Enterprise + AI',
+    program: 'PTP',
+    branch: 'Smart Village',
     category: 'Digital Healthcare',
     description:
       'A healthcare solution designed around accessible digital services and structured patient journeys.',
@@ -744,5 +753,38 @@ export const tracks = [
     branches: [],
 
     icon: Palette,
+  },
+];
+
+export const compareRows = [
+  {
+    label: 'Primary Focus',
+    mobile: 'Cross-platform mobile development',
+    dotnet: 'Enterprise software & architecture',
+    web: 'Full-stack web & UI engineering',
+  },
+  {
+    label: 'Main Platforms',
+    mobile: 'Flutter, React Native, .NET MAUI',
+    dotnet: '.NET, Azure, Dynamics, Power BI',
+    web: 'React, Angular, Vue, Next.js',
+  },
+  {
+    label: 'AI Integration',
+    mobile: 'RAG, AI Agents, AI-assisted apps',
+    dotnet: 'RAG, Agents, AI for enterprise & BI',
+    web: 'RAG, Agents, AI-enhanced web stacks',
+  },
+  {
+    label: 'Program',
+    mobile: 'PTP',
+    dotnet: 'PTP',
+    web: 'PTP',
+  },
+  {
+    label: 'Smart Village',
+    mobile: 'Available',
+    dotnet: 'Available',
+    web: 'Available',
   },
 ];

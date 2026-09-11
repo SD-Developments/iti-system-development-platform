@@ -31,7 +31,7 @@ function Tracks() {
   };
   return (
     <>
-      <section id="track-explorer" className="py-16 lg:py-24">
+      <section id="track-explorer" className="py-16 lg:py-24 bg-sd-bg-light border-b border-border">
         <div className="mx-auto w-[90%] max-w-7xl">
           <SectionHeader
             eyebrow="Track Explorer"
