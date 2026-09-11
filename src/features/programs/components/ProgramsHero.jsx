@@ -57,7 +57,7 @@ const ProgramsHero = () => {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-sd-navy/85 via-sd-navy/20 to-transparent" />
 
-                <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-xl border border-white/20 bg-white/10 p-4 shadow-lg backdrop-blur-md">
+                <div className="absolute bottom-8 left-5 right-5 flex items-center justify-between rounded-xl border border-white/20 bg-white/10 p-4 shadow-lg backdrop-blur-md">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                       <span className="material-symbols-outlined text-[22px]">code_blocks</span>
@@ -109,16 +109,16 @@ const ProgramsHero = () => {
             ))}
           </div>
         </div>
+
+        {/* Official Credential */}
         <div className="absolute -bottom-9.5 left-1/2 z-50 hidden w-65 -translate-x-1/2 translate-y-1/2 items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-xl sm:flex">
           <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <span className="material-symbols-outlined text-[24px]">school</span>
           </div>
-
           <div className="flex flex-col">
             <span className="font-mono text-[11px] font-bold uppercase text-primary">
               Official Credential
             </span>
-
             <span className="text-sm font-bold text-card-foreground">
               {heroSlides[currentSlide].credential}
             </span>
