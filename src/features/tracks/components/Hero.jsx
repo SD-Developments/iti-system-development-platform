@@ -1,5 +1,6 @@
 import { ArrowRight, Braces, Code2, GitCompareArrows } from 'lucide-react';
 import Metric from '../../../components/Metric';
+import { hero1 } from '@/constants';
 
 function Hero() {
   return (
@@ -57,9 +58,9 @@ function Hero() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-2 shadow-2xl shadow-foreground/10">
+              <div className="relative shadowbox overflow-hidden rounded-3xl border border-border bg-card p-2 shadow-2xl shadow-foreground/10">
                 <img
-                  src="/images/tracks/tracks-hero.jpg"
+                  src={hero1}
                   alt="System Development students collaborating"
                   className="aspect-4/3 w-full rounded-[20px] object-cover"
                 />

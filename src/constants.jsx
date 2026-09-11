@@ -10,6 +10,9 @@ import {
   Workflow,
 } from 'lucide-react';
 
+export { default as hero1 } from './assets/images/hero1.png';
+export { default as hero2 } from './assets/images/Requra.png';
+
 export const bandingNavLinks = [
   {
     id: 'home',
