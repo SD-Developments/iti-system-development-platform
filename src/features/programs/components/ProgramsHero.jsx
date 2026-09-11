@@ -56,7 +56,6 @@ const ProgramsHero = () => {
                   className="h-full w-full object-cover object-center transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-sd-navy/85 via-sd-navy/20 to-transparent" />
-
                 <div className="absolute bottom-8 left-5 right-5 flex items-center justify-between rounded-xl border border-white/20 bg-white/10 p-4 shadow-lg backdrop-blur-md">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
@@ -67,7 +66,6 @@ const ProgramsHero = () => {
                       <span className="font-mono text-[11px] text-white/75">{slide.subtitle}</span>
                     </div>
                   </div>
-
                   <span className="rounded-full bg-primary px-2.5 py-1 font-mono text-[11px] font-bold text-white">
                     {slide.badge}
                   </span>

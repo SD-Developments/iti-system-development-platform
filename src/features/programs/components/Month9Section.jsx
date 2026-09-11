@@ -54,13 +54,13 @@ const Month9Section = () => {
               </div>
               <div className="p-5 rounded-2xl bg-card border border-border/30 shadow-xs flex items-center gap-4 hover:border-sd-teal/40 transition-all">
                 <div className="w-12 h-12 rounded-xl bg-secondary2 text-sd-teal flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[24px]">domain</span>
+                  <span className="material-symbols-outlined text-[24px]">verified</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="font-heading text-base font-bold text-sd-navy">
-                    Full Residency
+                    100% Fellowship
                   </span>
-                  <span className="font-mono text-xs text-muted-foreground">Studio-Based</span>
+                  <span className="font-mono text-xs text-muted-foreground">Funded by MCIT</span>
                 </div>
               </div>
             </div>
@@ -223,73 +223,60 @@ const Month9Section = () => {
                 </p>
               </div>
               <span className="font-mono text-xs text-muted-foreground font-medium shrink-0">
-                5 Dedicated Tracks
+                3 Dedicated Tracks
               </span>
             </div>
             {/* 5 clean, visually attractive, non-interactive selectable-looking path pills/cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 pt-2">
-              <div className="p-4 rounded-xl bg-card border border-border/30 shadow-xs flex items-center gap-3 hover:border-primary transition-all">
-                <div className="w-9 h-9 rounded-lg bg-sd-navy/10 text-primary flex items-center justify-center shrink-0">
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3.5 pt-2 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Track 01 */}
+              <div className="flex items-center gap-3 rounded-xl border border-border/30 bg-card p-4 shadow-xs transition-all hover:border-primary">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sd-navy/10 text-primary">
                   <span className="material-symbols-outlined text-[18px]">terminal</span>
                 </div>
+
                 <div className="flex flex-col">
-                  <span className="font-heading text-xs font-bold text-sd-navy leading-snug">
-                    Full Stack .NET Core
+                  <span className="font-heading text-xs font-bold leading-snug text-sd-navy">
+                    Full-Stack Web Solutions Development
                   </span>
+
                   <span className="font-mono text-[10px] text-muted-foreground">
-                    C# • Microservices
+                    UI Engineering • AI Integration
                   </span>
                 </div>
               </div>
-              <div className="p-4 rounded-xl bg-card border border-border/30 shadow-xs flex items-center gap-3 hover:border-sd-teal transition-all">
-                <div className="w-9 h-9 rounded-lg bg-secondary2 text-sd-teal flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[18px]">code</span>
+
+              {/* Track 02 */}
+              <div className="flex items-center gap-3 rounded-xl border border-border/30 bg-card p-4 shadow-xs transition-all hover:border-sd-teal">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-secondary2 text-sd-teal">
+                  <span className="material-symbols-outlined text-[18px]">smartphone</span>
                 </div>
+
                 <div className="flex flex-col">
-                  <span className="font-heading text-xs font-bold text-sd-navy leading-snug">
-                    MEARN & TypeScript
+                  <span className="font-heading text-xs font-bold leading-snug text-sd-navy">
+                    Cross-Platform Mobile App Development
                   </span>
+
                   <span className="font-mono text-[10px] text-muted-foreground">
-                    Node.js • React • Mongo
+                    Mobile Engineering • AI Integration
                   </span>
                 </div>
               </div>
-              <div className="p-4 rounded-xl bg-card border border-border/30 shadow-xs flex items-center gap-3 hover:border-sd-navy transition-all">
-                <div className="w-9 h-9 rounded-lg bg-sd-navy/10 text-sd-navy flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[18px]">cloud</span>
+
+              {/* Track 03 */}
+              <div className="flex items-center gap-3 rounded-xl border border-border/30 bg-card p-4 shadow-xs transition-all hover:border-sd-navy">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sd-navy/10 text-sd-navy">
+                  <span className="material-symbols-outlined text-[18px]">architecture</span>
                 </div>
+
                 <div className="flex flex-col">
-                  <span className="font-heading text-xs font-bold text-sd-navy leading-snug">
-                    Cloud Native DevOps & K8s
+                  <span className="material-symbols-outlined hidden">architecture</span>
+
+                  <span className="font-heading text-xs font-bold leading-snug text-sd-navy">
+                    .NET Enterprise Solutions Development
                   </span>
+
                   <span className="font-mono text-[10px] text-muted-foreground">
-                    CI/CD • Kubernetes
-                  </span>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl bg-card border border-border/30 shadow-xs flex items-center gap-3 hover:border-primary transition-all">
-                <div className="w-9 h-9 rounded-lg bg-sd-navy/10 text-primary flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[18px]">memory</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-heading text-xs font-bold text-sd-navy leading-snug">
-                    Embedded Linux & Automotive RTOS
-                  </span>
-                  <span className="font-mono text-[10px] text-muted-foreground">
-                    C/C++ • AUTOSAR
-                  </span>
-                </div>
-              </div>
-              <div className="p-4 rounded-xl bg-card border border-border/30 shadow-xs flex items-center gap-3 hover:border-sd-teal transition-all">
-                <div className="w-9 h-9 rounded-lg bg-secondary2 text-sd-teal flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-[18px]">smart_toy</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-heading text-xs font-bold text-sd-navy leading-snug">
-                    AI Platform Engineering
-                  </span>
-                  <span className="font-mono text-[10px] text-muted-foreground">
-                    LLMs • MLOps • PyTorch
+                    Enterprise Architecture • AI Integration
                   </span>
                 </div>
               </div>
@@ -421,7 +408,7 @@ const Month9Section = () => {
               </div>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
                 <a
-                  className="px-6 py-3.5 rounded-xl bg-sd-navy hover:bg-primary/90 text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md flex items-center justify-center gap-2"
+                  className="px-6 py-3.5 rounded-xl bg-sd-red hover:bg-primary/85 text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md flex items-center justify-center gap-2"
                   href="#intake-status"
                 >
                   <span>Apply for 9-Month Residency</span>
