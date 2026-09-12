@@ -358,6 +358,12 @@ samp {
   }
 }
 
+@utility bggrid {
+  background-image:
+    linear-gradient(to right, #fff 1px, transparent 1px),
+    linear-gradient(to bottom, #fff 1px, transparent 1px);
+  background-size: 54px 54px;
+}
 /* =========================================================
    COMPONENT LAYER
    ========================================================= */

@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Layers3, MapPin, Terminal } from 'lucide-react';
+import { ArrowRight, BookOpen, Layers3, MapPin } from 'lucide-react';
 
 function TrackCard({ track }) {
   const Icon = track.icon;
@@ -39,9 +39,13 @@ function TrackCard({ track }) {
 
         <TrackMeta label="Duration" value={track.duration} icon={<Layers3 size={14} />} />
 
-        <TrackMeta label="Hours" value={track.hours} icon={<Terminal size={14} />} />
+        {/* <TrackMeta label="Hours" value={track.hours} icon={<Terminal size={14} />} /> */}
 
-        <TrackMeta label="Available At" value="Smart Village" icon={<MapPin size={14} />} />
+        <TrackMeta
+          label="Available At"
+          value={track.branches.join(', ')}
+          icon={<MapPin size={14} />}
+        />
       </div>
 
       <a
