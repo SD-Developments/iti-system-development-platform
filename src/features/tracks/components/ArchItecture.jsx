@@ -8,9 +8,9 @@ function ArchItecture() {
         className="relative overflow-hidden bg-sd-navy py-20 text-sd-white lg:py-28"
       >
         {/* decorative glow */}
-        <div className="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] rounded-full bg-sd-teal/10 blur-[120px]" />
+        <div className="pointer-events-none absolute -right-40 -top-24 h-130 w-130 rounded-full bg-sd-teal/10 blur-[120px]" />
 
-        <div className="pointer-events-none absolute -bottom-44 left-[20%] h-[500px] w-[500px] rounded-full bg-primary/15 blur-[130px]" />
+        <div className="pointer-events-none absolute -bottom-44 left-[20%] h-125 w-125 rounded-full bg-primary/15 blur-[130px]" />
 
         {/* grid */}
         <div
@@ -41,7 +41,7 @@ function ArchItecture() {
           {/* Architecture flow */}
           <div className="relative mt-14">
             {/* Connector */}
-            <div className="absolute left-[10%] right-[10%] top-[38px] hidden h-px bg-linear-to-r from-transparent via-sd-teal/35 to-transparent lg:block" />
+            <div className="absolute left-[10%] right-[10%] top-9.5 hidden h-px bg-linear-to-r from-transparent via-sd-teal/35 to-transparent lg:block" />
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
               {architectureStages.map((stage, index) => {
@@ -53,7 +53,7 @@ function ArchItecture() {
                     className="
                         group relative rounded-[26px]
                         border border-sd-white/10
-                        bg-sd-white/[0.045]
+                        bg-sd-white/4.5
                         p-6
                         backdrop-blur-sm
                         transition duration-300
@@ -71,7 +71,7 @@ function ArchItecture() {
                     <div
                       className="
                         relative z-10
-                        flex h-[76px] w-[76px]
+                        flex h-19 w-19
                         items-center justify-center
                         rounded-[22px]
                         border border-sd-teal/20
