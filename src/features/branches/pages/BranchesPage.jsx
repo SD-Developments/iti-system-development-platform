@@ -1,5 +1,6 @@
 // import { branchesData} from '@/constants';
 // import { useMemo, useState } from 'react';
+import AllBranches from '../components/AllBranches';
 import BranchHeroSection from '../components/BranchHeroSection';
 import BranchHubsSection from '../components/BranchHubsSection';
 import EditorialFeature from '../components/EditorialFeature';
@@ -41,6 +42,7 @@ const BranchesPage = () => {
       <RegionalCommunities></RegionalCommunities>
       <StudentsExperience></StudentsExperience>
       <EditorialFeature></EditorialFeature>
+      <AllBranches></AllBranches>
     </>
   );
 };
