@@ -1882,3 +1882,5 @@ export const getAccentClasses = (accent) => {
 
   return classes[accent] || classes.navy;
 };
+
+export const partners = ['MICROSOFT', 'VALEO', 'DELL TECH', 'FAWRY', 'VODAFONE', 'IBM', 'INSTABUG'];
