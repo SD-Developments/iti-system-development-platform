@@ -26,8 +26,8 @@ function Tracks() {
 
   const handleClearFilter = () => {
     setAvailable('');
-    setProgram('');
-    setSearchQuery('');
+    setProgram('All Programs');
+    setSearchQuery('All Branches');
   };
   return (
     <>
