@@ -9,8 +9,8 @@ import { useMemo, useState } from 'react';
 
 function Tracks() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [program, setProgram] = useState('');
-  const [available, setAvailable] = useState('');
+  const [program, setProgram] = useState('All Programs');
+  const [available, setAvailable] = useState('All Branches');
 
   const filteredTracks = useMemo(() => {
     return tracks.filter((track) => {
@@ -18,8 +18,8 @@ function Tracks() {
         !searchQuery ||
         track.shortTitle.toLowerCase().includes(searchQuery) ||
         track.title.toLowerCase().includes(searchQuery);
-      const matchesProgram = !program || track.program === program;
-      const matchesAvailable = !available || track.branches.includes(available);
+      const matchesProgram = program === 'All Programs' || track.program === program;
+      const matchesAvailable = available === 'All Branches' || track.branches.includes(available);
       return matchesSearch && matchesProgram && matchesAvailable;
     });
   }, [searchQuery, program, available]);
@@ -62,7 +62,7 @@ function Tracks() {
                 <ComboboxBasic
                   setData={setProgram}
                   data={program}
-                  items={['PTP', 'ITP']}
+                  items={['All Programs', 'PTP', 'ITP']}
                   placeholder={'Program'}
                 />
               </div>
@@ -71,7 +71,7 @@ function Tracks() {
                 <ComboboxBasic
                   setData={setAvailable}
                   data={available}
-                  items={branches}
+                  items={['All Branches', ...branches]}
                   placeholder={'Available At'}
                 />
               </div>
@@ -83,9 +83,11 @@ function Tracks() {
           </div>
 
           <div className="mt-8 flex items-center justify-between">
-            <span className="text-sm font-semibold text-foreground">Smart Village Tracks</span>
+            <span className="text-sm font-semibold text-foreground">{available} Tracks</span>
 
-            <span className="font-mono text-xs text-muted-foreground">3 tracks</span>
+            <span className="font-mono text-xs text-muted-foreground">
+              {tracks.filter((t) => t.branches.includes(available)).length || tracks.length} tracks
+            </span>
           </div>
 
           <div className="mt-5 grid gap-5 lg:grid-cols-3">

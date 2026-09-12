@@ -1,4 +1,4 @@
-import { partners } from '@/constants';
+import { partnerCompanies } from '@/constants';
 
 function PartnersSection() {
   return (
@@ -17,7 +17,7 @@ function PartnersSection() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 lg:justify-end">
-              {partners.map((partner) => (
+              {partnerCompanies.map((partner) => (
                 <span
                   key={partner}
                   className="text-sm font-bold text-muted-foreground transition hover:text-foreground"

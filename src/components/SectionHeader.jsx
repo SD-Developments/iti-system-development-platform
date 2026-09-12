@@ -1,5 +1,3 @@
-import { ArrowRight } from 'lucide-react';
-
 function SectionHeader({ eyebrow, title, description, action }) {
   return (
     <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -17,7 +15,6 @@ function SectionHeader({ eyebrow, title, description, action }) {
 
       <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-primary">
         {action}
-        <ArrowRight size={16} />
       </a>
     </div>
   );
