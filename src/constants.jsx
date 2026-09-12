@@ -1884,3 +1884,193 @@ export const getAccentClasses = (accent) => {
 };
 
 export const partners = ['MICROSOFT', 'VALEO', 'DELL TECH', 'FAWRY', 'VODAFONE', 'IBM', 'INSTABUG'];
+// ----------------------------------------
+
+export const allProjects = [
+  {
+    id: 1,
+    type: 'DISTRIBUTED SYSTEMS // GOLANG',
+    typeColor: 'red',
+    title: 'Interbank Raft Settlement Protocol',
+    description:
+      'Engineered as an independent local clearing switch providing sub-millisecond atomic transactions between federated micro-financial institutions. Implements customized distributed Raft consensus with persistent write-ahead logging.',
+    technologies: ['Golang', 'Raft Algorithm', 'TimescaleDB', 'Apache Kafka', 'gRPC'],
+    status: 'Defense: Passed with Distinction',
+    image: null,
+    variant: 'wide',
+    visual: 'raft',
+  },
+
+  {
+    id: 2,
+    type: 'WEBXR // WASM',
+    typeColor: 'red',
+    title: 'EduVerse 3D — Browser Physics Simulator',
+    description:
+      'Zero-install WebGL 2.0 and WebAssembly physics simulation engine tailored for 4,000+ national STEM public school classrooms with low-bandwidth optimization.',
+    technologies: ['Three.js', 'WebAssembly', 'Rust Core'],
+    status: 'Ministry Piloted',
+    image:
+      'https://lh3.googleusercontent.com/aida/AEtjO1UKGVX_dV5Vuc05MZ6kjImMSmgk8ftHDRhFgATydZ47FhL9zzW8GrOPjwxHcy7exjjVBPj9jqpkHPeMRyF0lrixVrRSpUs1WFzwNUS_C-rrHqdEmnx_TBFDxlG74Gbk40vdGTe9gZ1eb_nEBSatnrk3N0AGk3aUdSX1AcecR7tMLAyZYSHB60qFBGsMcWMIUia1qhNXP-px2OuMllZXqRI-1KAlAhVzAEv7_uo1_y4UsPoFdNXvTJFwFhUO',
+    variant: 'small',
+    metaLeft: '4,000+ STEM Labs Piloted',
+    metaRight: 'WASM <1.2MB',
+  },
+
+  {
+    id: 3,
+    type: 'AUTOMOTIVE // EMBEDDED',
+    typeColor: 'navy',
+    title: 'AutoGuard ASIL-D — CAN-FD Gateway Firmware',
+    description:
+      'Deterministic automotive electronic control unit (ECU) firmware executing on ARM Cortex-M7 with guaranteed sub-4μs response jitter under bus saturation.',
+    technologies: ['Embedded C', 'FreeRTOS', 'STM32H7', 'CAN-FD'],
+    status: 'Hardware HIL Bench Tested',
+    image: null,
+    variant: 'small',
+    visual: 'automotive',
+  },
+
+  {
+    id: 4,
+    type: 'SOVEREIGN AI // RAG',
+    typeColor: 'red',
+    title: 'Wakeel AI — Arabic Legal Reasoning Engine',
+    description:
+      'Domain-adapted bilingual RAG pipeline indexing 14,000 Supreme Court precedents with hallucination-guard verifiers and statutory citation checks.',
+    technologies: ['Llama 3 70B', 'LangChain', 'Qdrant'],
+    status: '14k Rulings Vectorized',
+    image: null,
+    variant: 'small',
+    visual: 'legal',
+  },
+
+  {
+    id: 5,
+    type: 'AGRITECH // EDGE AI',
+    typeColor: 'teal',
+    title: 'Nilometer IoT — Nile Delta Edge Telemetry',
+    description:
+      'Solar-harvesting edge hydrology sensors transmitting canal water quality and TinyML soil salinization forecasts via LoRaWAN mesh gateways over 18km.',
+    technologies: ['Rust (no_std)', 'LoRaWAN', 'TinyML'],
+    status: 'Live Field Trial: Dakahlia',
+    image:
+      'https://lh3.googleusercontent.com/aida/AEtjO1WdXd27hYkzRyJ2eMXURVxMkYYf1zDmFfHBA3fh10_Wk4ph-IRxlA7SpVbeZJZpwmlSFdtAuVgz7Cnobofxf5AHEKILfB7yThf2Koi5WH8S-bZ6VZHB0aPrYelsX2baT4ON8JYuJ-h05BQ3ij2fjHPmQRucJi3pG9PXdidIgDUP5oRKveRHUhnKDwAbzAs4KOMLRnPsSwdY0j5inZvmsfTb3-Q4k4i0Yb9o-sftvyNDu7y3ti85gTzXhQM',
+    variant: 'small',
+    metaLeft: 'Mansoura Hub',
+    metaRight: '18km LoRaWAN Mesh',
+  },
+
+  {
+    id: 6,
+    type: 'CLOUD SECURITY // eBPF',
+    typeColor: 'red',
+    title: 'CyberSentinel — In-Kernel Zero-Trust eBPF Mesh',
+    description:
+      'Programmable socket-layer packet inspector isolating multi-tenant Kubernetes workloads with zero user-space latency penalty and instant DDoS throttling.',
+    technologies: ['eBPF / XDP', 'C / Rust', 'Kubernetes'],
+    status: 'Benchmark: 10 Gbps Wire-Rate',
+    image: null,
+    variant: 'small',
+    visual: 'security',
+  },
+];
+
+export const journeyStages = [
+  {
+    number: '1',
+    title: 'Problem Discovery',
+    description: 'Direct interviews with enterprise stakeholders and sovereign agencies.',
+    output: 'Output: RFC Document',
+    active: false,
+    color: 'teal',
+  },
+  {
+    number: '2',
+    title: 'Architectural Blueprint',
+    description: 'C4 models, distributed consensus choice, and database partitioning plans.',
+    output: 'Output: ADR & Threat Model',
+    active: false,
+    color: 'teal',
+  },
+  {
+    number: '3',
+    title: 'Sprint Alpha',
+    description: 'Core computational kernel, schemas, and API contracts implementation.',
+    output: 'Output: Passing CI/CD',
+    active: false,
+    color: 'teal',
+  },
+  {
+    number: '4',
+    title: 'Resilience Testing',
+    description: 'Chaos monkey experiments, simulated network partitions, and memory leak traces.',
+    output: 'Std: >85% Branch Cov.',
+    active: false,
+    color: 'teal',
+  },
+  {
+    number: '5',
+    title: 'Load Stress HIL',
+    description: 'Vegeta & k6 load injections verifying P99 sub-30ms latency thresholds.',
+    output: 'P99 Latency Validated',
+    active: false,
+    color: 'teal',
+  },
+  {
+    number: '6',
+    title: 'Live CTO Defense',
+    description: '90-minute live oral architectural defense before external enterprise CTO juries.',
+    output: 'Public Academic Jury',
+    active: true,
+    color: 'red',
+  },
+  {
+    number: '7',
+    title: 'Production Ship',
+    description: 'Open source publication, IP handover, or startup spinout incorporation.',
+    output: '100% Student IP',
+    active: false,
+    color: 'green',
+  },
+];
+
+export const industryFeatures = [
+  {
+    number: '01',
+    title: 'Real Problem Statements',
+    description:
+      'No contrived textbook problems. Challenges are submitted directly by tech leaders and sovereign ministries.',
+    color: 'red',
+  },
+  {
+    number: '02',
+    title: 'Principal Mentorship',
+    description:
+      'Every squad receives weekly code & architectural reviews with senior and principal engineers from global tech firms.',
+    color: 'teal',
+  },
+  {
+    number: '03',
+    title: 'Production Rigor',
+    description:
+      'Mandatory telemetry, security vulnerability scans, dynamic stress tests, and automated rollback scripts.',
+    color: 'navy',
+  },
+  {
+    number: '04',
+    title: '100% Student IP',
+    description:
+      'System Development retains 0% royalties. All intellectual property remains wholly owned by the student squad.',
+    color: 'green',
+  },
+];
+export const projectCategories = [
+  'All Projects (342)',
+  'AI & Machine Learning (86)',
+  'Web & Cloud Systems (94)',
+  'Mobile & Cross-Platform (68)',
+  'IoT & Embedded (42)',
+  'Healthcare Tech (38)',
+  'FinTech & Clearing (45)',
+];
