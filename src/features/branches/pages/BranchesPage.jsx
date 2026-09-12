@@ -4,6 +4,7 @@ import AllBranches from '../components/AllBranches';
 import BranchHeroSection from '../components/BranchHeroSection';
 import BranchHubsSection from '../components/BranchHubsSection';
 import EditorialFeature from '../components/EditorialFeature';
+import FinalCta from '../components/FinalCta';
 import RegionalCommunities from '../components/RegionalCommunities';
 import StudentsExperience from '../components/StudentsExperience';
 
@@ -43,6 +44,7 @@ const BranchesPage = () => {
       <StudentsExperience></StudentsExperience>
       <EditorialFeature></EditorialFeature>
       <AllBranches></AllBranches>
+      <FinalCta></FinalCta>
     </>
   );
 };
