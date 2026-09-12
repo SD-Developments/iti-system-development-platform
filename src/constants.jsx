@@ -1454,9 +1454,9 @@ export const faqs = [
   },
 ];
 // --------------------------
-const heroImage = './assets/images/hero1.png';
+import heroImage from './assets/images/hero1.png';
 
-const collaborationImage = './assets/images/about2.png';
+import collaborationImage from './assets/images/about2.png';
 
 export const regionalZones = [
   {

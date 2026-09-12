@@ -43,7 +43,10 @@ const RegionalCommunities = () => {
   };
   return (
     <>
-      <section id="regional-zones" className="w-full border-b border-border bg-card py-16 sm:py-20">
+      <section
+        id="regional-zones"
+        className="w-full bg-sd-bg-light border-b border-border py-16 sm:py-20"
+      >
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-col gap-4 md:mb-12 md:flex-row md:items-end md:justify-between">
             <div>
@@ -69,7 +72,7 @@ const RegionalCommunities = () => {
               return (
                 <div
                   key={zone.id}
-                  className={`flex flex-col justify-between rounded-2xl border border-border bg-sd-bg-light p-5 transition-colors ${accent.hover}`}
+                  className={`flex flex-col justify-between rounded-2xl border border-border bg-card p-5 transition-colors ${accent.hover}`}
                 >
                   <div>
                     <div className="mb-3 flex items-center justify-between gap-3">

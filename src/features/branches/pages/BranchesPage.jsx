@@ -2,7 +2,9 @@
 // import { useMemo, useState } from 'react';
 import BranchHeroSection from '../components/BranchHeroSection';
 import BranchHubsSection from '../components/BranchHubsSection';
+import EditorialFeature from '../components/EditorialFeature';
 import RegionalCommunities from '../components/RegionalCommunities';
+import StudentsExperience from '../components/StudentsExperience';
 
 // import collaborationImage from '../../../assets/images/about2.png'
 
@@ -37,6 +39,8 @@ const BranchesPage = () => {
       <BranchHeroSection></BranchHeroSection>
       <BranchHubsSection></BranchHubsSection>
       <RegionalCommunities></RegionalCommunities>
+      <StudentsExperience></StudentsExperience>
+      <EditorialFeature></EditorialFeature>
     </>
   );
 };
