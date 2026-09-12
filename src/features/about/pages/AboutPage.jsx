@@ -8,8 +8,8 @@ import {
   pipelineStages,
   leaders,
   milestones,
-  partners,
   aiInitiatives,
+  partnerCompanies,
 } from '../../../constants';
 
 const AboutPage = () => {
@@ -600,7 +600,7 @@ const AboutPage = () => {
                 </div>
 
                 <div className="grid grid-cols-2 items-center gap-3 sm:grid-cols-4 md:grid-cols-7">
-                  {partners.map((partner) => (
+                  {partnerCompanies.map((partner) => (
                     <div
                       key={partner}
                       className="rounded-xl border border-border bg-card px-2 py-3 text-center font-mono text-xs font-bold text-card-foreground shadow-sm"

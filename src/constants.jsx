@@ -255,8 +255,6 @@ export const leaders = [
   },
 ];
 
-export const partners = ['MICROSOFT', 'VALEO', 'DELL TECH', 'FAWRY', 'VODAFONE', 'IBM', 'INSTABUG'];
-
 export const aiInitiatives = [
   {
     title: 'AI Pair-Programming',
@@ -980,8 +978,6 @@ export const comparisonPrograms = [
     href: '#summer-camps',
   },
 ];
-
-export const hiringPartners = ['MICROSOFT', 'VALEO', 'DELL TECH', 'FAWRY', 'VODAFONE', 'INSTABUG'];
 
 export const heroStats = [
   {
