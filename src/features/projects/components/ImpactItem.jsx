@@ -1,6 +1,6 @@
 const ImpactItem = ({ number, title, description, color }) => {
   const numberColor =
-    color === 'teal' ? 'text-accent' : color === 'red' ? 'text-primary' : 'text-primary';
+    color === 'teal' ? 'text-accent' : color === 'red' ? 'text-primary' : 'text-navy';
 
   return (
     <div className="px-0 pt-4 md:px-6 md:pt-0 first:md:pl-0">

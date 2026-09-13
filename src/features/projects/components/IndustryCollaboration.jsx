@@ -11,7 +11,7 @@ const IndustryCollaboration = () => {
               INDUSTRY COLLABORATION
             </div>
 
-            <h2 className="text-3xl font-extrabold tracking-tight text-primary">
+            <h2 className="text-3xl font-extrabold tracking-tight text-navy">
               Engineered with Industry, Defended for Impact
             </h2>
 

@@ -9,7 +9,7 @@ const KhedmacloudSpotlight = () => {
                 PROJECT SPOTLIGHT // CIVIC INFRASTRUCTURE
               </div>
 
-              <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-primary sm:text-4xl">
+              <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-navy sm:text-4xl">
                 KhedmaCloud — Zero-Knowledge Municipal Licensing Protocol
               </h2>
 

@@ -1,7 +1,30 @@
 import { projectCategories, projects } from '@/constants';
 import ProjectCardComp from './ProjectCardComp';
+import { useEffect, useRef } from 'react';
 
 const ProjectExplorer = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const element = scrollRef.current;
+
+    if (!element) return;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+
+      element.scrollLeft += e.deltaY;
+    };
+
+    element.addEventListener('wheel', handleWheel, {
+      passive: false,
+    });
+
+    return () => {
+      element.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
   return (
     <>
       <section id="projects-grid" className="border-b border-border bg-sd-bg-light py-20 lg:py-24">
@@ -14,7 +37,7 @@ const ProjectExplorer = () => {
                 DIGITAL ENGINEERING GALLERY
               </div>
 
-              <h2 className="text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
+              <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
                 Explore SD Projects
               </h2>
 
@@ -33,20 +56,25 @@ const ProjectExplorer = () => {
 
           {/* Category Pills */}
 
-          <div className="custom-scrollbar mb-10 flex items-center gap-2.5 overflow-x-auto pb-4">
-            {projectCategories.map((category, index) => (
-              <button
-                key={category}
-                type="button"
-                className={`shrink-0 rounded-xl px-4 py-2 font-mono text-xs font-medium tracking-wide transition-colors ${
-                  index === 0
-                    ? 'bg-primary text-primary-foreground shadow-sm'
-                    : 'border border-border bg-card text-muted-foreground hover:bg-muted'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+          <div
+            ref={scrollRef}
+            className="custom-scrollbar mb-10 w-full min-w-0 max-w-full overflow-x-auto pb-3"
+          >
+            <div className="flex w-max min-w-full items-center gap-2.5">
+              {projectCategories.map((category, index) => (
+                <button
+                  key={category}
+                  type="button"
+                  className={`shrink-0 rounded-xl px-4 py-2 font-mono text-xs font-medium tracking-wide transition-colors ${
+                    index === 0
+                      ? 'bg-sd-navy text-primary-foreground shadow-sm'
+                      : 'border border-border bg-card text-foreground hover:bg-muted'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Project Gallery */}

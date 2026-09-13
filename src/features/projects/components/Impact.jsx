@@ -10,7 +10,7 @@ const Impact = () => {
               number="340+"
               title="Projects Shipped"
               description="To government agencies, global startups, and production users."
-              color="primary"
+              color="navy"
             />
 
             <ImpactItem

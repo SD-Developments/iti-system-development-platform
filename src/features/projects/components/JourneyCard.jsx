@@ -1,6 +1,6 @@
 const JourneyCard = ({ stage }) => {
   const activeStyles = stage.active
-    ? 'border-2 border-primary bg-primary text-primary-foreground shadow-xl md:-translate-y-1'
+    ? 'border-2 border-primary bg-sd-navy text-primary-foreground shadow-xl md:-translate-y-1'
     : 'border border-border bg-sd-bg-light text-foreground hover:border-accent';
 
   const numberStyles = stage.active
@@ -24,7 +24,7 @@ const JourneyCard = ({ stage }) => {
           <span
             className={`font-mono text-[11px] font-bold ${
               stage.active
-                ? 'text-primary-foreground'
+                ? 'text-primary'
                 : stage.color === 'green'
                   ? 'text-emerald-600'
                   : 'text-accent'
@@ -34,7 +34,7 @@ const JourneyCard = ({ stage }) => {
           </span>
         </div>
 
-        <h3 className={`mb-2 text-sm font-bold ${stage.active ? 'text-white' : 'text-primary'}`}>
+        <h3 className={`mb-2 text-sm font-bold ${stage.active ? 'text-white' : 'text-navy'}`}>
           {stage.title}
         </h3>
 

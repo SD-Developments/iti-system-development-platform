@@ -14,7 +14,7 @@ const EngineeringJourney = () => {
               RIGOROUS LIFECYCLE
             </div>
 
-            <h2 className="text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
               The SD Engineering Journey
             </h2>
 
