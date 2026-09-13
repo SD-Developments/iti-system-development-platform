@@ -1,11 +1,13 @@
 import { projectCategories, projects } from '@/constants';
 import ProjectCardComp from './ProjectCardComp';
+import ProjectDetailsModal from './ProjectDetailsModal';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 const MAX_PROJECTS = 6;
 
 const ProjectExplorer = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
   const scrollRef = useRef(null);
 
   // -----------------------------------------
@@ -158,7 +160,11 @@ const ProjectExplorer = () => {
         {filteredProjects.length > 0 && (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             {displayedProjects.map((project) => (
-              <ProjectCardComp key={project.title} project={project} />
+              <ProjectCardComp
+                key={project.title}
+                project={project}
+                onClick={() => setSelectedProject(project)}
+              />
             ))}
           </div>
         )}
@@ -209,6 +215,10 @@ const ProjectExplorer = () => {
           </div>
         )}
       </div>
+
+      {selectedProject && (
+        <ProjectDetailsModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </section>
   );
 };
