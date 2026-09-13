@@ -1,6 +1,6 @@
 import TechnicalProjectVisual from './TechnicalProjectVisual';
 
-const ProjectCardComp = ({ project }) => {
+const ProjectCardComp = ({ project, onClick }) => {
   // console.log(project);
   const isWide = project.variant === 'wide';
 
@@ -8,7 +8,8 @@ const ProjectCardComp = ({ project }) => {
   return (
     <>
       <article
-        className={`group flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card shadow-lg transition-all duration-300 hover:-translate-y-1 ${
+        onClick={onClick}
+        className={`group flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card shadow-lg transition-all duration-300 hover:-translate-y-1 ${
           project.typeColor === 'red' ? 'hover:border-primary' : 'hover:border-accent'
         } ${spanClass}`}
       >
@@ -77,7 +78,7 @@ const ProjectCardComp = ({ project }) => {
                 isWide ? 'text-sm' : 'text-xs'
               }`}
             >
-              {project.description}
+              {project.description.slice(0, 200)}
             </p>
 
             <div className="mt-5 flex flex-wrap gap-1.5 font-mono text-xs">
