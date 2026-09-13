@@ -365,11 +365,19 @@ export const programs = [
     featured: false,
   },
 ];
+import web1 from './assets/images/web1.jpg';
+import web2 from './assets/images/web2.jpg';
+import web3 from './assets/images/web3.jpg';
+import web4 from './assets/images/web4.jpg';
+import mobile1 from './assets/images/mobile1.jpg';
+import mobile2 from './assets/images/mobile2.jpg';
+import mobile3 from './assets/images/mobile3.jpg';
 
 export const projects = [
   {
     title: 'AquaMetrics',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Sports Technology',
@@ -377,12 +385,14 @@ export const projects = [
       'AquaMetrics is an AI-powered athlete management and decision support platform for competitive swimming academies. By integrating Retrieval-Augmented Generation (RAG), domain-specific AI agents, longitudinal performance tracking, and centralized athlete management, the platform assists coaches in monitoring athlete progress, personalizing training plans, and making evidence-based decisions.',
     technologies: ['React', 'Python', 'RAG', 'AI Agents', 'LLM', 'Data Analytics'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/aqua-metrics.jpg',
+    // image: '/images/projects/aqua-metrics.jpg',
+    image: web1,
   },
 
   {
     title: 'Ruya',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Smart Tourism',
@@ -390,12 +400,14 @@ export const projects = [
       'RUYA is an intelligent tourism platform that leverages Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), computer vision, and multi-agent orchestration to assist tourists in exploring historical sites. By combining visual recognition, contextual retrieval, user profiling, and location awareness, the system delivers accurate, personalized, and interactive guidance through natural conversation.',
     technologies: ['React', 'Python', 'LLM', 'RAG', 'Computer Vision', 'Multi-Agent AI'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/ruya.jpg',
+    // image: '/images/projects/ruya.jpg',
+    image: web2,
   },
 
   {
     title: 'FoodLoop',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Food Waste & Marketplace',
@@ -403,12 +415,14 @@ export const projects = [
       'FoodLoop is an AI-powered marketplace that helps reduce food waste by connecting consumers and charities with nearby businesses selling surplus food at discounted prices. Using AI for product recognition, OCR, and dynamic pricing recommendations, the platform enables merchants to create listings efficiently while making affordable, quality food more accessible to consumers.',
     technologies: ['React', 'Node.js', 'AI', 'OCR', 'Computer Vision', 'Dynamic Pricing'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/foodloop.jpg',
+    // image: '/images/projects/foodloop.jpg',
+    image: web3,
   },
 
   {
     title: 'Englisphere AI',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI Education',
@@ -416,12 +430,14 @@ export const projects = [
       'Englisphere AI is an adaptive English learning platform for working professionals. It profiles the user’s job, industry, level, and goals, then uses AI agents to build a personalized curriculum, give feedback, and run realistic practice conversations tailored to their field.',
     technologies: ['React', 'Node.js', 'LLM', 'AI Agents', 'Natural Language Processing'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/englisphere-ai.jpg',
+    // image: '/images/projects/englisphere-ai.jpg',
+    image: web4,
   },
 
   {
     title: 'Draya',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'EdTech & Intelligent Learning',
@@ -429,12 +445,14 @@ export const projects = [
       'Draya is an AI-powered learning platform that acts as an intelligent teaching assistant. It helps educators generate curriculum-aware exams, evaluate student performance, identify learning gaps, and provide personalized recommendations for students while giving parents AI-generated progress reports.',
     technologies: ['Angular', '.NET', 'SQL Server', 'AI', 'LLM', 'RAG'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/draya.jpg',
+    // image: '/images/projects/draya.jpg',
+    image: web1,
   },
 
   {
     title: 'HomePal',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Smart Home & Grocery',
@@ -442,12 +460,14 @@ export const projects = [
       'HomePal is an AI-powered household and grocery operations manager tailored for Egyptian families. It combines multimodal receipt and pantry scanning, supermarket offer comparison, and budget-aware multi-agent meal planning to combat food waste and grocery inflation.',
     technologies: ['React', 'Node.js', 'AI Agents', 'Computer Vision', 'OCR', 'LLM'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/homepal.jpg',
+    // image: '/images/projects/homepal.jpg',
+    image: mobile1,
   },
 
   {
     title: 'Requra.AI',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Requirements Engineering',
@@ -455,12 +475,14 @@ export const projects = [
       'Requra.AI is an evidence-grounded requirements engineering platform that transforms unstructured project inputs—including documents, meeting transcripts, and audio—into clear, reviewable specifications. Using agentic AI, it extracts and classifies requirements, generates user stories and acceptance criteria, produces executive summaries, and links every output to its source evidence.',
     technologies: ['React', '.NET', 'Python', 'LLM', 'RAG', 'AI Agents', 'Jira'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/requra.jpg',
+    // image: '/images/projects/requra.jpg',
+    image: mobile2,
   },
 
   {
     title: 'Salasel',
     track: 'AI & Intelligent Systems',
+    domains: ['Mobile & Cross-Platform', 'Web & UI', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI Procurement',
@@ -468,12 +490,14 @@ export const projects = [
       'Salasel is an AI-powered procurement management platform that automates the purchasing process for SME retailers and pharmacies by connecting merchants directly with wholesale distributors. Merchants can manage inventory using Arabic voice or text while AI extracts data, drafts purchase orders, and recommends suppliers based on price, speed, and availability.',
     technologies: ['Flutter', 'React', 'Node.js', 'AI', 'NLP', 'Arabic Voice AI'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/salasel.jpg',
+    // image: '/images/projects/salasel.jpg',
+    image: mobile3,
   },
 
   {
     title: 'FeedInsight',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Product Intelligence',
@@ -481,12 +505,14 @@ export const projects = [
       'FeedInsight is an AI-powered product intelligence platform that helps product teams collect, analyze, and manage customer feedback. It identifies trends, detects duplicate issues, prioritizes feature requests, generates developer-ready backlog items, and integrates with Jira.',
     technologies: ['React', '.NET', 'SQL Server', 'AI', 'NLP', 'Jira'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/feedinsight.jpg',
+    // image: '/images/projects/feedinsight.jpg',
+    image: web2,
   },
 
   {
     title: 'Hakeem',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'Healthcare Tech', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'HealthTech',
@@ -494,12 +520,14 @@ export const projects = [
       'Hakeem is a secure patient-owned medical history organizer that transforms scattered medical documents into a structured and easy-to-review Medical CV. Patients can upload prescriptions, lab reports, scans, and clinical notes, review AI-extracted information, manage reminders, and generate a source-grounded Medical CV that they can keep private, download, or share.',
     technologies: ['React', 'Node.js', 'AI', 'OCR', 'LLM', 'RAG'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/hakeem.jpg',
+    // image: '/images/projects/hakeem.jpg',
+    image: web3,
   },
 
   {
     title: 'HaqQi',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'LegalTech & Consumer Rights',
@@ -507,12 +535,14 @@ export const projects = [
       'HaqQi is an AI-powered web and mobile platform that helps consumers prepare legally grounded complaints. Users can describe their issue using text or images, after which the platform identifies the complaint category, retrieves relevant laws from official Egyptian sources, explains consumer rights in simple language, and generates a professional complaint letter ready for PDF export.',
     technologies: ['React', 'Flutter', 'Python', 'LLM', 'RAG', 'OCR'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/haqqi.jpg',
+    // image: '/images/projects/haqqi.jpg',
+    image: web4,
   },
 
   {
     title: 'Life Admin Autopilot',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI Personal Assistant',
@@ -520,12 +550,14 @@ export const projects = [
       'Life Admin Autopilot is an AI agent with an app that turns everyday life administration—bills, renewals, warranties, and appointments—into handled tasks from a single sentence or photo. It extracts information, checks the user’s schedule, creates tasks, provides reminders, and answers questions grounded in the user’s own tasks and documents.',
     technologies: ['React', 'Node.js', 'LLM', 'AI Agents', 'OCR', 'RAG'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/life-admin-autopilot.jpg',
+    // image: '/images/projects/life-admin-autopilot.jpg',
+    image: web1,
   },
 
   {
     title: 'Wakeel AI',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'HR & LegalTech',
@@ -533,12 +565,14 @@ export const projects = [
       'Wakeel AI is an AI-powered digital HR and legal officer for Egyptian SMEs. It provides Arabic and English HR and legal assistance, generates legally compliant PDF documents, uses RAG over labor laws and company policies, and supports company-specific knowledge, statutory calculators, document generation, JWT/RBAC, encryption, and audit logging.',
     technologies: ['Flutter', 'React', '.NET', 'LLM', 'RAG', 'AI Agents', 'JWT', 'RBAC'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/wakeel-ai.jpg',
+    // image: '/images/projects/wakeel-ai.jpg',
+    image: web2,
   },
 
   {
     title: 'SentinelAI',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI Cybersecurity',
@@ -555,12 +589,14 @@ export const projects = [
       'MITRE ATT&CK',
     ],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/sentinel-ai.jpg',
+    // image: '/images/projects/sentinel-ai.jpg',
+    image: mobile2,
   },
 
   {
     title: 'Codify',
     track: 'AI & Intelligent Systems',
+    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI-Powered EdTech',
@@ -568,9 +604,11 @@ export const projects = [
       'Codify is an AI-powered programming learning platform designed to help students improve their problem-solving and coding skills through interactive programming challenges. Students can solve problems in supported programming languages, submit their code, receive execution results, and get AI-generated hints and feedback. Instructors can monitor student progress through analytics.',
     technologies: ['React', 'Node.js', 'AI', 'Code Execution', 'LLM', 'Analytics'],
     meta: 'PTP · Smart Village',
-    image: '/images/projects/codify.jpg',
+    // image: '/images/projects/codify.jpg',
+    image: web4,
   },
 ];
+
 export const activities = [
   {
     title: 'Tech Talks',
@@ -2051,96 +2089,6 @@ export const getAccentClasses = (accent) => {
 
 export const partners = ['MICROSOFT', 'VALEO', 'DELL TECH', 'FAWRY', 'VODAFONE', 'IBM', 'INSTABUG'];
 // ----------------------------------------
-
-export const allProjects = [
-  {
-    id: 1,
-    type: 'DISTRIBUTED SYSTEMS // GOLANG',
-    typeColor: 'red',
-    title: 'Interbank Raft Settlement Protocol',
-    description:
-      'Engineered as an independent local clearing switch providing sub-millisecond atomic transactions between federated micro-financial institutions. Implements customized distributed Raft consensus with persistent write-ahead logging.',
-    technologies: ['Golang', 'Raft Algorithm', 'TimescaleDB', 'Apache Kafka', 'gRPC'],
-    status: 'Defense: Passed with Distinction',
-    image: null,
-    variant: 'wide',
-    visual: 'raft',
-  },
-
-  {
-    id: 2,
-    type: 'WEBXR // WASM',
-    typeColor: 'red',
-    title: 'EduVerse 3D — Browser Physics Simulator',
-    description:
-      'Zero-install WebGL 2.0 and WebAssembly physics simulation engine tailored for 4,000+ national STEM public school classrooms with low-bandwidth optimization.',
-    technologies: ['Three.js', 'WebAssembly', 'Rust Core'],
-    status: 'Ministry Piloted',
-    image:
-      'https://lh3.googleusercontent.com/aida/AEtjO1UKGVX_dV5Vuc05MZ6kjImMSmgk8ftHDRhFgATydZ47FhL9zzW8GrOPjwxHcy7exjjVBPj9jqpkHPeMRyF0lrixVrRSpUs1WFzwNUS_C-rrHqdEmnx_TBFDxlG74Gbk40vdGTe9gZ1eb_nEBSatnrk3N0AGk3aUdSX1AcecR7tMLAyZYSHB60qFBGsMcWMIUia1qhNXP-px2OuMllZXqRI-1KAlAhVzAEv7_uo1_y4UsPoFdNXvTJFwFhUO',
-    variant: 'small',
-    metaLeft: '4,000+ STEM Labs Piloted',
-    metaRight: 'WASM <1.2MB',
-  },
-
-  {
-    id: 3,
-    type: 'AUTOMOTIVE // EMBEDDED',
-    typeColor: 'navy',
-    title: 'AutoGuard ASIL-D — CAN-FD Gateway Firmware',
-    description:
-      'Deterministic automotive electronic control unit (ECU) firmware executing on ARM Cortex-M7 with guaranteed sub-4μs response jitter under bus saturation.',
-    technologies: ['Embedded C', 'FreeRTOS', 'STM32H7', 'CAN-FD'],
-    status: 'Hardware HIL Bench Tested',
-    image: null,
-    variant: 'small',
-    visual: 'automotive',
-  },
-
-  {
-    id: 4,
-    type: 'SOVEREIGN AI // RAG',
-    typeColor: 'red',
-    title: 'Wakeel AI — Arabic Legal Reasoning Engine',
-    description:
-      'Domain-adapted bilingual RAG pipeline indexing 14,000 Supreme Court precedents with hallucination-guard verifiers and statutory citation checks.',
-    technologies: ['Llama 3 70B', 'LangChain', 'Qdrant'],
-    status: '14k Rulings Vectorized',
-    image: null,
-    variant: 'small',
-    visual: 'legal',
-  },
-
-  {
-    id: 5,
-    type: 'AGRITECH // EDGE AI',
-    typeColor: 'teal',
-    title: 'Nilometer IoT — Nile Delta Edge Telemetry',
-    description:
-      'Solar-harvesting edge hydrology sensors transmitting canal water quality and TinyML soil salinization forecasts via LoRaWAN mesh gateways over 18km.',
-    technologies: ['Rust (no_std)', 'LoRaWAN', 'TinyML'],
-    status: 'Live Field Trial: Dakahlia',
-    image:
-      'https://lh3.googleusercontent.com/aida/AEtjO1WdXd27hYkzRyJ2eMXURVxMkYYf1zDmFfHBA3fh10_Wk4ph-IRxlA7SpVbeZJZpwmlSFdtAuVgz7Cnobofxf5AHEKILfB7yThf2Koi5WH8S-bZ6VZHB0aPrYelsX2baT4ON8JYuJ-h05BQ3ij2fjHPmQRucJi3pG9PXdidIgDUP5oRKveRHUhnKDwAbzAs4KOMLRnPsSwdY0j5inZvmsfTb3-Q4k4i0Yb9o-sftvyNDu7y3ti85gTzXhQM',
-    variant: 'small',
-    metaLeft: 'Mansoura Hub',
-    metaRight: '18km LoRaWAN Mesh',
-  },
-
-  {
-    id: 6,
-    type: 'CLOUD SECURITY // eBPF',
-    typeColor: 'red',
-    title: 'CyberSentinel — In-Kernel Zero-Trust eBPF Mesh',
-    description:
-      'Programmable socket-layer packet inspector isolating multi-tenant Kubernetes workloads with zero user-space latency penalty and instant DDoS throttling.',
-    technologies: ['eBPF / XDP', 'C / Rust', 'Kubernetes'],
-    status: 'Benchmark: 10 Gbps Wire-Rate',
-    image: null,
-    variant: 'small',
-    visual: 'security',
-  },
-];
 
 export const journeyStages = [
   {

@@ -1,6 +1,7 @@
 import TechnicalProjectVisual from './TechnicalProjectVisual';
 
 const ProjectCardComp = ({ project }) => {
+  // console.log(project);
   const isWide = project.variant === 'wide';
 
   const spanClass = isWide ? 'md:col-span-8' : 'md:col-span-4';
