@@ -6,7 +6,6 @@ export const useTheme = () => {
   const setTheme = useThemeStore((state) => state.setTheme);
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    console.log('savedTheme', savedTheme);
     if (savedTheme === 'light' || savedTheme === 'dark' || savedTheme === 'system') {
       setTheme(savedTheme);
     }
