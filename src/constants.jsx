@@ -392,7 +392,7 @@ export const projects = [
   {
     title: 'Ruya',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['UI & UX Design'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Smart Tourism',
@@ -407,7 +407,7 @@ export const projects = [
   {
     title: 'FoodLoop',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['UI & UX Design', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Food Waste & Marketplace',
@@ -422,7 +422,7 @@ export const projects = [
   {
     title: 'Englisphere AI',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'UI & UX Design'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI Education',
@@ -437,7 +437,7 @@ export const projects = [
   {
     title: 'Draya',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['UI & UX Design'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'EdTech & Intelligent Learning',
@@ -452,7 +452,7 @@ export const projects = [
   {
     title: 'HomePal',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Smart Home & Grocery',
@@ -467,7 +467,7 @@ export const projects = [
   {
     title: 'Requra.AI',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Requirements Engineering',
@@ -482,7 +482,7 @@ export const projects = [
   {
     title: 'Salasel',
     track: 'AI & Intelligent Systems',
-    domains: ['Mobile & Cross-Platform', 'Web & UI', 'AI & Machine Learning'],
+    domains: ['Mobile & Cross-Platform', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI Procurement',
@@ -497,7 +497,7 @@ export const projects = [
   {
     title: 'FeedInsight',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'UI & UX Design', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'Product Intelligence',
@@ -512,7 +512,7 @@ export const projects = [
   {
     title: 'Hakeem',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'Healthcare Tech', 'AI & Machine Learning'],
+    domains: ['Mobile & Cross-Platform', 'Web & UI', 'Healthcare Tech'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'HealthTech',
@@ -527,7 +527,7 @@ export const projects = [
   {
     title: 'HaqQi',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'UI & UX Design', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'LegalTech & Consumer Rights',
@@ -542,7 +542,7 @@ export const projects = [
   {
     title: 'Life Admin Autopilot',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'UI & UX Design', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI Personal Assistant',
@@ -557,7 +557,7 @@ export const projects = [
   {
     title: 'Wakeel AI',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'HR & LegalTech',
@@ -596,7 +596,7 @@ export const projects = [
   {
     title: 'Codify',
     track: 'AI & Intelligent Systems',
-    domains: ['Web & UI', 'UI & UX', 'AI & Machine Learning'],
+    domains: ['Web & UI', 'UI & UX Design', 'AI & Machine Learning'],
     program: 'PTP',
     branch: 'Smart Village',
     category: 'AI-Powered EdTech',
@@ -2180,9 +2180,10 @@ export const industryFeatures = [
   },
 ];
 export const projectCategories = [
-  'All Projects (100)',
-  'Web & UI (94)',
-  'UI & UX (94)',
-  'Mobile & Cross-Platform (68)',
-  'Healthcare Tech (38)',
+  'All Projects',
+  'Web & UI',
+  'UI & UX Design',
+  'Mobile & Cross-Platform',
+  'Healthcare Tech',
+  'AI & Machine Learning',
 ];
