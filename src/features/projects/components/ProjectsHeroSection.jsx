@@ -29,11 +29,24 @@ const ProjectsHeroSection = () => {
               {/* Heading */}
               <h1 className="text-4xl font-extrabold leading-[1.12] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                 Projects Built to Solve{' '}
-                <span className="text-primary underline decoration-primary/30 decoration-2 decoration-wavy">
+                <span className="relative inline-block text-primary">
                   Real Problems.
+                  <svg
+                    aria-hidden="true"
+                    className="absolute -bottom-3 left-0 h-3 w-full overflow-visible"
+                    viewBox="0 0 300 12"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M2 7 C50 2, 80 10, 125 6 S205 3, 298 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      className="text-primary/40"
+                    />
+                  </svg>
                 </span>
               </h1>
-
               {/* Description */}
               <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
                 From high-concurrency clearing switches to autonomous edge telemetry, SD student
