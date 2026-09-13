@@ -4,7 +4,6 @@ import Home from './features/home/pages/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import AboutPage from './features/about/pages/AboutPage';
 import TracksPage from './features/tracks/pages/TracksPage';
-import BranchesPage from './features/branches/pages/BranchesPage';
 import ProjectsPage from './features/projects/pages/ProjectsPage';
 import EventsPage from './features/events/pages/EventsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
@@ -37,11 +36,6 @@ function App() {
         {
           path: 'tracks',
           element: <TracksPage />,
-        },
-
-        {
-          path: 'branches',
-          element: <BranchesPage />,
         },
 
         {

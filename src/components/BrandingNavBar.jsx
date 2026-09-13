@@ -53,7 +53,7 @@ function BrandingNavBar() {
         {/* Logo */}
         <SdLogo />
         {/* Desktop Navigation */}
-        <ul className="ml-8 hidden items-center gap-1 xl:flex">
+        <ul className="ml-8 hidden w-1/2 items-center justify-end gap-1 xl:flex">
           {bandingNavLinks.map((link) => (
             <li key={link.id}>
               <NavLink
