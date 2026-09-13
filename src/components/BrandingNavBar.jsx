@@ -2,16 +2,29 @@ import { useRef } from 'react';
 import { NavLink } from 'react-router';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Search, ChevronDown, Command, ArrowRight, Menu } from 'lucide-react';
+import facebook from '../assets/images/facebook.png';
+import linkedin from '../assets/images/linkedin.png';
+import { ArrowRight, Menu, Monitor, Moon, Sun } from 'lucide-react';
+
 import { bandingNavLinks } from '../constants';
 import clsx from 'clsx';
-import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from './ui/avatar';
-import avatar1 from '../assets/images/avatar1.png';
 import SdLogo from './SdLogo';
+
+import { Button } from '@/components/ui/button';
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import useTheme from '../hooks/useTheme';
 
 function BrandingNavBar() {
   const navRef = useRef(null);
-
+  const { theme, setTheme } = useTheme();
   useGSAP(
     () => {
       gsap.from(navRef.current, {
@@ -35,12 +48,11 @@ function BrandingNavBar() {
         backdrop-blur-md
       "
     >
-      <div className="flex py-2 w-full items-center px-6 xl:px-8">
-        {/* ================= Logo ================= */}
+      <div className="flex w-full items-center justify-between px-6 py-2 xl:px-8">
+        {/* Logo */}
+        <SdLogo />
 
-        <SdLogo></SdLogo>
-        {/* ================= Desktop Navigation ================= */}
-
+        {/* Desktop Navigation */}
         <ul className="ml-8 hidden items-center gap-1 xl:flex">
           {bandingNavLinks.map((link) => (
             <li key={link.id}>
@@ -49,16 +61,19 @@ function BrandingNavBar() {
                 end={link.path === '/'}
                 className={({ isActive }) =>
                   clsx(
-                    `relative flex items-center
-                    whitespace-nowrap
-                    rounded-lg
-                    px-3 py-2
-                    text-sm
-                    font-medium
-                    transition-all
-                    duration-200`,
+                    `
+                      relative flex items-center
+                      whitespace-nowrap
+                      rounded-lg
+                      px-3 py-2
+                      text-sm
+                      font-medium
+                      transition-all
+                      duration-200
+                    `,
                     {
-                      'bg-primary/10 text-primary dark:text-sd-teal dark:bg-sd-teal/10': isActive,
+                      'bg-primary/10 text-primary dark:bg-sd-teal/10 dark:text-sd-teal': isActive,
+
                       'text-muted-foreground hover:bg-muted hover:text-foreground': !isActive,
                     }
                   )
@@ -76,126 +91,151 @@ function BrandingNavBar() {
               </NavLink>
             </li>
           ))}
-
-          {/* ================= More ================= */}
-
-          <li>
-            <button
-              type="button"
-              className="
-                flex items-center gap-1
-                rounded-lg
-                px-3 py-2
-
-                text-sm
-                font-medium
-                text-muted-foreground
-
-                transition-all
-                duration-200
-
-                hover:bg-muted
-                hover:text-foreground
-              "
-            >
-              More
-              <ChevronDown size={16} />
-            </button>
-          </li>
         </ul>
 
-        {/* ================= Right Side ================= */}
-
+        {/* Right Controls */}
         <div className="ml-auto flex items-center gap-3">
-          {/* Search */}
-          <div
-            className="
-              hidden
-              h-11
-              w-57.5
-              shrink-0
-              items-center
-              gap-2
-              rounded-xl
-              border
-              border-border
-              bg-muted/40
-              px-3
-              lg:flex
-            "
-          >
-            <Search size={18} className="shrink-0 text-muted-foreground" />
-
-            <input
-              type="text"
-              placeholder="Search..."
-              className="
-                h-full
-                min-w-0
-                flex-1
-                bg-transparent
-                text-sm
-                text-foreground
-                outline-none
-                placeholder:text-muted-foreground
-              "
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              render={
+                <button
+                  type="button"
+                  className="
+                    group
+                    relative
+                    hidden
+                    h-11
+                    w-20.5
+                    items-center
+                    xl:flex
+                    focus:outline-none
+                  "
+                >
+                  <span
+                    className="
+                      absolute
+                      left-10
+                      z-10
+                      flex
+                      h-10
+                      w-10
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-border
+                      bg-background
+                      text-muted-foreground
+                      shadow-sm
+                      transition-all
+                      duration-200
+                      p-1
+                      group-hover:left-9
+                      group-hover:text-foreground
+                    "
+                  >
+                    <img src={facebook} alt="facebook" />
+                  </span>
+                  <span
+                    className="
+                      absolute
+                      left-3
+                      z-20
+                      flex
+                      h-10
+                      w-10
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-border
+                      bg-background
+                      text-muted-foreground
+                      shadow-sm
+                      transition-all
+                      duration-200
+                      p-1
+                      group-hover:left-4.5
+                      group-hover:text-foreground
+                    "
+                  >
+                    <img src={linkedin} alt="linkedin" />
+                  </span>
+                </button>
+              }
             />
 
-            <span
-              className="
-                flex
-                shrink-0
-                items-center
-                gap-1
-                rounded-md
-                border
-                border-border
-                bg-background
-                px-1.5
-                py-1
-                text-[10px]
-                text-muted-foreground
-              "
-            >
-              <Command size={11} />K
-            </span>
-          </div>
+            <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuGroup>
+                <DropdownMenuLabel>Contact Us</DropdownMenuLabel>
 
-          {/* Profile */}
-          <Avatar>
-            <AvatarImage src={avatar1} alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
-            <AvatarBadge className="bg-green-600 dark:bg-green-800" />
-          </Avatar>
+                <DropdownMenuItem>
+                  <a href="" className="flex font-semibold w-full">
+                    <img src={facebook} alt="facebook" className="mr-2 w-5 h-5" />
+                    Facebook
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <a href="" className="flex font-semibold w-full">
+                    <img src={linkedin} alt="linkedin" className="mr-2 w-5 h-5" />
+                    Linkedin
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-border
+              bg-background
+              text-muted-foreground
+              shadow-sm
+              transition-all
+              duration-200
+              hidden
+              hover:bg-muted
+              hover:text-foreground
+              xl:inline-flex
+            "
 
-          {/* Explore Intakes */}
+            onClick={() => {
+              setTheme(theme === 'dark' ? 'light' : 'dark');
+            }}
+          >
+            {theme === 'light' && <Sun size={18} />}
+            {theme === 'dark' && <Moon size={18} />}
+            {theme === 'system' && <Monitor size={18} />}
+          </Button>
+
+          {/* ==============================================
+              EXPLORE INTAKES
+          ============================================== */}
+
           <NavLink
             to="/intakes"
             className="
               hidden
               items-center
               gap-2
-
               rounded-xl
-
               bg-primary
-
               px-5
               py-3
-
               text-sm
               font-semibold
-
               text-primary-foreground
-
               shadow-sm
-
               transition-all
               duration-200
-
+              hover:-translate-y-0.5
               hover:bg-primary/90
               hover:shadow-md
-
               xl:flex
             "
           >
@@ -203,7 +243,9 @@ function BrandingNavBar() {
             <ArrowRight size={17} />
           </NavLink>
 
-          {/* Mobile Menu */}
+          {/* ==============================================
+              MOBILE MENU
+          ============================================== */}
 
           <button
             type="button"
@@ -211,19 +253,13 @@ function BrandingNavBar() {
               flex
               h-11
               w-11
-
               items-center
               justify-center
-
               rounded-lg
-
               border
               border-border
-
               transition-all
-
               hover:bg-muted
-
               xl:hidden
             "
           >

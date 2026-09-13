@@ -48,6 +48,11 @@ export const bandingNavLinks = [
     title: 'Projects Hub',
     path: '/projects',
   },
+  {
+    id: 'news',
+    title: 'News & Activites',
+    path: '/news-activites',
+  },
 ];
 
 export const academicPathways = [

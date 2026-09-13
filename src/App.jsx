@@ -10,6 +10,7 @@ import ProjectsPage from './features/projects/pages/ProjectsPage';
 import EventsPage from './features/events/pages/EventsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
 import MainLayout from './layouts/MainLayout';
+import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function App() {
@@ -27,11 +28,6 @@ function App() {
         {
           path: 'about',
           element: <AboutPage />,
-        },
-
-        {
-          path: 'events',
-          element: <EventsPage />,
         },
 
         {
@@ -57,6 +53,14 @@ function App() {
         {
           path: 'projects',
           element: <ProjectsPage />,
+        },
+        {
+          path: 'events',
+          element: <EventsPage />,
+        },
+        {
+          path: 'news-activites',
+          element: <NewsAndActivites />,
         },
       ],
     },
