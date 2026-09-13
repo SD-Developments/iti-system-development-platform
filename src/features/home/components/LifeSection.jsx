@@ -1,5 +1,3 @@
-import JourneyItem from '@/components/JourneyItem';
-import { BookOpen, Lightbulb, Rocket, Users } from 'lucide-react';
 import img2 from '../../../assets/images/hero1.png';
 import { Badge } from '@/components/ui/badge';
 import { activities } from '@/constants';
@@ -7,7 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 function LifeSection() {
   return (
     <>
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 border-y border-border">
         <div className="mx-auto w-[90%] max-w-7xl">
           <SectionHeader
             eyebrow="The Community"
@@ -69,37 +67,6 @@ function LifeSection() {
                 );
               })}
             </div>
-          </div>
-
-          {/* Journey */}
-          <div className="mt-10 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-            <JourneyItem
-              number="01"
-              icon={<BookOpen size={22} />}
-              title="Learn"
-              text="Build strong technical foundations."
-            />
-
-            <JourneyItem
-              number="02"
-              icon={<Lightbulb size={22} />}
-              title="Build"
-              text="Turn knowledge into working solutions."
-            />
-
-            <JourneyItem
-              number="03"
-              icon={<Users size={22} />}
-              title="Collaborate"
-              text="Work with peers, instructors, and teams."
-            />
-
-            <JourneyItem
-              number="04"
-              icon={<Rocket size={22} />}
-              title="Ship"
-              text="Deliver projects with real impact."
-            />
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ import img2 from '../../../assets/images/hero1.png';
 function StudentSection() {
   return (
     <>
-      <section className="border-y border-border bg-secondary/40 py-20 lg:py-28">
+      <section className="bg-secondary/40 py-20 lg:py-28">
         <div className="mx-auto w-[90%] max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">

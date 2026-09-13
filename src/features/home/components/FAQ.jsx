@@ -86,18 +86,9 @@ const FAQ = () => {
             <div className="relative z-10 flex w-full shrink-0 flex-col items-center gap-3 sm:w-auto sm:flex-row">
               <a
                 href="#intake-status"
-                className="w-full rounded-xl bg-white px-8 py-4 text-center text-sm font-bold uppercase tracking-wider text-sd-navy shadow-lg transition-all hover:bg-gray-100 sm:w-auto"
+                className="w-full rounded-xl  hover:bg-white   text-primary-foreground  bg-primary px-8 py-4 text-center text-sm font-bold uppercase tracking-wider hover:text-sd-navy shadow-lg transition-all  sm:w-auto"
               >
                 Apply for Intake 45
-              </a>
-
-              <a
-                href="#comparison-matrix"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-center text-sm font-bold uppercase tracking-wider text-white shadow-lg transition-all hover:opacity-90 sm:w-auto"
-              >
-                <span className="material-symbols-outlined text-[18px]">download</span>
-
-                <span>Download Syllabus (PDF)</span>
               </a>
             </div>
           </div>
