@@ -30,8 +30,7 @@ function BuiltSection() {
       <div
         className="
           pointer-events-none absolute inset-0 opacity-[0.035]
-          [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)]
-          [background-size:52px_52px]
+          bg-grid2
         "
       />
 

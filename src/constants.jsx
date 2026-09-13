@@ -29,11 +29,6 @@ export const bandingNavLinks = [
     path: '/about',
   },
   {
-    id: 'programs',
-    title: 'Programs',
-    path: '/programs',
-  },
-  {
     id: 'tracks',
     title: 'Tracks',
     path: '/tracks',

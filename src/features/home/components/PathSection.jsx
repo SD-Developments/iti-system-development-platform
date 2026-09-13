@@ -1,10 +1,14 @@
 import SectionHeader from '@/components/SectionHeader';
-import { ArrowRight, BookOpen, Clock3, Layers3, MapPin } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock3, Layers3, MapPin, X } from 'lucide-react';
 
 import { programs, tracks } from '@/constants';
 import { Link } from 'react-router';
+import Month9Section from './Month9Section';
+import { useState } from 'react';
+import Month4Section from './Month4Section';
 
 function PathSection() {
+  const [showProgram, setShowProgram] = useState(null);
   const smartVillageTracks = tracks
     .filter((track) => track.program === 'PTP' && track.branches?.includes('Smart Village'))
     .slice(0, 3);
@@ -32,10 +36,13 @@ function PathSection() {
             PROGRAMS
         ================================================== */}
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2 ">
           {programs.map((program) => (
             <article
               key={program.code}
+              onClick={() => {
+                setShowProgram(program.code);
+              }}
               className={`
                 group
                 relative
@@ -46,6 +53,8 @@ function PathSection() {
                 transition
                 duration-300
                 lg:p-10
+                hover:border-primary
+                cursor-pointer
                 ${
                   program.featured
                     ? 'border-sd-navy bg-sd-navy text-sd-white'
@@ -154,8 +163,10 @@ function PathSection() {
                   </div>
                 </div>
 
-                <a
-                  href={program.href}
+                <button
+                  onClick={() => {
+                    setShowProgram(program.code);
+                  }}
                   className={`
                     inline-flex
                     items-center
@@ -167,7 +178,7 @@ function PathSection() {
                 >
                   Explore {program.code}
                   <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-                </a>
+                </button>
               </div>
             </article>
           ))}
@@ -227,6 +238,65 @@ function PathSection() {
           </div>
         </div>
       </div>
+
+      {showProgram === 'ITP' && (
+        <div
+          className="fixed inset-0 z-100 flex items-center justify-center bg-sd-navy/70 p-4 backdrop-blur-sm sm:p-6"
+
+          onClick={() => {
+            setShowProgram(null);
+          }}
+        >
+          <div
+            className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
+
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => {
+                setShowProgram(null);
+              }}
+              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
+              aria-label="Close project details"
+            >
+              <X size={20} />
+            </button>
+            <Month4Section />
+          </div>
+        </div>
+      )}
+      {showProgram === 'PTP' && (
+        <div
+          className="fixed inset-0 z-100 flex items-center justify-center bg-sd-navy/70 p-4 backdrop-blur-sm sm:p-6"
+
+          onClick={() => {
+            setShowProgram(null);
+          }}
+        >
+          <div
+            className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
+
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => {
+                setShowProgram(null);
+              }}
+              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
+              aria-label="Close project details"
+            >
+              <X size={20} />
+            </button>
+            <Month9Section />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

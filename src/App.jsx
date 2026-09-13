@@ -3,7 +3,6 @@ import { ScrollTrigger, SplitText } from 'gsap/all';
 import Home from './features/home/pages/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import AboutPage from './features/about/pages/AboutPage';
-import ProgramsPage from './features/programs/pages/ProgramsPage';
 import TracksPage from './features/tracks/pages/TracksPage';
 import BranchesPage from './features/branches/pages/BranchesPage';
 import ProjectsPage from './features/projects/pages/ProjectsPage';
@@ -33,11 +32,6 @@ function App() {
         {
           path: 'intakes',
           element: <IntakesPage />,
-        },
-
-        {
-          path: 'programs',
-          element: <ProgramsPage />,
         },
 
         {
