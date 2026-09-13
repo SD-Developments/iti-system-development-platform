@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { NavLink } from 'react-router';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -25,6 +25,7 @@ import useTheme from '../hooks/useTheme';
 function BrandingNavBar() {
   const navRef = useRef(null);
   const { theme, setTheme } = useTheme();
+  const [mobileMenu, setMobileMenu] = useState(false);
   useGSAP(
     () => {
       gsap.from(navRef.current, {
@@ -48,10 +49,9 @@ function BrandingNavBar() {
         backdrop-blur-md
       "
     >
-      <div className="flex w-full items-center justify-between px-6 py-2 xl:px-8">
+      <div className="flex relative w-full items-center justify-between px-6 py-2 xl:px-8">
         {/* Logo */}
         <SdLogo />
-
         {/* Desktop Navigation */}
         <ul className="ml-8 hidden items-center gap-1 xl:flex">
           {bandingNavLinks.map((link) => (
@@ -92,7 +92,6 @@ function BrandingNavBar() {
             </li>
           ))}
         </ul>
-
         {/* Right Controls */}
         <div className="ml-auto flex items-center gap-3">
           <DropdownMenu>
@@ -249,6 +248,9 @@ function BrandingNavBar() {
 
           <button
             type="button"
+            onClick={() => {
+              setMobileMenu(!mobileMenu);
+            }}
             className="
               flex
               h-11
@@ -266,6 +268,190 @@ function BrandingNavBar() {
             <Menu size={21} />
           </button>
         </div>
+        {/* ==============================================
+              MOBILE MENU DOWN
+          ============================================== */}
+        {/* ==============================================
+    MOBILE MENU DOWN
+============================================== */}
+        {mobileMenu && (
+          <div
+            className="
+      absolute
+      left-0
+      top-full
+      z-40
+      flex
+      w-full
+      h-screen
+      flex-col
+      border-t
+      border-border
+      bg-background/98
+      px-6
+      py-5
+      shadow-xl
+          overflow-y-scroll
+      backdrop-blur-xl
+      xl:hidden
+    "
+          >
+            {/* Navigation */}
+            <div className="flex flex-col gap-1">
+              {bandingNavLinks.map((link) => (
+                <NavLink
+                  key={link.id}
+                  to={link.path}
+                  end={link.path === '/'}
+                  className={({ isActive }) =>
+                    clsx(
+                      `
+                flex
+                items-center
+                justify-between
+                rounded-xl
+                px-4
+                py-3.5
+                text-sm
+                font-semibold
+                transition-all
+              `,
+                      {
+                        'bg-primary/10 text-primary dark:bg-sd-teal/10 dark:text-sd-teal': isActive,
+
+                        'text-muted-foreground hover:bg-muted hover:text-foreground': !isActive,
+                      }
+                    )
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      <div className="flex items-center gap-3">
+                        {isActive && (
+                          <span className="h-1.5 w-1.5 rounded-full bg-primary dark:bg-sd-teal" />
+                        )}
+
+                        <span>{link.title}</span>
+                      </div>
+
+                      <ArrowRight size={15} />
+                    </>
+                  )}
+                </NavLink>
+              ))}
+            </div>
+
+            {/* Divider */}
+            <div className="my-5 h-px bg-border" />
+
+            {/* Bottom controls */}
+            <div className="flex flex-col gap-3">
+              {/* Social */}
+              <div className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3">
+                <div>
+                  <div className="text-xs font-semibold">Contact Us</div>
+
+                  <div className="mt-0.5 text-[10px] text-muted-foreground">
+                    Follow System Development
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <a
+                    href=""
+                    className="
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-border
+              bg-background
+              p-1
+            "
+                  >
+                    <img src={facebook} alt="Facebook" />
+                  </a>
+
+                  <a
+                    href=""
+                    className="
+              -ml-2
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-border
+              bg-background
+              p-1
+            "
+                  >
+                    <img src={linkedin} alt="LinkedIn" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Theme */}
+              <button
+                type="button"
+                onClick={() => {
+                  setTheme(theme === 'dark' ? 'light' : 'dark');
+                }}
+                className="
+          flex
+          items-center
+          justify-between
+          rounded-xl
+          border
+          border-border
+          bg-card
+          px-4
+          py-3
+          text-sm
+          font-semibold
+          transition
+          hover:bg-muted
+        "
+              >
+                <span>Theme</span>
+
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-muted text-muted-foreground">
+                  {theme === 'light' && <Sun size={16} />}
+                  {theme === 'dark' && <Moon size={16} />}
+                  {theme === 'system' && <Monitor size={16} />}
+                </span>
+              </button>
+
+              {/* CTA */}
+              <NavLink
+                to="/intakes"
+                className="
+          flex
+          items-center
+          justify-between
+          rounded-xl
+          bg-primary
+          px-4
+          py-3.5
+          text-sm
+          font-semibold
+          text-primary-foreground
+          shadow-sm
+          transition
+          hover:bg-primary/90
+        "
+              >
+                Explore Intakes
+                <ArrowRight size={17} />
+              </NavLink>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
