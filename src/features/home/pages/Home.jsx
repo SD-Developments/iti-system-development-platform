@@ -7,6 +7,7 @@ import FAQ from '../components/FAQ';
 import Outcomes from '../components/Outcomes';
 
 import { ArrowDownRight } from 'lucide-react';
+import BranchHubsSection from '../components/BranchHubsSection';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <main className="relative bg-background text-foreground">
         <HeroCarousel />
         <PathSection />
+        <BranchHubsSection />
         <BuiltSection />
         <LifeSection />
         <StudentSection />

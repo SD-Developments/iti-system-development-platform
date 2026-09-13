@@ -551,6 +551,7 @@ const BranchHubsSection = () => {
                           return (
                             <div
                               key={track.id}
+                              href={`/tracks/${track.id}`}
                               className="
                 group/track
                 flex items-center

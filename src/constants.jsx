@@ -1078,7 +1078,7 @@ export const tracks = [
     hours: '570 hrs',
     projectHours: '90 hrs',
 
-    branches: [],
+    branches: ['Smart Village'],
 
     icon: Smartphone,
   },
@@ -1112,7 +1112,7 @@ export const tracks = [
     hours: '594 hrs',
     projectHours: '90 hrs',
 
-    branches: [],
+    branches: ['Smart Village'],
 
     icon: Workflow,
   },
@@ -1147,7 +1147,7 @@ export const tracks = [
     hours: '570 hrs',
     projectHours: '90 hrs',
 
-    branches: [],
+    branches: ['Smart Village'],
 
     icon: Code2,
   },
