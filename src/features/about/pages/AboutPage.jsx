@@ -7,6 +7,7 @@ import AiInitiatives from '../components/AiInitiatives';
 import Timeline from '../components/Timeline';
 import Leadership from '../components/Leadership';
 import Cta from '../components/Cta';
+import TeamSection from '../components/TeamSection';
 
 const AboutPage = () => {
   return (
@@ -21,6 +22,7 @@ const AboutPage = () => {
           <AiInitiatives />
           <Timeline />
           <Leadership />
+          <TeamSection />
           <Cta />
         </div>
       </main>

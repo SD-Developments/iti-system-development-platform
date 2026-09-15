@@ -2449,3 +2449,97 @@ export const projectCategories = [
   'Healthcare Tech',
   'AI & Machine Learning',
 ];
+
+// --------------------------------
+import team1 from './assets/images/team1.png';
+import team2 from './assets/images/team2.png';
+import team3 from './assets/images/team3.png';
+import team4 from './assets/images/team4.png';
+import team5 from './assets/images/team5.png';
+import team6 from './assets/images/team6.png';
+import team7 from './assets/images/team7.png';
+export const teamMembers = [
+  {
+    id: '01',
+    name: 'Sherihan Mohamed',
+    image: team1,
+    keywords: ['LEAD', 'GUIDE', 'EMPOWER'],
+    roles: ['DEPARTMENT HEAD'],
+    icon: 'local_police',
+    accent: 'red',
+    linkedin: 'https://www.linkedin.com/in/sherihan-mohamed/',
+    github: 'https://github.com/sherihan-mohamed',
+  },
+
+  {
+    id: '02',
+    name: 'Ramy Abou-Nagi',
+    image: team5,
+    keywords: ['TEACH', 'SUPPORT', 'DEVELOP'],
+    roles: ['INSTRUCTOR', 'STAFF'],
+    icon: 'person',
+    accent: 'teal',
+    linkedin: 'https://www.linkedin.com/in/ramy-abou-nagi/',
+    github: 'https://github.com/ramy-abou-nagi',
+  },
+
+  {
+    id: '03',
+    name: 'Basma',
+    image: team2,
+    keywords: ['TEACH', 'SUPPORT', 'INSPIRE'],
+    roles: ['INSTRUCTOR', 'STAFF'],
+    icon: 'person',
+    accent: 'teal',
+    linkedin: 'https://www.linkedin.com/in/basma/',
+    github: 'https://github.com/basma',
+  },
+
+  {
+    id: '04',
+    name: 'Mahmoud Abdelaziz',
+    image: team6,
+    keywords: ['BUILD', 'GUIDE', 'MENTOR'],
+    roles: ['INSTRUCTOR', 'FULL STACK WEB TRACK SUPERVISOR'],
+    icon: 'school',
+    accent: 'teal',
+    linkedin: 'https://www.linkedin.com/in/mahmoud-abdelaziz/',
+    github: 'https://github.com/mahmoud-abdelaziz',
+  },
+
+  {
+    id: '05',
+    name: 'Omar Walid',
+    image: team7,
+    keywords: ['MOBILE', 'CREATE', 'INNOVATE'],
+    roles: ['INSTRUCTOR', 'MOBILE CROSS TRACK SUPERVISOR'],
+    icon: 'smartphone',
+    accent: 'teal',
+    linkedin: 'https://www.linkedin.com/in/omar-walid/',
+    github: 'https://github.com/omar-walid',
+  },
+
+  {
+    id: '06',
+    name: 'Shima Hamdy',
+    image: team3,
+    keywords: ['DEVELOP', 'ARCHITECT', 'EMPOWER'],
+    roles: ['INSTRUCTOR', '.NET TRACK SUPERVISOR'],
+    icon: 'settings',
+    accent: 'teal',
+    linkedin: 'https://www.linkedin.com/in/shima-hamdy/',
+    github: 'https://github.com/shima-hamdy',
+  },
+
+  {
+    id: '07',
+    name: 'Noura Mohamed',
+    image: team4,
+    keywords: ['TEACH', 'INSPIRE', 'BELONG'],
+    roles: ['INSTRUCTOR'],
+    icon: 'person',
+    accent: 'teal',
+    linkedin: 'https://www.linkedin.com/in/noura-mohamed/',
+    github: 'https://github.com/noura-mohamed',
+  },
+];
