@@ -8,7 +8,7 @@ import ProjectsPage from './features/projects/pages/ProjectsPage';
 import EventsPage from './features/events/pages/EventsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
 import MainLayout from './layouts/MainLayout';
-import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
+import NewsAndActivites from './features/newsandactivites/page/NewsAndActivites';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function App() {

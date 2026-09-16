@@ -28,24 +28,18 @@ const TeamSection = () => {
           MAIN CONTAINER
       ====================================================== */}
 
-        <div className="relative z-10 mx-auto max-w-[1280px] px-6 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           {/* =====================================================
             TOP META
         ====================================================== */}
 
           <div className="mb-5 hidden items-center justify-between font-mono text-[11px] uppercase tracking-widest text-[#687888] md:flex">
             <div className="flex items-center gap-2">
-              <span className="text-white/60">SOFTWARE DEVELOPMENT</span>
+              <span className="text-white/60">SYSTEM DEVELOPMENT</span>
 
               <span className="text-white/30">/</span>
 
-              <span className="text-[#00B0B0]">ITI</span>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <span className="h-0.5 w-2.5 bg-[#E03531]" />
-
-              <span className="font-bold tracking-wider text-white/80">THE PEOPLE BEHIND SD</span>
+              <span className="text-sd-red">ITI</span>
             </div>
 
             <div className="flex items-center gap-2 text-white/50">

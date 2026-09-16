@@ -35,7 +35,7 @@ const TeamCard = ({ person }) => {
           IMAGE
       ==================================================== */}
 
-        <div className="relative aspect-[4/5] overflow-hidden bg-[#0a2638]">
+        <div className="relative aspect-4/5 overflow-hidden bg-[#0a2638]">
           <img
             src={person.image}
             alt={person.name}
@@ -44,7 +44,7 @@ const TeamCard = ({ person }) => {
 
           {/* Image Gradient */}
 
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0D354B] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-[#0D354B] to-transparent" />
         </div>
 
         {/* ===================================================
@@ -56,7 +56,7 @@ const TeamCard = ({ person }) => {
             {/* Name */}
 
             <h3
-              className={`text-xl font-black leading-tight tracking-tight text-white ${
+              className={`text-xl font-medium leading-tight tracking-tight text-white ${
                 !isDepartmentHead ? 'transition-colors group-hover:text-[#00B0B0]' : ''
               }`}
             >
