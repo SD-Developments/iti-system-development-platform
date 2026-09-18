@@ -13,15 +13,19 @@ import Lenis from 'lenis';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 const lenis = new Lenis({
-  duration: 3,
+  duration: 2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smoothWheel: true,
   wheelMultiplier: 1,
   touchMultiplier: 2,
 });
-lenis.on('scroll', ScrollTrigger.update);
+lenis.on('scroll', ScrollTrigger.update); // Whenever Lenis produces a scroll update, tell ScrollTrigger to recalculate/update.
+// GSAP uses this to continuously update animations. in animation loop
+// Every time GSAP's animation loop runs, execute this function.
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
+  // GSAP passes a time value into your callback. (GSAP's ticker time is in seconds.)
+  lenis.raf(time * 1000); // Lenis's raf() expects a timestamp in milliseconds in this setup.
+  // Tell Lenis to update itself using the current animation-loop timestamp.
 });
 gsap.ticker.lagSmoothing(0);
 

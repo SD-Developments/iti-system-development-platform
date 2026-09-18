@@ -18,23 +18,25 @@ function HeroCarousel() {
   }, []);
 
   return (
-    <section
-      className={clsx(
-        'relative      md:h-[190vh] lg:h-[110vh] w-full py-28 bg-background text-foreground'
-      )}
-    >
+    <section className={clsx('relative lg:h-[110vh] w-full py-28 bg-background text-foreground')}>
       <div className="mx-auto flex w-[90%] flex-col items-center lg:flex-row">
         <div className="my-5 w-full lg:w-1/2">
-          <div className="mb-7 text-md font-semibold tracking-wider text-muted-foreground">
-            {String(currSlide + 1).padStart(2, '0')} /{' '}
-            {String(heorHomeSlides.length).padStart(2, '0')}
+          <div className="mb-7 flex items-center gap-3">
+            <span className="h-2 w-2 rounded-full bg-accent" />
+
+            <span className="font-mono text-sm font-bold uppercase tracking-[0.18em] text-accent">
+              {slide.eyebrow}
+            </span>
+
+            <span className="h-px w-10 bg-border" />
+
+            <span className="font-mono text-sm text-muted-foreground">
+              {String(currSlide + 1).padStart(2, '0')} /
+              {String(heorHomeSlides.length).padStart(2, '0')}
+            </span>
           </div>
 
-          <div className="mb-7 text-xs font-bold tracking-[0.24em] text-accent">
-            {slide.eyebrow}
-          </div>
-
-          <h1 className="m-0 text-4xl font-extrabold leading-[0.92] tracking-[-0.055em] sm:text-[64px] md:text-[76px] lg:text-[92px]">
+          <h1 className="m-0 text-4xl font-extrabold leading-[0.92] tracking-[-0.055em] sm:text-[54px] md:text-[66px] lg:text-[78px] xl:text-[86px]">
             {slide.title}
           </h1>
 
@@ -56,9 +58,22 @@ function HeroCarousel() {
               <ArrowRight size={18} />
             </button>
             <button
-              className={clsx(
-                'inline-flex text-foreground min-h-13 items-center justify-center rounded-[14px] border border-accent px-6 font-bold transition hover:-translate-y-0.5'
-              )}
+              className="
+    inline-flex
+    min-h-13
+    items-center
+    justify-center
+    rounded-[14px]
+    border border-border
+    bg-card
+    px-6
+    font-bold
+    text-foreground
+    transition
+    hover:-translate-y-0.5
+    hover:border-accent/40
+    hover:bg-secondary
+  "
             >
               {slide.secondaryCta}
             </button>
@@ -70,7 +85,7 @@ function HeroCarousel() {
         </div>
       </div>
 
-      <div className="absolute right-1 top-1/2 z-10 flex -translate-y-1/2 rotate-90 items-center justify-center gap-4">
+      <div className="absolute left-1/2 bottom-16 z-10 flex -translate-x-1/2 rotate-0 items-center justify-center gap-4 lg:left-[95%] lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 lg:rotate-90">
         <div className="flex items-center gap-2">
           {heorHomeSlides.map((item, index) => (
             <button
