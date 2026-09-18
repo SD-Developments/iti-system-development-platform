@@ -1,14 +1,32 @@
 import { heorHomeSlides } from '@/constants';
 import clsx from 'clsx';
-import { ArrowRight, BookOpen, Code2, Layers3, MapPin } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { ArrowRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 import hero1 from '../../../assets/images/hero1.png';
 import hero2 from '../../../assets/images/Requra.png';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 function HeroCarousel() {
   const [currSlide, setCurrSlide] = useState(0);
-  const slide = heorHomeSlides[currSlide];
-
+  const trackRef = useRef(null);
+  const viewportRef = useRef(null);
+  useGSAP(
+    () => {
+      if (!viewportRef.current || !trackRef.current) return;
+      gsap.to(trackRef.current, {
+        xPercent: -100 * currSlide,
+        duration: 2,
+        overwrite: 'auto',
+        force3D: true,
+        ease: 'power3.inOut',
+      });
+    },
+    {
+      dependencies: [currSlide],
+      scope: viewportRef,
+    }
+  );
   useEffect(() => {
     const id = setInterval(() => {
       setCurrSlide((prev) => (prev + 1) % heorHomeSlides.length);
@@ -18,8 +36,39 @@ function HeroCarousel() {
   }, []);
 
   return (
-    <section className={clsx('relative lg:h-[110vh] w-full py-28 bg-background text-foreground')}>
-      <div className="mx-auto flex w-[90%] flex-col items-center lg:flex-row">
+    <section className="relative lg:h-[110vh] w-full  bg-background text-foreground overflow-hidden">
+      <div ref={viewportRef} className="mx-auto  w-full overflow-hidden">
+        <div ref={trackRef} className="w-full flex items-center">
+          {heorHomeSlides.map((slide) => (
+            <div key={slide.id} className="w-full shrink-0">
+              <SlideItem slide={slide} currSlide={currSlide} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="absolute left-1/2 bottom-20 z-10 flex -translate-x-1/2 rotate-0 items-center justify-center gap-4">
+        <div className="flex items-center gap-2">
+          {heorHomeSlides.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setCurrSlide(index)}
+              className={clsx(
+                'h-2.5 rounded-full transition-all',
+                index === currSlide ? 'w-7 bg-primary' : 'w-2.5 bg-muted-foreground/40'
+              )}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SlideItem({ slide, currSlide }) {
+  return (
+    <>
+      <div className="py-28 px-10 flex flex-col items-center lg:flex-row">
         <div className="my-5 w-full lg:w-1/2">
           <div className="mb-7 flex items-center gap-3">
             <span className="h-2 w-2 rounded-full bg-accent" />
@@ -59,21 +108,21 @@ function HeroCarousel() {
             </button>
             <button
               className="
-    inline-flex
-    min-h-13
-    items-center
-    justify-center
-    rounded-[14px]
-    border border-border
-    bg-card
-    px-6
-    font-bold
-    text-foreground
-    transition
-    hover:-translate-y-0.5
-    hover:border-accent/40
-    hover:bg-secondary
-  "
+              inline-flex
+              min-h-13
+              items-center
+              justify-center
+              rounded-[14px]
+              border border-border
+              bg-card
+              px-6
+              font-bold
+              text-foreground
+              transition
+              hover:-translate-y-0.5
+              hover:border-accent/40
+              hover:bg-secondary
+              "
             >
               {slide.secondaryCta}
             </button>
@@ -84,47 +133,7 @@ function HeroCarousel() {
           <HeroVisual type={slide.visual} />
         </div>
       </div>
-
-      <div className="absolute left-1/2 bottom-16 z-10 flex -translate-x-1/2 rotate-0 items-center justify-center gap-4 lg:left-[95%] lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 lg:rotate-90">
-        <div className="flex items-center gap-2">
-          {heorHomeSlides.map((item, index) => (
-            <button
-              key={item.id}
-              onClick={() => setCurrSlide(index)}
-              className={clsx(
-                'h-2.5 rounded-full transition-all',
-                index === currSlide ? 'w-7 bg-primary' : 'w-2.5 bg-muted-foreground/40'
-              )}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="absolute -bottom-11 left-1/2 z-20 mt-8 hidden w-[80%] -translate-x-1/2 grid-cols-1 gap-5 rounded-[22px] border border-border bg-card/90 px-6 py-6 shadowbox backdrop-blur sm:grid-cols-2 lg:grid lg:grid-cols-4">
-        <ProofItem icon={<BookOpen size={24} />} title="2 Programs" text="PTP · ITP" />
-        <ProofItem icon={<Layers3 size={24} />} title="Multiple Tracks" text="Build your path" />
-        <ProofItem icon={<MapPin size={24} />} title="Multiple Branches" text="Across Egypt" />
-        <ProofItem
-          icon={<Code2 size={24} />}
-          title="Real Projects"
-          text="From learning to impact"
-        />
-      </div>
-    </section>
-  );
-}
-
-function ProofItem({ icon, title, text }) {
-  return (
-    <div className="flex items-center gap-3">
-      <div className="text-accent">{icon}</div>
-
-      <div>
-        <strong className="block text-sm text-card-foreground">{title}</strong>
-
-        <span className="mt-1 block text-xs text-muted-foreground">{text}</span>
-      </div>
-    </div>
+    </>
   );
 }
 
