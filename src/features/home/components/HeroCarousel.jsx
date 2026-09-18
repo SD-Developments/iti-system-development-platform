@@ -18,7 +18,11 @@ function HeroCarousel() {
   }, []);
 
   return (
-    <section className={clsx('relative min-h-screen w-full py-28 bg-background text-foreground')}>
+    <section
+      className={clsx(
+        'relative      md:h-[190vh] lg:h-[110vh] w-full py-28 bg-background text-foreground'
+      )}
+    >
       <div className="mx-auto flex w-[90%] flex-col items-center lg:flex-row">
         <div className="my-5 w-full lg:w-1/2">
           <div className="mb-7 text-md font-semibold tracking-wider text-muted-foreground">

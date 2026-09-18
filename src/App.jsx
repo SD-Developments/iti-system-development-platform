@@ -9,7 +9,21 @@ import EventsPage from './features/events/pages/EventsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
 import MainLayout from './layouts/MainLayout';
 import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import Lenis from 'lenis';
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
+const lenis = new Lenis({
+  duration: 3,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true,
+  wheelMultiplier: 1,
+  touchMultiplier: 2,
+});
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+gsap.ticker.lagSmoothing(0);
 
 function App() {
   const router = createBrowserRouter([
@@ -56,10 +70,6 @@ function App() {
 
   return (
     <>
-      {/* <BrandingNavBar />
-      <Home />
-      <div className="bg-red-400 w-full h-dvh"></div>
-      <div className="bg-blue-400 w-full h-dvh"></div> */}
       <RouterProvider router={router} />
     </>
   );
