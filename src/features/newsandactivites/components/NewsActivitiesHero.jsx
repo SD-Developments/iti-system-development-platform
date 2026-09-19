@@ -1,4 +1,5 @@
 import { stitchImages } from '../../../constants';
+import HeroSectionBackPattern from './heroSectionBackPattern';
 
 const ArrowIcon = () => (
   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -13,6 +14,8 @@ const ArrowIcon = () => (
 
 const NewsActivitiesHero = () => (
   <section className="relative overflow-hidden border-b border-slate-800 bg-sd-navy pb-16 pt-28 text-white">
+    <HeroSectionBackPattern />
+
     <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="grid grid-cols-12 gap-8 items-center">
         <div className="col-span-12 lg:col-span-6 relative z-10 pr-0 lg:pr-6">
