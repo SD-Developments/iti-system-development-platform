@@ -16,7 +16,7 @@ const NewsActivitiesHero = () => (
   <section className="relative overflow-hidden border-b border-slate-800 bg-sd-navy pb-16 pt-28 text-white">
     <HeroSectionBackPattern />
 
-    <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="max-w-335 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="grid grid-cols-12 gap-8 items-center">
         <div className="col-span-12 lg:col-span-6 relative z-10 pr-0 lg:pr-6">
           <div className="flex items-center gap-2 text-sd-red font-mono text-xs tracking-wider uppercase font-semibold mb-3">
@@ -44,13 +44,13 @@ const NewsActivitiesHero = () => (
 
         <div className="col-span-12 lg:col-span-6 relative">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700/80 bg-slate-900 group">
-            <div className="relative h-[340px] sm:h-[390px] w-full overflow-hidden bg-slate-950">
+            <div className="relative h-85 sm:h-97.5 w-full overflow-hidden bg-slate-950">
               <img
                 alt="Software Development Students Community"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
                 src={stitchImages.hero}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20" />
               <div className="absolute top-6 left-8 -rotate-12 pointer-events-none">
                 <span className="font-handwriting text-sd-teal text-3xl sm:text-4xl font-bold">
                   Build

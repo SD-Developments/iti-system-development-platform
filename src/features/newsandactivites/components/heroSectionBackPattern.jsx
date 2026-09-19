@@ -20,75 +20,65 @@ const HeroSectionBackPattern = () => {
         >
           SD
         </div>
-
-        {/* =======================================================
-      02 — LARGE CONSTRUCTION CIRCLE
-  ======================================================== */}
-
         <div
           className="
       absolute
-      -left-[260px]
-      -top-[280px]
-      h-[760px]
-      w-[760px]
+      -left-65
+      -top-70
+      h-190
+      w-190
       rounded-full
       border
-      border-sd-teal/[0.10]
+      border-sd-teal/10
     "
         />
 
         <div
           className="
       absolute
-      -left-[180px]
-      -top-[200px]
-      h-[600px]
-      w-[600px]
+      -left-45
+      -top-50
+      h-150
+      w-150
       rounded-full
       border
       border-dashed
-      border-sd-teal/[0.08]
+      border-sd-teal/8
     "
         />
 
         <div
           className="
       absolute
-      -left-[90px]
-      -top-[110px]
-      h-[420px]
-      w-[420px]
+      -left-22.5
+      -top-27.5
+      h-105
+      w-105
       rounded-full
       border
-      border-sd-teal/[0.06]
+      border-sd-teal/6
     "
         />
-
-        {/* =======================================================
-      03 — RIGHT CONSTRUCTION CIRCLE
-  ======================================================== */}
-
         <div
           className="
       absolute
-      -right-[300px]
-      -top-[240px]
-      h-[700px]
-      w-[700px]
+      -right-75
+      -top-60
+      h-175
+      w-175
       rounded-full
       border
-      border-sd-red/[0.09]
+      border-sd-red/9
     "
         />
 
         <div
           className="
       absolute
-      -right-[200px]
-      -top-[150px]
-      h-[520px]
-      w-[520px]
+      -right-50
+      -top-37.5
+      h-130
+      w-130
       rounded-full
       border
       border-dashed
@@ -107,10 +97,10 @@ const HeroSectionBackPattern = () => {
       top-[18%]
       h-px
       w-[55%]
-      rotate-[18deg]
-      bg-gradient-to-r
+      rotate-18
+      bg-linear-to-r
       from-transparent
-      via-sd-teal/[0.12]
+      via-sd-teal/12
       to-transparent
     "
         />
@@ -122,10 +112,10 @@ const HeroSectionBackPattern = () => {
       top-[62%]
       h-px
       w-[45%]
-      -rotate-[16deg]
-      bg-gradient-to-r
+      rotate-[-16deg]
+      bg-linear-to-r
       from-transparent
-      via-sd-red/[0.10]
+      via-sd-red/10
       to-transparent
     "
         />
@@ -137,10 +127,10 @@ const HeroSectionBackPattern = () => {
       top-0
       h-[55%]
       w-px
-      rotate-[25deg]
-      bg-gradient-to-b
+      rotate-25
+      bg-linear-to-b
       from-transparent
-      via-white/[0.04]
+      via-white/4
       to-transparent
     "
         />
@@ -157,7 +147,7 @@ const HeroSectionBackPattern = () => {
       hidden
       h-32
       w-px
-      bg-slate-400/[0.12]
+      bg-slate-400/12
       lg:block
     "
         />
@@ -280,8 +270,8 @@ const HeroSectionBackPattern = () => {
       absolute
       right-[8%]
       top-[28%]
-      h-[220px]
-      w-[300px]
+      h-55
+      w-75
       opacity-30
     "
           viewBox="0 0 300 220"
@@ -433,7 +423,7 @@ const HeroSectionBackPattern = () => {
       hidden
       h-px
       w-16
-      bg-gradient-to-r
+      bg-linear-to-r
       from-transparent
       via-sd-red/50
       to-sd-red
@@ -450,8 +440,8 @@ const HeroSectionBackPattern = () => {
       absolute
       left-[20%]
       top-[20%]
-      h-[500px]
-      w-[500px]
+      h-125
+      w-125
       rounded-full
       bg-sd-teal/[0.035]
       blur-[140px]
@@ -463,10 +453,10 @@ const HeroSectionBackPattern = () => {
       absolute
       right-[10%]
       top-0
-      h-[400px]
-      w-[400px]
+      h-100
+      w-100
       rounded-full
-      bg-sd-red/[0.025]
+      bg-sd-red/2.5
       blur-[140px]
     "
         />
