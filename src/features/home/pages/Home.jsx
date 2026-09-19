@@ -19,9 +19,7 @@ function Home() {
         <BuiltSection />
         <LifeSection />
         <StudentSection />
-
         <JourneyToOutcomes />
-
         <Outcomes />
         <FAQ />
       </main>

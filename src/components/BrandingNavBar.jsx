@@ -32,6 +32,7 @@ function BrandingNavBar() {
         y: -100,
         opacity: 0,
         duration: 0.8,
+        delay: 0.5,
         ease: 'power3.out',
       });
     },

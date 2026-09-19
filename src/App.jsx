@@ -8,8 +8,26 @@ import ProjectsPage from './features/projects/pages/ProjectsPage';
 import EventsPage from './features/events/pages/EventsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
 import MainLayout from './layouts/MainLayout';
-import NewsAndActivites from './features/newsandactivites/page/NewsAndActivites';
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
+import Lenis from 'lenis';
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
+const lenis = new Lenis({
+  duration: 2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true,
+  wheelMultiplier: 1,
+  touchMultiplier: 2,
+});
+lenis.on('scroll', ScrollTrigger.update); // Whenever Lenis produces a scroll update, tell ScrollTrigger to recalculate/update.
+// GSAP uses this to continuously update animations. in animation loop
+// Every time GSAP's animation loop runs, execute this function.
+gsap.ticker.add((time) => {
+  // GSAP passes a time value into your callback. (GSAP's ticker time is in seconds.)
+  lenis.raf(time * 1000); // Lenis's raf() expects a timestamp in milliseconds in this setup.
+  // Tell Lenis to update itself using the current animation-loop timestamp.
+});
+gsap.ticker.lagSmoothing(0);
 
 function App() {
   const router = createBrowserRouter([
@@ -56,10 +74,6 @@ function App() {
 
   return (
     <>
-      {/* <BrandingNavBar />
-      <Home />
-      <div className="bg-red-400 w-full h-dvh"></div>
-      <div className="bg-blue-400 w-full h-dvh"></div> */}
       <RouterProvider router={router} />
     </>
   );

@@ -2,16 +2,15 @@ import { Outlet } from 'react-router';
 
 import BrandingNavBar from '../components/BrandingNavBar';
 import BrandingFooter from '../components/BrandingFooter';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const MainLayout = () => {
   return (
     <>
       <div className="flex min-h-screen flex-col">
         <BrandingNavBar />
-
-        {/* <main className="flex-1"> */}
         <Outlet />
-        {/* </main> */}
+        <ScrollToTop />
         <BrandingFooter />
       </div>
     </>
