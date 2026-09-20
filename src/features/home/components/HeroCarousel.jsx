@@ -11,15 +11,26 @@ function HeroCarousel() {
   const [currSlide, setCurrSlide] = useState(0);
   const trackRef = useRef(null);
   const viewportRef = useRef(null);
+  const slides = heorHomeSlides;
+  const extendedSlide = [...slides, slides[0]];
+  const [paused, setPaused] = useState(false);
   useGSAP(
     () => {
       if (!viewportRef.current || !trackRef.current) return;
       gsap.to(trackRef.current, {
         xPercent: -100 * currSlide,
-        duration: 2,
+        duration: 0.5,
         overwrite: 'auto',
         force3D: true,
         ease: 'power3.inOut',
+        onComplete: () => {
+          if (currSlide === heorHomeSlides.length) {
+            gsap.set(trackRef.current, {
+              xPercent: 0,
+            });
+            setCurrSlide(0);
+          }
+        },
       });
     },
     {
@@ -28,20 +39,25 @@ function HeroCarousel() {
     }
   );
   useEffect(() => {
+    if (paused) return;
     const id = setInterval(() => {
       setCurrSlide((prev) => (prev + 1) % heorHomeSlides.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(id);
-  }, []);
+  }, [paused]);
 
   return (
-    <section className="relative lg:h-[110vh] w-full  bg-background text-foreground overflow-hidden">
+    <section
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      className="relative w-full min-h-screen bg-background text-foreground overflow-hidden"
+    >
       <div ref={viewportRef} className="mx-auto  w-full overflow-hidden">
         <div ref={trackRef} className="w-full flex items-center">
-          {heorHomeSlides.map((slide) => (
-            <div key={slide.id} className="w-full shrink-0">
-              <SlideItem slide={slide} currSlide={currSlide} />
+          {extendedSlide.map((slide, idx) => (
+            <div key={`${slide.id}-${idx}`} className="w-full shrink-0">
+              <SlideItem slide={slide} index={idx + 1} total={slides.length} />
             </div>
           ))}
         </div>
@@ -65,7 +81,7 @@ function HeroCarousel() {
   );
 }
 
-function SlideItem({ slide, currSlide }) {
+function SlideItem({ slide, total, index }) {
   return (
     <>
       <div className="py-28 px-10 flex flex-col items-center lg:flex-row">
@@ -80,8 +96,7 @@ function SlideItem({ slide, currSlide }) {
             <span className="h-px w-10 bg-border" />
 
             <span className="font-mono text-sm text-muted-foreground">
-              {String(currSlide + 1).padStart(2, '0')} /
-              {String(heorHomeSlides.length).padStart(2, '0')}
+              {String(index).padStart(2, '0')} /{String(total).padStart(2, '0')}
             </span>
           </div>
 
