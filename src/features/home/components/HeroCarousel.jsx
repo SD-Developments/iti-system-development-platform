@@ -24,7 +24,7 @@ function HeroCarousel() {
         force3D: true,
         ease: 'power3.inOut',
         onComplete: () => {
-          if (currSlide === heorHomeSlides.length) {
+          if (currSlide === slides.length) {
             gsap.set(trackRef.current, {
               xPercent: 0,
             });
