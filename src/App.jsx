@@ -10,8 +10,10 @@ import IntakesPage from './features/intakes/pages/IntakesPage';
 import MainLayout from './layouts/MainLayout';
 import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
 import Lenis from 'lenis';
+import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(useGSAP);
 const lenis = new Lenis({
   duration: 2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

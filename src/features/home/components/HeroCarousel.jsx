@@ -8,56 +8,64 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 function HeroCarousel() {
-  const [currSlide, setCurrSlide] = useState(0);
+  const [physicalSlide, setPhysicalSlide] = useState(0); // This is the real position inside the rendered track, including the cloned slide.
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocusWithin, setIsFocusWithin] = useState(false);
   const trackRef = useRef(null);
   const viewportRef = useRef(null);
   const slides = heorHomeSlides;
-  const extendedSlide = [...slides, slides[0]];
-  const [paused, setPaused] = useState(false);
+  const slideCount = slides.length;
+  const extendedSlide = slideCount > 0 ? [...slides, slides[0]] : [];
+  const logicalSlide = slideCount > 0 ? physicalSlide % slideCount : 0; //This is the slide the user logically sees
+  const paused = isHovered || isFocusWithin;
   useGSAP(
     () => {
       if (!viewportRef.current || !trackRef.current) return;
       gsap.to(trackRef.current, {
-        xPercent: -100 * currSlide,
+        xPercent: -100 * physicalSlide,
         duration: 0.5,
         overwrite: 'auto',
         force3D: true,
         ease: 'power3.inOut',
         onComplete: () => {
-          if (currSlide === slides.length) {
+          if (physicalSlide === slideCount) {
             gsap.set(trackRef.current, {
               xPercent: 0,
             });
-            setCurrSlide(0);
+            setPhysicalSlide(0);
           }
         },
       });
     },
     {
-      dependencies: [currSlide],
+      dependencies: [physicalSlide],
       scope: viewportRef,
     }
   );
   useEffect(() => {
-    if (paused) return;
-    const id = setInterval(() => {
-      setCurrSlide((prev) => (prev + 1) % heorHomeSlides.length);
+    if (paused || slideCount <= 1) {
+      return undefined;
+    }
+    const id = setTimeout(() => {
+      setPhysicalSlide((current) => (current >= slideCount ? 1 : current + 1));
     }, 3000);
 
-    return () => clearInterval(id);
-  }, [paused]);
+    return () => clearTimeout(id);
+  }, [paused, physicalSlide, slideCount]);
 
   return (
     <section
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onFocusCapture={() => setIsFocusWithin(true)}
+      onBlurCapture={() => setIsFocusWithin(false)}
       className="relative w-full min-h-screen bg-background text-foreground overflow-hidden"
     >
       <div ref={viewportRef} className="mx-auto  w-full overflow-hidden">
         <div ref={trackRef} className="w-full flex items-center">
           {extendedSlide.map((slide, idx) => (
             <div key={`${slide.id}-${idx}`} className="w-full shrink-0">
-              <SlideItem slide={slide} index={idx + 1} total={slides.length} />
+              <SlideItem slide={slide} index={(idx % slideCount) + 1} total={slideCount} />
             </div>
           ))}
         </div>
@@ -68,10 +76,10 @@ function HeroCarousel() {
           {heorHomeSlides.map((item, index) => (
             <button
               key={item.id}
-              onClick={() => setCurrSlide(index)}
+              onClick={() => setPhysicalSlide(index)}
               className={clsx(
                 'h-2.5 rounded-full transition-all',
-                index === currSlide ? 'w-7 bg-primary' : 'w-2.5 bg-muted-foreground/40'
+                index === logicalSlide ? 'w-7 bg-primary' : 'w-2.5 bg-muted-foreground/40'
               )}
             />
           ))}
