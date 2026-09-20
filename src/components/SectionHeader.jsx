@@ -6,8 +6,7 @@ function SectionHeader({ eyebrow, title, description, action }) {
   const containerRef = useRef(null);
   useGSAP(
     () => {
-      if (!containerRef) return;
-
+      if (!containerRef.current) return;
       const t1 = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,

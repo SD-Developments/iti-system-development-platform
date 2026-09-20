@@ -11,68 +11,72 @@ import MainLayout from './layouts/MainLayout';
 import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
 import Lenis from 'lenis';
 import { useGSAP } from '@gsap/react';
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
-gsap.registerPlugin(useGSAP);
-const lenis = new Lenis({
-  duration: 2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smoothWheel: true,
-  wheelMultiplier: 1,
-  touchMultiplier: 2,
-});
-lenis.on('scroll', ScrollTrigger.update); // Whenever Lenis produces a scroll update, tell ScrollTrigger to recalculate/update.
-// GSAP uses this to continuously update animations. in animation loop
-// Every time GSAP's animation loop runs, execute this function.
-gsap.ticker.add((time) => {
-  // GSAP passes a time value into your callback. (GSAP's ticker time is in seconds.)
-  lenis.raf(time * 1000); // Lenis's raf() expects a timestamp in milliseconds in this setup.
-  // Tell Lenis to update itself using the current animation-loop timestamp.
-});
-gsap.ticker.lagSmoothing(0);
+import { useEffect } from 'react';
+gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+
+      {
+        path: 'about',
+        element: <AboutPage />,
+      },
+
+      {
+        path: 'intakes',
+        element: <IntakesPage />,
+      },
+
+      {
+        path: 'tracks',
+        element: <TracksPage />,
+      },
+
+      {
+        path: 'projects',
+        element: <ProjectsPage />,
+      },
+      {
+        path: 'events',
+        element: <EventsPage />,
+      },
+      {
+        path: 'news-activites',
+        element: <NewsAndActivites />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <MainLayout />,
-
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-
-        {
-          path: 'about',
-          element: <AboutPage />,
-        },
-
-        {
-          path: 'intakes',
-          element: <IntakesPage />,
-        },
-
-        {
-          path: 'tracks',
-          element: <TracksPage />,
-        },
-
-        {
-          path: 'projects',
-          element: <ProjectsPage />,
-        },
-        {
-          path: 'events',
-          element: <EventsPage />,
-        },
-        {
-          path: 'news-activites',
-          element: <NewsAndActivites />,
-        },
-      ],
-    },
-  ]);
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1,
+      // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
+    lenis.on('scroll', ScrollTrigger.update);
+    const updateLenis = (time) => {
+      lenis.raf(time * 1000);
+    };
+    gsap.ticker.add(updateLenis);
+    gsap.ticker.lagSmoothing(0);
+    ScrollTrigger.refresh();
+    return () => {
+      gsap.ticker.remove(updateLenis);
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <>

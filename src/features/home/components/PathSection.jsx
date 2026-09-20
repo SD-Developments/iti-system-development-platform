@@ -15,20 +15,43 @@ function PathSection() {
   const smartVillageTracks = tracks
     .filter((track) => track.program === 'PTP' && track.branches?.includes('Smart Village'))
     .slice(0, 3);
-  useGSAP(() => {
-    if (!containerRef) return;
-    const t1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.pathsection',
-        start: 'top top',
-        end: 'bottom bottom',
-        markers: true,
-      },
-    });
-    t1.from('');
-  }, {});
+  useGSAP(
+    () => {
+      if (!containerRef.current) return;
+
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 85%',
+          end: 'bottom 25%',
+          scrub: 0.3,
+        },
+      });
+
+      timeline
+        .from('.leftprogram', {
+          x: -100,
+          autoAlpha: 0,
+          duration: 0.5,
+          ease: 'power2.out',
+        })
+        .from(
+          '.rightprogram',
+          {
+            x: 100,
+            autoAlpha: 0,
+            duration: 0.5,
+            ease: 'power2.out',
+          },
+          '<'
+        );
+    },
+    {
+      scope: containerRef,
+    }
+  );
   return (
-    <section ref={containerRef} className=" relative overflow-hidden bg-sd-bg-light py-20 lg:py-28">
+    <section ref={containerRef} className="relative overflow-hidden bg-sd-bg-light py-20 lg:py-28">
       {/* Background */}
       <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-accent/5 blur-[110px]" />
 
@@ -70,8 +93,8 @@ function PathSection() {
                 cursor-pointer
                 ${
                   program.featured
-                    ? 'border-sd-navy bg-sd-navy text-sd-white'
-                    : 'border-border bg-card text-card-foreground'
+                    ? 'border-sd-navy bg-sd-navy text-sd-white leftprogram'
+                    : 'border-border bg-card text-card-foreground rightprogram'
                 }
               `}
             >
