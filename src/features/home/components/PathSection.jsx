@@ -450,25 +450,6 @@ function TrackCard({ track, index }) {
                 {track.duration}
               </div>
             </div>
-
-            <a
-              href={`/tracks/${track.id}`}
-              className={`
-                flex h-10 w-10
-                items-center
-                justify-center
-                rounded-full
-                bg-secondary
-                text-muted-foreground
-                transition-all
-                ${style.arrow}
-              `}
-            >
-              <ArrowRight
-                size={16}
-                className="transition-transform group-hover/card:translate-x-0.5"
-              />
-            </a>
           </div>
         </div>
       </div>
