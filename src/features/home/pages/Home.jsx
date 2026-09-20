@@ -5,7 +5,6 @@ import StudentSection from '../components/StudentSection';
 import BuiltSection from '../components/BuiltSection';
 import FAQ from '../components/FAQ';
 import Outcomes from '../components/Outcomes';
-
 import { ArrowDownRight } from 'lucide-react';
 import BranchHubsSection from '../components/BranchHubsSection';
 
