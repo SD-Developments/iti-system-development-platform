@@ -4,17 +4,31 @@ import { ArrowRight, BookOpen, Clock3, Layers3, MapPin, X } from 'lucide-react';
 import { programs, tracks } from '@/constants';
 import { Link } from 'react-router';
 import Month9Section from './Month9Section';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Month4Section from './Month4Section';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 function PathSection() {
   const [showProgram, setShowProgram] = useState(null);
+  const containerRef = useRef(null);
   const smartVillageTracks = tracks
     .filter((track) => track.program === 'PTP' && track.branches?.includes('Smart Village'))
     .slice(0, 3);
-
+  useGSAP(() => {
+    if (!containerRef) return;
+    const t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.pathsection',
+        start: 'top top',
+        end: 'bottom bottom',
+        markers: true,
+      },
+    });
+    t1.from('');
+  }, {});
   return (
-    <section className="relative overflow-hidden bg-sd-bg-light py-20 lg:py-28">
+    <section ref={containerRef} className=" relative overflow-hidden bg-sd-bg-light py-20 lg:py-28">
       {/* Background */}
       <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-accent/5 blur-[110px]" />
 
@@ -29,7 +43,6 @@ function PathSection() {
           eyebrow="Programs & Tracks"
           title="Choose Your Path"
           description="Start with the program that fits your journey, then explore the main technical tracks currently offered at Smart Village."
-          action="Explore All Programs"
         />
 
         {/* ==================================================

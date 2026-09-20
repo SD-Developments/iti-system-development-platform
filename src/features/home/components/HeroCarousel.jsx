@@ -13,17 +13,29 @@ function HeroCarousel() {
   const [isFocusWithin, setIsFocusWithin] = useState(false);
   const trackRef = useRef(null);
   const viewportRef = useRef(null);
+  const heroRef = useRef(null);
   const slides = heorHomeSlides;
   const slideCount = slides.length;
   const extendedSlide = slideCount > 0 ? [...slides, slides[0]] : [];
   const logicalSlide = slideCount > 0 ? physicalSlide % slideCount : 0; //This is the slide the user logically sees
   const paused = isHovered || isFocusWithin;
+
+  useGSAP(() => {
+    gsap.from(heroRef.current, {
+      duration: 0.5,
+      scale: 0,
+      delay: 0.5,
+    });
+  });
+
   useGSAP(
     () => {
       if (!viewportRef.current || !trackRef.current) return;
+
       gsap.to(trackRef.current, {
         xPercent: -100 * physicalSlide,
         duration: 0.5,
+        delay: 0.5,
         overwrite: 'auto',
         force3D: true,
         ease: 'power3.inOut',
@@ -55,6 +67,7 @@ function HeroCarousel() {
 
   return (
     <section
+      ref={heroRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocusCapture={() => setIsFocusWithin(true)}
