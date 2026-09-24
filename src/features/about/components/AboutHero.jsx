@@ -1,4 +1,5 @@
-import about4 from '../../../assets/images/hero1.png';
+import img from '../../../assets/images/hero1.png';
+
 const AboutHero = () => {
   return (
     <section className="relative w-full bg-background overflow-hidden border-b border-border">
@@ -70,10 +71,10 @@ const AboutHero = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-card bg-slate-900 group">
               <img
                 alt="ITI software development students collaborating in modern engineering lab"
-                className="w-full h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                src={about4}
+                className="w-full h-120 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                src={img}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-sd-navy/90 via-sd-navy/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-sd-navy/90 via-sd-navy/20 to-transparent"></div>
               {/* Handwritten Accent Overlay */}
               <div className="absolute top-5 left-6 bg-card/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg border border-white/50 -rotate-2">
                 <span className="font-handwriting text-2xl text-primary font-bold tracking-wide">
