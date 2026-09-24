@@ -7,17 +7,17 @@ const TeamSection = () => {
 
   return (
     <section id="faculty" className="w-full bg-background py-20 transition-colors">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col gap-12">
+      <div className="mx-auto flex max-w-7xl flex-col gap-12 px-6">
         {/* Header */}
-        <div className="flex flex-col items-center text-center gap-4">
+        <div className="flex flex-col items-center gap-4 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-sd-red animate-pulse" />
-            <span className="font-mono text-xs font-bold tracking-wider text-sd-red uppercase">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-sd-red" />
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-sd-red">
               The People Behind SD
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
+          <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Meet the SD Engineering Team
           </h2>
 
@@ -28,21 +28,21 @@ const TeamSection = () => {
         </div>
 
         {/* Top Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {topRow.map((member) => (
             <TeamCard key={member.id} member={member} />
           ))}
         </div>
 
         {/* Bottom Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto w-full">
+        <div className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {bottomRow.map((member) => (
             <TeamCard key={member.id} member={member} />
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-border">
+        {/* Bottom Stats */}
+        <div className="grid grid-cols-1 gap-6 border-t border-border pt-8 md:grid-cols-3">
           <div className="flex items-center gap-4">
             <span className="text-4xl font-black text-sd-red">{teamMembers.length}</span>
 
@@ -62,7 +62,7 @@ const TeamSection = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-4xl font-black text-sd-navy dark:text-white">1</span>
+            <span className="text-4xl font-black text-[#6B7280] dark:text-[#9CA3AF]">1</span>
 
             <div>
               <p className="font-bold text-foreground">Unified Department</p>
