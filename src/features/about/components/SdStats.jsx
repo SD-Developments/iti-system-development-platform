@@ -1,24 +1,88 @@
-import { sdStats } from '@/constants';
-
 const SdStats = () => {
   return (
     <>
-      <section className="bg-sd-bg-light py-14">
-        <div className="mx-auto grid max-w-[1340px] gap-5 px-6 md:grid-cols-4">
-          {sdStats.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-sd-red"
-            >
-              <div className="text-3xl font-extrabold text-sd-navy">{item.value}</div>
-
-              <div className="mt-3 font-semibold text-sd-navy">{item.title}</div>
-
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {item.description}
-              </p>
+      <section className="w-full bg-white py-16 border-b border-[#e2eaee]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Metric 1 */}
+            <div className="p-7 rounded-2xl bg-[#F6F9FA] border border-[#e2eaee] shadow-sm flex flex-col justify-between hover:border-[#E03531]/40 hover:shadow-md transition-all">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-mono text-xs font-bold text-[#E03531] tracking-wider uppercase">
+                  01 // SPECIALIZATION
+                </span>
+                <span className="material-symbols-outlined text-[#E03531] text-2xl">stacks</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-5xl font-black text-[#082B3E] tracking-tight">3</span>
+                <span className="font-mono text-xs font-bold text-[#082B3E] uppercase tracking-wider">
+                  PROFESSIONAL TRACKS
+                </span>
+                <p className="text-sm text-[#687888] mt-2 leading-relaxed">
+                  Specialized intensive tracks: Full Stack Web, Cross-Platform Mobile, and .NET
+                  Enterprise.
+                </p>
+              </div>
             </div>
-          ))}
+            {/* Metric 2 */}
+            <div className="p-7 rounded-2xl bg-[#F6F9FA] border border-[#e2eaee] shadow-sm flex flex-col justify-between hover:border-[#00B0B0]/40 hover:shadow-md transition-all">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-mono text-xs font-bold text-[#00B0B0] tracking-wider uppercase">
+                  02 // CAPSTONE DEFENSE
+                </span>
+                <span className="material-symbols-outlined text-[#00B0B0] text-2xl">timer</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-5xl font-black text-[#082B3E] tracking-tight">
+                  300 <span className="text-2xl text-[#687888] font-semibold">hrs</span>
+                </span>
+                <span className="font-mono text-xs font-bold text-[#082B3E] uppercase tracking-wider">
+                  GRADUATION PROJECT
+                </span>
+                <p className="text-sm text-[#687888] mt-2 leading-relaxed">
+                  Comprehensive capstone engineering under live mentor supervision and real industry
+                  requirements.
+                </p>
+              </div>
+            </div>
+            {/* Metric 3 */}
+            <div className="p-7 rounded-2xl bg-[#F6F9FA] border border-[#e2eaee] shadow-sm flex flex-col justify-between hover:border-[#082B3E]/40 hover:shadow-md transition-all">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-mono text-xs font-bold text-[#082B3E] tracking-wider uppercase">
+                  03 // FORMAT
+                </span>
+                <span className="material-symbols-outlined text-[#082B3E] text-2xl">school</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-5xl font-black text-[#082B3E] tracking-tight">75 / 25</span>
+                <span className="font-mono text-xs font-bold text-[#082B3E] uppercase tracking-wider">
+                  BLENDED LEARNING
+                </span>
+                <p className="text-sm text-[#687888] mt-2 leading-relaxed">
+                  75% intensive on-campus practical labs and project sprints combined with 25%
+                  interactive digital learning.
+                </p>
+              </div>
+            </div>
+            {/* Metric 4 */}
+            <div className="p-7 rounded-2xl bg-[#F6F9FA] border border-[#e2eaee] shadow-sm flex flex-col justify-between hover:border-[#E03531]/40 hover:shadow-md transition-all">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-mono text-xs font-bold text-[#E03531] tracking-wider uppercase">
+                  04 // ADMISSIONS
+                </span>
+                <span className="material-symbols-outlined text-[#E03531] text-2xl">verified</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-5xl font-black text-[#082B3E] tracking-tight">Good+</span>
+                <span className="font-mono text-xs font-bold text-[#082B3E] uppercase tracking-wider">
+                  MINIMUM REQUIREMENT
+                </span>
+                <p className="text-sm text-[#687888] mt-2 leading-relaxed">
+                  Selective admissions admitting top STEM graduates across engineering, computer
+                  science, and sciences.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

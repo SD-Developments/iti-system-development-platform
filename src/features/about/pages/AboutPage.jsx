@@ -9,6 +9,7 @@ import Leadership from '../components/Leadership';
 import Cta from '../components/Cta';
 import TeamSection from '../components/TeamSection';
 import SdStats from '../components/SdStats';
+import SdTracks from '../components/SdTracks';
 
 const AboutPage = () => {
   return (
@@ -17,6 +18,7 @@ const AboutPage = () => {
         <div className="flex w-full flex-col">
           <AboutHero />
           <SdStats />
+          <SdTracks />
           <DepartmentStory />
           <VisionMission />
           <CoreValues />
