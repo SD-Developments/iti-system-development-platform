@@ -3,7 +3,6 @@ import Leadership from '../components/Leadership';
 import Cta from '../components/Cta';
 import TeamSection from '../components/TeamSection';
 import SdStats from '../components/SdStats';
-import SdTracks from '../components/SdTracks';
 import StudentsBuilds from '../components/StudentsBuilds';
 import Curriculum from '../components/Curriculum';
 import TrackAi from '../components/TrackAi';
@@ -16,7 +15,6 @@ const AboutPage = () => {
         <div className="flex w-full flex-col">
           <AboutHero />
           <SdStats />
-          <SdTracks />
           <StudentsBuilds />
           <Curriculum />
           <TrackAi />

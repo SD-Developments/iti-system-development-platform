@@ -2,77 +2,107 @@ const ACCENTS = {
   red: {
     border: 'border-[#E03531]',
     badgeBg: 'bg-[#E03531]',
-    glow: 'shadow-[0_0_15px_rgba(224,53,49,0.5)]',
+    glow: 'shadow-[0_0_15px_rgba(224,53,49,0.35)]',
   },
   teal: {
     border: 'border-[#00B0B0]',
     badgeBg: 'bg-[#00B0B0]',
-    glow: 'shadow-[0_0_15px_rgba(0,176,176,0.5)]',
+    glow: 'shadow-[0_0_15px_rgba(0,176,176,0.35)]',
   },
   blue: {
     border: 'border-[#1D4ED8]',
     badgeBg: 'bg-[#1D4ED8]',
-    glow: 'shadow-[0_0_15px_rgba(29,78,216,0.6)]',
+    glow: 'shadow-[0_0_15px_rgba(29,78,216,0.35)]',
   },
 };
+
 const TeamCard = ({ member }) => {
   const accent = ACCENTS[member.accent] ?? ACCENTS.teal;
 
   return (
     <div
-      className={`p-5 rounded-2xl bg-white/10 backdrop-blur-md flex flex-col justify-between gap-4 border-t-4 ${accent.border} hover:bg-white/15 transition-all`}
+      className={`
+        rounded-2xl border border-border bg-card
+        p-5 flex flex-col gap-4
+        shadow-lg hover:shadow-xl
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-sd-teal/40
+      `}
     >
-      <div className="flex items-center justify-between font-mono text-xs text-[#e0e9ee]">
-        <span className="text-white font-bold">{member.id}</span>
-        <span>{member.keywords.join(' • ')}</span>
-      </div>
+      {/* Top Meta */}
+      <div className="flex items-center justify-between font-mono text-xs">
+        <span className="font-bold text-foreground">{member.id}</span>
 
-      <div className="rounded-xl overflow-hidden bg-slate-800 h-64 relative">
-        <img
-          alt={`${member.name} - ${member.roles[0]}`}
-          className="w-full h-full object-cover"
-          src={member.image}
-        />
-        <span
-          className={`absolute bottom-2 right-2 w-8 h-8 rounded-full ${accent.badgeBg} text-white flex items-center justify-center ${accent.glow}`}
-        >
-          <span className="material-symbols-outlined text-[16px]">{member.icon}</span>
+        <span className="text-muted-foreground text-[10px] uppercase tracking-wide">
+          {member.keywords.join(' • ')}
         </span>
       </div>
 
-      <div className="flex flex-col gap-2">
-        <h3 className="text-xl font-bold text-white">{member.name}</h3>
+      {/* Image */}
+      <div className={`relative h-64 overflow-hidden rounded-xl border ${accent.border}`}>
+        <img
+          src={member.image}
+          alt={`${member.name} - ${member.roles[0]}`}
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+        />
 
-        <div className="flex flex-wrap gap-1.5">
+        <span
+          className={`
+            absolute bottom-3 right-3
+            flex h-9 w-9 items-center justify-center
+            rounded-full text-white
+            ${accent.badgeBg} ${accent.glow}
+          `}
+        >
+          <span className="material-symbols-outlined text-[18px]">{member.icon}</span>
+        </span>
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col gap-3">
+        <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
+
+        <div className="flex flex-wrap gap-2">
           {member.roles.map((role) => (
             <span
               key={role}
-              className={`self-start font-mono text-xs px-3 py-1.5 rounded-lg ${accent.badgeBg} text-white font-black tracking-wider uppercase ${accent.glow}`}
+              className={`
+                rounded-lg px-3 py-1.5
+                font-mono text-[11px] font-bold uppercase tracking-wider
+                text-white ${accent.badgeBg} ${accent.glow}
+              `}
             >
               {role}
             </span>
           ))}
         </div>
 
-        {member.quote && <p className="text-xs text-[#e0e9ee] pt-1">“{member.quote}”</p>}
+        {member.quote && (
+          <p className="border-t border-border pt-3 text-sm leading-relaxed text-muted-foreground">
+            “{member.quote}”
+          </p>
+        )}
 
-        <div className="flex items-center gap-2 pt-2 border-t border-white/10">
+        {/* Links */}
+        <div className="flex items-center gap-3 border-t border-border pt-3">
           {member.linkedin && (
             <a
-              className="text-white/70 hover:text-white transition-colors"
               href={member.linkedin}
               title="LinkedIn"
+              className="text-muted-foreground transition hover:text-sd-teal"
             >
-              <span className="material-symbols-outlined text-[18px]">share</span>
+              <span className="material-symbols-outlined">share</span>
             </a>
           )}
+
           {member.github && (
             <a
-              className="text-white/70 hover:text-white transition-colors"
               href={member.github}
               title="GitHub"
+              className="text-muted-foreground transition hover:text-sd-red"
             >
-              <span className="material-symbols-outlined text-[18px]">code</span>
+              <span className="material-symbols-outlined">code</span>
             </a>
           )}
         </div>

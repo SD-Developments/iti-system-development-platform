@@ -6,57 +6,67 @@ const TeamSection = () => {
   const bottomRow = teamMembers.slice(4);
 
   return (
-    <section className="w-full bg-[#082B3E] py-20 text-white" id="faculty">
+    <section id="faculty" className="w-full bg-background py-20 transition-colors">
       <div className="max-w-7xl mx-auto px-6 flex flex-col gap-12">
-        <div className="flex flex-col items-center text-center gap-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E03531] text-white font-mono text-xs font-bold">
-            <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-            THE PEOPLE BEHIND SD
+        {/* Header */}
+        <div className="flex flex-col items-center text-center gap-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-sd-red animate-pulse" />
+            <span className="font-mono text-xs font-bold tracking-wider text-sd-red uppercase">
+              The People Behind SD
+            </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
             Meet the SD Engineering Team
           </h2>
-          <p className="text-lg text-[#e0e9ee] max-w-2xl">
+
+          <p className="max-w-2xl text-lg text-muted-foreground">
             Engineers, instructors, and mentors shaping the next generation of software developers
             across Egypt.
           </p>
         </div>
 
-        {/* Top Row: 4 Members */}
+        {/* Top Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {topRow.map((member) => (
-            <TeamCard key={member.id} member={member} total={teamMembers.length} />
+            <TeamCard key={member.id} member={member} />
           ))}
         </div>
 
-        {/* Bottom Row: remaining Members, centered */}
+        {/* Bottom Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto w-full">
           {bottomRow.map((member) => (
-            <TeamCard key={member.id} member={member} total={teamMembers.length} />
+            <TeamCard key={member.id} member={member} />
           ))}
         </div>
 
-        {/* Bottom Summary Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-white/15">
+        {/* Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-border">
           <div className="flex items-center gap-4">
-            <span className="text-4xl font-black text-[#E03531]">{teamMembers.length}</span>
-            <div className="flex flex-col">
-              <span className="text-sm font-bold text-white">Faculty &amp; Instructors</span>
-              <span className="text-xs text-[#e0e9ee]">Experienced Instructors &amp; Mentors</span>
+            <span className="text-4xl font-black text-sd-red">{teamMembers.length}</span>
+
+            <div>
+              <p className="font-bold text-foreground">Faculty & Instructors</p>
+              <p className="text-sm text-muted-foreground">Experienced Instructors & Mentors</p>
             </div>
           </div>
+
           <div className="flex items-center gap-4">
-            <span className="text-4xl font-black text-[#00B0B0]">3</span>
-            <div className="flex flex-col">
-              <span className="text-sm font-bold text-white">Core Technical Tracks</span>
-              <span className="text-xs text-[#e0e9ee]">Full Stack • Mobile Cross • .NET Core</span>
+            <span className="text-4xl font-black text-sd-teal">3</span>
+
+            <div>
+              <p className="font-bold text-foreground">Core Technical Tracks</p>
+              <p className="text-sm text-muted-foreground">Full Stack • Mobile Cross • .NET Core</p>
             </div>
           </div>
+
           <div className="flex items-center gap-4">
-            <span className="text-4xl font-black text-white">1</span>
-            <div className="flex flex-col">
-              <span className="text-sm font-bold text-white">Unified Department</span>
-              <span className="text-xs text-[#e0e9ee]">One Vision. Greater National Impact.</span>
+            <span className="text-4xl font-black text-sd-navy dark:text-white">1</span>
+
+            <div>
+              <p className="font-bold text-foreground">Unified Department</p>
+              <p className="text-sm text-muted-foreground">One Vision. Greater National Impact.</p>
             </div>
           </div>
         </div>
