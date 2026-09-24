@@ -8,6 +8,7 @@ import Timeline from '../components/Timeline';
 import Leadership from '../components/Leadership';
 import Cta from '../components/Cta';
 import TeamSection from '../components/TeamSection';
+import SdStats from '../components/SdStats';
 
 const AboutPage = () => {
   return (
@@ -15,6 +16,7 @@ const AboutPage = () => {
       <main className="w-full bg-background text-foreground">
         <div className="flex w-full flex-col">
           <AboutHero />
+          <SdStats />
           <DepartmentStory />
           <VisionMission />
           <CoreValues />
