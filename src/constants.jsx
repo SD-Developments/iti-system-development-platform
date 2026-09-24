@@ -2817,3 +2817,154 @@ export const timeline = [
 ];
 
 export { stitchImages };
+
+// --------------------------------
+import hero from './assets/images/about_hero_section.png';
+import fullStack from './assets/images/web1.jpg';
+import mobile from './assets/images/about2.png';
+import dotnet from './assets/images/about2.png';
+import production from './assets/images/about2.png';
+import aiLab from './assets/images/about2.png';
+
+export const aboutImages = {
+  hero,
+  fullStack,
+  mobile,
+  dotnet,
+  production,
+  aiLab,
+};
+
+export const sdStats = [
+  {
+    value: '3',
+    title: 'Professional Tracks',
+    description: 'Full Stack, Mobile Cross, and .NET Enterprise.',
+  },
+  {
+    value: '300 hrs',
+    title: 'Graduation Project',
+    description: 'Industry-oriented capstone development.',
+  },
+  {
+    value: '75 / 25',
+    title: 'Blended Learning',
+    description: 'Practical labs with digital learning.',
+  },
+  {
+    value: 'Good+',
+    title: 'Admission Standard',
+    description: 'Selective engineering-focused intake.',
+  },
+];
+
+export const engineeringTracks = [
+  {
+    title: 'Full Stack Web Solutions',
+    color: 'red',
+    image: fullStack,
+    technologies: [
+      'React',
+      'Next.js',
+      'Angular',
+      'Vue',
+      'Node.js',
+      'NestJS',
+      'GraphQL',
+      'AI Agents',
+      'RAG',
+    ],
+    description: 'Modern frontend, backend, and AI-powered web engineering.',
+  },
+  {
+    title: 'Cross-Platform Mobile',
+    color: 'teal',
+    image: mobile,
+    technologies: ['Flutter', 'React Native', '.NET MAUI', 'Firebase', 'Docker', 'AI Integration'],
+    description: 'Building production-ready mobile applications across platforms.',
+  },
+  {
+    title: '.NET Enterprise',
+    color: 'navy',
+    image: dotnet,
+    technologies: ['ASP.NET Core', 'Web APIs', 'gRPC', 'SQL Server', 'Azure', 'Power BI'],
+    description: 'Enterprise-grade backend architecture and cloud services.',
+  },
+];
+
+export const curriculumStages = [
+  {
+    number: '01',
+    title: 'Programming Foundations',
+    points: ['Algorithms', 'Data Structures', 'OOP', 'Linux'],
+  },
+  {
+    number: '02',
+    title: 'Core Engineering',
+    points: ['React', 'Angular', 'APIs', 'Databases'],
+  },
+  {
+    number: '03',
+    title: 'AI Integration',
+    points: ['Prompt Engineering', 'RAG', 'AI Agents', 'Copilot'],
+  },
+  {
+    number: '04',
+    title: 'Production Experience',
+    points: ['Docker', 'Azure', 'CI/CD', 'Graduation Project'],
+  },
+];
+
+export const aiFeatures = [
+  'Prompt Engineering',
+  'AI-Assisted Development',
+  'RAG Systems',
+  'AI Agents',
+  'Model Context Protocol',
+  'Intelligent Automation',
+];
+
+// export const teamMembers = [
+//   {
+//     name: 'Sherihan Mohamed',
+//     role: 'Department Head',
+//     image: sherihan,
+//     color: 'red',
+//   },
+//   {
+//     name: 'Ramy Abou-Nagi',
+//     role: 'Instructor • Staff',
+//     image: ramy,
+//     color: 'teal',
+//   },
+//   {
+//     name: 'Basma',
+//     role: 'Instructor • Staff',
+//     image: basma,
+//     color: 'teal',
+//   },
+//   {
+//     name: 'Mahmoud Abdelaziz',
+//     role: 'Full Stack Web Track Supervisor',
+//     image: mahmoud,
+//     color: 'blue',
+//   },
+//   {
+//     name: 'Omar Walid',
+//     role: 'Mobile Cross Track Supervisor',
+//     image: omar,
+//     color: 'teal',
+//   },
+//   {
+//     name: 'Shima Hamdy',
+//     role: '.NET Track Supervisor',
+//     image: shima,
+//     color: 'blue',
+//   },
+//   {
+//     name: 'Noura Mohamed',
+//     role: 'Instructor',
+//     image: noura,
+//     color: 'teal',
+//   },
+// ];
