@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="134" viewBox="0 0 160 134">
+  <defs>
+    <radialGradient id="r" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#F04A45"/>
+      <stop offset="1" stop-color="#D12624"/>
+    </radialGradient>
+    <radialGradient id="n" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#214257"/>
+      <stop offset="1" stop-color="#0B2233"/>
+    </radialGradient>
+    <radialGradient id="t" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#26D3C7"/>
+      <stop offset="1" stop-color="#0AA59F"/>
+    </radialGradient>
+    <radialGradient id="g" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#9AA7B5"/>
+      <stop offset="1" stop-color="#73808E"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1320"/>
+      <stop offset="1" stop-color="#111C2D"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- dark background -->
+  <rect x="4" y="4" width="152" height="126" rx="22" fill="url(#bg)"/>
+
+  <!-- logo symbol -->
+  <g filter="url(#shadow)">
+    <!-- S -->
+    <path d="M66 29
+             C52 29 43 30 38 37
+             C34 42 34 48 33 54
+             C34 61 45 68 66 68"
+          fill="none" stroke="#E33833" stroke-width="5.2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M66 68 L66 109"
+          fill="none" stroke="#E33833" stroke-width="5.2"
+          stroke-linecap="round"/>
+    <path d="M66 109
+             C53 109 43 109 37 104
+             C34 102 33 100 33 98"
+          fill="none" stroke="#E33833" stroke-width="5.2"
+          stroke-linecap="round"/>
+
+    <!-- central spine -->
+    <path d="M91 29 L91 109"
+          fill="none" stroke="#163447" stroke-width="5.2"
+          stroke-linecap="round"/>
+
+    <!-- D -->
+    <path d="M91 29
+             C108 29 122 34 129 48
+             L129 86
+             C125 99 112 109 91 109"
+          fill="none" stroke="#0FB7AF" stroke-width="5.2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- lower-right gray transition -->
+    <path d="M129 86
+             C126 99 113 109 91 109"
+          fill="none" stroke="#7A8796" stroke-width="5.2"
+          stroke-linecap="round"/>
+
+    <!-- nodes -->
+    <circle cx="66" cy="29" r="10.2" fill="url(#r)"/>
+    <circle cx="33" cy="54" r="10.2" fill="url(#r)"/>
+    <circle cx="66" cy="68" r="10.2" fill="url(#r)"/>
+    <circle cx="33" cy="98" r="10.2" fill="url(#r)"/>
+    <circle cx="66" cy="109" r="10.2" fill="url(#r)"/>
+
+    <circle cx="91" cy="29" r="10.2" fill="url(#n)"/>
+    <circle cx="91" cy="69" r="7.4" fill="url(#n)"/>
+
+    <circle cx="129" cy="48" r="10.2" fill="url(#t)"/>
+    <circle cx="129" cy="86" r="10.2" fill="url(#g)"/>
+    <circle cx="91" cy="109" r="10.2" fill="url(#t)"/>
+  </g>
+</svg>
