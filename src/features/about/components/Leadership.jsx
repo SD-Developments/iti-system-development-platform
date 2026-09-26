@@ -1,87 +1,66 @@
-import { leaders, partners } from '@/constants';
+const companies = [
+  ['IBM', 'Enterprise Cloud', 'primary'],
+  ['Deloitte', 'Digital Consulting', 'accent'],
+  ['Vodafone', 'Telecom & Cloud', 'primary'],
+  ['_VOIS', 'Intelligent Solutions', 'primary'],
+  ['Fawry', 'FinTech Backbone', 'accent'],
+  ['LinkDev', 'Digital Solutions', 'navy'],
+  ['Valeo', 'Autonomous Systems', 'accent'],
+  ['noon', 'E-Commerce Scale', 'navy'],
+  ['Banque Misr', 'Digital Banking', 'primary'],
+  ['Microsoft', 'Cloud Platforms', 'accent'],
+  ['Dell Tech', 'Enterprise Hardware', 'navy'],
+  ['Instabug', 'Dev Telemetry', 'accent'],
+];
+
+const ACCENT = {
+  primary: { border: 'hover:border-primary', text: 'group-hover:text-primary' },
+  accent: { border: 'hover:border-accent', text: 'group-hover:text-accent' },
+  navy: { border: 'hover:border-sd-navy', text: 'group-hover:text-sd-navy' },
+};
 
 const Leadership = () => {
   return (
-    <>
-      <section className="w-full border-b border-border bg-background py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="mx-auto mb-16 flex max-w-3xl flex-col gap-3 text-center">
-            <span className="font-mono text-[12px] font-bold uppercase tracking-wider text-primary">
-              Academic & Industrial Governance
+    <section className="w-full bg-background py-20 border-b border-border">
+      <div className="max-w-[1280px] mx-auto px-6 flex flex-col gap-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="flex flex-col gap-3 max-w-2xl">
+            <span className="font-mono text-xs font-bold text-primary uppercase tracking-widest">
+              // ALUMNI DESTINATIONS
             </span>
-
-            <h2 className="mt-1.5 text-3xl font-black tracking-tight text-foreground sm:text-4xl lg:text-[40px]">
-              Guided by Leading Engineers & Practitioners
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground tracking-tight">
+              Where SD Graduates Work
             </h2>
-
-            <p className="text-base text-muted-foreground">
-              Our track supervisors, lead architects, and advisory council members bridge public
-              institutional commitment with real-world tech industry execution.
+            <p className="text-lg text-muted-foreground">
+              Our alumni engineer mission-critical systems at the world's most demanding technology
+              leaders and multinationals.
             </p>
           </div>
-
-          {/* Leaders */}
-
-          <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {leaders.map((leader) => (
-              <div
-                key={leader.name}
-                className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-7 text-center shadow-sm transition-colors hover:border-primary/40"
-              >
-                <img
-                  src={leader.image}
-                  alt={leader.alt}
-                  className="h-24 w-24 rounded-full object-cover shadow-inner ring-2 ring-primary/20"
-                />
-
-                <div className="flex flex-col">
-                  <h3 className="text-base font-bold text-card-foreground">{leader.name}</h3>
-
-                  <span className="mt-0.5 font-mono text-xs font-bold text-primary">
-                    {leader.role}
-                  </span>
-
-                  <span className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                    {leader.description}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Advisory Council */}
-
-          <div className="flex flex-col gap-6 rounded-2xl border border-border bg-sd-bg-light p-8">
-            <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-foreground">
-                  Active Industry Advisory Council
-                </span>
-
-                <span className="mt-0.5 text-xs text-muted-foreground">
-                  The companies co-designing our graduation challenges and track rubrics
-                </span>
-              </div>
-
-              <span className="font-mono text-xs font-bold text-primary">
-                60+ GLOBAL & LOCAL PARTNERS
-              </span>
-            </div>
-
-            <div className="grid grid-cols-2 items-center gap-3 sm:grid-cols-4 md:grid-cols-7">
-              {partners.map((partner) => (
-                <div
-                  key={partner}
-                  className="rounded-xl border border-border bg-card px-2 py-3 text-center font-mono text-xs font-bold text-card-foreground shadow-sm"
-                >
-                  {partner}
-                </div>
-              ))}
-            </div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent/10 text-accent border border-accent/30 font-mono text-xs font-bold shrink-0">
+            <span className="w-2 h-2 rounded-full bg-accent"></span>
+            96%+ Placement Rate within 90 Days of Graduation
           </div>
         </div>
-      </section>
-    </>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {companies.map(([name, sub, accentKey]) => {
+            const a = ACCENT[accentKey];
+            return (
+              <div
+                key={name}
+                className={`p-6 rounded-2xl bg-muted border border-border flex flex-col items-center justify-center text-center group hover:bg-card ${a.border} hover:shadow-md transition-all h-28`}
+              >
+                <span
+                  className={`font-black text-lg text-muted-foreground tracking-tight transition-colors ${a.text}`}
+                >
+                  {name}
+                </span>
+                <span className="font-mono text-[10px] text-muted-foreground mt-1">{sub}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 };
 
