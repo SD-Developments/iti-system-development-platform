@@ -1,5 +1,5 @@
 import { itpFacts, itpSprints, technicalLanes } from '@/features/home/data';
-import programsHero2 from '../../../assets/images/hero1.png';
+import programsHero2 from '../../../assets/images/hero/hero1.png';
 
 const Month4Section = () => {
   return (

@@ -1,6 +1,6 @@
 import JourneyRow from '@/components/JourneyRow';
 import { ArrowRight } from 'lucide-react';
-import img2 from '../../../assets/images/hero1.png';
+import img2 from '../../../assets/images/hero/hero1.png';
 
 function StudentSection() {
   return (

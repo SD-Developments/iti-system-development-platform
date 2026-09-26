@@ -1,4 +1,4 @@
-import about4 from '../../../assets/images/hero1.png';
+import about4 from '../../../assets/images/hero/hero1.png';
 
 const cards = [
   {

@@ -155,19 +155,19 @@ export const aiInitiatives = [
   },
 ];
 
-import team1 from '../../assets/images/team1.png';
+import team1 from '../../assets/images/team/team1.png';
 
-import team2 from '../../assets/images/team2.png';
+import team2 from '../../assets/images/team/team2.png';
 
-import team3 from '../../assets/images/team3.png';
+import team3 from '../../assets/images/team/team3.png';
 
-import team4 from '../../assets/images/team4.png';
+import team4 from '../../assets/images/team/team4.png';
 
-import team5 from '../../assets/images/team5.png';
+import team5 from '../../assets/images/team/team5.png';
 
-import team6 from '../../assets/images/team6.png';
+import team6 from '../../assets/images/team/team6.png';
 
-import team7 from '../../assets/images/team7.png';
+import team7 from '../../assets/images/team/team7.png';
 
 export const teamMembers = [
   {
@@ -255,17 +255,17 @@ export const teamMembers = [
   },
 ];
 
-import hero from '../../assets/images/about_hero_section.png';
+import hero from '../../assets/images/hero/about_hero_section.png';
 
-import fullStack from '../../assets/images/web1.jpg';
+import fullStack from '../../assets/images/projects/web1.jpg';
 
-import mobile from '../../assets/images/about2.png';
+import mobile from '../../assets/images/hero/about2.png';
 
-import dotnet from '../../assets/images/about2.png';
+import dotnet from '../../assets/images/hero/about2.png';
 
-import production from '../../assets/images/about2.png';
+import production from '../../assets/images/hero/about2.png';
 
-import aiLab from '../../assets/images/about2.png';
+import aiLab from '../../assets/images/hero/about2.png';
 
 export const aboutImages = {
   hero,

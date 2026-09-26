@@ -20,32 +20,24 @@ function PathSection() {
     () => {
       if (!containerRef.current) return;
 
-      const timeline = gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 85%',
-          end: 'bottom 25%',
-          scrub: 0.3,
+          start: 'top 50%',
+          end: 'top 45%', // short = faster, not full page
+          scrub: 0.4,
         },
       });
-
-      timeline
-        .from('.leftprogram', {
-          x: -100,
-          autoAlpha: 0,
-          duration: 0.5,
-          ease: 'power2.out',
-        })
-        .from(
-          '.rightprogram',
-          {
-            x: 100,
-            autoAlpha: 0,
-            duration: 0.5,
-            ease: 'power2.out',
-          },
-          '<'
-        );
+      tl.fromTo(
+        '.leftprogram',
+        { x: -100, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, ease: 'power1.in' }
+      ).fromTo(
+        '.rightprogram',
+        { x: 100, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, ease: 'power1.in' },
+        '<'
+      );
     },
     {
       scope: containerRef,

@@ -1,4 +1,4 @@
-import projectImage from '../../../assets/images/project1.jpg';
+import projectImage from '../../../assets/images/projects/project1.jpg';
 const FeaturedProject = () => {
   return (
     <>

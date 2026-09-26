@@ -1,6 +1,6 @@
-import img1 from '../../../assets/images/hero1.png';
-import img2 from '../../../assets/images/about2.png';
-import img3 from '../../../assets/images/about_hero_section.png';
+import img1 from '../../../assets/images/hero/hero1.png';
+import img2 from '../../../assets/images/hero/about2.png';
+import img3 from '../../../assets/images/hero/about_hero_section.png';
 
 const shots = [
   {

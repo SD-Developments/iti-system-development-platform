@@ -1,4 +1,4 @@
-import img2 from '../../../assets/images/hero1.png';
+import img2 from '../../../assets/images/hero/hero1.png';
 import { Badge } from '@/components/ui/badge';
 import { activities } from '@/features/home/data';
 import SectionHeader from '@/components/SectionHeader';

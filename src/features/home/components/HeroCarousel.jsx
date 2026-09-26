@@ -2,8 +2,8 @@ import { heroHomeSlides } from '@/features/home/data';
 import clsx from 'clsx';
 import { ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import hero1 from '../../../assets/images/hero1.png';
-import hero2 from '../../../assets/images/Requra.png';
+import hero1 from '../../../assets/images/hero/hero1.png';
+import hero2 from '../../../assets/images/hero/Requra.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 

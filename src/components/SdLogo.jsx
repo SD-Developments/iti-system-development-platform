@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router';
-import logo from '../assets/images/iti_sd_logo.svg';
+import logo from '../assets/images/logos/iti_sd_logo.svg';
 const SdLogo = () => {
   return (
     <>

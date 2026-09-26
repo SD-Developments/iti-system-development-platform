@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import aboutCtaImage from '../assets/images/about_hero_section.png';
+import aboutCtaImage from '../assets/images/hero/about_hero_section.png';
 
 function AboutCta() {
   return (

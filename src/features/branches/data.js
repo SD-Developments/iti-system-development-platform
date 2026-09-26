@@ -1,8 +1,8 @@
 // Branch-hub data. Preserved from the removed Branches page; currently unreferenced.
 
-import heroImage from '../../assets/images/hero1.png';
+import heroImage from '../../assets/images/hero/hero1.png';
 
-import collaborationImage from '../../assets/images/about2.png';
+import collaborationImage from '../../assets/images/hero/about2.png';
 
 export const regionalZones = [
   {

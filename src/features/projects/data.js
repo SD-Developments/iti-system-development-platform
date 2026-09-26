@@ -1,18 +1,18 @@
 // Projects feature data.
 
-import web1 from '../../assets/images/web1.jpg';
+import web1 from '../../assets/images/projects/web1.jpg';
 
-import web2 from '../../assets/images/web2.jpg';
+import web2 from '../../assets/images/projects/web2.jpg';
 
-import web3 from '../../assets/images/web3.jpg';
+import web3 from '../../assets/images/projects/web3.jpg';
 
-import web4 from '../../assets/images/web4.jpg';
+import web4 from '../../assets/images/projects/web4.jpg';
 
-import mobile1 from '../../assets/images/mobile1.jpg';
+import mobile1 from '../../assets/images/projects/mobile1.jpg';
 
-import mobile2 from '../../assets/images/mobile2.jpg';
+import mobile2 from '../../assets/images/projects/mobile2.jpg';
 
-import mobile3 from '../../assets/images/mobile3.jpg';
+import mobile3 from '../../assets/images/projects/mobile3.jpg';
 
 export const projects = [
   {

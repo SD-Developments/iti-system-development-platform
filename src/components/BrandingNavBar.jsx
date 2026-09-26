@@ -2,8 +2,8 @@ import { useRef, useState } from 'react';
 import { NavLink } from 'react-router';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import facebook from '../assets/images/facebook.png';
-import linkedin from '../assets/images/linkedin.png';
+import facebook from '../assets/images/logos/facebook.png';
+import linkedin from '../assets/images/logos/linkedin.png';
 import { ArrowRight, Menu, Monitor, Moon, Sun } from 'lucide-react';
 
 import { brandingNavLinks } from './layout/data';
