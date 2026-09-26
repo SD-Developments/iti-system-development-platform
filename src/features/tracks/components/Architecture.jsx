@@ -1,6 +1,6 @@
 import { architectureStages } from '@/constants';
 
-function ArchItecture() {
+function Architecture() {
   return (
     <>
       <section
@@ -152,4 +152,4 @@ function ArchitectureSummary({ number, title, text }) {
   );
 }
 
-export default ArchItecture;
+export default Architecture;
