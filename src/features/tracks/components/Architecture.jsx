@@ -1,4 +1,4 @@
-import { architectureStages } from '@/constants';
+import { architectureStages } from '../data';
 
 function Architecture() {
   return (
