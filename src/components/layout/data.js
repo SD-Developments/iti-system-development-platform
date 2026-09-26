@@ -93,3 +93,18 @@ export const departmentLinks = [
     path: '/about',
   },
 ];
+
+// Social / contact links (single source of truth for navbar dropdown + mobile).
+// TODO: replace hrefs with the official SD pages.
+export const socialLinks = [
+  {
+    id: 'facebook',
+    label: 'Facebook',
+    href: 'https://www.facebook.com/',
+  },
+  {
+    id: 'linkedin',
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/',
+  },
+];

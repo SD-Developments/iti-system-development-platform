@@ -1,11 +1,10 @@
 import gsap from 'gsap';
 import { ScrollTrigger, SplitText } from 'gsap/all';
 import Lenis from 'lenis';
-import { useGSAP } from '@gsap/react';
 import { useEffect } from 'react';
 import { setLenis } from '@/lib/lenis';
 
-gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function LenisProvider({ children }) {
   useEffect(() => {

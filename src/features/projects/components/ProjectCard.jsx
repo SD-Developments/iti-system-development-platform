@@ -31,19 +31,21 @@ const ProjectCard = ({ project, onClick }) => {
                     project.typeColor === 'red' ? 'bg-primary/90' : 'bg-accent/90'
                   }`}
                 >
-                  {project.type}
+                  {project.type ?? project.category}
                 </span>
 
                 <span className="rounded border border-white/20 bg-sd-navy/80 px-2 py-0.5 font-mono text-[10px] text-white backdrop-blur-md">
-                  {project.metaRight}
+                  {project.metaRight ?? project.program}
                 </span>
               </div>
 
               <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between font-mono text-[10px] text-slate-300">
-                <span>{project.metaLeft}</span>
+                <span>
+                  {project.metaLeft ?? project.meta ?? `${project.program} · ${project.branch}`}
+                </span>
 
                 <span className="text-emerald-400">
-                  {project.id === 5 ? '18km LoRaWAN Mesh' : 'LIVE'}
+                  {project.id === 'lora-mesh' ? '18km LoRaWAN Mesh' : 'LIVE'}
                 </span>
               </div>
             </div>
@@ -56,11 +58,15 @@ const ProjectCard = ({ project, onClick }) => {
           <div className={isWide ? 'p-7' : 'p-6'}>
             {isWide && (
               <div className="mb-2 flex items-center gap-2">
-                <span className="font-mono text-xs text-muted-foreground">{project.location}</span>
+                <span className="font-mono text-xs text-muted-foreground">
+                  {project.location ?? project.branch}
+                </span>
 
                 <span className="text-border">•</span>
 
-                <span className="font-mono text-xs text-accent">{project.intake}</span>
+                <span className="font-mono text-xs text-accent">
+                  {project.intake ?? project.program}
+                </span>
               </div>
             )}
 
@@ -77,15 +83,15 @@ const ProjectCard = ({ project, onClick }) => {
                 isWide ? 'text-sm' : 'text-xs'
               }`}
             >
-              {project.description.slice(0, 200)}
+              {project.description?.slice(0, 200) ?? ''}
             </p>
 
             <div className="mt-5 flex flex-wrap gap-1.5 font-mono text-xs">
-              {project.technologies.map((technology) => (
+              {project.technologies?.map((technology) => (
                 <span key={technology} className="rounded bg-muted px-2.5 py-1 text-foreground">
                   {technology}
                 </span>
-              ))}
+              )) ?? null}
             </div>
           </div>
         </div>
@@ -93,11 +99,11 @@ const ProjectCard = ({ project, onClick }) => {
         {/* Footer */}
 
         <div className="flex items-center justify-between border-t border-border bg-muted px-6 py-3.5 font-mono text-xs">
-          <span className="text-muted-foreground">{project.status}</span>
+          <span className="text-muted-foreground">{project.status ?? project.meta}</span>
 
-          <a href="#" className="font-bold text-primary transition-colors hover:text-accent">
+          <button className="font-bold text-primary transition-colors hover:text-accent">
             View Project →
-          </a>
+          </button>
         </div>
       </article>
     </>

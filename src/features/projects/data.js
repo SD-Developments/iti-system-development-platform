@@ -16,6 +16,7 @@ import mobile3 from '../../assets/images/projects/mobile3.jpg';
 
 export const projects = [
   {
+    id: 'aquametrics',
     title: 'AquaMetrics',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'AI & Machine Learning'],
@@ -33,6 +34,7 @@ export const projects = [
   },
 
   {
+    id: 'ruya',
     title: 'Ruya',
     track: 'AI & Intelligent Systems',
     domains: ['UI & UX Design'],
@@ -50,6 +52,7 @@ export const projects = [
   },
 
   {
+    id: 'foodloop',
     title: 'FoodLoop',
     track: 'AI & Intelligent Systems',
     domains: ['UI & UX Design', 'AI & Machine Learning'],
@@ -67,6 +70,7 @@ export const projects = [
   },
 
   {
+    id: 'englisphere-ai',
     title: 'Englisphere AI',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'UI & UX Design'],
@@ -84,6 +88,7 @@ export const projects = [
   },
 
   {
+    id: 'draya',
     title: 'Draya',
     track: 'AI & Intelligent Systems',
     domains: ['UI & UX Design'],
@@ -101,6 +106,7 @@ export const projects = [
   },
 
   {
+    id: 'homepal',
     title: 'HomePal',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'AI & Machine Learning'],
@@ -118,6 +124,7 @@ export const projects = [
   },
 
   {
+    id: 'requra-ai',
     title: 'Requra.AI',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'AI & Machine Learning'],
@@ -135,6 +142,7 @@ export const projects = [
   },
 
   {
+    id: 'salasel',
     title: 'Salasel',
     track: 'AI & Intelligent Systems',
     domains: ['Mobile & Cross-Platform', 'AI & Machine Learning'],
@@ -152,6 +160,7 @@ export const projects = [
   },
 
   {
+    id: 'feedinsight',
     title: 'FeedInsight',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'UI & UX Design', 'AI & Machine Learning'],
@@ -169,6 +178,7 @@ export const projects = [
   },
 
   {
+    id: 'hakeem',
     title: 'Hakeem',
     track: 'AI & Intelligent Systems',
     domains: ['Mobile & Cross-Platform', 'Web & UI', 'Healthcare Tech'],
@@ -186,6 +196,7 @@ export const projects = [
   },
 
   {
+    id: 'haqqi',
     title: 'HaqQi',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'UI & UX Design', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
@@ -203,6 +214,7 @@ export const projects = [
   },
 
   {
+    id: 'life-admin-autopilot',
     title: 'Life Admin Autopilot',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'UI & UX Design', 'AI & Machine Learning'],
@@ -220,6 +232,7 @@ export const projects = [
   },
 
   {
+    id: 'wakeel-ai',
     title: 'Wakeel AI',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'Mobile & Cross-Platform', 'AI & Machine Learning'],
@@ -237,6 +250,7 @@ export const projects = [
   },
 
   {
+    id: 'sentinel-ai',
     title: 'SentinelAI',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'AI & Machine Learning'],
@@ -263,6 +277,7 @@ export const projects = [
   },
 
   {
+    id: 'codify',
     title: 'Codify',
     track: 'AI & Intelligent Systems',
     domains: ['Web & UI', 'UI & UX Design', 'AI & Machine Learning'],

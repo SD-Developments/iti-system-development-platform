@@ -4,12 +4,6 @@ import { useEffect } from 'react';
 export const useTheme = () => {
   const theme = useThemeStore((state) => state.theme);
   const setTheme = useThemeStore((state) => state.setTheme);
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light' || savedTheme === 'dark' || savedTheme === 'system') {
-      setTheme(savedTheme);
-    }
-  }, [setTheme]);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -28,10 +22,6 @@ export const useTheme = () => {
         mediaQuery.removeEventListener('change', applyTheme);
       };
     }
-  }, [theme]);
-
-  useEffect(() => {
-    localStorage.setItem('theme', theme);
   }, [theme]);
 
   return {

@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router';
-import { Terminal, Code2, PlayCircle, Globe } from 'lucide-react';
 import SdLogo from './SdLogo';
-import { academicPathways, departmentLinks, technicalTracks } from './layout/data';
+import facebookLogo from '../assets/images/logos/facebook.png';
+import linkedinLogo from '../assets/images/logos/linkedin.png';
+import { academicPathways, departmentLinks, socialLinks, technicalTracks } from './layout/data';
+
+const socialLogos = { facebook: facebookLogo, linkedin: linkedinLogo };
 
 function BrandingFooter() {
   return (
@@ -20,20 +23,19 @@ function BrandingFooter() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-2 pt-1">
-              {[
-                { icon: Terminal, title: 'Terminal' },
-                { icon: Code2, title: 'Code Repository' },
-                { icon: PlayCircle, title: 'Community Videos' },
-                { icon: Globe, title: 'National Hubs' },
-              ].map((item) => (
+              {socialLinks.map((item) => (
                 <a
-                  key={item.title}
-                  href="#"
-                  title={item.title}
+                  key={item.id}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={item.label}
+                  aria-label={item.label}
                   className="
                     flex h-10 w-10 items-center justify-center
                     rounded-xl
                     bg-muted
+                    p-2
                     text-muted-foreground
                     shadow-sm
                     transition-all duration-300
@@ -42,7 +44,7 @@ function BrandingFooter() {
                     hover:text-white
                   "
                 >
-                  <item.icon size={18} />
+                  <img src={socialLogos[item.id]} alt={item.label} className="h-5 w-5" />
                 </a>
               ))}
             </div>
@@ -123,14 +125,6 @@ function BrandingFooter() {
 
           {/* Bottom Links */}
           <div className="flex flex-wrap items-center justify-center gap-5">
-            <a href="#" className="transition-colors hover:text-foreground">
-              Privacy Policy
-            </a>
-
-            <a href="#" className="transition-colors hover:text-foreground">
-              Terms of Admission
-            </a>
-
             <span className="font-mono text-[11px] tracking-wide text-sd-red">
               Crafted for Egypt&apos;s Next Gen Engineers
             </span>
