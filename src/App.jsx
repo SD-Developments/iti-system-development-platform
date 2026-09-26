@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import AboutPage from './features/about/pages/AboutPage';
 import TracksPage from './features/tracks/pages/TracksPage';
 import ProjectsPage from './features/projects/pages/ProjectsPage';
-import EventsPage from './features/events/pages/EventsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
 import MainLayout from './layouts/MainLayout';
 import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
@@ -44,10 +43,7 @@ const router = createBrowserRouter([
         path: 'projects',
         element: <ProjectsPage />,
       },
-      {
-        path: 'events',
-        element: <EventsPage />,
-      },
+
       {
         path: 'news-activites',
         element: <NewsAndActivites />,

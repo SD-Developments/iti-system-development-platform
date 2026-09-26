@@ -1,43 +1,51 @@
-import { NavLink } from 'react-router';
+import img3 from '../../../assets/images/about_hero_section.png';
 
 const Cta = () => {
   return (
-    <>
-      <section className="mx-auto w-full max-w-7xl px-4 py-20 md:px-6 lg:py-24">
-        <div className="relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-3xl bg-linear-to-r from-primary via-primary/80 to-sd-navy p-8 text-white shadow-2xl md:p-14 lg:flex-row">
-          <div className="relative z-10 flex max-w-xl flex-col gap-3">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-white/90 backdrop-blur-md">
-              INTAKE 45 ADMISSIONS NOW PREVIEWING
-            </div>
-
-            <h2 className="mt-1 text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Ready to Build the Future of Software?
-            </h2>
-
-            <p className="text-sm leading-relaxed text-white/90 sm:text-base">
-              Explore our specialized diplomas, intensive 4-month bootcamps, and nationwide tracks.
-              Admissions open cyclically across all 11 Egyptian branches.
-            </p>
-          </div>
-
-          <div className="relative z-10 flex w-full shrink-0 flex-col items-center gap-4 sm:flex-row lg:w-auto">
-            <NavLink
-              to="/tracks"
-              className="w-full rounded-xl bg-white px-8 py-4 text-center text-sm font-bold text-sd-navy shadow-lg transition-all hover:bg-sd-white sm:w-auto"
-            >
-              Explore All Tracks
-            </NavLink>
-
-            <NavLink
-              to="/programs"
-              className="w-full rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-center text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/20 sm:w-auto"
-            >
-              View Programs & Diplomas
-            </NavLink>
-          </div>
+    <section className="relative w-full bg-sd-navy py-24 overflow-hidden text-white">
+      <div
+        className="absolute inset-0 opacity-70 bg-cover bg-center"
+        style={{ backgroundImage: `url(${img3})` }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-sd-navy/80 via-sd-navy/95 to-sd-navy"></div>
+      <div className="relative max-w-[1280px] mx-auto px-6 text-center flex flex-col items-center gap-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-accent font-mono text-xs font-bold">
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          JOIN THE HERITAGE
         </div>
-      </section>
-    </>
+        <div className="flex flex-col gap-2">
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight">
+            THIS IS SD.
+          </h2>
+          <span className="text-2xl sm:text-3xl font-extrabold text-accent tracking-wide">
+            Learn. Build. Engineer.
+          </span>
+        </div>
+        <p className="text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
+          Whether you are preparing to launch your engineering career through our intensive diploma
+          or seeking top-tier software engineers for your technology team, the Software Development
+          Department welcomes you.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a
+            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm hover:bg-primary/90 transition-all shadow-[0_0_25px_color-mix(in_srgb,var(--color-primary)_50%,transparent)] group"
+            href="#tracks"
+          >
+            <span>Explore Academic Tracks</span>
+            <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">
+              arrow_forward
+            </span>
+          </a>
+          <a
+            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold text-sm hover:bg-white/20 transition-all shadow-md"
+            href="#"
+          >
+            <span className="material-symbols-outlined text-[20px] text-accent">code</span>
+            <span>View Student Projects</span>
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 
