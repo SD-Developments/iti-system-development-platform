@@ -453,7 +453,7 @@ function TrackCard({ track, index }) {
 
         {/* tech */}
         <div className="mt-5 flex flex-wrap gap-2">
-          {track.technologies.slice(0, 4).map((technology) => (
+          {track.technologies?.slice(0, 4).map((technology) => (
             <span
               key={technology}
               className="
