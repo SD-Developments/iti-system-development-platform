@@ -1,7 +1,7 @@
 import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { tracks } from '@/features/tracks/data';
-import { ArrowRight, BriefcaseBusiness } from 'lucide-react';
+import { ArrowRight, BookOpen, BriefcaseBusiness } from 'lucide-react';
 import { useMemo, useState } from 'react';
 
 function Learn() {
@@ -59,7 +59,7 @@ function Learn() {
 }
 
 function TrackLearningRow({ track, index }) {
-  const Icon = track.icon;
+  const Icon = track.icon ?? BookOpen;
   const visibleTechnologies = track.technologies?.slice(0, 7) || [];
   const remainingTechnologies = (track.technologies?.length || 0) - visibleTechnologies.length;
 
