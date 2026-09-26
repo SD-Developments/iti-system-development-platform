@@ -1,6 +1,6 @@
-import { architectureStages } from '@/features/tracks/data';
+import { architectureStages } from '@/constants';
 
-function Architecture() {
+function ArchItecture() {
   return (
     <>
       <section
@@ -12,6 +12,7 @@ function Architecture() {
 
         <div className="pointer-events-none absolute -bottom-44 left-[20%] h-125 w-125 rounded-full bg-primary/15 blur-[130px]" />
 
+        {/* grid */}
         <div
           className="
             pointer-events-none absolute inset-0 opacity-[0.04]
@@ -151,4 +152,4 @@ function ArchitectureSummary({ number, title, text }) {
   );
 }
 
-export default Architecture;
+export default ArchItecture;
