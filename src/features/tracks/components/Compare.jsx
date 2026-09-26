@@ -1,5 +1,5 @@
 import SectionHeader from '@/components/SectionHeader';
-import { compareRows } from '@/constants';
+import { compareRows } from '@/features/tracks/data';
 import { Code2, GitCompareArrows, Smartphone, Workflow } from 'lucide-react';
 
 function Compare() {

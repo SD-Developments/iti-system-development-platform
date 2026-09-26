@@ -1,4 +1,4 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { latestNews } from '../data';
 
 const toneClasses = {
@@ -12,6 +12,7 @@ const toneClasses = {
 const LatestSection = () => (
   <section id="latest">
     <SectionHeader
+      variant="compact"
       eyebrow="LATEST"
       title="Latest from SD"
       description="Recent news, events, and activities from our community."

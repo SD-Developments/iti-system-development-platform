@@ -1,7 +1,8 @@
 import SectionHeader from '@/components/SectionHeader';
 import { ArrowRight, BookOpen, Clock3, Layers3, MapPin, X } from 'lucide-react';
 
-import { programs, tracks } from '@/constants';
+import { programs } from '@/features/home/data';
+import { tracks } from '@/features/tracks/data';
 import { Link } from 'react-router';
 import Month9Section from './Month9Section';
 import { useRef, useState } from 'react';

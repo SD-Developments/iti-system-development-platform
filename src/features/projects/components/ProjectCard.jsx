@@ -1,7 +1,6 @@
 import TechnicalProjectVisual from './TechnicalProjectVisual';
 
-const ProjectCardComp = ({ project, onClick }) => {
-  // console.log(project);
+const ProjectCard = ({ project, onClick }) => {
   const isWide = project.variant === 'wide';
 
   const spanClass = isWide ? 'md:col-span-8' : 'md:col-span-4';
@@ -105,4 +104,4 @@ const ProjectCardComp = ({ project, onClick }) => {
   );
 };
 
-export default ProjectCardComp;
+export default ProjectCard;

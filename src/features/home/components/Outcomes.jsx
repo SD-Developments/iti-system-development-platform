@@ -1,4 +1,4 @@
-import { partnerCompanies, testimonials } from '@/constants';
+import { partnerCompanies, testimonials } from '@/features/home/data';
 
 const Outcomes = () => {
   return (

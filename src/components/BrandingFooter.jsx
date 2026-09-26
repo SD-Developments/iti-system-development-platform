@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router';
 import { Terminal, Code2, PlayCircle, Globe } from 'lucide-react';
 import SdLogo from './SdLogo';
-import { academicPathways, departmentLinks, technicalTracks } from '../constants';
+import { academicPathways, departmentLinks, technicalTracks } from './layout/data';
 
 function BrandingFooter() {
   return (

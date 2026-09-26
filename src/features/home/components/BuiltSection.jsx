@@ -2,7 +2,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ArrowLeft, ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
 
-import { projects } from '@/constants';
+import { projects } from '@/features/projects/data';
 import { Link } from 'react-router';
 
 function BuiltSection() {

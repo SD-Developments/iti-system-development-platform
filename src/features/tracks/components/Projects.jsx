@@ -1,5 +1,5 @@
 import ProjectCard from '@/components/ProjectCard';
-import { projects } from '@/constants';
+import { projects } from '@/features/projects/data';
 import { ArrowRight } from 'lucide-react';
 
 function Projects() {

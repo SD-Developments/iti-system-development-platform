@@ -1,4 +1,4 @@
-import { heorHomeSlides } from '@/constants';
+import { heroHomeSlides } from '@/features/home/data';
 import clsx from 'clsx';
 import { ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
@@ -8,31 +8,65 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 function HeroCarousel() {
-  const [physicalSlide, setPhysicalSlide] = useState(0); // This is the real position inside the rendered track, including the cloned slide.
+  const [physicalSlide, setPhysicalSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isFocusWithin, setIsFocusWithin] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // tab open?
+  const [isInView, setIsInView] = useState(true); // scrolled into view?
   const trackRef = useRef(null);
   const viewportRef = useRef(null);
-  const heroRef = useRef(null);
-  const slides = heorHomeSlides;
+  const tweenRef = useRef(null); // to pause mid-animation
+  const sectionRef = useRef(null); // to observe
+  const jumpRef = useRef(false); // true = next change is dot-jump, use set not to
+  const slides = heroHomeSlides;
   const slideCount = slides.length;
   const extendedSlide = slideCount > 0 ? [...slides, slides[0]] : [];
-  const logicalSlide = slideCount > 0 ? physicalSlide % slideCount : 0; //This is the slide the user logically sees
-  const paused = isHovered || isFocusWithin;
+  const logicalSlide = slideCount > 0 ? physicalSlide % slideCount : 0;
+  const paused = isHovered || isFocusWithin || !isVisible || !isInView;
 
-  useGSAP(() => {
-    gsap.from(heroRef.current, {
-      duration: 0.5,
-      scale: 0,
-      delay: 0.5,
-    });
-  });
+  // Entry animation: transform + opacity only, no scale, no delay.
+  // LCP elements (h1, hero img) are left static.
+  useGSAP(
+    () => {
+      gsap.from('.hero-stagger', {
+        y: 24,
+        opacity: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+        stagger: 0.08,
+        clearProps: 'all',
+      });
+    },
+    {
+      scope: viewportRef,
+    }
+  );
 
+  const goToSlide = (index) => {
+    if (index === logicalSlide) return;
+    if (logicalSlide === slideCount - 1 && index === 0) {
+      setPhysicalSlide(slideCount);
+      return;
+    }
+    tweenRef.current?.kill();
+    jumpRef.current = true;
+    setPhysicalSlide(index);
+  };
   useGSAP(
     () => {
       if (!viewportRef.current || !trackRef.current) return;
 
-      gsap.to(trackRef.current, {
+      // Reset / mount: already at 0, snap instantly, no tween, no delay
+      if (physicalSlide === 0) {
+        gsap.set(trackRef.current, { xPercent: 0 });
+        return;
+      }
+      if (jumpRef.current) {
+        jumpRef.current = false;
+        gsap.set(trackRef.current, { xPercent: -100 * physicalSlide });
+        return;
+      }
+      tweenRef.current = gsap.to(trackRef.current, {
         xPercent: -100 * physicalSlide,
         duration: 0.5,
         delay: 0.5,
@@ -54,6 +88,7 @@ function HeroCarousel() {
       scope: viewportRef,
     }
   );
+
   useEffect(() => {
     if (paused || slideCount <= 1) {
       return undefined;
@@ -65,9 +100,32 @@ function HeroCarousel() {
     return () => clearTimeout(id);
   }, [paused, physicalSlide, slideCount]);
 
+  useEffect(() => {
+    const onVisibility = () => {
+      const visible = document.visibilityState === 'visible';
+      setIsVisible(visible);
+      if (!visible) tweenRef.current?.pause();
+      else tweenRef.current?.play();
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => document.removeEventListener('visibilitychange', onVisibility);
+  }, []);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.15 } // 15% visible = keep playing
+    );
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
-      ref={heroRef}
+      ref={sectionRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocusCapture={() => setIsFocusWithin(true)}
@@ -86,10 +144,10 @@ function HeroCarousel() {
 
       <div className="absolute left-1/2 bottom-20 z-10 flex -translate-x-1/2 rotate-0 items-center justify-center gap-4">
         <div className="flex items-center gap-2">
-          {heorHomeSlides.map((item, index) => (
+          {heroHomeSlides.map((item, index) => (
             <button
               key={item.id}
-              onClick={() => setPhysicalSlide(index)}
+              onClick={() => goToSlide(index)}
               className={clsx(
                 'h-2.5 rounded-full transition-all',
                 index === logicalSlide ? 'w-7 bg-primary' : 'w-2.5 bg-muted-foreground/40'
@@ -126,18 +184,22 @@ function SlideItem({ slide, total, index }) {
           </h1>
 
           <div
-            className={clsx('mt-7 text-[22px] leading-snug md:text-[28px] text-muted-foreground')}
+            className={clsx(
+              'hero-stagger mt-7 text-[22px] leading-snug md:text-[28px] text-muted-foreground'
+            )}
           >
             {slide.subtitle}
           </div>
 
           <p
-            className={clsx('mt-6 max-w-140 text-muted-foreground text-base leading-8 md:text-lg')}
+            className={clsx(
+              'hero-stagger mt-6 max-w-140 text-muted-foreground text-base leading-8 md:text-lg'
+            )}
           >
             {slide.description}
           </p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+          <div className="hero-stagger mt-9 flex flex-col gap-4 sm:flex-row">
             <button className="inline-flex min-h-13 items-center justify-center gap-2 rounded-[14px] bg-primary px-6 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition hover:-translate-y-0.5">
               {slide.primaryCta}
               <ArrowRight size={18} />
@@ -165,7 +227,7 @@ function SlideItem({ slide, total, index }) {
           </div>
         </div>
 
-        <div className="flex w-full items-center justify-center lg:w-1/2">
+        <div className="hero-stagger flex w-full items-center justify-center lg:w-1/2">
           <HeroVisual type={slide.visual} />
         </div>
       </div>

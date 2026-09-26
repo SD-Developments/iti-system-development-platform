@@ -1,8 +1,9 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { announcements } from '../data';
 const AnnouncementsSection = () => (
   <section>
     <SectionHeader
+      variant="compact"
       eyebrow="ANNOUNCEMENTS"
       title="Announcements"
       description="Important updates from the department."

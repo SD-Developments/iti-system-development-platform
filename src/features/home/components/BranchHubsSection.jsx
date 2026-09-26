@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { tracks } from '@/constants';
+import { tracks } from '@/features/tracks/data';
 
 const BranchHubsSection = () => {
   const [selectedBranch, setSelectedBranch] = useState('Smart Village');

@@ -6,7 +6,7 @@ import facebook from '../assets/images/facebook.png';
 import linkedin from '../assets/images/linkedin.png';
 import { ArrowRight, Menu, Monitor, Moon, Sun } from 'lucide-react';
 
-import { bandingNavLinks } from '../constants';
+import { brandingNavLinks } from './layout/data';
 import clsx from 'clsx';
 import SdLogo from './SdLogo';
 
@@ -55,7 +55,7 @@ function BrandingNavBar() {
         <SdLogo />
         {/* Desktop Navigation */}
         <ul className="ml-8 hidden w-1/2 items-center justify-end gap-1 xl:flex">
-          {bandingNavLinks.map((link) => (
+          {brandingNavLinks.map((link) => (
             <li key={link.id}>
               <NavLink
                 to={link.path}
@@ -299,7 +299,7 @@ function BrandingNavBar() {
           >
             {/* Navigation */}
             <div className="flex flex-col gap-1">
-              {bandingNavLinks.map((link) => (
+              {brandingNavLinks.map((link) => (
                 <NavLink
                   key={link.id}
                   to={link.path}

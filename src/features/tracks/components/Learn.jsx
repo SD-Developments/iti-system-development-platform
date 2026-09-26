@@ -1,6 +1,6 @@
 import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
-import { tracks } from '@/constants';
+import { tracks } from '@/features/tracks/data';
 import { ArrowRight, BriefcaseBusiness } from 'lucide-react';
 import { useMemo, useState } from 'react';
 

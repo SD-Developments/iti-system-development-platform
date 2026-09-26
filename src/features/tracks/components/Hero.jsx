@@ -1,6 +1,6 @@
 import { ArrowRight, Braces, Code2, GitCompareArrows } from 'lucide-react';
 import Metric from '../../../components/Metric';
-import { hero1 } from '@/constants';
+import hero1 from '../../../assets/images/hero1.png';
 
 function Hero() {
   return (

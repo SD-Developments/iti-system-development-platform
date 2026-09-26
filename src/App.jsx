@@ -7,10 +7,11 @@ import TracksPage from './features/tracks/pages/TracksPage';
 import ProjectsPage from './features/projects/pages/ProjectsPage';
 import IntakesPage from './features/intakes/pages/IntakesPage';
 import MainLayout from './layouts/MainLayout';
-import NewsAndActivites from './features/newsandactivites/NewsAndActivites';
 import Lenis from 'lenis';
 import { useGSAP } from '@gsap/react';
 import { useEffect } from 'react';
+import NewsAndActivities from './features/news-activities/pages/NewsAndActivities';
+import { setLenis } from '@/lib/lenis';
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 const router = createBrowserRouter([
@@ -45,10 +46,14 @@ const router = createBrowserRouter([
       },
 
       {
-        path: 'news-activites',
-        element: <NewsAndActivites />,
+        path: 'news-activities',
+        element: <NewsAndActivities />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <h1>NotFound</h1>,
   },
 ]);
 
@@ -61,6 +66,7 @@ function App() {
       wheelMultiplier: 1,
       touchMultiplier: 2,
     });
+    setLenis(lenis);
     lenis.on('scroll', ScrollTrigger.update);
     const updateLenis = (time) => {
       lenis.raf(time * 1000);
@@ -71,6 +77,7 @@ function App() {
     return () => {
       gsap.ticker.remove(updateLenis);
       lenis.destroy();
+      setLenis(null);
     };
   }, []);
 

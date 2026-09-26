@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef } from 'react';
 
-function SectionHeader({ eyebrow, title, description, action }) {
+function SectionHeader({ eyebrow, title, description, action, href = '#', variant = 'hero' }) {
   const containerRef = useRef(null);
   useGSAP(
     () => {
@@ -26,6 +26,29 @@ function SectionHeader({ eyebrow, title, description, action }) {
       scope: containerRef,
     }
   );
+
+  if (variant === 'compact') {
+    return (
+      <div className="flex items-end justify-between mb-6 pb-2 border-b border-border">
+        <div>
+          <div className="flex items-center gap-2 text-sd-red font-mono text-[11px] font-bold uppercase tracking-wider mb-1">
+            <span>// {eyebrow}</span>
+          </div>
+          <h2 className="text-2xl font-bold text-foreground">{title}</h2>
+          <p className="text-xs text-muted-foreground mt-0.5">{description}</p>
+        </div>
+        {action && (
+          <a
+            href={href}
+            className="text-xs font-bold text-primary hover:text-sd-red inline-flex items-center gap-1 transition-colors"
+          >
+            {action} <span className="text-sm">→</span>
+          </a>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div
       ref={containerRef}
@@ -43,11 +66,11 @@ function SectionHeader({ eyebrow, title, description, action }) {
         <p className="mt-4 max-w-xl leading-7 text-muted-foreground">{description}</p>
       </div>
 
-      {action ?? (
-        <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-primary">
+      {action ? (
+        <a href={href} className="inline-flex items-center gap-2 text-sm font-bold text-primary">
           {action}
         </a>
-      )}
+      ) : null}
     </div>
   );
 }

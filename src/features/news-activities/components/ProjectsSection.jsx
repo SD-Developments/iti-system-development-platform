@@ -1,8 +1,9 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { featuredProjects } from '../data';
 const ProjectsSection = () => (
   <section id="projects">
     <SectionHeader
+      variant="compact"
       eyebrow="PROJECTS"
       title="Projects in Action"
       description="From classroom ideas to real-world software."

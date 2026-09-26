@@ -1,9 +1,10 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { upcomingEvents } from '../data';
 
 const EventsSection = () => (
   <section id="events">
     <SectionHeader
+      variant="compact"
       eyebrow="EVENTS"
       title="Upcoming Events"
       description="What's next at SD."

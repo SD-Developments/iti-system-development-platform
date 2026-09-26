@@ -1,5 +1,5 @@
-import { projectCategories, projects } from '@/constants';
-import ProjectCardComp from './ProjectCardComp';
+import { projectCategories, projects } from '@/features/projects/data';
+import ProjectCard from './ProjectCard';
 import ProjectDetailsModal from './ProjectDetailsModal';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -160,7 +160,7 @@ const ProjectExplorer = () => {
         {filteredProjects.length > 0 && (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             {displayedProjects.map((project) => (
-              <ProjectCardComp
+              <ProjectCard
                 key={project.title}
                 project={project}
                 onClick={() => setSelectedProject(project)}

@@ -1,4 +1,4 @@
-import { journeyStages } from '@/constants';
+import { journeyStages } from '@/features/projects/data';
 import JourneyCard from './JourneyCard';
 
 const EngineeringJourney = () => {

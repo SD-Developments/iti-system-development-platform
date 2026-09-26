@@ -1,4 +1,4 @@
-import { itpFacts, itpSprints, technicalLanes } from '@/constants';
+import { itpFacts, itpSprints, technicalLanes } from '@/features/home/data';
 import programsHero2 from '../../../assets/images/hero1.png';
 
 const Month4Section = () => {

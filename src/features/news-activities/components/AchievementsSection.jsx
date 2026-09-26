@@ -1,10 +1,11 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { achievements } from '../data';
 
 const icons = { gift: '🎁', group: '♧', verified: '✓', trend: '↗' };
 const AchievementsSection = () => (
   <section id="achievements">
     <SectionHeader
+      variant="compact"
       eyebrow="ACHIEVEMENTS"
       title="SD Achievements"
       description="Celebrating the success of our students."

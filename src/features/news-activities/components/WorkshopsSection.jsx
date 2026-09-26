@@ -1,4 +1,4 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { workshops } from '../data';
 
 const tone = {
@@ -10,6 +10,7 @@ const tone = {
 const WorkshopsSection = () => (
   <section id="workshops">
     <SectionHeader
+      variant="compact"
       eyebrow="LEARN"
       title="Learn. Build. Share."
       description="Technical sessions, workshops, and knowledge-sharing."

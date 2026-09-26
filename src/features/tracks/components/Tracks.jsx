@@ -3,7 +3,7 @@ import SectionHeader from '@/components/SectionHeader';
 import TrackCard from '@/components/TrackCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { branches, tracks } from '@/constants';
+import { branches, tracks } from '@/features/tracks/data';
 import { Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 

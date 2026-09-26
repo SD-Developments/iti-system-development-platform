@@ -1,4 +1,4 @@
-import { partnerCompanies } from '@/constants';
+import { partnerCompanies } from '@/features/home/data';
 
 function PartnersSection() {
   return (

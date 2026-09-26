@@ -1,4 +1,4 @@
-import { faqs } from '@/constants';
+import { faqs } from '@/features/home/data';
 
 const FAQ = () => {
   return (

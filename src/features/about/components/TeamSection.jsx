@@ -1,4 +1,4 @@
-import { teamMembers } from '@/constants';
+import { teamMembers } from '@/features/about/data';
 import TeamCard from './TeamCard';
 
 const TeamSection = () => {

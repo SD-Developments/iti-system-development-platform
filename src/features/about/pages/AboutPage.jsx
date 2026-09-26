@@ -1,6 +1,6 @@
 import AboutHero from '../components/AboutHero';
 import Leadership from '../components/Leadership';
-import Cta from '../components/Cta';
+import Cta from '@/components/Cta';
 import TeamSection from '../components/TeamSection';
 import SdStats from '../components/SdStats';
 import StudentsBuilds from '../components/StudentsBuilds';
@@ -21,7 +21,7 @@ const AboutPage = () => {
           <Leadership />
           <TeamSection />
           <Moment />
-          <Cta />
+          <Cta variant="about" />
         </div>
       </main>
     </>

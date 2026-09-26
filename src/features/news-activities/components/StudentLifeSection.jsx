@@ -1,4 +1,4 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { studentLife } from '../data';
 
 const LifeCard = ({ item }) => (
@@ -26,6 +26,7 @@ const LifeCard = ({ item }) => (
 const StudentLifeSection = () => (
   <section id="community">
     <SectionHeader
+      variant="compact"
       eyebrow="COMMUNITY"
       title="Student Life at SD"
       description="Beyond the classroom — building, collaborating, competing, and creating."

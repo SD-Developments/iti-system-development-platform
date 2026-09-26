@@ -1,8 +1,9 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/SectionHeader';
 import { gallery } from '../data';
 const GallerySection = () => (
   <section>
     <SectionHeader
+      variant="compact"
       eyebrow="GALLERY"
       title="Inside SD"
       description="People, moments, and memories from the Software Development Department."

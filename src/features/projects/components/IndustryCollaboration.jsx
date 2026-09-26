@@ -1,4 +1,4 @@
-import { industryFeatures } from '@/constants';
+import { industryFeatures } from '@/features/projects/data';
 import IndustryCard from './IndustryCard';
 
 const IndustryCollaboration = () => {
