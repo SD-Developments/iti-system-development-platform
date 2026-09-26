@@ -1,18 +1,18 @@
 import { createBrowserRouter } from 'react-router';
 import Home from './features/home/pages/Home';
-import AboutPage from './features/about/pages/AboutPage';
-import TracksPage from './features/tracks/pages/TracksPage';
-import ProjectsPage from './features/projects/pages/ProjectsPage';
-import IntakesPage from './features/intakes/pages/IntakesPage';
-import NewsAndActivities from './features/news-activities/pages/NewsAndActivities';
 import MainLayout from './layouts/MainLayout';
 import NotFound from './pages/NotFound';
+import { AboutPage, IntakesPage, NewsAndActivities, ProjectsPage, TracksPage } from './routerLazy';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainLayout />,
-
+    element: (
+      <ErrorBoundary>
+        <MainLayout />
+      </ErrorBoundary>
+    ),
     children: [
       {
         index: true,

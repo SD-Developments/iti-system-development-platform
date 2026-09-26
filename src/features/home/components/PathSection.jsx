@@ -5,10 +5,11 @@ import { programs } from '@/features/home/data';
 import { tracks } from '@/features/tracks/data';
 import { Link } from 'react-router';
 import Month9Section from './Month9Section';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Month4Section from './Month4Section';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { useLenis } from '@/hooks/useLenis';
 
 function PathSection() {
   const [showProgram, setShowProgram] = useState(null);
@@ -16,6 +17,18 @@ function PathSection() {
   const smartVillageTracks = tracks
     .filter((track) => track.program === 'PTP' && track.branches?.includes('Smart Village'))
     .slice(0, 3);
+
+  const { stop, start } = useLenis();
+  useEffect(() => {
+    if (!showProgram) return;
+    stop();
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+      start();
+    };
+  }, [showProgram, stop, start]);
   useGSAP(
     () => {
       if (!containerRef.current) return;
@@ -277,6 +290,7 @@ function PathSection() {
           }}
         >
           <div
+            data-lenis-prevent
             className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
 
             onClick={(e) => {
@@ -306,6 +320,7 @@ function PathSection() {
           }}
         >
           <div
+            data-lenis-prevent
             className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
 
             onClick={(e) => {

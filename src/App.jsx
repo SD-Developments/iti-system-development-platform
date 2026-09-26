@@ -1,6 +1,6 @@
 import { RouterProvider } from 'react-router';
 import router from './router';
-import LenisProvider from './lib/lenis-provider';
+import LenisProvider from './contexts/LenisContext';
 
 function App() {
   return (

@@ -1,6 +1,19 @@
+import { useLenis } from '@/hooks/useLenis';
 import { X } from 'lucide-react';
+import { useEffect } from 'react';
 
 const ProjectDetailsModal = ({ project, onClose }) => {
+  const { stop, start } = useLenis();
+  useEffect(() => {
+    stop();
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+      start();
+    };
+  }, [stop, start]);
+
   if (!project) return null;
 
   return (
@@ -9,6 +22,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
       onClick={onClose}
     >
       <div
+        data-lenis-prevent
         className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >

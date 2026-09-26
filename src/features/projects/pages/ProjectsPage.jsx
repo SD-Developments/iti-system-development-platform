@@ -6,10 +6,13 @@ import IndustryCollaboration from '../components/IndustryCollaboration';
 import KhedmacloudSpotlight from '../components/KhedmacloudSpotlight';
 import ProjectExplorer from '../components/ProjectExplorer';
 import ProjectsHeroSection from '../components/ProjectsHeroSection';
+import Seo from '@/components/Seo';
+import { PAGE_SEO } from '@/lib/seo';
 
 const ProjectsPage = () => {
   return (
     <>
+      <Seo {...PAGE_SEO.projects} />
       <ProjectsHeroSection />
       <FeaturedProject />
       <ProjectExplorer />

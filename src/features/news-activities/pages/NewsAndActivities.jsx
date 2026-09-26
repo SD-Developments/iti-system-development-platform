@@ -12,6 +12,8 @@ import StayConnectedCTA from '../components/StayConnectedCTA';
 import StudentLifeSection from '../components/StudentLifeSection';
 import TimelineSection from '../components/TimelineSection';
 import WorkshopsSection from '../components/WorkshopsSection';
+import Seo from '@/components/Seo';
+import { PAGE_SEO } from '@/lib/seo';
 
 const NewsAndActivities = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -20,6 +22,7 @@ const NewsAndActivities = () => {
   const filterInfo = useMemo(() => ({ activeCategory, sort }), [activeCategory, sort]);
   return (
     <>
+      <Seo {...PAGE_SEO.news} />
       <div className="bg-sd-bg-light text-foreground antialiased">
         <NewsActivitiesHero />
         <CategoryFilterBar

@@ -23,13 +23,13 @@ function HeroCarousel() {
   const extendedSlide = slideCount > 0 ? [...slides, slides[0]] : [];
   const logicalSlide = slideCount > 0 ? physicalSlide % slideCount : 0;
   const paused = isHovered || isFocusWithin || !isVisible || !isInView;
-
   // Entry animation: transform + opacity only, no scale, no delay.
   // LCP elements (h1, hero img) are left static.
   useGSAP(
     () => {
       gsap.from('.hero-stagger', {
         y: 24,
+        delay: 0.5,
         opacity: 0,
         duration: 0.6,
         ease: 'power2.out',

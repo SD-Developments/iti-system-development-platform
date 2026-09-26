@@ -21,7 +21,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import useTheme from '../hooks/useTheme';
-import { getLenis } from '@/lib/lenis';
+import { useLenis } from '@/hooks/useLenis';
 
 const socialIcons = { facebook, linkedin };
 
@@ -318,6 +318,7 @@ function BrandingNavBar() {
   const { theme, setTheme } = useTheme();
   const [mobileMenu, setMobileMenu] = useState(false);
   const { pathname } = useLocation();
+  const { stop, start } = useLenis();
 
   useGSAP(
     () => {
@@ -341,8 +342,7 @@ function BrandingNavBar() {
   // Lock background scroll (Lenis + native) while mobile menu is open
   useEffect(() => {
     if (!mobileMenu) return;
-    const lenis = getLenis();
-    lenis?.stop();
+    stop();
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const onKey = (e) => {
@@ -350,11 +350,11 @@ function BrandingNavBar() {
     };
     window.addEventListener('keydown', onKey);
     return () => {
-      lenis?.start();
+      start();
       document.body.style.overflow = prevOverflow;
       window.removeEventListener('keydown', onKey);
     };
-  }, [mobileMenu]);
+  }, [mobileMenu, stop, start]);
 
   const closeMobileMenu = () => setMobileMenu(false);
 

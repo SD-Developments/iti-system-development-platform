@@ -5,12 +5,39 @@ import StudentSection from '../components/StudentSection';
 import BuiltSection from '../components/BuiltSection';
 import FAQ from '../components/FAQ';
 import Outcomes from '../components/Outcomes';
-import { ArrowDownRight } from 'lucide-react';
+import JourneyToOutcomes from '../components/JourneyToOutcomes';
 import BranchHubsSection from '../components/BranchHubsSection';
+import Seo from '@/components/Seo';
+import { PAGE_SEO, SITE } from '@/lib/seo';
+
+const homeStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: SITE.name,
+    alternateName: 'ITI SD',
+    url: SITE.url,
+    description:
+      'ITI Software Development Department — immersive software engineering education in Egypt since 1993: 9-month professional diploma, 4-month accelerator, production capstones and nationwide hubs.',
+    foundingDate: '1993',
+    parentOrganization: {
+      '@type': 'EducationalOrganization',
+      name: 'Information Technology Institute (ITI), MCIT Egypt',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url,
+    inLanguage: 'en',
+  },
+];
 
 function Home() {
   return (
     <>
+      <Seo {...PAGE_SEO.home} structuredData={homeStructuredData} />
       <main className="relative bg-background text-foreground">
         <HeroCarousel />
         <PathSection />
@@ -23,45 +50,6 @@ function Home() {
         <FAQ />
       </main>
     </>
-  );
-}
-
-function JourneyToOutcomes() {
-  return (
-    <div className="relative flex justify-center py-6 lg:py-8 bg-sd-bg-light">
-      <div className="group flex flex-col items-center">
-        <span className="font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
-          From Experience to Impact
-        </span>
-
-        <div
-          className="
-            mt-3
-            flex h-14 w-14
-            items-center justify-center
-            rounded-full
-            border border-border
-            bg-card
-            text-primary
-            shadow-lg
-            shadow-foreground/5
-            transition-all
-            duration-300
-            group-hover:-translate-y-1
-            group-hover:border-primary/30
-            group-hover:bg-primary
-            group-hover:text-primary-foreground
-          "
-        >
-          <ArrowDownRight
-            size={22}
-            className="transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"
-          />
-        </div>
-
-        <div className="mt-3 h-10 w-px bg-linear-to-b from-primary/50 to-transparent" />
-      </div>
-    </div>
   );
 }
 
