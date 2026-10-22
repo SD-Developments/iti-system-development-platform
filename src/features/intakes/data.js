@@ -24,7 +24,7 @@ export const itpTracks = [
     hours: '500h',
     title: 'Modern Web with Angular & React',
     description:
-      'State management (NgRx / Redux), RxJS observables, WebSockets, accessibility, progressive web apps, and performance audits.',
+      'State management (NgRx / Redux), RxJS observables, WebSockets, accessibility, progressive web apps, performance audits, plus an AI session: AI-assisted React/Angular development with Copilot/Cursor and RAG-powered UI features.',
     outcome: 'Frontend Engineer',
   },
   {

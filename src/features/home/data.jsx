@@ -218,8 +218,8 @@ export const technicalLanes = [
     category: 'Frontend Engineering // 500h',
     title: 'Modern Web with Angular & React',
     description:
-      'State machines (NgRx & Redux Toolkit), RxJS, WebSockets, and lighthouse web performance tuning.',
-    tags: ['Angular', 'React', 'TypeScript', 'Tailwind'],
+      'State machines (NgRx & Redux Toolkit), RxJS, WebSockets, lighthouse web performance tuning, plus an AI session: Copilot/Cursor-assisted React development, prompt patterns for components, and RAG chatbot integration.',
+    tags: ['Angular', 'React', 'TypeScript', 'Tailwind', 'Copilot', 'RAG'],
     accent: 'teal',
   },
   {
