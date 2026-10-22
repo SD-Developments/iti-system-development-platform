@@ -390,7 +390,7 @@ function TrackCard({ track, index }) {
         group/card
         relative
         flex
-        min-h-[330px]
+        min-h-82.5
         flex-col
         overflow-hidden
         rounded-[26px]
@@ -454,7 +454,7 @@ function TrackCard({ track, index }) {
         </span>
 
         {/* title */}
-        <h4 className="mt-2 max-w-[270px] text-xl font-extrabold leading-snug tracking-[-0.025em]">
+        <h4 className="mt-2 max-w-67.5 text-xl font-extrabold leading-snug tracking-tight">
           {track.shortTitle}
         </h4>
 
