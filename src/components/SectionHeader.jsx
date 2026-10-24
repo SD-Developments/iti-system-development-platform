@@ -1,5 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
 
 function SectionHeader({ eyebrow, title, description, action, href = '#', variant = 'hero' }) {
@@ -29,20 +30,23 @@ function SectionHeader({ eyebrow, title, description, action, href = '#', varian
 
   if (variant === 'compact') {
     return (
-      <div className="flex items-end justify-between mb-6 pb-2 border-b border-border">
-        <div>
-          <div className="flex items-center gap-2 text-sd-red font-mono text-[11px] font-bold uppercase tracking-wider mb-1">
+      <div className="mb-6 flex flex-col gap-3 border-b border-border pb-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
+        <div className="min-w-0">
+          <div className="mb-1.5 flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-wider text-sd-red">
             <span>// {eyebrow}</span>
           </div>
-          <h2 className="text-2xl font-bold text-foreground">{title}</h2>
-          <p className="text-xs text-muted-foreground mt-0.5">{description}</p>
+          <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-[28px]">
+            {title}
+          </h2>
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{description}</p>
         </div>
         {action && (
           <a
             href={href}
-            className="text-xs font-bold text-primary hover:text-sd-red inline-flex items-center gap-1 transition-colors"
+            className="group inline-flex shrink-0 items-center gap-1.5 rounded-sm text-sm font-bold text-primary transition-colors hover:text-sd-red focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sd-red"
           >
-            {action} <span className="text-sm">→</span>
+            {action}
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </a>
         )}
       </div>

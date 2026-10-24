@@ -1,30 +1,35 @@
+import { ArrowUpRight } from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader';
 import { studentLife } from '../data';
 
-const LifeCard = ({ item }) => (
-  <div
-    className={`relative rounded-xl overflow-hidden group shadow-sm bg-slate-900 min-h-[160px] ${item.size === 'large' ? 'md:col-span-4 md:row-span-2 md:min-h-full' : ''}`}
-  >
-    <img
-      alt={item.title}
-      src={item.image}
-      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
-    <div className="absolute bottom-3 left-3 right-3 text-white flex items-end justify-between">
-      <div>
-        <h3 className={item.size === 'large' ? 'text-base font-bold' : 'text-sm font-bold'}>
-          {item.title}
-        </h3>
-        {item.description && <p className="text-[11px] text-slate-300">{item.description}</p>}
+const LifeCard = ({ item }) => {
+  const isLarge = item.size === 'large';
+  return (
+    <div
+      className={`group relative overflow-hidden rounded-xl bg-slate-900 shadow-sm md:col-span-4 ${isLarge ? 'min-h-72 md:row-span-2' : 'min-h-44'}`}
+    >
+      <img
+        alt={item.title}
+        src={item.image}
+        className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+      <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 text-white">
+        <div className="min-w-0">
+          <h3 className={isLarge ? 'text-lg font-bold' : 'text-base font-bold'}>{item.title}</h3>
+          {item.description && <p className="text-sm text-slate-300">{item.description}</p>}
+        </div>
+        <ArrowUpRight
+          aria-hidden="true"
+          className="size-4 shrink-0 text-white/70 transition-colors group-hover:text-white"
+        />
       </div>
-      <span className="text-xs">↗</span>
     </div>
-  </div>
-);
+  );
+};
 
 const StudentLifeSection = () => (
-  <section id="community">
+  <section id="community" className="scroll-mt-40">
     <SectionHeader
       variant="compact"
       eyebrow="COMMUNITY"
@@ -32,18 +37,10 @@ const StudentLifeSection = () => (
       description="Beyond the classroom — building, collaborating, competing, and creating."
       action="View Gallery"
     />
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:h-[340px]">
-      <LifeCard item={studentLife[0]} />
-      <div className="md:col-span-4 grid grid-rows-2 gap-4">
-        {studentLife.slice(1, 3).map((item) => (
-          <LifeCard key={item.title} item={item} />
-        ))}
-      </div>
-      <div className="md:col-span-4 grid grid-rows-2 gap-4">
-        {studentLife.slice(3).map((item) => (
-          <LifeCard key={item.title} item={item} />
-        ))}
-      </div>
+    <div className="grid grid-cols-1 gap-4 md:h-[440px] md:grid-cols-12 md:grid-rows-2">
+      {studentLife.map((item) => (
+        <LifeCard key={item.title} item={item} />
+      ))}
     </div>
   </section>
 );

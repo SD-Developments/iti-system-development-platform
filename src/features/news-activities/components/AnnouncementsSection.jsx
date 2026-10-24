@@ -1,7 +1,9 @@
+import { ArrowUpRight, Megaphone } from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader';
 import { announcements } from '../data';
+
 const AnnouncementsSection = () => (
-  <section>
+  <section id="announcements" className="scroll-mt-40">
     <SectionHeader
       variant="compact"
       eyebrow="ANNOUNCEMENTS"
@@ -9,32 +11,35 @@ const AnnouncementsSection = () => (
       description="Important updates from the department."
       action="View All"
     />
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {announcements.map((item) => (
-        <div
+        <article
           key={item.title}
-          className="bg-card rounded-xl border border-border p-4 flex items-center justify-between shadow-sm hover:border-sd-red/50 transition group"
+          className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-sd-red/50 hover:shadow-md"
         >
-          <div className="flex items-center gap-4">
+          <div className="flex min-w-0 items-center gap-4">
             <div
-              className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${item.tone === 'red' ? 'bg-red-50 text-sd-red' : 'bg-secondary2 text-sd-teal'}`}
+              className={`flex size-12 shrink-0 items-center justify-center rounded-xl ${item.tone === 'red' ? 'bg-sd-red/10 text-sd-red' : 'bg-secondary2 text-sd-teal'}`}
             >
-              ▤
+              <Megaphone aria-hidden="true" className="size-5" />
             </div>
-            <div>
+            <div className="min-w-0">
               <span
-                className={`text-[9px] font-mono font-bold uppercase px-1.5 py-0.5 rounded ${item.tone === 'red' ? 'bg-sd-red text-white' : 'bg-sd-teal text-white'}`}
+                className={`rounded px-2 py-0.5 font-mono text-[11px] font-bold uppercase text-white ${item.tone === 'red' ? 'bg-sd-red' : 'bg-sd-teal'}`}
               >
                 {item.status}
               </span>
-              <h3 className="text-sm font-bold text-foreground mt-1 group-hover:text-sd-red transition-colors">
+              <h3 className="mt-1.5 text-base font-bold leading-snug text-foreground transition-colors group-hover:text-sd-red">
                 {item.title}
               </h3>
-              <p className="text-xs text-muted-foreground">{item.detail}</p>
+              <p className="text-sm text-muted-foreground">{item.detail}</p>
             </div>
           </div>
-          <span className="text-muted-foreground group-hover:text-sd-red">↗</span>
-        </div>
+          <ArrowUpRight
+            aria-hidden="true"
+            className="size-5 shrink-0 text-muted-foreground transition-colors group-hover:text-sd-red"
+          />
+        </article>
       ))}
     </div>
   </section>

@@ -1,8 +1,15 @@
+import { ArrowRight, CalendarDays } from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader';
 import { upcomingEvents } from '../data';
 
+const tagClasses = (event) => {
+  if (event.featured) return 'bg-sd-red text-white';
+  if (event.tagTone === 'teal') return 'bg-secondary2 text-sd-teal';
+  return 'bg-muted text-muted-foreground';
+};
+
 const EventsSection = () => (
-  <section id="events">
+  <section id="events" className="scroll-mt-40">
     <SectionHeader
       variant="compact"
       eyebrow="EVENTS"
@@ -10,58 +17,69 @@ const EventsSection = () => (
       description="What's next at SD."
       action="View All Events"
     />
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {upcomingEvents.map((event) => (
-        <div
+        <article
           key={event.title}
-          className={`${event.featured ? 'bg-sd-navy text-white border-slate-800' : 'bg-card text-foreground border-border'} rounded-xl p-4 flex flex-col justify-between border shadow-sm`}
+          className={`${event.featured ? 'border-slate-800 bg-sd-navy text-white' : 'border-border bg-card text-foreground hover:shadow-md'} group flex flex-col justify-between rounded-xl border p-5 shadow-sm transition-shadow`}
         >
           <div>
-            <div className="flex items-baseline gap-1.5 font-mono font-bold mb-3">
-              <span className="text-xs text-sd-red">{event.month}</span>
-              <span className="text-3xl tracking-tight">{event.day}</span>
+            <div className="mb-4 flex items-baseline gap-2 font-mono font-bold">
+              <span className="text-sm text-sd-red">{event.month}</span>
+              <span className="text-4xl leading-none tracking-tight">{event.day}</span>
             </div>
             <div
-              className={`text-[10px] font-mono mb-1 ${event.featured ? 'text-slate-400' : 'text-muted-foreground'}`}
+              className={`mb-1.5 font-mono text-xs ${event.featured ? 'text-slate-400' : 'text-muted-foreground'}`}
             >
-              {event.posted}
+              Posted {event.posted}
             </div>
-            <h3 className="text-sm font-bold mb-2">{event.title}</h3>
+            <h3
+              className={`${event.featured ? '' : 'group-hover:text-sd-red'} mb-2 text-base font-bold leading-snug transition-colors`}
+            >
+              {event.title}
+            </h3>
             <p
-              className={`text-[11px] leading-relaxed mb-4 ${event.featured ? 'text-slate-300' : 'text-muted-foreground'}`}
+              className={`mb-5 text-sm leading-relaxed ${event.featured ? 'text-slate-300' : 'text-muted-foreground'}`}
             >
               {event.description}
             </p>
           </div>
           <div
-            className={`flex items-center justify-between pt-3 border-t text-xs ${event.featured ? 'border-slate-700/60' : 'border-border'}`}
+            className={`flex items-center justify-between gap-3 border-t pt-4 ${event.featured ? 'border-slate-700/60' : 'border-border'}`}
           >
             <span
-              className={`text-[10px] uppercase font-mono px-2 py-0.5 rounded font-bold ${event.featured ? 'bg-sd-red text-white' : event.tagTone === 'teal' ? 'bg-secondary2 text-sd-teal' : 'bg-muted text-muted-foreground'}`}
+              className={`${tagClasses(event)} rounded px-2 py-0.5 font-mono text-[11px] font-bold uppercase`}
             >
               {event.tag}
             </span>
             <a
-              className={`${event.featured ? 'text-slate-300' : 'text-muted-foreground'} hover:text-sd-red`}
+              className={`${event.featured ? 'text-slate-300 hover:text-white' : 'text-muted-foreground hover:text-sd-red'} inline-flex items-center gap-1 rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red`}
               href="#"
             >
-              View Event →
+              View Event
+              <ArrowRight aria-hidden="true" className="size-4" />
             </a>
           </div>
-        </div>
+        </article>
       ))}
-      <div className="bg-[#051E2C] text-white rounded-xl p-4 flex flex-col justify-between border border-slate-800 shadow-sm">
-        <div>
-          <div className="w-8 h-8 rounded-full bg-slate-800 text-sd-teal flex items-center justify-center mb-4">
-            ▣
+      <div className="flex flex-col gap-4 rounded-xl border border-slate-800 bg-sd-navy p-5 text-white shadow-sm sm:col-span-2 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:col-span-4">
+        <div className="flex items-center gap-4">
+          <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-slate-800 text-sd-teal">
+            <CalendarDays aria-hidden="true" className="size-5" />
+          </span>
+          <div>
+            <h3 className="text-base font-bold">More Events Ahead</h3>
+            <p className="text-sm leading-relaxed text-slate-400">
+              Check out our full calendar for upcoming activities.
+            </p>
           </div>
-          <h3 className="text-base font-bold mb-2">More Events Ahead</h3>
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Check out our full calendar for upcoming activities.
-          </p>
         </div>
-        <a className="pt-3 border-t border-slate-800 text-xs font-semibold text-sd-teal" href="#">
-          View Calendar →
+        <a
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-sm text-sm font-semibold text-sd-teal transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sd-teal"
+          href="#"
+        >
+          View Calendar
+          <ArrowRight aria-hidden="true" className="size-4" />
         </a>
       </div>
     </div>

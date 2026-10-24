@@ -1,9 +1,14 @@
+import { BadgeCheck, Gift, TrendingUp, Users } from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader';
 import { achievements } from '../data';
 
-const icons = { gift: '🎁', group: '♧', verified: '✓', trend: '↗' };
+const icons = { gift: Gift, group: Users, verified: BadgeCheck, trend: TrendingUp };
+
+const numberTone = { red: 'text-sd-red', teal: 'text-sd-teal' };
+const iconTone = { red: 'bg-sd-red/10 text-sd-red', teal: 'bg-secondary2 text-sd-teal' };
+
 const AchievementsSection = () => (
-  <section id="achievements">
+  <section id="achievements" className="scroll-mt-40">
     <SectionHeader
       variant="compact"
       eyebrow="ACHIEVEMENTS"
@@ -11,30 +16,33 @@ const AchievementsSection = () => (
       description="Celebrating the success of our students."
       action="View All Achievements"
     />
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      {achievements.map((item) => (
-        <div
-          key={item.number}
-          className="bg-card rounded-xl p-5 border border-border shadow-sm flex items-center gap-4"
-        >
-          <span
-            className={`text-4xl font-extrabold font-mono tracking-tighter ${item.tone === 'red' ? 'text-sd-red' : item.tone === 'teal' ? 'text-sd-teal' : 'text-foreground'}`}
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {achievements.map((item) => {
+        const Icon = icons[item.icon];
+        return (
+          <article
+            key={item.number}
+            className="flex flex-col rounded-xl border border-border bg-card p-5 shadow-sm transition-shadow hover:shadow-md"
           >
-            {item.number}
-          </span>
-          <div className="leading-tight">
-            <div className="text-[10px] font-mono uppercase font-bold text-muted-foreground">
+            <div className="mb-4 flex items-center justify-between">
+              <span
+                className={`${numberTone[item.tone] ?? 'text-foreground'} font-mono text-4xl font-extrabold leading-none tracking-tighter`}
+              >
+                {item.number}
+              </span>
+              <span
+                className={`${iconTone[item.tone] ?? iconTone.teal} flex size-10 items-center justify-center rounded-full`}
+              >
+                <Icon aria-hidden="true" className="size-5" />
+              </span>
+            </div>
+            <div className="mb-1 font-mono text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
               {item.label}
             </div>
-            <p className="text-xs font-bold text-foreground mt-0.5">{item.text}</p>
-          </div>
-          <div
-            className={`ml-auto text-xl ${item.tone === 'red' ? 'text-sd-red' : 'text-sd-teal'}`}
-          >
-            {icons[item.icon]}
-          </div>
-        </div>
-      ))}
+            <p className="text-sm font-bold leading-snug text-foreground">{item.text}</p>
+          </article>
+        );
+      })}
     </div>
   </section>
 );
