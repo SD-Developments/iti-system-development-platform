@@ -31,7 +31,7 @@ const GallerySection = () => (
             src={item.image}
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent" />
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 text-white">
             <div className="min-w-0">
               <p className="truncate text-sm font-bold">{item.title}</p>

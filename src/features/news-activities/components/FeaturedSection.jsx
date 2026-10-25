@@ -7,13 +7,13 @@ const FeaturedSection = () => (
     className="scroll-mt-40 overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
   >
     <div className="grid grid-cols-1 lg:grid-cols-12">
-      <div className="relative aspect-[16/9] overflow-hidden bg-slate-900 lg:col-span-7 lg:aspect-auto lg:min-h-[420px]">
+      <div className="relative aspect-video overflow-hidden bg-slate-900 lg:col-span-7 lg:aspect-auto lg:min-h-105">
         <img
           alt="SD Technical Day 2026 Stage"
           className="absolute inset-0 h-full w-full object-cover"
           src={stitchImages.featured}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
         <div className="absolute bottom-4 left-4 rounded bg-black/60 px-3 py-1 font-mono text-xs uppercase tracking-widest text-white backdrop-blur-sm">
           SMART VILLAGE AUDITORIUM
         </div>

@@ -13,7 +13,7 @@ const LifeCard = ({ item }) => {
         src={item.image}
         className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/40 to-transparent" />
       <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 text-white">
         <div className="min-w-0">
           <h3 className={isLarge ? 'text-lg font-bold' : 'text-base font-bold'}>{item.title}</h3>
@@ -37,7 +37,7 @@ const StudentLifeSection = () => (
       description="Beyond the classroom — building, collaborating, competing, and creating."
       action="View Gallery"
     />
-    <div className="grid grid-cols-1 gap-4 md:h-[440px] md:grid-cols-12 md:grid-rows-2">
+    <div className="grid grid-cols-1 gap-4 md:h-110 md:grid-cols-12 md:grid-rows-2">
       {studentLife.map((item) => (
         <LifeCard key={item.title} item={item} />
       ))}
