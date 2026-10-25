@@ -9,8 +9,6 @@ import gsap from 'gsap';
 
 function HeroCarousel() {
   const [physicalSlide, setPhysicalSlide] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isFocusWithin, setIsFocusWithin] = useState(false);
   const [isVisible, setIsVisible] = useState(true); // tab open?
   const [isInView, setIsInView] = useState(true); // scrolled into view?
   const trackRef = useRef(null);
@@ -22,7 +20,7 @@ function HeroCarousel() {
   const slideCount = slides.length;
   const extendedSlide = slideCount > 0 ? [...slides, slides[0]] : [];
   const logicalSlide = slideCount > 0 ? physicalSlide % slideCount : 0;
-  const paused = isHovered || isFocusWithin || !isVisible || !isInView;
+  const paused = !isVisible || !isInView;
   // Entry animation: transform + opacity only, no scale, no delay.
   // LCP elements (h1, hero img) are left static.
   useGSAP(
@@ -126,10 +124,6 @@ function HeroCarousel() {
   return (
     <section
       ref={sectionRef}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onFocusCapture={() => setIsFocusWithin(true)}
-      onBlurCapture={() => setIsFocusWithin(false)}
       className="relative w-full min-h-screen bg-background text-foreground overflow-hidden"
     >
       <div ref={viewportRef} className="mx-auto  w-full overflow-hidden">
