@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import AchievementsSection from '../components/AchievementsSection';
 import AnnouncementsSection from '../components/AnnouncementsSection';
 import CategoryFilterBar from '../components/CategoryFilterBar';
@@ -13,59 +13,40 @@ import TimelineSection from '../components/TimelineSection';
 import WorkshopsSection from '../components/WorkshopsSection';
 import Seo from '@/components/Seo';
 import { PAGE_SEO } from '@/lib/seo';
-import { categorySections } from '../data';
 
 const NewsAndActivities = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [sort, setSort] = useState('Latest');
   const [search, setSearch] = useState('');
 
-  const filterInfo = useMemo(
-    () => ({ activeCategory, sort, search }),
-    [activeCategory, sort, search]
-  );
-  const isVisible = (id) =>
-    activeCategory === 'All' || (categorySections[activeCategory] ?? []).includes(id);
-
-  // In-page links (hero, CTA) may point at a section the active filter hides:
-  // reset the filter, then scroll once the section has rendered.
-  const handleAnchorClick = (event) => {
-    const link = event.target.closest('a[href^="#"]');
-    const id = link?.getAttribute('href').slice(1);
-    if (!id || document.getElementById(id)) return;
-    event.preventDefault();
-    setActiveCategory('All');
-    requestAnimationFrame(() =>
-      requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView())
-    );
-  };
-
   return (
     <>
       <Seo {...PAGE_SEO.news} />
-      <div className="bg-sd-bg-light text-foreground antialiased" onClick={handleAnchorClick}>
+      <div className="bg-sd-bg-light text-foreground antialiased">
         <NewsActivitiesHero />
         <main className="max-w-335 mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-14 sm:space-y-20">
           <LatestSection
+            category={activeCategory}
             sort={sort}
             search={search}
-            showCards={isVisible('latest')}
             filterBar={
               <CategoryFilterBar
-                {...filterInfo}
+                activeCategory={activeCategory}
+                sort={sort}
+                search={search}
                 onCategoryChange={setActiveCategory}
                 onSortChange={setSort}
                 onSearchChange={setSearch}
               />
             }
           />
-          {isVisible('events') && <EventsSection />}
-          {isVisible('workshops') && <WorkshopsSection />}
-          {isVisible('community') && <StudentLifeSection />}
-          {isVisible('achievements') && <AchievementsSection />}
-          {isVisible('projects') && <ProjectsSection />}
-          {isVisible('announcements') && <AnnouncementsSection />}
-          {isVisible('gallery') && <GallerySection />}
+          <EventsSection />
+          <WorkshopsSection />
+          <StudentLifeSection />
+          <AchievementsSection />
+          <ProjectsSection />
+          <AnnouncementsSection />
+          <GallerySection />
         </main>
         <TimelineSection />
         <StayConnectedCTA />

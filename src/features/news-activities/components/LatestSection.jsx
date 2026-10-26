@@ -73,11 +73,27 @@ const filterNews = (items, search) => {
 
 const PAGE_SIZE = 3;
 
-const LatestSection = ({ sort = 'Latest', search = '', filterBar = null, showCards = true }) => {
+const categoryTypes = {
+  News: 'NEWS',
+  Events: 'EVENT',
+  Workshops: 'WORKSHOP',
+  Achievements: 'ACHIEVEMENT',
+  'Student Activities': 'STUDENT ACTIVITY',
+  Announcements: 'ANNOUNCEMENT',
+};
+
+const LatestSection = ({ category = 'All', sort = 'Latest', search = '', filterBar = null }) => {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const items = sortNews(filterNews(latestNews, search), sort);
+  const categoryType = categoryTypes[category];
+  const categoryItems = categoryType
+    ? latestNews.filter((item) => item.type === categoryType)
+    : latestNews;
+  const items = sortNews(filterNews(categoryItems, search), sort);
   const visibleItems = items.slice(0, visibleCount);
   const remaining = items.length - visibleItems.length;
+  const emptyMessage = search.trim()
+    ? `No ${category === 'All' ? 'news or activities' : category.toLowerCase()} found for "${search.trim()}".`
+    : `No ${category === 'All' ? 'news or activities' : category.toLowerCase()} available right now.`;
 
   return (
     <section id="latest" className="scroll-mt-40">
@@ -89,41 +105,40 @@ const LatestSection = ({ sort = 'Latest', search = '', filterBar = null, showCar
         action="View All"
       />
       {filterBar}
-      {showCards &&
-        (items.length > 0 ? (
-          <>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {visibleItems.map((item) => (
-                <NewsCard key={item.title} item={item} />
-              ))}
+      {items.length > 0 ? (
+        <>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {visibleItems.map((item) => (
+              <NewsCard key={item.title} item={item} />
+            ))}
+          </div>
+          {remaining > 0 && (
+            <div className="mt-8 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+                className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground shadow-sm transition-all hover:border-sd-red hover:bg-sd-red hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red"
+              >
+                Show more
+                <span className="rounded-full bg-muted px-2 py-0.5 font-mono text-xs text-muted-foreground transition-colors group-hover:bg-white/20 group-hover:text-white">
+                  {remaining}
+                </span>
+                <ChevronDown
+                  aria-hidden="true"
+                  className="size-4 transition-transform group-hover:translate-y-0.5"
+                />
+              </button>
             </div>
-            {remaining > 0 && (
-              <div className="mt-8 flex justify-center">
-                <button
-                  type="button"
-                  onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-                  className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground shadow-sm transition-all hover:border-sd-red hover:bg-sd-red hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red"
-                >
-                  Show more
-                  <span className="rounded-full bg-muted px-2 py-0.5 font-mono text-xs text-muted-foreground transition-colors group-hover:bg-white/20 group-hover:text-white">
-                    {remaining}
-                  </span>
-                  <ChevronDown
-                    aria-hidden="true"
-                    className="size-4 transition-transform group-hover:translate-y-0.5"
-                  />
-                </button>
-              </div>
-            )}
-          </>
-        ) : (
-          <p
-            role="status"
-            className="rounded-2xl border border-dashed border-border bg-card px-6 py-12 text-center text-sm text-muted-foreground"
-          >
-            No results for &ldquo;{search.trim()}&rdquo;.
-          </p>
-        ))}
+          )}
+        </>
+      ) : (
+        <p
+          role="status"
+          className="rounded-2xl border border-dashed border-border bg-card px-6 py-12 text-center text-sm text-muted-foreground"
+        >
+          {emptyMessage}
+        </p>
+      )}
     </section>
   );
 };
