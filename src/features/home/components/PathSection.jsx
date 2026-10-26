@@ -388,7 +388,7 @@ function TrackCard({ track, index }) {
         group/card
         relative
         flex
-        min-h-[330px]
+        min-h-82.5
         flex-col
         overflow-hidden
         rounded-[26px]
