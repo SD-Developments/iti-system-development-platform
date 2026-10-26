@@ -3,7 +3,6 @@ import AchievementsSection from '../components/AchievementsSection';
 import AnnouncementsSection from '../components/AnnouncementsSection';
 import CategoryFilterBar from '../components/CategoryFilterBar';
 import EventsSection from '../components/EventsSection';
-import FeaturedSection from '../components/FeaturedSection';
 import GallerySection from '../components/GallerySection';
 import LatestSection from '../components/LatestSection';
 import NewsActivitiesHero from '../components/NewsActivitiesHero';
@@ -19,8 +18,12 @@ import { categorySections } from '../data';
 const NewsAndActivities = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [sort, setSort] = useState('Latest');
+  const [search, setSearch] = useState('');
 
-  const filterInfo = useMemo(() => ({ activeCategory, sort }), [activeCategory, sort]);
+  const filterInfo = useMemo(
+    () => ({ activeCategory, sort, search }),
+    [activeCategory, sort, search]
+  );
   const isVisible = (id) =>
     activeCategory === 'All' || (categorySections[activeCategory] ?? []).includes(id);
 
@@ -42,14 +45,20 @@ const NewsAndActivities = () => {
       <Seo {...PAGE_SEO.news} />
       <div className="bg-sd-bg-light text-foreground antialiased" onClick={handleAnchorClick}>
         <NewsActivitiesHero />
-        <CategoryFilterBar
-          {...filterInfo}
-          onCategoryChange={setActiveCategory}
-          onSortChange={setSort}
-        />
         <main className="max-w-335 mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-14 sm:space-y-20">
-          {isVisible('featured') && <FeaturedSection />}
-          {isVisible('latest') && <LatestSection sort={sort} />}
+          <LatestSection
+            sort={sort}
+            search={search}
+            showCards={isVisible('latest')}
+            filterBar={
+              <CategoryFilterBar
+                {...filterInfo}
+                onCategoryChange={setActiveCategory}
+                onSortChange={setSort}
+                onSearchChange={setSearch}
+              />
+            }
+          />
           {isVisible('events') && <EventsSection />}
           {isVisible('workshops') && <WorkshopsSection />}
           {isVisible('community') && <StudentLifeSection />}
