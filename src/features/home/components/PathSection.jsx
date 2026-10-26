@@ -1,6 +1,5 @@
 import SectionHeader from '@/components/SectionHeader';
 import { ArrowRight, BookOpen, Clock3, Layers3, MapPin, X } from 'lucide-react';
-
 import { programs } from '@/features/home/data';
 import { tracks } from '@/features/tracks/data';
 import { Link } from 'react-router';
@@ -36,20 +35,20 @@ function PathSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 80%',
-          end: 'top 30%',
+          start: 'top 50%',
+          end: 'top 45%', // short = faster, not full page
           scrub: 0.4,
         },
       });
       tl.fromTo(
         '.leftprogram',
         { x: -100, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, ease: 'none' }
+        { x: 0, autoAlpha: 1, ease: 'power1.in' }
       ).fromTo(
         '.rightprogram',
         { x: 100, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, ease: 'none' },
-        '<+=0.15'
+        { x: 0, autoAlpha: 1, ease: 'power1.in' },
+        '<'
       );
     },
     {
@@ -92,6 +91,8 @@ function PathSection() {
                 rounded-3xl
                 border
                 p-8
+                transition
+                duration-300
                 lg:p-10
                 hover:border-primary
                 cursor-pointer
@@ -388,7 +389,7 @@ function TrackCard({ track, index }) {
         group/card
         relative
         flex
-        min-h-82.5
+        min-h-[330px]
         flex-col
         overflow-hidden
         rounded-[26px]
