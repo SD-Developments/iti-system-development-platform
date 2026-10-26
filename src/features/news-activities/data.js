@@ -45,16 +45,6 @@ export const newsCategories = [
   'Announcements',
 ];
 
-// Which page sections belong to each category filter ('All' shows everything).
-export const categorySections = {
-  News: ['featured', 'latest'],
-  Events: ['featured', 'events'],
-  Workshops: ['workshops'],
-  Achievements: ['achievements'],
-  'Student Activities': ['community', 'projects', 'gallery'],
-  Announcements: ['announcements'],
-};
-
 export const latestNews = [
   {
     title: 'Welcome to Intake 48',
