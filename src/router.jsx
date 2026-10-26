@@ -16,38 +16,67 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+
+        element: (
+          <ErrorBoundary>
+            <Home />
+          </ErrorBoundary>
+        ),
       },
 
       {
         path: 'about',
-        element: <AboutPage />,
+        element: (
+          <ErrorBoundary>
+            <AboutPage />
+          </ErrorBoundary>
+        ),
       },
 
       {
         path: 'intakes',
-        element: <IntakesPage />,
+        element: (
+          <ErrorBoundary>
+            <IntakesPage />
+          </ErrorBoundary>
+        ),
       },
 
       {
         path: 'tracks',
-        element: <TracksPage />,
+        element: (
+          <ErrorBoundary>
+            <TracksPage />
+          </ErrorBoundary>
+        ),
       },
 
       {
         path: 'projects',
-        element: <ProjectsPage />,
+        element: (
+          <ErrorBoundary>
+            <ProjectsPage />
+          </ErrorBoundary>
+        ),
       },
 
       {
         path: 'news-activities',
-        element: <NewsAndActivities />,
+        element: (
+          <ErrorBoundary>
+            <NewsAndActivities />
+          </ErrorBoundary>
+        ),
       },
     ],
   },
   {
     path: '*',
-    element: <NotFound />,
+    element: (
+      <ErrorBoundary>
+        <NotFound />
+      </ErrorBoundary>
+    ),
   },
 ]);
 
