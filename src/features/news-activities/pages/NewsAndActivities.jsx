@@ -1,16 +1,12 @@
 import { useState } from 'react';
-import AchievementsSection from '../components/AchievementsSection';
 import AnnouncementsSection from '../components/AnnouncementsSection';
 import CategoryFilterBar from '../components/CategoryFilterBar';
 import EventsSection from '../components/EventsSection';
-import GallerySection from '../components/GallerySection';
 import LatestSection from '../components/LatestSection';
 import NewsActivitiesHero from '../components/NewsActivitiesHero';
-import ProjectsSection from '../components/ProjectsSection';
 import StayConnectedCTA from '../components/StayConnectedCTA';
 import StudentLifeSection from '../components/StudentLifeSection';
 import TimelineSection from '../components/TimelineSection';
-import WorkshopsSection from '../components/WorkshopsSection';
 import Seo from '@/components/Seo';
 import { PAGE_SEO } from '@/lib/seo';
 
@@ -41,12 +37,8 @@ const NewsAndActivities = () => {
             }
           />
           <EventsSection />
-          <WorkshopsSection />
           <StudentLifeSection />
-          <AchievementsSection />
-          <ProjectsSection />
           <AnnouncementsSection />
-          <GallerySection />
         </main>
         <TimelineSection />
         <StayConnectedCTA />
