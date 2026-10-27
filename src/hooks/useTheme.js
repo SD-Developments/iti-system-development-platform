@@ -12,6 +12,7 @@ export const useTheme = () => {
       const systemTheme = mediaQuery.matches ? 'dark' : 'light';
       const appliedTheme = theme === 'system' ? systemTheme : theme;
       root.classList.toggle('dark', appliedTheme === 'dark');
+      setTheme(appliedTheme);
     }
 
     applyTheme();
@@ -22,7 +23,7 @@ export const useTheme = () => {
         mediaQuery.removeEventListener('change', applyTheme);
       };
     }
-  }, [theme]);
+  }, [theme, setTheme]);
 
   return {
     theme,
