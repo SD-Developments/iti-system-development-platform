@@ -1,6 +1,5 @@
 import SectionHeader from '@/components/SectionHeader';
 import { ArrowRight, BookOpen, Clock3, Layers3, MapPin, X } from 'lucide-react';
-
 import { programs } from '@/features/home/data';
 import { tracks } from '@/features/tracks/data';
 import { Link } from 'react-router';
