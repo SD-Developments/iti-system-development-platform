@@ -370,35 +370,19 @@ export const tracks = [
   },
 ];
 
-export const compareRows = [
+export const programs = [
   {
-    label: 'Primary Focus',
-    mobile: 'Cross-platform mobile development',
-    dotnet: 'Enterprise software & architecture',
-    web: 'Full-stack web & UI engineering',
+    id: 'PTP',
+    name: 'Professional Training Program',
+    duration: '9 Months',
+    summary: 'Deep, specialization-focused program with broader architecture and delivery depth.',
+    bestFor: 'Learners who want in-depth specialization and a job-ready portfolio.',
   },
   {
-    label: 'Main Platforms',
-    mobile: 'Flutter, React Native, .NET MAUI',
-    dotnet: '.NET, Azure, Dynamics, Power BI',
-    web: 'React, Angular, Vue, Next.js',
-  },
-  {
-    label: 'AI Integration',
-    mobile: 'RAG, AI Agents, AI-assisted apps',
-    dotnet: 'RAG, Agents, AI for enterprise & BI',
-    web: 'RAG, Agents, AI-enhanced web stacks',
-  },
-  {
-    label: 'Program',
-    mobile: 'PTP',
-    dotnet: 'PTP',
-    web: 'PTP',
-  },
-  {
-    label: 'Smart Village',
-    mobile: 'Available',
-    dotnet: 'Available',
-    web: 'Available',
+    id: 'ITP',
+    name: 'Intensive Training Program',
+    duration: '4 Months',
+    summary: 'Short, focused program that targets a specific stack or role.',
+    bestFor: 'Learners who want a fast, targeted path into a specific technology.',
   },
 ];
