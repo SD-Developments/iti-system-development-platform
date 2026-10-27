@@ -6,8 +6,8 @@ import { Link } from 'react-router';
 import Month9Section from './Month9Section';
 import { useEffect, useRef, useState } from 'react';
 import Month4Section from './Month4Section';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+// import { useGSAP } from '@gsap/react';
+// import gsap from 'gsap';
 import { useLenis } from '@/hooks/useLenis';
 
 function PathSection() {
@@ -28,33 +28,33 @@ function PathSection() {
       start();
     };
   }, [showProgram, stop, start]);
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
+  // useGSAP(
+  //   () => {
+  //     if (!containerRef.current) return;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 70%',
-          end: 'top 35%',
-          scrub: 0.4,
-        },
-      });
-      tl.fromTo(
-        '.leftprogram',
-        { x: -100, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, ease: 'none' }
-      ).fromTo(
-        '.rightprogram',
-        { x: 100, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, ease: 'none' },
-        '<+=0.15'
-      );
-    },
-    {
-      scope: containerRef,
-    }
-  );
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: containerRef.current,
+  //         start: 'top 70%',
+  //         end: 'top 35%',
+  //         scrub: 0.4,
+  //       },
+  //     });
+  //     tl.fromTo(
+  //       '.leftprogram',
+  //       { x: -100, autoAlpha: 0 },
+  //       { x: 0, autoAlpha: 1, ease: 'none' }
+  //     ).fromTo(
+  //       '.rightprogram',
+  //       { x: 100, autoAlpha: 0 },
+  //       { x: 0, autoAlpha: 1, ease: 'none' },
+  //       '<+=0.15'
+  //     );
+  //   },
+  //   {
+  //     scope: containerRef,
+  //   }
+  // );
   return (
     <section ref={containerRef} className="relative overflow-hidden bg-sd-bg-light py-20 lg:py-28">
       {/* Background */}
