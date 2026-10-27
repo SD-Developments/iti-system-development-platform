@@ -2,6 +2,7 @@ import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { programs, tracks } from '@/features/tracks/data';
 import { cn } from '@/lib/utils';
+import Lenis from 'lenis';
 import { Check, GitCompareArrows, Minus } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
@@ -27,23 +28,37 @@ function Compare() {
   const comparisonTable = useRef(null);
 
   useEffect(() => {
-    const element = comparisonTable.current;
-    if (!element) return;
-    console.log('object');
-    const handleWheel = (e) => {
-      console.log('scrollWidth', element.scrollWidth);
-      console.log('clientWidth', element.clientWidth);
-      console.log('deltaY', e.deltaY);
-      console.log('deltaX', e.deltaX);
+    const element = comparisonTable.current; // the overflow-x-auto div
+    const content = element?.firstElementChild; // the min-w-max grid
+    if (!element || !content) return;
 
-      if (e.deltaY == 0) return;
-      e.preventDefault();
-      element.scrollLeft += e.deltaY;
+    const lenis = new Lenis({
+      wrapper: element,
+      content,
+      orientation: 'horizontal', // writes wrapper.scrollLeft (lenis.mjs:533)
+      smoothWheel: true,
+      duration: 0.8,
+      autoRaf: true, // self-driving rAF; destroy() cancels it (:488, :502)
+      // gestureOrientation defaults to 'both' for horizontal, so vertical wheel maps to X
+    });
+
+    //   // Runs after Lenis's own listener (same element, registered later).
+    //   // Hand the wheel back to the page Lenis when we're at the edge.
+    const releaseAtEdge = (e) => {
+      const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+      if (!delta) return;
+
+      const atStart = lenis.targetScroll <= 0;
+      const atEnd = lenis.targetScroll >= lenis.limit - 1;
+
+      if (delta > 0 ? !atEnd : !atStart) e.stopPropagation();
     };
-    element.addEventListener('wheel', handleWheel, { passive: false });
+
+    element.addEventListener('wheel', releaseAtEdge, { passive: true });
 
     return () => {
-      element.removeEventListener('wheel', handleWheel, { passive: false });
+      element.removeEventListener('wheel', releaseAtEdge);
+      lenis.destroy();
     };
   }, []);
 
