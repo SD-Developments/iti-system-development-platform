@@ -1,33 +1,6 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 import { ArrowRight } from 'lucide-react';
-import { useRef } from 'react';
 
 function SectionHeader({ eyebrow, title, description, action, href = '#', variant = 'hero' }) {
-  const containerRef = useRef(null);
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-      const t1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 85%',
-          end: 'top 45%',
-          scrub: 1,
-        },
-      });
-      t1.from('.head', {
-        x: -100,
-        duration: 1,
-        opacity: 0,
-        ease: 'power1.inOut',
-      });
-    },
-    {
-      scope: containerRef,
-    }
-  );
-
   if (variant === 'compact') {
     return (
       <div className="mb-6 flex flex-col gap-3 border-b border-border pb-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
@@ -52,12 +25,8 @@ function SectionHeader({ eyebrow, title, description, action, href = '#', varian
       </div>
     );
   }
-
   return (
-    <div
-      ref={containerRef}
-      className="flex flex-col justify-between gap-5 md:flex-row md:items-end"
-    >
+    <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
       <div className="head max-w-2xl">
         <span className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-primary">
           {eyebrow}
