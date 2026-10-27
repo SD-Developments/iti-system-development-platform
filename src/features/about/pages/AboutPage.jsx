@@ -6,9 +6,9 @@ import SdStats from '../components/SdStats';
 import StudentsBuilds from '../components/StudentsBuilds';
 import Curriculum from '../components/Curriculum';
 import TrackAi from '../components/TrackAi';
-import Moment from '../components/Moment';
 import Seo from '@/components/Seo';
 import { PAGE_SEO } from '@/lib/seo';
+import AboutStatus from '../components/AboutStatus';
 
 const AboutPage = () => {
   return (
@@ -22,8 +22,8 @@ const AboutPage = () => {
           <Curriculum />
           <TrackAi />
           <Leadership />
+          <AboutStatus />
           <TeamSection />
-          <Moment />
           <Cta variant="about" />
         </div>
       </main>
