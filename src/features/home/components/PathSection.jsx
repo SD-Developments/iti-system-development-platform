@@ -35,20 +35,20 @@ function PathSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 50%',
-          end: 'top 45%', // short = faster, not full page
+          start: 'top 70%',
+          end: 'top 35%',
           scrub: 0.4,
         },
       });
       tl.fromTo(
         '.leftprogram',
         { x: -100, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, ease: 'power1.in' }
+        { x: 0, autoAlpha: 1, ease: 'none' }
       ).fromTo(
         '.rightprogram',
         { x: 100, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, ease: 'power1.in' },
-        '<'
+        { x: 0, autoAlpha: 1, ease: 'none' },
+        '<+=0.15'
       );
     },
     {
@@ -91,8 +91,6 @@ function PathSection() {
                 rounded-3xl
                 border
                 p-8
-                transition
-                duration-300
                 lg:p-10
                 hover:border-primary
                 cursor-pointer
