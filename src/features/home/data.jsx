@@ -1,7 +1,6 @@
 // Home feature data. This file is .jsx because heroHomeSlides contains JSX.
 import { BriefcaseBusiness, Code2, Presentation, Trophy } from 'lucide-react';
 import { branchHubsLabel, itpHours, ptpHours } from '@/data/siteFacts';
-import { tracks } from '@/features/tracks/data';
 
 export const heroHomeSlides = [
   {
@@ -82,30 +81,8 @@ export const heroHomeSlides = [
   },
 ];
 
-export const programs = [
-  {
-    code: 'PTP',
-    duration: '9 Months',
-    title: 'Professional Training Program',
-    description:
-      'An intensive development journey combining technical foundations, specialization, teamwork, and real graduation projects.',
-    tracks: 'Multiple Tracks',
-    branches: 'Multiple Branches',
-    href: '/intakes',
-    featured: true,
-  },
-  {
-    code: 'ITP',
-    duration: '4 Months',
-    title: 'Intensive Training Program',
-    description:
-      'A focused, accelerated program designed around specialized technical skills and practical software development.',
-    tracks: 'Multiple Tracks',
-    branches: 'Multiple Branches',
-    href: '/intakes',
-    featured: false,
-  },
-];
+// Dynamic data: provided by the API (see docs/API.md); empty until it is connected.
+export const programs = [];
 
 export const activities = [
   {
@@ -222,19 +199,8 @@ export const itpSprints = [
   },
 ];
 
-const laneAccents = ['teal', 'navy', 'primary', 'green'];
-
-// Derived from the ITP tracks in features/tracks/data.js so the lists never drift.
-export const technicalLanes = tracks
-  .filter((track) => track.program === 'ITP')
-  .map((track, index) => ({
-    number: String(index + 1).padStart(2, '0'),
-    category: `${track.category} // ${track.hours}`,
-    title: track.title,
-    description: track.description,
-    tags: track.technologies.slice(0, 6),
-    accent: laneAccents[index % laneAccents.length],
-  }));
+// Dynamic data: provided by the API (see docs/API.md); empty until it is connected.
+export const technicalLanes = [];
 export const tenets = [
   {
     number: '01',
@@ -274,14 +240,8 @@ export const tenets = [
   },
 ];
 
-export const partnerCompanies = [
-  'MICROSOFT',
-  'VALEO',
-  'DELL TECH',
-  'FAWRY',
-  'VODAFONE',
-  'INSTABUG',
-];
+// Dynamic data: provided by the API (see docs/API.md); empty until it is connected.
+export const partnerCompanies = [];
 
 export const testimonials = [
   {

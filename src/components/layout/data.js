@@ -48,28 +48,8 @@ export const academicPathways = [
   },
 ];
 
-export const technicalTracks = [
-  {
-    title: 'Full Stack & Cloud DevOps',
-    path: '/tracks',
-  },
-  {
-    title: 'Applied Machine Learning & GenAI',
-    path: '/tracks',
-  },
-  {
-    title: 'Mobile Solutions Architecture',
-    path: '/tracks',
-  },
-  {
-    title: 'Enterprise Java & Cloud Native',
-    path: '/tracks',
-  },
-  {
-    title: 'Embedded Software & RTOS',
-    path: '/tracks',
-  },
-];
+// Dynamic data: provided by the API (see docs/API.md); empty until it is connected.
+export const technicalTracks = [];
 
 export const departmentLinks = [
   {
