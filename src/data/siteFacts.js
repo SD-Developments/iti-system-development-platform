@@ -1,14 +1,13 @@
-// Facts shown in several places on the site, computed from the content in ./content.js
-// so they can never disagree with the underlying records.
+// Single source of truth for facts that appear in several places on the site.
+// Update a value here and every page, meta description and CTA picks it up.
+// TODO: confirm all values with the department.
 
-import { branches, formatHours, getProgram, intakes } from './content';
-
-export const branchCount = branches.length;
+export const branchCount = 11;
 export const branchHubsLabel = `${branchCount} Hubs`;
 
-// Latest intake number (the one currently running or about to start).
-export const currentIntake = Math.max(...intakes.map((intake) => intake.number));
+// Intake currently open for applications / being onboarded.
+export const currentIntake = 48;
 
-export const ptpHours = formatHours(getProgram('ptp').contactHours);
-export const itpHours = formatHours(getProgram('itp').contactHours);
-export const summerHours = formatHours(getProgram('summer').contactHours);
+export const ptpHours = '1,200+';
+export const itpHours = '500+';
+export const summerHours = '120–180';

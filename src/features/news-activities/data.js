@@ -1,7 +1,6 @@
 import { currentIntake } from '@/data/siteFacts';
-import { formatDate, news as newsRecords, parseDate, t } from '@/data/content';
-// News & activities feature data: static page content plus UI-friendly views of the
-// dynamic news records that live in src/data.
+// News & activities feature data.
+
 export const stitchImages = {
   hero: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCCRdsm5d2CYa1LVp3vvcOrkfQlXoBj_zFQiApsAks0K7tC0Sv5-3eidYYcrtVWWCJzdkHJdqBG2hbKcKyQozcusN7PJ_9aeOgtL59L764X859YCdBAOjugBPjXPNtJ8uxC-SEFtauxRI6KqoFTXclwEjR1aLvb7YPP2BHcy-QhqG9Tj7rH1E64Q-2JAIPNjXJT1ZihY2nUSASWTWdmRDYztjAwST8PQCRCMKIfl1eSsR_B4AFa2PXz4A',
   featured:
@@ -47,88 +46,126 @@ export const newsCategories = [
   'Announcements',
 ];
 
-const upper = (value) => (value ?? '').replace(/-/g, ' ').toUpperCase();
-const byNewest = (a, b) => b.publishedAt.localeCompare(a.publishedAt);
-const withType = (...types) => newsRecords.filter((item) => types.includes(item.type));
-const cycle = (list, index) => list[index % list.length];
+export const latestNews = [
+  {
+    title: `Welcome to Intake ${currentIntake}`,
+    type: 'NEWS',
+    date: 'SEP 10, 2026',
+    description: 'A new generation of software developers begins their journey at SD.',
+    image: stitchImages.intake,
+    tone: 'dark',
+  },
+  {
+    title: 'Building AI-Powered Web Applications',
+    type: 'WORKSHOP',
+    date: 'SEP 08, 2026',
+    description: 'React × Node.js × RAG hands-on workshop session.',
+    image: stitchImages.aiWorkshop,
+    tone: 'teal',
+  },
+  {
+    title: 'SD Students at Techstars Hackathon',
+    type: 'STUDENT ACTIVITY',
+    date: 'AUG 28, 2026',
+    description: 'Innovative ideas. Real impact.',
+    image: stitchImages.hackathon,
+    tone: 'blue',
+  },
+  {
+    title: 'SD Team Wins 1st Place',
+    type: 'ACHIEVEMENT',
+    date: 'AUG 20, 2026',
+    description: 'Congratulations to our students for winning the AI Innovation Challenge.',
+    image: stitchImages.achievement,
+    tone: 'red',
+  },
+  {
+    title: 'Registration for Fall Workshops is Open',
+    type: 'ANNOUNCEMENT',
+    date: 'AUG 15, 2026',
+    description: 'Join our upcoming technical sessions.',
+    image: stitchImages.announcement,
+    tone: 'orange',
+  },
+];
 
-// Used until the department supplies real photos (records have `image: null`).
-const fallbackImageByType = {
-  news: stitchImages.intake,
-  workshop: stitchImages.aiWorkshop,
-  'student-activity': stitchImages.hackathon,
-  achievement: stitchImages.achievement,
-  announcement: stitchImages.announcement,
-};
-const toneByType = {
-  news: 'dark',
-  workshop: 'teal',
-  'student-activity': 'blue',
-  achievement: 'red',
-  announcement: 'orange',
-};
+export const upcomingEvents = [
+  {
+    month: 'SEP',
+    day: '28',
+    posted: 'SEP 10, 2026',
+    title: 'SD Career Day',
+    description:
+      'Smart Village, Cairo. Meet industry experts and explore career opportunities at SD.',
+    tag: 'CAREER',
+    featured: true,
+  },
+  {
+    month: 'OCT',
+    day: '03',
+    posted: 'SEP 16, 2026',
+    title: 'Project Showcase',
+    description: 'SD Headquarters. Students present their capstone projects.',
+    tag: 'PRESENTATION',
+  },
+  {
+    month: 'OCT',
+    day: '15',
+    posted: 'SEP 20, 2026',
+    title: 'Cloud & DevOps Workshop',
+    description: 'Online hands-on cloud session with real-world labs.',
+    tag: 'WORKSHOP',
+    tagTone: 'teal',
+  },
+  {
+    month: 'OCT',
+    day: '24',
+    posted: 'AUG 26, 2026',
+    title: 'Alumni Panel',
+    description: 'Smart Village, Cairo. Career stories and insights from SD alumni.',
+    tag: 'TALK',
+  },
+];
 
-export const latestNews = newsRecords
-  .filter((item) => item.type !== 'event' && item.publishedAt)
-  .sort(byNewest)
-  .slice(0, 5)
-  .map((item) => ({
-    title: t(item.title),
-    type: upper(item.type),
-    date: formatDate(item.publishedAt),
-    description: t(item.summary),
-    image: item.image?.src ?? fallbackImageByType[item.type],
-    tone: toneByType[item.type],
-  }));
+export const workshops = [
+  {
+    type: 'WORKSHOP',
+    date: 'SEP 16, 2026',
+    title: 'Git & GitHub for Teams',
+    description: 'Best practices for collaborative development.',
+    duration: '2 HOURS',
+    level: 'BEGINNER',
+    tone: 'red',
+  },
+  {
+    type: 'TECHNICAL TALK',
+    date: 'SEP 22, 2026',
+    title: 'System Design Basics',
+    description: 'Learn how to design scalable systems.',
+    duration: '2 HOURS',
+    level: 'INTERMEDIATE',
+    tone: 'dark',
+  },
+  {
+    type: 'WORKSHOP',
+    date: 'SEP 26, 2026',
+    title: 'Mobile Development with Flutter',
+    description: 'Build cross-platform apps with clean architecture.',
+    duration: '3 HOURS',
+    level: 'INTERMEDIATE',
+    tone: 'teal',
+  },
+  {
+    type: 'CAREER SESSION',
+    date: 'OCT 05, 2026',
+    title: 'Preparing for Technical Interviews',
+    description: 'Tips, practice, and real examples from tech leads.',
+    duration: '2 HOURS',
+    level: 'ALL LEVELS',
+    tone: 'green',
+  },
+];
 
-export const upcomingEvents = withType('event')
-  .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate))
-  .map((item) => {
-    const start = parseDate(item.event.startDate);
-    const tag = item.tags[0];
-    return {
-      month: start.month,
-      day: start.day,
-      posted: formatDate(item.publishedAt),
-      title: t(item.title),
-      description: t(item.summary),
-      tag: upper(tag),
-      featured: item.featured,
-      ...(tag === 'workshop' ? { tagTone: 'teal' } : {}),
-    };
-  });
-
-export const workshops = withType('workshop')
-  .filter((item) => item.event?.durationHours)
-  .sort((a, b) => a.event.startDate.localeCompare(b.event.startDate))
-  .map((item, index) => ({
-    type: upper(item.tags[0] ?? item.type),
-    date: formatDate(item.event.startDate),
-    title: t(item.title),
-    description: t(item.summary),
-    duration: `${item.event.durationHours} HOURS`,
-    level: upper(item.event.level),
-    tone: cycle(['red', 'dark', 'teal', 'green'], index),
-  }));
-
-const achievementIcons = { certification: 'verified', competition: 'trend', default: 'gift' };
-
-export const achievements = withType('achievement').map((item, index) => ({
-  number: String(index + 1).padStart(2, '0'),
-  label: upper(item.tags[0]),
-  text: t(item.title),
-  icon: achievementIcons[item.tags[0]] ?? achievementIcons.default,
-  tone: cycle(['red', 'teal', 'teal', 'dark'], index),
-}));
-
-export const announcements = withType('announcement')
-  .filter((item) => item.pinned)
-  .map((item, index) => ({
-    status: upper(item.tags[0]),
-    title: t(item.title),
-    detail: t(item.summary),
-    tone: cycle(['red', 'teal'], index),
-  }));
 export const studentLife = [
   {
     title: 'Hackathons',
@@ -149,6 +186,73 @@ export const studentLife = [
     description: 'Real-world exposure.',
     image: stitchImages.fieldVisits,
     size: 'small',
+  },
+];
+
+export const achievements = [
+  {
+    number: '01',
+    label: 'PROJECT AWARD',
+    text: 'SD Team wins first place in the AI Innovation Challenge.',
+    icon: 'gift',
+    tone: 'red',
+  },
+  {
+    number: '02',
+    label: 'HACKATHON',
+    text: 'Students selected for Techstars Hackathon.',
+    icon: 'group',
+    tone: 'teal',
+  },
+  {
+    number: '03',
+    label: 'CERTIFICATION',
+    text: 'SD students complete Google Cloud certifications.',
+    icon: 'verified',
+    tone: 'teal',
+  },
+  {
+    number: '04',
+    label: 'COMPETITION',
+    text: 'Our team reaches the finals in Egypt Tech Challenge.',
+    icon: 'trend',
+    tone: 'dark',
+  },
+];
+
+export const featuredProjects = [
+  {
+    title: 'AquaMetrics',
+    track: 'AI & Intelligent Systems',
+    description: 'An AI-powered athlete management platform.',
+    image: stitchImages.galleryProjects,
+  },
+  {
+    title: 'EduConnect',
+    track: 'Full Stack Development',
+    description: 'A smart learning platform for students and instructors.',
+    image: stitchImages.teamProjects,
+  },
+  {
+    title: 'MediTrack',
+    track: 'Mobile Cross Platform',
+    description: 'Healthcare management made simple and intuitive.',
+    image: stitchImages.galleryAI,
+  },
+];
+
+export const announcements = [
+  {
+    status: 'NEW',
+    title: `Intake ${currentIntake} Orientation Schedule`,
+    detail: 'September 21, 2026',
+    tone: 'red',
+  },
+  {
+    status: 'IMPORTANT',
+    title: 'Registration for AI Workshop is Now Open',
+    detail: 'Limited seats available.',
+    tone: 'teal',
   },
 ];
 

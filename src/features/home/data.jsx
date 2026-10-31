@@ -1,13 +1,6 @@
 // Home feature data. This file is .jsx because heroHomeSlides contains JSX.
 import { BriefcaseBusiness, Code2, Presentation, Trophy } from 'lucide-react';
 import { branchHubsLabel, itpHours, ptpHours } from '@/data/siteFacts';
-import {
-  branches as branchRecords,
-  formatDuration,
-  partners as partnerRecords,
-  programs as programRecords,
-  t,
-} from '@/data/content';
 import { tracks } from '@/features/tracks/data';
 
 export const heroHomeSlides = [
@@ -89,25 +82,31 @@ export const heroHomeSlides = [
   },
 ];
 
-const countLabel = (count, singular, plural = `${singular}s`) =>
-  `${count} ${count === 1 ? singular : plural}`;
-
-export const programs = programRecords
-  .filter((program) => program.kind !== 'summer')
-  .map((program) => ({
-    code: program.code,
-    duration: formatDuration(program.duration),
-    title: t(program.name),
-    description: t(program.summary),
-    tracks: countLabel(program.trackIds.length, 'Track'),
-    branches: countLabel(
-      branchRecords.filter((branch) => branch.programIds.includes(program.id)).length,
-      'Branch',
-      'Branches'
-    ),
+export const programs = [
+  {
+    code: 'PTP',
+    duration: '9 Months',
+    title: 'Professional Training Program',
+    description:
+      'An intensive development journey combining technical foundations, specialization, teamwork, and real graduation projects.',
+    tracks: 'Multiple Tracks',
+    branches: 'Multiple Branches',
     href: '/intakes',
-    featured: program.kind === 'diploma',
-  }));
+    featured: true,
+  },
+  {
+    code: 'ITP',
+    duration: '4 Months',
+    title: 'Intensive Training Program',
+    description:
+      'A focused, accelerated program designed around specialized technical skills and practical software development.',
+    tracks: 'Multiple Tracks',
+    branches: 'Multiple Branches',
+    href: '/intakes',
+    featured: false,
+  },
+];
+
 export const activities = [
   {
     title: 'Tech Talks',
@@ -275,7 +274,14 @@ export const tenets = [
   },
 ];
 
-export const partnerCompanies = partnerRecords.map((partner) => partner.name.toUpperCase());
+export const partnerCompanies = [
+  'MICROSOFT',
+  'VALEO',
+  'DELL TECH',
+  'FAWRY',
+  'VODAFONE',
+  'INSTABUG',
+];
 
 export const testimonials = [
   {

@@ -1,5 +1,4 @@
 // Shared layout data (navbar + footer link groups).
-import { tracks } from '@/features/tracks/data';
 
 export const brandingNavLinks = [
   {
@@ -49,10 +48,29 @@ export const academicPathways = [
   },
 ];
 
-export const technicalTracks = tracks.slice(0, 5).map((track) => ({
-  title: track.shortTitle,
-  path: '/tracks',
-}));
+export const technicalTracks = [
+  {
+    title: 'Full Stack & Cloud DevOps',
+    path: '/tracks',
+  },
+  {
+    title: 'Applied Machine Learning & GenAI',
+    path: '/tracks',
+  },
+  {
+    title: 'Mobile Solutions Architecture',
+    path: '/tracks',
+  },
+  {
+    title: 'Enterprise Java & Cloud Native',
+    path: '/tracks',
+  },
+  {
+    title: 'Embedded Software & RTOS',
+    path: '/tracks',
+  },
+];
+
 export const departmentLinks = [
   {
     title: 'The SD Culture',
