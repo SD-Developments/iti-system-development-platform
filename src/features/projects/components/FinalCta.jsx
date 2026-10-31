@@ -30,15 +30,8 @@ const FinalCta = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <a
-              href="#"
+              href="/intakes"
               className="rounded-xl bg-primary px-7 py-3.5 text-sm font-bold tracking-wide text-primary-foreground shadow-lg transition-all duration-200 hover:-translate-y-0.5"
-            >
-              Submit an Industry Challenge
-            </a>
-
-            <a
-              href="/programs"
-              className="rounded-xl border border-slate-600 bg-transparent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10"
             >
               Explore SD Academic Programs
             </a>

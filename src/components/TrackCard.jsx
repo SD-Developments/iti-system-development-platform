@@ -112,7 +112,7 @@ function TrackCard({ track }) {
                 </span>
               ))
             ) : (
-              <span className="text-[11px] text-muted-foreground">Coming soon</span>
+              <span className="text-[11px] text-muted-foreground">Branches to be announced</span>
             )}
           </div>
         </div>

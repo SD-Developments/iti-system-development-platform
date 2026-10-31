@@ -170,13 +170,6 @@ const FeaturedProject = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 pt-4">
-                <a
-                  href="#"
-                  className="rounded-xl bg-primary px-6 py-3 text-sm font-bold tracking-wide text-primary-foreground shadow-lg transition-all duration-200 hover:-translate-y-0.5"
-                >
-                  Explore Case Study &amp; Whitepaper →
-                </a>
-
                 <button
                   type="button"
                   className="rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 font-mono text-xs text-slate-200 transition-colors hover:bg-slate-700"

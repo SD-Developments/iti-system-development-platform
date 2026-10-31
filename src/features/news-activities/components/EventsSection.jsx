@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays } from 'lucide-react';
+import { CalendarDays } from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader';
 import { upcomingEvents } from '../data';
 
@@ -52,13 +52,6 @@ const EventsSection = () => (
             >
               {event.tag}
             </span>
-            <a
-              className={`${event.featured ? 'text-slate-300 hover:text-white' : 'text-muted-foreground hover:text-sd-red'} inline-flex items-center gap-1 rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red`}
-              href="#"
-            >
-              View Event
-              <ArrowRight aria-hidden="true" className="size-4" />
-            </a>
           </div>
         </article>
       ))}
@@ -70,17 +63,10 @@ const EventsSection = () => (
           <div>
             <h3 className="text-base font-bold">More Events Ahead</h3>
             <p className="text-sm leading-relaxed text-slate-400">
-              Check out our full calendar for upcoming activities.
+              More activities will be announced throughout the year.
             </p>
           </div>
         </div>
-        <a
-          className="inline-flex shrink-0 items-center gap-1.5 rounded-sm text-sm font-semibold text-sd-teal transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sd-teal"
-          href="#"
-        >
-          View Calendar
-          <ArrowRight aria-hidden="true" className="size-4" />
-        </a>
       </div>
     </div>
   </section>

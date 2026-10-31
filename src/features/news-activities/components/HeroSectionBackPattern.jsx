@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Play, Users } from 'lucide-react';
+import { MapPin, Users } from 'lucide-react';
 import { stitchImages } from '../data';
 
 const HeroSectionBackPattern = () => (
@@ -37,28 +37,6 @@ const HeroSectionBackPattern = () => (
           <Users aria-hidden="true" className="size-4 text-sd-teal" />
           <span>500+ Attendees</span>
         </div>
-      </div>
-      <div className="flex flex-wrap items-center gap-3">
-        <a
-          className="group inline-flex items-center gap-2 rounded-full bg-linear-to-r from-sd-red to-[#c92d32] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sd-red/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-sd-red/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red"
-          href="#"
-        >
-          Read Full Story
-          <ArrowRight
-            aria-hidden="true"
-            className="size-4 transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </a>
-        <a
-          className="group inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red"
-          href="#"
-        >
-          <span className="flex size-7 items-center justify-center rounded-full bg-sd-red text-white transition-transform duration-300 group-hover:scale-110">
-            <Play aria-hidden="true" className="size-3 fill-current" />
-          </span>
-          <span className="text-sm font-bold leading-none text-white">Watch Highlights</span>
-          <span className="font-mono text-[11px] leading-none text-slate-400">02:15 min</span>
-        </a>
       </div>
       <div className="mt-12 hidden items-center gap-4 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 lg:flex">
         <span className="h-px w-8 bg-linear-to-r from-sd-red to-sd-teal" />

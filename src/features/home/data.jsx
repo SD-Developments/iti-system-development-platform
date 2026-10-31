@@ -14,14 +14,16 @@ export const heroHomeSlides = [
     ),
     subtitle: (
       <>
-        Learn. <span className="text-[#14B8A6]">Build.</span> Collaborate.{' '}
-        <span className="text-[#C62828]">Ship.</span>
+        Learn. <span className="text-accent">Build.</span> Collaborate.{' '}
+        <span className="text-primary">Ship.</span>
       </>
     ),
     description:
       'Develop real engineering capability through intensive programs, practical projects, and collaborative learning.',
     primaryCta: 'Explore SD',
     secondaryCta: 'See What We Build',
+    primaryHref: '/about',
+    secondaryHref: '/projects',
     theme: 'light',
     visual: 'students',
   },
@@ -39,6 +41,8 @@ export const heroHomeSlides = [
       'Explore intensive professional programs with multiple tracks, branches, projects, and real-world learning experiences.',
     primaryCta: 'Explore Programs',
     secondaryCta: 'Compare Programs',
+    primaryHref: '/intakes',
+    secondaryHref: '/tracks#compare',
     theme: 'light',
     visual: 'programs',
   },
@@ -51,6 +55,8 @@ export const heroHomeSlides = [
       'Explore graduation projects built by students and see how learning turns into working systems.',
     primaryCta: 'See Projects',
     secondaryCta: 'Featured Project',
+    primaryHref: '/projects',
+    secondaryHref: '/projects',
     theme: 'dark',
     visual: 'project',
   },
@@ -67,6 +73,8 @@ export const heroHomeSlides = [
       'Tech talks, workshops, hackathons, company visits, competitions, and community activities.',
     primaryCta: 'Explore Activities',
     secondaryCta: 'Inside SD',
+    primaryHref: '/news-activities',
+    secondaryHref: '/news-activities',
     theme: 'light',
     visual: 'activities',
   },
@@ -81,7 +89,7 @@ export const programs = [
       'An intensive development journey combining technical foundations, specialization, teamwork, and real graduation projects.',
     tracks: 'Multiple Tracks',
     branches: 'Multiple Branches',
-    href: '/programs/ptp',
+    href: '/intakes',
     featured: true,
   },
   {
@@ -92,7 +100,7 @@ export const programs = [
       'A focused, accelerated program designed around specialized technical skills and practical software development.',
     tracks: 'Multiple Tracks',
     branches: 'Multiple Branches',
-    href: '/programs/itp',
+    href: '/intakes',
     featured: false,
   },
 ];

@@ -68,13 +68,6 @@ const KhedmacloudSpotlight = () => {
                     </span>
                   ))}
                 </div>
-
-                <a
-                  href="#"
-                  className="text-sm font-bold text-primary transition-colors hover:text-accent"
-                >
-                  View Architectural Specs →
-                </a>
               </div>
             </div>
 

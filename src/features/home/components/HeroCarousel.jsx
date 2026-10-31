@@ -1,6 +1,7 @@
 import { heroHomeSlides } from '@/features/home/data';
 import clsx from 'clsx';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
 import hero1 from '../../../assets/images/hero/hero1.png';
 import hero2 from '../../../assets/images/hero/Requra.png';
@@ -194,11 +195,15 @@ function SlideItem({ slide, total, index }) {
           </p>
 
           <div className="hero-stagger mt-9 flex flex-col gap-4 sm:flex-row">
-            <button className="inline-flex min-h-13 items-center justify-center gap-2 rounded-[14px] bg-primary px-6 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition hover:-translate-y-0.5">
+            <Link
+              to={slide.primaryHref}
+              className="inline-flex min-h-13 items-center justify-center gap-2 rounded-[14px] bg-primary px-6 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition hover:-translate-y-0.5"
+            >
               {slide.primaryCta}
               <ArrowRight size={18} />
-            </button>
-            <button
+            </Link>
+            <Link
+              to={slide.secondaryHref}
               className="
               inline-flex
               min-h-13
@@ -217,7 +222,7 @@ function SlideItem({ slide, total, index }) {
               "
             >
               {slide.secondaryCta}
-            </button>
+            </Link>
           </div>
         </div>
 

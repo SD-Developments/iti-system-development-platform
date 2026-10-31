@@ -30,7 +30,7 @@ function AboutCta() {
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
           <a
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm hover:bg-primary/90 transition-all shadow-[0_0_25px_color-mix(in_srgb,var(--color-primary)_50%,transparent)] group"
-            href="#tracks"
+            href="/tracks"
           >
             <span>Explore Academic Tracks</span>
             <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">
@@ -39,7 +39,7 @@ function AboutCta() {
           </a>
           <a
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold text-sm hover:bg-white/20 transition-all shadow-md"
-            href="#"
+            href="/projects"
           >
             <span className="material-symbols-outlined text-[20px] text-accent">code</span>
             <span>View Student Projects</span>
@@ -77,7 +77,7 @@ function TracksCta() {
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="/programs/ptp"
+                href="/intakes"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground"
               >
                 Explore PTP

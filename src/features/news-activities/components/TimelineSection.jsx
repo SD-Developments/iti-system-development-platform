@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import { timeline } from '../data';
 
 const TimelineSection = () => (
@@ -26,16 +25,6 @@ const TimelineSection = () => (
           <span className="rounded-full bg-sd-red px-3 py-1 font-mono text-xs font-bold text-white shadow-lg shadow-sd-red/30">
             2026
           </span>
-          <a
-            className="group inline-flex items-center gap-1.5 rounded-full border border-slate-700 bg-white/5 px-4 py-1.5 font-mono text-xs text-slate-300 transition-all duration-200 hover:border-sd-teal hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-teal"
-            href="#"
-          >
-            View Full Timeline
-            <ArrowRight
-              aria-hidden="true"
-              className="size-3.5 transition-transform duration-200 group-hover:translate-x-1"
-            />
-          </a>
         </div>
       </div>
       <div className="relative">

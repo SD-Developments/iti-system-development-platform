@@ -32,19 +32,19 @@ export const brandingNavLinks = [
 export const academicPathways = [
   {
     title: '9-Month Professional Diploma',
-    path: '/programs',
+    path: '/intakes',
   },
   {
     title: '4-Month Intensive Accelerator',
-    path: '/programs',
+    path: '/intakes',
   },
   {
     title: 'Summer Tech Academies',
-    path: '/programs',
+    path: '/intakes',
   },
   {
     title: 'Undergraduate Hackathons',
-    path: '/events',
+    path: '/news-activities',
   },
 ];
 
@@ -78,11 +78,11 @@ export const departmentLinks = [
   },
   {
     title: 'Smart Village (HQ)',
-    path: '/branches',
+    path: '/about',
   },
   {
     title: 'Creativa Centers',
-    path: '/branches',
+    path: '/about',
   },
   {
     title: 'Capstones Showcase',

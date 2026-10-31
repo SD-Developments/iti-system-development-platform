@@ -19,7 +19,7 @@ const ROWS = [
   { label: 'Typical Roles', render: (t) => <TechList items={t.jobProfiles?.slice(0, 2)} plain /> },
   {
     label: 'Available At',
-    render: (t) => (t.branches?.length ? t.branches.join(', ') : 'Coming soon'),
+    render: (t) => (t.branches?.length ? t.branches.join(', ') : 'To be announced'),
   },
 ];
 
