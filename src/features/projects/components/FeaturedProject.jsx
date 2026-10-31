@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import projectImage from '../../../assets/images/projects/project1.jpg';
 const FeaturedProject = () => {
   return (
@@ -170,12 +171,9 @@ const FeaturedProject = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 pt-4">
-                <button
-                  type="button"
-                  className="rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 font-mono text-xs text-slate-200 transition-colors hover:bg-slate-700"
-                >
+                <Button type="button" variant="glass" size="xl">
                   View Live Telemetry
-                </button>
+                </Button>
               </div>
             </div>
           </div>

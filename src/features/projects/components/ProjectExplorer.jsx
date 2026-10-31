@@ -1,3 +1,6 @@
+import EmptyState from '@/components/EmptyState';
+import ShowMoreButton from '@/components/ShowMoreButton';
+import { Button } from '@/components/ui/button';
 import { projectCategories, projects } from '@/features/projects/data';
 import ProjectCard from './ProjectCard';
 import ProjectDetailsModal from './ProjectDetailsModal';
@@ -129,18 +132,15 @@ const ProjectExplorer = () => {
               const categoryCount = getCategoryCount(category);
 
               return (
-                <button
+                <Button
                   key={category}
-                  type="button"
+                  size="sm"
+                  variant={isActive ? 'navy' : 'outline'}
                   onClick={() => handleCategoryChange(category)}
-                  className={`shrink-0 rounded-xl px-4 py-2 font-mono text-xs font-medium tracking-wide transition-colors ${
-                    isActive
-                      ? 'bg-sd-navy text-primary-foreground shadow-sm'
-                      : 'border border-border bg-card text-foreground hover:bg-muted'
-                  }`}
+                  className="shrink-0 font-mono tracking-wide"
                 >
                   {category} ({categoryCount})
-                </button>
+                </Button>
               );
             })}
           </div>
@@ -173,46 +173,28 @@ const ProjectExplorer = () => {
             SHOW MORE / SHOW LESS
         ========================================= */}
         {filteredProjects.length > MAX_PROJECTS && (
-          <div className="mt-10 flex justify-center">
-            <button
-              type="button"
-              onClick={() => setShowAll((prev) => !prev)}
-              className="group flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 font-mono text-sm font-semibold text-foreground shadow-sm transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <span>{showAll ? 'Show Less' : 'Show More'}</span>
-
-              <span
-                className={`text-lg transition-transform duration-300 ${
-                  showAll ? 'rotate-180' : ''
-                }`}
-              >
-                ↓
-              </span>
-            </button>
-          </div>
+          <ShowMoreButton expanded={showAll} onToggle={() => setShowAll((prev) => !prev)} />
         )}
 
         {/* =========================================
             EMPTY STATE
         ========================================= */}
         {filteredProjects.length === 0 && (
-          <div className="flex min-h-60 items-center justify-center rounded-xl border border-border bg-card">
-            <div className="text-center">
-              <h3 className="text-lg font-bold text-foreground">No projects found</h3>
-
-              <p className="mt-2 text-sm text-muted-foreground">
-                No projects are available in this category.
-              </p>
-
-              <button
-                type="button"
-                onClick={() => handleCategoryChange('All Projects')}
-                className="mt-4 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent"
-              >
-                View All Projects
-              </button>
-            </div>
-          </div>
+          <EmptyState
+            title="No projects found"
+            message={
+              activeCategory === 'All Projects'
+                ? 'Projects will appear here once they are published.'
+                : 'No projects are available in this category.'
+            }
+            action={
+              activeCategory !== 'All Projects' && (
+                <Button size="sm" onClick={() => handleCategoryChange('All Projects')}>
+                  View All Projects
+                </Button>
+              )
+            }
+          />
         )}
       </div>
 

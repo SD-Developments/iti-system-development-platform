@@ -1,6 +1,7 @@
+import { ButtonLink } from '@/components/ui/button';
 import Icon from '@/components/Icon';
 import { useLenis } from '@/hooks/useLenis';
-import { X } from 'lucide-react';
+import ModalCloseButton from '@/components/ModalCloseButton';
 import { useEffect } from 'react';
 
 const ProjectDetailsModal = ({ project, onClose }) => {
@@ -28,14 +29,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute end-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
-          aria-label="Close project details"
-        >
-          <X size={20} />
-        </button>
+        <ModalCloseButton label="Close project details" onClick={onClose} />
 
         {/* Project Image */}
         {project.image && (
@@ -121,27 +115,29 @@ const ProjectDetailsModal = ({ project, onClose }) => {
           {/* Actions */}
           <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row">
             {project.github && (
-              <a
+              <ButtonLink
                 href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-border bg-muted px-5 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                external
+                variant="outline"
+                size="lg"
+                className="flex-1"
               >
                 <Icon name="code" className="text-[20px]" />
                 GitHub
-              </a>
+              </ButtonLink>
             )}
 
             {project.liveDemo && (
-              <a
+              <ButtonLink
                 href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition-colors hover:bg-accent"
+                external
+                variant="default"
+                size="lg"
+                className="flex-1"
               >
                 <Icon name="open_in_new" className="text-[20px]" />
                 Live Demo
-              </a>
+              </ButtonLink>
             )}
           </div>
         </div>

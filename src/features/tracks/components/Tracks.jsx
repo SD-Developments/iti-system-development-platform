@@ -1,3 +1,5 @@
+import EmptyState from '@/components/EmptyState';
+import { SearchX } from 'lucide-react';
 import ComboboxBasic from '@/components/ComboboxBasic';
 import SectionHeader from '@/components/SectionHeader';
 import TrackCard from '@/components/TrackCard';
@@ -76,7 +78,7 @@ function Tracks() {
                 />
               </div>
 
-              <Button onClick={handleClearFilter} className="flex h-12 rounded-xl">
+              <Button size="xl" variant="outline" onClick={handleClearFilter}>
                 Clear
               </Button>
             </div>
@@ -90,11 +92,33 @@ function Tracks() {
             </span>
           </div>
 
-          <div className="mt-5 grid gap-5 lg:grid-cols-3">
-            {filteredTracks.map((track) => (
-              <TrackCard key={track.id} track={track} />
-            ))}
-          </div>
+          {filteredTracks.length === 0 ? (
+            <EmptyState
+              className="mt-5"
+              icon={SearchX}
+              title={
+                tracks.length === 0 ? 'No tracks available yet' : 'No tracks match your filters'
+              }
+              message={
+                tracks.length === 0
+                  ? 'Tracks will appear here once they are published.'
+                  : 'Try a different program or branch.'
+              }
+              action={
+                tracks.length > 0 && (
+                  <Button size="sm" onClick={handleClearFilter}>
+                    Clear Filters
+                  </Button>
+                )
+              }
+            />
+          ) : (
+            <div className="mt-5 grid gap-5 lg:grid-cols-3">
+              {filteredTracks.map((track) => (
+                <TrackCard key={track.id} track={track} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>

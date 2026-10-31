@@ -1,3 +1,6 @@
+import { ButtonLink } from '@/components/ui/button';
+import EmptyState from '@/components/EmptyState';
+import { Layers } from 'lucide-react';
 import Icon from '@/components/Icon';
 import { itpFacts, itpSprints, technicalLanes } from '@/features/home/data';
 import programsHero2 from '../../../assets/images/hero/hero1.png';
@@ -198,11 +201,18 @@ const Month4Section = () => {
                 </span>
               </div>
 
-              <div className="scrollbar-thin flex max-h-155 flex-col gap-3 overflow-y-auto pe-2">
-                {technicalLanes.map((lane) => (
-                  <div
-                    key={lane.number}
-                    className="
+              {technicalLanes.length === 0 ? (
+                <EmptyState
+                  icon={Layers}
+                  title="No tracks available yet"
+                  message="Technical lanes will appear here once tracks are published."
+                />
+              ) : (
+                <div className="scrollbar-thin flex max-h-155 flex-col gap-3 overflow-y-auto pe-2">
+                  {technicalLanes.map((lane) => (
+                    <div
+                      key={lane.number}
+                      className="
                       group
                       flex shrink-0
                       flex-col
@@ -220,11 +230,11 @@ const Month4Section = () => {
                       sm:items-center
                       sm:p-5
                     "
-                  >
-                    <div className="flex max-w-md flex-col gap-1.5">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`
+                    >
+                      <div className="flex max-w-md flex-col gap-1.5">
+                        <div className="flex items-center gap-2">
+                          <span
+                            className={`
                             rounded
                             px-2 py-0.5
                             font-mono
@@ -241,28 +251,28 @@ const Month4Section = () => {
                                     : 'bg-secondary text-foreground'
                             }
                           `}
-                        >
-                          LANE {lane.number}
-                        </span>
+                          >
+                            LANE {lane.number}
+                          </span>
 
-                        <span className="font-mono text-[11px] text-muted-foreground">
-                          {lane.category}
-                        </span>
-                      </div>
+                          <span className="font-mono text-[11px] text-muted-foreground">
+                            {lane.category}
+                          </span>
+                        </div>
 
-                      <h4 className="font-heading text-base font-bold text-foreground transition-colors group-hover:text-accent">
-                        {lane.title}
-                      </h4>
+                        <h4 className="font-heading text-base font-bold text-foreground transition-colors group-hover:text-accent">
+                          {lane.title}
+                        </h4>
 
-                      <p className="text-xs leading-relaxed text-muted-foreground">
-                        {lane.description}
-                      </p>
+                        <p className="text-xs leading-relaxed text-muted-foreground">
+                          {lane.description}
+                        </p>
 
-                      <div className="flex flex-wrap gap-1 pt-1">
-                        {lane.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="
+                        <div className="flex flex-wrap gap-1 pt-1">
+                          {lane.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="
                               rounded
                               bg-secondary
                               px-2 py-0.5
@@ -270,43 +280,27 @@ const Month4Section = () => {
                               text-[10px]
                               text-secondary-foreground
                             "
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
+
+                      <ButtonLink
+                        href="#comparison-matrix"
+                        variant="secondary"
+                        size="sm"
+                        className="shrink-0 self-start"
+                      >
+                        <span>Syllabus</span>
+
+                        <Icon name="arrow_forward" className="text-[14px]" />
+                      </ButtonLink>
                     </div>
-
-                    <a
-                      href="#comparison-matrix"
-                      className="
-                        flex
-                        shrink-0
-                        items-center
-                        gap-1.5
-                        self-start
-                        rounded-xl
-                        border border-border
-                        bg-secondary
-                        px-3.5 py-2
-                        font-mono
-                        text-xs
-                        font-bold
-                        text-accent
-                        transition-all
-                        hover:border-accent
-                        hover:bg-accent
-                        hover:text-accent-foreground
-                        sm:self-center
-                      "
-                    >
-                      <span>Syllabus</span>
-
-                      <Icon name="arrow_forward" className="text-[14px]" />
-                    </a>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* ==================================================
@@ -417,33 +411,16 @@ const Month4Section = () => {
               </div>
             </div>
 
-            <a
+            <ButtonLink
               href="#intake-status"
-              className="
-                flex
-                w-full
-                shrink-0
-                items-center
-                justify-center
-                gap-2
-                rounded-xl
-                bg-accent
-                px-6 py-3
-                text-xs
-                font-bold
-                uppercase
-                tracking-wider
-                text-accent-foreground
-                shadow-md
-                transition-all
-                hover:bg-accent/90
-                sm:w-auto
-              "
+              variant="accent"
+              size="xl"
+              className="w-full shrink-0 sm:w-auto"
             >
               <span>Apply for 4-Month</span>
 
               <Icon name="arrow_forward" className="text-[16px]" />
-            </a>
+            </ButtonLink>
           </div>
         </div>
       </section>

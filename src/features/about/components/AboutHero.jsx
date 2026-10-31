@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ui/button';
 import { ptpHours } from '@/data/siteFacts';
 import Icon from '@/components/Icon';
 import img from '../../../assets/images/hero/hero1.png';
@@ -39,23 +40,17 @@ const AboutHero = () => {
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-4 pt-3">
-              <a
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground font-bold text-sm hover:bg-primary/90 transition-all shadow-md shadow-primary/20 group"
-                href="#tracks"
-              >
+              <ButtonLink href="#tracks" variant="default" size="xl" className="group">
                 <span>Explore Academic Tracks</span>
                 <Icon
                   name="arrow_forward"
                   className="text-[18px] group-hover:translate-x-0.5 transition-transform"
                 />
-              </a>
-              <a
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-card border border-border text-foreground font-bold text-sm hover:bg-muted transition-all shadow-sm"
-                href="#faculty"
-              >
+              </ButtonLink>
+              <ButtonLink href="#faculty" variant="outline" size="xl">
                 <Icon name="group" className="text-[18px] text-muted-foreground" />
                 <span>Meet The Faculty</span>
-              </a>
+              </ButtonLink>
             </div>
           </div>
           {/* Visual Column */}

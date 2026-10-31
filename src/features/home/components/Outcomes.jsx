@@ -1,3 +1,5 @@
+import EmptyState from '@/components/EmptyState';
+import { Building2 } from 'lucide-react';
 import { partnerCompanies, testimonials } from '@/features/home/data';
 
 const Outcomes = () => {
@@ -28,16 +30,25 @@ const Outcomes = () => {
               Trusted by Multinational &amp; Sovereign Engineering Teams
             </span>
 
-            <div className="grid grid-cols-2 items-center gap-6 text-center sm:grid-cols-3 md:grid-cols-6">
-              {partnerCompanies.map((company) => (
-                <span
-                  key={company}
-                  className="font-heading text-lg font-bold text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {company}
-                </span>
-              ))}
-            </div>
+            {partnerCompanies.length === 0 ? (
+              <EmptyState
+                className="min-h-0 py-6"
+                icon={Building2}
+                title="No partners listed yet"
+                message="Industry partners will appear here once they are published."
+              />
+            ) : (
+              <div className="grid grid-cols-2 items-center gap-6 text-center sm:grid-cols-3 md:grid-cols-6">
+                {partnerCompanies.map((company) => (
+                  <span
+                    key={company}
+                    className="font-heading text-lg font-bold text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {company}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Testimonials */}

@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ui/button';
 import { branchCount } from '@/data/siteFacts';
 const FinalCta = () => {
   return (
@@ -30,12 +31,9 @@ const FinalCta = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-            <a
-              href="/intakes"
-              className="rounded-xl bg-primary px-7 py-3.5 text-sm font-bold tracking-wide text-primary-foreground shadow-lg transition-all duration-200 hover:-translate-y-0.5"
-            >
+            <ButtonLink href="/intakes" variant="default" size="xl">
               Explore SD Academic Programs
-            </a>
+            </ButtonLink>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 pt-8 font-mono text-xs text-slate-400">

@@ -1,7 +1,7 @@
+import { Button, ButtonLink } from '@/components/ui/button';
 import { heroHomeSlides } from '@/features/home/data';
 import clsx from 'clsx';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
 import hero1 from '../../../assets/images/hero/hero1.png';
 import hero2 from '../../../assets/images/hero/Requra.png';
@@ -147,6 +147,9 @@ function HeroCarousel({ onOpenProgram }) {
           {heroHomeSlides.map((item, index) => (
             <button
               key={item.id}
+              type="button"
+              aria-label={'Go to slide ${index + 1}'}
+              aria-current={index === logicalSlide}
               onClick={() => goToSlide(index)}
               className={clsx(
                 'h-2.5 rounded-full transition-all',
@@ -200,34 +203,13 @@ function SlideItem({ slide, total, index, onOpenProgram }) {
           </p>
 
           <div className="hero-stagger mt-9 flex flex-col gap-4 sm:flex-row">
-            <Link
-              to={slide.primaryHref}
-              className="inline-flex min-h-13 items-center justify-center gap-2 rounded-lg bg-primary px-6 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition hover:-translate-y-0.5"
-            >
+            <ButtonLink to={slide.primaryHref} variant="default" size="xl">
               {slide.primaryCta}
               <ArrowRight size={18} />
-            </Link>
-            <Link
-              to={slide.secondaryHref}
-              className="
-              inline-flex
-              min-h-13
-              items-center
-              justify-center
-              rounded-lg
-              border border-border
-              bg-card
-              px-6
-              font-bold
-              text-foreground
-              transition
-              hover:-translate-y-0.5
-              hover:border-accent/40
-              hover:bg-secondary
-              "
-            >
+            </ButtonLink>
+            <ButtonLink to={slide.secondaryHref} variant="outline" size="xl">
               {slide.secondaryCta}
-            </Link>
+            </ButtonLink>
           </div>
         </div>
 
@@ -252,13 +234,14 @@ function HeroVisual({ type, onOpenProgram }) {
             Intensive professional development journey with multiple tracks and branches.
           </p>
 
-          <button
-            type="button"
+          <Button
+            variant="accent"
+            size="lg"
             onClick={() => onOpenProgram?.('PTP')}
-            className="mt-7 rounded-xl bg-accent px-5 py-3 font-bold text-accent-foreground"
+            className="mt-7"
           >
             Explore PTP
-          </button>
+          </Button>
         </div>
 
         <div className="min-h-95 rounded-3xl border border-border bg-card p-8 text-card-foreground shadow-xl shadow-foreground/5">
@@ -272,13 +255,9 @@ function HeroVisual({ type, onOpenProgram }) {
             Focused accelerated learning journey for specialized technical paths.
           </p>
 
-          <button
-            type="button"
-            onClick={() => onOpenProgram?.('ITP')}
-            className="mt-7 rounded-xl bg-primary px-5 py-3 font-bold text-primary-foreground"
-          >
+          <Button size="lg" onClick={() => onOpenProgram?.('ITP')} className="mt-7">
             Explore ITP
-          </button>
+          </Button>
         </div>
       </div>
     );

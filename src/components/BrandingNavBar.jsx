@@ -64,32 +64,17 @@ function ThemeToggleDesktop({ theme, setTheme }) {
 
 function ThemeToggleMobile({ theme, setTheme }) {
   return (
-    <button
-      type="button"
-      onClick={() => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
-      }}
-      className="
-        flex
-        items-center
-        justify-between
-        rounded-xl
-        border
-        border-border
-        bg-card
-        px-4
-        py-3
-        text-sm
-        font-semibold
-        transition
-        hover:bg-muted
-      "
+    <Button
+      variant="outline"
+      size="lg"
+      className="justify-between"
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <span>Theme</span>
       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-muted text-muted-foreground">
         <ThemeIcon theme={theme} size={16} />
       </span>
-    </button>
+    </Button>
   );
 }
 
@@ -405,29 +390,16 @@ function BrandingNavBar() {
             <ArrowRight size={17} />
           </NavLink>
 
-          <button
-            type="button"
-            onClick={() => {
-              setMobileMenu(!mobileMenu);
-            }}
+          <Button
+            variant="outline"
+            size="icon-lg"
+            onClick={() => setMobileMenu(!mobileMenu)}
             aria-expanded={mobileMenu}
             aria-label={mobileMenu ? 'Close menu' : 'Open menu'}
-            className="
-              flex
-              h-11
-              w-11
-              items-center
-              justify-center
-              rounded-lg
-              border
-              border-border
-              transition-all
-              hover:bg-muted
-              xl:hidden
-            "
+            className="xl:hidden"
           >
             {mobileMenu ? <X size={21} /> : <Menu size={21} />}
-          </button>
+          </Button>
         </div>
         {/* Mobile menu */}
         {mobileMenu && (

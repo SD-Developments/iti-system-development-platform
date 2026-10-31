@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ui/button';
 import Icon from '@/components/Icon';
 import { ArrowRight } from 'lucide-react';
 import aboutCtaImage from '../assets/images/hero/about_hero_section.png';
@@ -29,23 +30,17 @@ function AboutCta() {
           Department welcomes you.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <a
-            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-sm hover:bg-primary/90 transition-all shadow-[0_0_25px_color-mix(in_srgb,var(--color-primary)_50%,transparent)] group"
-            href="/tracks"
-          >
+          <ButtonLink href="/tracks" variant="default" size="xl" className="group">
             <span>Explore Academic Tracks</span>
             <Icon
               name="arrow_forward"
               className="text-[20px] group-hover:translate-x-1 transition-transform"
             />
-          </a>
-          <a
-            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold text-sm hover:bg-white/20 transition-all shadow-md"
-            href="/projects"
-          >
+          </ButtonLink>
+          <ButtonLink href="/projects" variant="glass" size="xl">
             <Icon name="code" className="text-[20px] text-accent" />
             <span>View Student Projects</span>
-          </a>
+          </ButtonLink>
         </div>
       </div>
     </section>
@@ -78,21 +73,15 @@ function TracksCta() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="/intakes"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground"
-              >
+              <ButtonLink href="/intakes" variant="default" size="xl">
                 Explore PTP
                 <ArrowRight size={16} />
-              </a>
+              </ButtonLink>
 
-              <a
-                href="/intakes"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-sd-white/20 bg-sd-white/5 px-6 py-3.5 text-sm font-bold"
-              >
+              <ButtonLink href="/intakes" variant="glass" size="xl">
                 View Intakes
                 <ArrowRight size={16} />
-              </a>
+              </ButtonLink>
             </div>
           </div>
         </div>

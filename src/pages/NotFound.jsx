@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { ButtonLink } from '@/components/ui/button';
 import Seo from '@/components/Seo';
 import { PAGE_SEO } from '@/lib/seo';
 
@@ -18,18 +18,12 @@ function NotFound() {
           explore the academic tracks.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground"
-          >
+          <ButtonLink to="/" variant="default" size="xl">
             Back to Home
-          </Link>
-          <Link
-            to="/tracks"
-            className="inline-flex items-center justify-center rounded-xl border border-border px-6 py-3.5 text-sm font-bold text-foreground"
-          >
+          </ButtonLink>
+          <ButtonLink to="/tracks" variant="outline" size="xl">
             Explore Tracks
-          </Link>
+          </ButtonLink>
         </div>
       </main>
     </>

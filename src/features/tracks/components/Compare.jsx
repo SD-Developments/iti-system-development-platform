@@ -1,3 +1,4 @@
+import EmptyState from '@/components/EmptyState';
 import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { programs, tracks } from '@/features/tracks/data';
@@ -86,7 +87,7 @@ function Compare() {
                 size="lg"
                 variant={filter === item ? 'default' : 'ghost'}
                 onClick={() => setFilter(item)}
-                className="rounded-xl px-6"
+                className="px-6"
               >
                 {item === 'All' ? 'All Programs' : item}
               </Button>
@@ -131,45 +132,57 @@ function Compare() {
         </div>
 
         {/* Comparison table */}
-        <div
-          ref={comparisonTable}
-          data-lenis-prevent
-          className="mt-8 overflow-x-auto rounded-3xl border border-border bg-card shadow-sm"
-        >
+        {tracks.length === 0 ? (
+          <EmptyState
+            className="mt-8"
+            icon={GitCompareArrows}
+            title="Nothing to compare yet"
+            message="Track comparisons will appear here once tracks are published."
+          />
+        ) : (
           <div
-            className="grid min-w-max"
-            style={{
-              gridTemplateColumns: `180px repeat(${visibleTracks.length}, minmax(240px, 1fr))`,
-            }}
+            ref={comparisonTable}
+            data-lenis-prevent
+            className="mt-8 overflow-x-auto rounded-3xl border border-border bg-card shadow-sm"
           >
-            {/* Header row */}
-            <div className="sticky start-0 z-10 border-b border-border bg-secondary p-5 font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              Compare
-            </div>
-            {visibleTracks.map((track) => {
-              const Icon = track.icon;
-              return (
-                <div key={track.id} className="border-b border-s border-border bg-secondary/60 p-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                    {Icon && <Icon size={19} />}
-                  </div>
-                  <div className="mt-3 text-sm font-bold leading-snug">{track.shortTitle}</div>
-                  <a
-                    href={`/tracks/${track.id}`}
-                    className="mt-2 inline-block text-xs font-bold text-primary hover:underline"
+            <div
+              className="grid min-w-max"
+              style={{
+                gridTemplateColumns: `180px repeat(${visibleTracks.length}, minmax(240px, 1fr))`,
+              }}
+            >
+              {/* Header row */}
+              <div className="sticky start-0 z-10 border-b border-border bg-secondary p-5 font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">
+                Compare
+              </div>
+              {visibleTracks.map((track) => {
+                const Icon = track.icon;
+                return (
+                  <div
+                    key={track.id}
+                    className="border-b border-s border-border bg-secondary/60 p-5"
                   >
-                    View track
-                  </a>
-                </div>
-              );
-            })}
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                      {Icon && <Icon size={19} />}
+                    </div>
+                    <div className="mt-3 text-sm font-bold leading-snug">{track.shortTitle}</div>
+                    <a
+                      href={`/tracks/${track.id}`}
+                      className="mt-2 inline-block text-xs font-bold text-primary hover:underline"
+                    >
+                      View track
+                    </a>
+                  </div>
+                );
+              })}
 
-            {/* Body rows */}
-            {ROWS.map((row) => (
-              <Row key={row.label} row={row} tracks={visibleTracks} />
-            ))}
+              {/* Body rows */}
+              {ROWS.map((row) => (
+                <Row key={row.label} row={row} tracks={visibleTracks} />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Guidance */}
         <div className="mt-8 grid gap-5 lg:grid-cols-2">

@@ -1,13 +1,16 @@
 import SectionHeader from '@/components/SectionHeader';
-import { Button } from '@/components/ui/button';
+import EmptyState from '@/components/EmptyState';
+import ShowMoreButton from '@/components/ShowMoreButton';
 import { tracks } from '@/features/tracks/data';
 import { ArrowRight, BookOpen, BriefcaseBusiness } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
+
+const INITIAL_TRACKS = 3;
 
 function Learn() {
-  const [extend, setExtend] = useState(3);
-  let tracksArr = useMemo(() => tracks.slice(0, extend) || [], [extend]);
-  const disBtn = tracksArr.length === tracks.length;
+  const [expanded, setExpanded] = useState(false);
+  const visibleTracks = expanded ? tracks : tracks.slice(0, INITIAL_TRACKS);
+
   return (
     <section className="relative overflow-hidden border-y border-border bg-secondary/30 py-16 lg:py-24">
       {/* subtle background decoration */}
@@ -27,37 +30,33 @@ function Learn() {
           </div>
         </div>
 
-        <div className="mt-12 space-y-5">
-          {tracksArr.map((track, index) => (
-            <TrackLearningRow key={track.id} track={track} index={index} />
-          ))}
-        </div>
-      </div>
-
-      <div className="flex-center mt-10">
-        {!disBtn ? (
-          <Button
-            onClick={() => {
-              setExtend(tracks.length);
-            }}
-          >
-            more
-          </Button>
+        {tracks.length === 0 ? (
+          <EmptyState
+            className="mt-12"
+            icon={BookOpen}
+            title="No tracks available yet"
+            message="Track details will appear here once they are published."
+          />
         ) : (
-          <Button
-            variant="accent"
-            onClick={() => {
-              setExtend(3);
-            }}
-          >
-            reset
-          </Button>
+          <div className="mt-12 space-y-5">
+            {visibleTracks.map((track, index) => (
+              <TrackLearningRow key={track.id} track={track} index={index} />
+            ))}
+          </div>
+        )}
+
+        {tracks.length > INITIAL_TRACKS && (
+          <ShowMoreButton
+            expanded={expanded}
+            onToggle={() => setExpanded((value) => !value)}
+            moreLabel={`Show All ${tracks.length} Tracks`}
+            lessLabel="Show Fewer Tracks"
+          />
         )}
       </div>
     </section>
   );
 }
-
 function TrackLearningRow({ track, index }) {
   const Icon = track.icon ?? BookOpen;
   const visibleTechnologies = track.technologies?.slice(0, 7) || [];

@@ -1,8 +1,10 @@
+import EmptyState from '@/components/EmptyState';
+import ModalCloseButton from '@/components/ModalCloseButton';
+import { Button, ButtonLink } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
-import { ArrowRight, BookOpen, Clock3, Layers3, MapPin, X } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock3, Layers3, MapPin } from 'lucide-react';
 import { programs } from '@/features/home/data';
 import { tracks } from '@/features/tracks/data';
-import { Link } from 'react-router';
 import Month9Section from './Month9Section';
 import { useEffect, useRef } from 'react';
 import Month4Section from './Month4Section';
@@ -50,14 +52,22 @@ function PathSection({ showProgram, setShowProgram }) {
             PROGRAMS
         ================================================== */}
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2 ">
-          {programs.map((program) => (
-            <article
-              key={program.code}
-              onClick={() => {
-                setShowProgram(program.code);
-              }}
-              className={`
+        {programs.length === 0 ? (
+          <EmptyState
+            className="mt-12"
+            icon={BookOpen}
+            title="No programs available yet"
+            message="Program details will appear here once they are published."
+          />
+        ) : (
+          <div className="mt-12 grid gap-6 lg:grid-cols-2 ">
+            {programs.map((program) => (
+              <article
+                key={program.code}
+                onClick={() => {
+                  setShowProgram(program.code);
+                }}
+                className={`
                 group
                 relative
                 overflow-hidden
@@ -73,10 +83,10 @@ function PathSection({ showProgram, setShowProgram }) {
                     : 'border-border bg-card text-card-foreground'
                 }
               `}
-            >
-              {/* decorative circle */}
-              <div
-                className={`
+              >
+                {/* decorative circle */}
+                <div
+                  className={`
                   absolute inset-e-0 top-0
                   h-40 w-40
                   translate-x-1/3
@@ -84,13 +94,13 @@ function PathSection({ showProgram, setShowProgram }) {
                   rounded-full
                   ${program.featured ? 'bg-sd-teal/10' : 'bg-primary/10'}
                 `}
-              />
+                />
 
-              <div className="relative">
-                <div className="mb-8 flex items-start justify-between gap-5">
-                  <div>
-                    <span
-                      className={`
+                <div className="relative">
+                  <div className="mb-8 flex items-start justify-between gap-5">
+                    <div>
+                      <span
+                        className={`
                         font-mono
                         text-xs
                         font-bold
@@ -98,24 +108,24 @@ function PathSection({ showProgram, setShowProgram }) {
                         tracking-[0.18em]
                         ${program.featured ? 'text-sd-teal' : 'text-primary'}
                       `}
-                    >
-                      {program.code}
-                    </span>
+                      >
+                        {program.code}
+                      </span>
 
-                    <div
-                      className={`
+                      <div
+                        className={`
                         mt-2
                         text-sm
                         font-semibold
                         ${program.featured ? 'text-sd-white/60' : 'text-muted-foreground'}
                       `}
-                    >
-                      {program.duration}
+                      >
+                        {program.duration}
+                      </div>
                     </div>
-                  </div>
 
-                  <div
-                    className={`
+                    <div
+                      className={`
                       rounded-xl
                       p-3
                       shadow-sm
@@ -125,28 +135,25 @@ function PathSection({ showProgram, setShowProgram }) {
                           : 'bg-secondary text-primary'
                       }
                     `}
-                  >
-                    <BookOpen size={24} />
+                    >
+                      <BookOpen size={24} />
+                    </div>
                   </div>
-                </div>
-
-                <h3 className="max-w-xl text-3xl font-extrabold tracking-tight lg:text-4xl">
-                  {program.title}
-                </h3>
-
-                <p
-                  className={`
+                  <h3 className="max-w-xl text-3xl font-extrabold tracking-tight lg:text-4xl">
+                    {program.title}
+                  </h3>
+                  <p
+                    className={`
                     mt-5
                     max-w-xl
                     leading-7
                     ${program.featured ? 'text-sd-white/65' : 'text-muted-foreground'}
                   `}
-                >
-                  {program.description}
-                </p>
-
-                <div
-                  className={`
+                  >
+                    {program.description}
+                  </p>
+                  <div
+                    className={`
                     my-8
                     grid
                     grid-cols-2
@@ -155,46 +162,38 @@ function PathSection({ showProgram, setShowProgram }) {
                     py-5
                     ${program.featured ? 'border-sd-white/10' : 'border-border'}
                   `}
-                >
-                  <div className="flex items-center gap-2 text-sm font-semibold">
-                    <Layers3
-                      size={17}
-                      className={program.featured ? 'text-sd-teal' : 'text-accent'}
-                    />
+                  >
+                    <div className="flex items-center gap-2 text-sm font-semibold">
+                      <Layers3
+                        size={17}
+                        className={program.featured ? 'text-sd-teal' : 'text-accent'}
+                      />
 
-                    {program.tracks}
+                      {program.tracks}
+                    </div>
+
+                    <div className="flex items-center gap-2 text-sm font-semibold">
+                      <MapPin
+                        size={17}
+                        className={program.featured ? 'text-sd-teal' : 'text-accent'}
+                      />
+
+                      {program.branches}
+                    </div>
                   </div>
-
-                  <div className="flex items-center gap-2 text-sm font-semibold">
-                    <MapPin
-                      size={17}
-                      className={program.featured ? 'text-sd-teal' : 'text-accent'}
-                    />
-
-                    {program.branches}
-                  </div>
+                  <Button
+                    variant="link"
+                    onClick={() => setShowProgram(program.code)}
+                    className={`font-bold ${program.featured ? 'text-sd-teal' : 'text-primary'}`}
+                  >
+                    Explore {program.code}
+                    <ArrowRight size={17} className="transition group-hover:translate-x-1" />
+                  </Button>{' '}
                 </div>
-
-                <button
-                  onClick={() => {
-                    setShowProgram(program.code);
-                  }}
-                  className={`
-                    inline-flex
-                    items-center
-                    gap-2
-                    text-sm
-                    font-bold
-                    ${program.featured ? 'text-sd-teal' : 'text-primary'}
-                  `}
-                >
-                  Explore {program.code}
-                  <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        )}
 
         {/* ==================================================
             TRACKS
@@ -223,31 +222,27 @@ function PathSection({ showProgram, setShowProgram }) {
                 Professional Training Program at Smart Village.
               </p>
             </div>
-
-            <Link
-              to="/tracks"
-              className="
-                group
-                inline-flex
-                shrink-0
-                items-center
-                gap-2
-                text-sm
-                font-bold
-                text-primary
-              "
-            >
+            <ButtonLink to="/tracks" variant="link" className="shrink-0 font-bold">
               View All Tracks
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-            </Link>
+              <ArrowRight size={16} />
+            </ButtonLink>{' '}
           </div>
 
           {/* compact track cards */}
-          <div className="mt-9 grid gap-5 md:grid-cols-3">
-            {smartVillageTracks.map((track, index) => (
-              <TrackCard key={track.id} track={track} index={index} />
-            ))}
-          </div>
+          {smartVillageTracks.length === 0 ? (
+            <EmptyState
+              className="mt-9"
+              icon={Layers3}
+              title="No tracks available yet"
+              message="Smart Village tracks will appear here once they are published."
+            />
+          ) : (
+            <div className="mt-9 grid gap-5 md:grid-cols-3">
+              {smartVillageTracks.map((track, index) => (
+                <TrackCard key={track.id} track={track} index={index} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -267,16 +262,7 @@ function PathSection({ showProgram, setShowProgram }) {
               e.stopPropagation();
             }}
           >
-            <button
-              type="button"
-              onClick={() => {
-                setShowProgram(null);
-              }}
-              className="absolute inset-e-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
-              aria-label="Close project details"
-            >
-              <X size={20} />
-            </button>
+            <ModalCloseButton label="Close program details" onClick={() => setShowProgram(null)} />
             <Month4Section />
           </div>
         </div>
@@ -297,16 +283,7 @@ function PathSection({ showProgram, setShowProgram }) {
               e.stopPropagation();
             }}
           >
-            <button
-              type="button"
-              onClick={() => {
-                setShowProgram(null);
-              }}
-              className="absolute inset-e-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
-              aria-label="Close project details"
-            >
-              <X size={20} />
-            </button>
+            <ModalCloseButton label="Close program details" onClick={() => setShowProgram(null)} />
             <Month9Section />
           </div>
         </div>

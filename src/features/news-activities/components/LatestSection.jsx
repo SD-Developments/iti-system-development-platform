@@ -1,5 +1,7 @@
-import { ArrowUpRight, ChevronDown } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { useState } from 'react';
+import EmptyState from '@/components/EmptyState';
+import ShowMoreButton from '@/components/ShowMoreButton';
 import SectionHeader from '@/components/SectionHeader';
 import { latestNews } from '../data';
 
@@ -83,14 +85,13 @@ const categoryTypes = {
 };
 
 const LatestSection = ({ category = 'All', sort = 'Latest', search = '', filterBar = null }) => {
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [expanded, setExpanded] = useState(false);
   const categoryType = categoryTypes[category];
   const categoryItems = categoryType
     ? latestNews.filter((item) => item.type === categoryType)
     : latestNews;
   const items = sortNews(filterNews(categoryItems, search), sort);
-  const visibleItems = items.slice(0, visibleCount);
-  const remaining = items.length - visibleItems.length;
+  const visibleItems = expanded ? items : items.slice(0, PAGE_SIZE);
   const emptyMessage = search.trim()
     ? `No ${category === 'All' ? 'news or activities' : category.toLowerCase()} found for "${search.trim()}".`
     : `No ${category === 'All' ? 'news or activities' : category.toLowerCase()} available right now.`;
@@ -112,32 +113,17 @@ const LatestSection = ({ category = 'All', sort = 'Latest', search = '', filterB
               <NewsCard key={item.title} item={item} />
             ))}
           </div>
-          {remaining > 0 && (
-            <div className="mt-8 flex justify-center">
-              <button
-                type="button"
-                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-                className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground shadow-sm transition-all hover:border-sd-red hover:bg-sd-red hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red"
-              >
-                Show more
-                <span className="rounded-full bg-muted px-2 py-0.5 font-mono text-xs text-muted-foreground transition-colors group-hover:bg-white/20 group-hover:text-white">
-                  {remaining}
-                </span>
-                <ChevronDown
-                  aria-hidden="true"
-                  className="size-4 transition-transform group-hover:translate-y-0.5"
-                />
-              </button>
-            </div>
+          {items.length > PAGE_SIZE && (
+            <ShowMoreButton
+              className="mt-8"
+              expanded={expanded}
+              onToggle={() => setExpanded((value) => !value)}
+              moreLabel={`Show More (${items.length - PAGE_SIZE})`}
+            />
           )}
         </>
       ) : (
-        <p
-          role="status"
-          className="rounded-xl border border-dashed border-border bg-card px-6 py-12 text-center text-sm text-muted-foreground"
-        >
-          {emptyMessage}
-        </p>
+        <EmptyState title="Nothing to show" message={emptyMessage} />
       )}
     </section>
   );

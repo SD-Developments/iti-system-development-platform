@@ -1,3 +1,4 @@
+import { Button, ButtonLink } from '@/components/ui/button';
 import { currentIntake } from '@/data/siteFacts';
 import Icon from '@/components/Icon';
 import { faqs } from '@/features/home/data';
@@ -53,12 +54,9 @@ const FAQ = () => {
               </div>
             </div>
 
-            <button
-              type="button"
-              className="rounded-xl bg-sd-navy px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:opacity-90"
-            >
+            <Button type="button" variant="navy" size="xl">
               Set Calendar Alert
-            </button>
+            </Button>
           </div>
         </div>
       </section>
@@ -86,12 +84,14 @@ const FAQ = () => {
             </div>
 
             <div className="relative z-10 flex w-full shrink-0 flex-col items-center gap-3 sm:w-auto sm:flex-row">
-              <a
+              <ButtonLink
                 href="#intake-status"
-                className="w-full rounded-xl  hover:bg-white   text-primary-foreground  bg-primary px-8 py-4 text-center text-sm font-bold uppercase tracking-wider hover:text-sd-navy shadow-lg transition-all  sm:w-auto"
+                variant="default"
+                size="xl"
+                className="w-full sm:w-auto"
               >
                 Apply for Intake {currentIntake}
-              </a>
+              </ButtonLink>
             </div>
           </div>
         </div>

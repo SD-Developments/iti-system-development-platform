@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ui/button';
 import { ptpHours } from '@/data/siteFacts';
 import Icon from '@/components/Icon';
 const Month9Section = () => {
@@ -487,21 +488,15 @@ const Month9Section = () => {
               </div>
 
               <div className="flex shrink-0 flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                <a
-                  className="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-sans text-xs font-bold uppercase tracking-wider text-primary-foreground shadow-md transition-all hover:bg-primary/90"
-                  href="#intake-status"
-                >
+                <ButtonLink href="#intake-status" variant="default" size="xl">
                   <span>Apply for 9-Month Residency</span>
 
                   <Icon name="arrow_forward" className="text-[16px]" />
-                </a>
+                </ButtonLink>
 
-                <a
-                  className="rounded-xl border border-white/20 bg-white/10 px-5 py-3.5 text-center font-sans text-xs font-semibold uppercase tracking-wider text-white transition-all hover:bg-white/20"
-                  href="#intake-status"
-                >
+                <ButtonLink href="#intake-status" variant="glass" size="xl">
                   Check Eligibility & Prerequisites
-                </a>
+                </ButtonLink>
               </div>
             </div>
           </div>

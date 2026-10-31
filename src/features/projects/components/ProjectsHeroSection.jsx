@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ui/button';
 const ProjectsHeroSection = () => {
   return (
     <>
@@ -56,10 +57,7 @@ const ProjectsHeroSection = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <a
-                  href="#projects-grid"
-                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold tracking-wide text-primary-foreground shadow-lg transition-all duration-200 hover:-translate-y-0.5"
-                >
+                <ButtonLink href="#projects-grid" variant="default" size="xl">
                   <span>Explore Exhibition ↓</span>
 
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,18 +68,15 @@ const ProjectsHeroSection = () => {
                       strokeWidth="2.5"
                     />
                   </svg>
-                </a>
+                </ButtonLink>
 
-                <a
-                  href="#engineering-journey"
-                  className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-accent"
-                >
+                <ButtonLink href="#engineering-journey" variant="outline" size="xl">
                   <svg className="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
 
                   <span>Watch Live CTO Defenses</span>
-                </a>
+                </ButtonLink>
               </div>
 
               {/* Proof Points */}

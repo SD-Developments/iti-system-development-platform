@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import TechnicalProjectVisual from './TechnicalProjectVisual';
 
 const ProjectCard = ({ project, onClick }) => {
@@ -101,9 +102,9 @@ const ProjectCard = ({ project, onClick }) => {
         <div className="flex items-center justify-between border-t border-border bg-muted px-6 py-3.5 font-mono text-xs">
           <span className="text-muted-foreground">{project.status ?? project.meta}</span>
 
-          <button className="font-bold text-primary transition-colors hover:text-accent">
+          <Button variant="link" size="sm" className="font-mono font-bold">
             View Project →
-          </button>
+          </Button>
         </div>
       </article>
     </>

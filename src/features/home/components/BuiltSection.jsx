@@ -1,9 +1,10 @@
+import EmptyState from '@/components/EmptyState';
+import { Button, ButtonLink } from '@/components/ui/button';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { ArrowLeft, ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Code, ExternalLink, Sparkles } from 'lucide-react';
 
 import { projects } from '@/features/projects/data';
-import { Link } from 'react-router';
 
 function BuiltSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -62,55 +63,36 @@ function BuiltSection() {
 
           {/* Header actions */}
           <div className="flex items-center gap-3">
-            <Link
-              to={'/projects'}
-              className="
-                me-2 hidden items-center gap-2
-                text-sm font-bold text-sd-teal
-                transition-all
-                hover:gap-3
-                sm:inline-flex
-              "
+            <ButtonLink
+              to="/projects"
+              variant="link-accent"
+              className="me-2 hidden font-bold sm:inline-flex"
             >
               Explore Projects Hub
               <ArrowRight size={16} />
-            </Link>
+            </ButtonLink>
+            {projects.length > 1 && (
+              <>
+                <Button
+                  variant="glass"
+                  size="icon-lg"
+                  className="rounded-full"
+                  aria-label="Previous project"
+                  onClick={() => emblaApi?.scrollPrev()}
+                >
+                  <ArrowLeft size={18} />
+                </Button>
 
-            <button
-              type="button"
-              onClick={() => emblaApi?.scrollPrev()}
-              className="
-                flex h-11 w-11 items-center justify-center
-                rounded-full
-                border border-sd-white/10
-                bg-sd-white/[0.05]
-                text-sd-white
-                transition-all
-                hover:-translate-y-0.5
-                hover:border-sd-teal/30
-                hover:bg-sd-teal/10
-                hover:text-sd-teal
-              "
-            >
-              <ArrowLeft size={18} />
-            </button>
-
-            <button
-              type="button"
-              onClick={() => emblaApi?.scrollNext()}
-              className="
-                flex h-11 w-11 items-center justify-center
-                rounded-full
-                bg-primary
-                text-primary-foreground
-                shadow-lg shadow-primary/15
-                transition-all
-                hover:-translate-y-0.5
-                hover:bg-primary/90
-              "
-            >
-              <ArrowRight size={18} />
-            </button>
+                <Button
+                  size="icon-lg"
+                  className="rounded-full"
+                  aria-label="Next project"
+                  onClick={() => emblaApi?.scrollNext()}
+                >
+                  <ArrowRight size={18} />
+                </Button>
+              </>
+            )}{' '}
           </div>
         </div>
 
@@ -118,12 +100,21 @@ function BuiltSection() {
             CAROUSEL
         ================================================== */}
 
-        <div ref={emblaRef} className="mt-12 overflow-hidden">
-          <div className="-ms-4 flex">
-            {projects.slice(0, 6).map((project, index) => (
-              <div
-                key={`${project.title}-${index}`}
-                className="
+        {projects.length === 0 ? (
+          <EmptyState
+            tone="dark"
+            className="mt-12"
+            icon={Sparkles}
+            title="No projects to showcase yet"
+            message="Standout projects will appear here once they are published."
+          />
+        ) : (
+          <div ref={emblaRef} className="mt-12 overflow-hidden">
+            <div className="-ms-4 flex">
+              {projects.slice(0, 6).map((project, index) => (
+                <div
+                  key={`${project.title}-${index}`}
+                  className="
                   min-w-0
                   shrink-0
                   grow-0
@@ -133,22 +124,20 @@ function BuiltSection() {
                   lg:basis-[34%]
                   xl:basis-[28%]
                 "
-              >
-                <ProjectShowcaseCard project={project} index={index} />
-              </div>
-            ))}
+                >
+                  <ProjectShowcaseCard project={project} index={index} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* mobile CTA */}
         <div className="mt-8 sm:hidden">
-          <Link
-            to={'/projects'}
-            className="inline-flex items-center gap-2 text-sm font-bold text-sd-teal"
-          >
+          <ButtonLink to="/projects" variant="link-accent" className="font-bold">
             Explore Projects Hub
             <ArrowRight size={16} />
-          </Link>
+          </ButtonLink>{' '}
         </div>
       </div>
     </section>
@@ -291,46 +280,29 @@ function ProjectShowcaseCard({ project, index }) {
 
           <div className="flex items-center gap-2">
             {project.github && (
-              <a
+              <ButtonLink
                 href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="
-                  flex h-8 w-8 items-center justify-center
-                  rounded-full
-                  border border-sd-white/10
-                  bg-sd-white/[0.04]
-                  text-sd-white/45
-                  transition
-                  hover:border-sd-teal/30
-                  hover:bg-sd-teal/10
-                  hover:text-sd-teal
-                "
+                external
+                variant="glass"
+                size="icon-sm"
+                className="rounded-full"
+                aria-label={`${project.title} source code`}
               >
-                <Sparkles size={13} />
-              </a>
+                <Code size={13} />
+              </ButtonLink>
             )}
-
             {project.liveDemo && (
-              <a
+              <ButtonLink
                 href={project.liveDemo}
-                target="_blank"
-                rel="noreferrer"
-                className="
-                  flex h-8 w-8 items-center justify-center
-                  rounded-full
-                  border border-sd-white/10
-                  bg-sd-white/[0.04]
-                  text-sd-white/45
-                  transition
-                  hover:border-primary/30
-                  hover:bg-primary/10
-                  hover:text-primary
-                "
+                external
+                variant="glass"
+                size="icon-sm"
+                className="rounded-full"
+                aria-label={`${project.title} live demo`}
               >
                 <ExternalLink size={13} />
-              </a>
-            )}
+              </ButtonLink>
+            )}{' '}
           </div>
         </div>
       </div>

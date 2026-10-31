@@ -1,5 +1,5 @@
+import { Button, ButtonLink } from '@/components/ui/button';
 import { Component } from 'react';
-import { Link } from 'react-router';
 import { Home, RefreshCw, TriangleAlert } from 'lucide-react';
 
 export default class ErrorBoundary extends Component {
@@ -41,21 +41,14 @@ export default class ErrorBoundary extends Component {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <button
-              type="button"
-              onClick={this.handleRetry}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary/90"
-            >
+            <Button type="button" onClick={this.handleRetry} variant="default" size="xl">
               <RefreshCw className="size-4" aria-hidden="true" />
               Try Again
-            </button>
-            <Link
-              to="/"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-6 py-3.5 text-sm font-bold text-foreground transition-colors hover:bg-muted"
-            >
+            </Button>
+            <ButtonLink to="/" variant="outline" size="xl">
               <Home className="size-4" aria-hidden="true" />
               Back to Home
-            </Link>
+            </ButtonLink>
           </div>
         </main>
       );

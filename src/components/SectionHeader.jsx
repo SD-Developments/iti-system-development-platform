@@ -1,6 +1,8 @@
 import { ArrowRight } from 'lucide-react';
+import { ButtonLink } from '@/components/ui/button';
 
-function SectionHeader({ eyebrow, title, description, action, href = '#', variant = 'hero' }) {
+function SectionHeader({ eyebrow, title, description, action, href, variant = 'hero' }) {
+  const showAction = Boolean(action && href);
   if (variant === 'compact') {
     return (
       <div className="mb-6 flex flex-col gap-3 border-b border-border pb-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
@@ -13,15 +15,12 @@ function SectionHeader({ eyebrow, title, description, action, href = '#', varian
           </h2>
           <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{description}</p>
         </div>
-        {action && (
-          <a
-            href={href}
-            className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg text-sm font-bold text-primary transition-colors hover:text-sd-red focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sd-red"
-          >
+        {showAction && (
+          <ButtonLink to={href} variant="link" className="shrink-0 font-bold">
             {action}
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-          </a>
-        )}
+            <ArrowRight className="size-4" />
+          </ButtonLink>
+        )}{' '}
       </div>
     );
   }
@@ -38,12 +37,11 @@ function SectionHeader({ eyebrow, title, description, action, href = '#', varian
 
         <p className="mt-4 max-w-xl leading-7 text-muted-foreground">{description}</p>
       </div>
-
-      {action ? (
-        <a href={href} className="inline-flex items-center gap-2 text-sm font-bold text-primary">
+      {showAction ? (
+        <ButtonLink to={href} variant="link" className="font-bold">
           {action}
-        </a>
-      ) : null}
+        </ButtonLink>
+      ) : null}{' '}
     </div>
   );
 }

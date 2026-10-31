@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ui/button';
 import { ArrowRight, CalendarDays } from 'lucide-react';
 
 const StayConnectedCTA = () => (
@@ -29,23 +30,17 @@ const StayConnectedCTA = () => (
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <a
-            className="group inline-flex items-center gap-2 rounded-full bg-sd-red px-6 py-3 text-sm font-bold text-white shadow-lg shadow-sd-red/25 transition-all hover:-translate-y-0.5 hover:bg-sd-red/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            href="#projects"
-          >
+          <ButtonLink href="#projects" variant="default" size="xl" className="group">
             Explore Projects
             <ArrowRight
               aria-hidden="true"
               className="size-4 transition-transform group-hover:translate-x-1"
             />
-          </a>
-          <a
-            className="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-white/5 px-6 py-3 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:border-sd-teal hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            href="#events"
-          >
+          </ButtonLink>
+          <ButtonLink href="#events" variant="glass" size="xl">
             <CalendarDays aria-hidden="true" className="size-4 text-sd-teal" />
             View Upcoming Events
-          </a>
+          </ButtonLink>
         </div>
         <div className="hidden border-s border-slate-700 ps-6 text-end font-mono text-[10px] leading-relaxed tracking-[0.3em] text-slate-400 lg:block">
           BUILD

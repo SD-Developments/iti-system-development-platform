@@ -1,4 +1,5 @@
 import { ChevronDown, Search, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { newsCategories } from '../data';
 
 const sortOptions = ['Latest', 'Most Popular', 'Oldest'];
@@ -21,15 +22,16 @@ const CategoryFilterBar = ({
         {newsCategories.map((category) => {
           const isActive = activeCategory === category;
           return (
-            <button
+            <Button
               key={category}
-              type="button"
+              size="sm"
+              variant={isActive ? 'default' : 'secondary'}
               aria-pressed={isActive}
               onClick={() => onCategoryChange(category)}
-              className={`${isActive ? 'bg-sd-red text-white shadow-sm' : 'bg-muted text-muted-foreground hover:bg-secondary2 hover:text-foreground'} whitespace-nowrap rounded-full px-3 py-1.5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sd-red`}
+              className="rounded-full"
             >
               {category}
-            </button>
+            </Button>
           );
         })}
       </div>
@@ -48,14 +50,15 @@ const CategoryFilterBar = ({
             className="w-full rounded-full border border-border bg-muted py-1.5 ps-9 pe-8 text-xs font-medium text-foreground placeholder:text-muted-foreground transition-colors hover:border-sd-red/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-sd-red/60 [&::-webkit-search-cancel-button]:appearance-none"
           />
           {search && (
-            <button
-              type="button"
+            <Button
+              variant="ghost"
+              size="icon-xs"
               aria-label="Clear search"
               onClick={() => onSearchChange('')}
-              className="absolute end-2.5 top-1/2 flex size-5 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary2 hover:text-foreground focus-visible:outline-2 focus-visible:outline-sd-red"
+              className="absolute end-2 top-1/2 size-5 -translate-y-1/2 rounded-full text-muted-foreground hover:translate-y-[-50%]"
             >
               <X aria-hidden="true" className="size-3.5" />
-            </button>
+            </Button>
           )}
         </div>
         <label className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">

@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ui/button';
 import { ArrowRight, Braces, Code2, GitCompareArrows } from 'lucide-react';
 import Metric from '../../../components/Metric';
 import hero1 from '../../../assets/images/hero/hero1.png';
@@ -39,21 +40,15 @@ function Hero() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="#track-explorer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-bold text-primary-foreground"
-                >
+                <ButtonLink href="#track-explorer" variant="default" size="xl">
                   Explore Tracks
                   <ArrowRight size={17} />
-                </a>
+                </ButtonLink>
 
-                <a
-                  href="#compare"
-                  className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 font-bold text-card-foreground"
-                >
+                <ButtonLink href="#compare" variant="outline" size="xl">
                   <GitCompareArrows size={17} className="text-accent" />
                   Compare Tracks
-                </a>
+                </ButtonLink>
               </div>
             </div>
 
