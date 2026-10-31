@@ -4,14 +4,13 @@ import { programs } from '@/features/home/data';
 import { tracks } from '@/features/tracks/data';
 import { Link } from 'react-router';
 import Month9Section from './Month9Section';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Month4Section from './Month4Section';
 // import { useGSAP } from '@gsap/react';
 // import gsap from 'gsap';
 import { useLenis } from '@/hooks/useLenis';
 
-function PathSection() {
-  const [showProgram, setShowProgram] = useState(null);
+function PathSection({ showProgram, setShowProgram }) {
   const containerRef = useRef(null);
   const smartVillageTracks = tracks
     .filter((track) => track.program === 'PTP' && track.branches?.includes('Smart Village'))

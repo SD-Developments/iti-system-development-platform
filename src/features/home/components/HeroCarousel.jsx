@@ -8,7 +8,7 @@ import hero2 from '../../../assets/images/hero/Requra.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-function HeroCarousel() {
+function HeroCarousel({ onOpenProgram }) {
   const [physicalSlide, setPhysicalSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true); // tab open?
   const [isInView, setIsInView] = useState(true); // scrolled into view?
@@ -131,7 +131,12 @@ function HeroCarousel() {
         <div ref={trackRef} className="w-full flex items-center">
           {extendedSlide.map((slide, idx) => (
             <div key={`${slide.id}-${idx}`} className="w-full shrink-0">
-              <SlideItem slide={slide} index={(idx % slideCount) + 1} total={slideCount} />
+              <SlideItem
+                slide={slide}
+                index={(idx % slideCount) + 1}
+                total={slideCount}
+                onOpenProgram={onOpenProgram}
+              />
             </div>
           ))}
         </div>
@@ -155,7 +160,7 @@ function HeroCarousel() {
   );
 }
 
-function SlideItem({ slide, total, index }) {
+function SlideItem({ slide, total, index, onOpenProgram }) {
   return (
     <>
       <div className="py-28 px-10 flex flex-col items-center lg:flex-row">
@@ -227,14 +232,14 @@ function SlideItem({ slide, total, index }) {
         </div>
 
         <div className="hero-stagger flex w-full items-center justify-center lg:w-1/2">
-          <HeroVisual type={slide.visual} />
+          <HeroVisual type={slide.visual} onOpenProgram={onOpenProgram} />
         </div>
       </div>
     </>
   );
 }
 
-function HeroVisual({ type }) {
+function HeroVisual({ type, onOpenProgram }) {
   if (type === 'programs') {
     return (
       <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2">
@@ -247,7 +252,11 @@ function HeroVisual({ type }) {
             Intensive professional development journey with multiple tracks and branches.
           </p>
 
-          <button className="mt-7 rounded-xl bg-accent px-5 py-3 font-bold text-accent-foreground">
+          <button
+            type="button"
+            onClick={() => onOpenProgram?.('PTP')}
+            className="mt-7 rounded-xl bg-accent px-5 py-3 font-bold text-accent-foreground"
+          >
             Explore PTP
           </button>
         </div>
@@ -263,7 +272,11 @@ function HeroVisual({ type }) {
             Focused accelerated learning journey for specialized technical paths.
           </p>
 
-          <button className="mt-7 rounded-xl bg-primary px-5 py-3 font-bold text-primary-foreground">
+          <button
+            type="button"
+            onClick={() => onOpenProgram?.('ITP')}
+            className="mt-7 rounded-xl bg-primary px-5 py-3 font-bold text-primary-foreground"
+          >
             Explore ITP
           </button>
         </div>

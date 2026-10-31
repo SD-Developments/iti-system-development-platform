@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import HeroCarousel from '../components/HeroCarousel';
 import PathSection from '../components/PathSection';
 import LifeSection from '../components/LifeSection';
@@ -35,12 +36,14 @@ const homeStructuredData = [
 ];
 
 function Home() {
+  const [showProgram, setShowProgram] = useState(null);
+
   return (
     <>
       <Seo {...PAGE_SEO.home} structuredData={homeStructuredData} />
       <main className="relative bg-background text-foreground">
-        <HeroCarousel />
-        <PathSection />
+        <HeroCarousel onOpenProgram={setShowProgram} />
+        <PathSection showProgram={showProgram} setShowProgram={setShowProgram} />
         <BranchHubsSection />
         <BuiltSection />
         <LifeSection />
