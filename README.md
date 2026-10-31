@@ -424,3 +424,12 @@ These must be resolved before launch. The JSON files use the value shown in the 
 - News images pointing at `googleusercontent.com` are `null` until department photos are supplied.
 - Project cover images were copied to `public/images/projects/` and are referenced as `/images/projects/<file>.jpg`.
 - Facts with unknown values (coordinates, contact details, team, year, intake dates, apply URL, logos) are `null`, never guessed.
+- Added ranches[].shortName T, programs[].bestFor T and the rackCategories taxonomy (labels for racks[].category), because the UI needs them.
+- Program contactHours now equals the min and max of its tracks (PTP 1,032–1,137 h, ITP 420–594 h). siteFacts and the pages read it, so the old "1,200+" and "500+" claims are gone.
+- Intake record is now ptp-intake-48 (upcoming, published); the current intake number is the highest intake number.
+-
+
+ews.pinned = true marks the announcements shown in the Announcements section. publishedAt is optional for workshops (they use event.startDate) and still missing for 2 announcements and 2 achievements.
+
+- All dynamic content is read through src/data/content.js; features build their UI shapes in their own data.js. Run
+  pm run validate:data after editing any JSON.
