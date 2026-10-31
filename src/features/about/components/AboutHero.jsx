@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import img from '../../../assets/images/hero/hero1.png';
 
 const AboutHero = () => {
@@ -23,26 +24,17 @@ const AboutHero = () => {
             {/* Metadata Indicators */}
             <div className="flex flex-wrap gap-2.5 pt-1">
               <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
-                <span className="material-symbols-outlined text-[11px] text-primary">
-                  history_edu
-                </span>{' '}
-                Since 1993
+                <Icon name="history_edu" className="text-[11px] text-primary" /> Since 1993
               </span>
               <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
-                <span className="material-symbols-outlined text-[15px] text-accent">
-                  workspace_premium
-                </span>{' '}
-                Professional Training Program
+                <Icon name="workspace_premium" className="text-[15px] text-accent" /> Professional
+                Training Program
               </span>
               <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
-                <span className="material-symbols-outlined text-[15px] text-primary">
-                  auto_awesome
-                </span>{' '}
-                AI Integration
+                <Icon name="auto_awesome" className="text-[15px] text-primary" /> AI Integration
               </span>
               <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
-                <span className="material-symbols-outlined text-[15px] text-accent">hub</span>{' '}
-                Blended Learning
+                <Icon name="hub" className="text-[15px] text-accent" /> Blended Learning
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-4 pt-3">
@@ -51,17 +43,16 @@ const AboutHero = () => {
                 href="#tracks"
               >
                 <span>Explore Academic Tracks</span>
-                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
-                  arrow_forward
-                </span>
+                <Icon
+                  name="arrow_forward"
+                  className="text-[18px] group-hover:translate-x-0.5 transition-transform"
+                />
               </a>
               <a
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-card border border-border text-foreground font-bold text-sm hover:bg-muted transition-all shadow-sm"
                 href="#faculty"
               >
-                <span className="material-symbols-outlined text-[18px] text-muted-foreground">
-                  group
-                </span>
+                <Icon name="group" className="text-[18px] text-muted-foreground" />
                 <span>Meet The Faculty</span>
               </a>
             </div>
@@ -77,7 +68,7 @@ const AboutHero = () => {
               <div className="absolute inset-0 bg-linear-to-t from-sd-navy/90 via-sd-navy/20 to-transparent"></div>
               {/* Handwritten Accent Overlay */}
               <div className="absolute top-5 left-6 bg-card/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg border border-white/50 -rotate-2">
-                <span className="font-handwriting text-2xl text-primary font-bold tracking-wide">
+                <span className="text-2xl text-primary font-bold tracking-wide">
                   Build • Learn • Grow
                 </span>
               </div>

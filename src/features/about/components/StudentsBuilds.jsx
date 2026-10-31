@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import about4 from '../../../assets/images/hero/hero1.png';
 
 const cards = [
@@ -104,7 +105,7 @@ const StudentsBuilds = () => {
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${a.iconBg}`}
                   >
-                    <span className="material-symbols-outlined text-2xl">{c.icon}</span>
+                    <Icon name={c.icon} className="text-2xl" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-2">

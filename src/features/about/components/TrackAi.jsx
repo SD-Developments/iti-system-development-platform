@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import about4 from '../../../assets/images/hero/hero1.png';
 
 const TrackAi = () => {
@@ -76,9 +77,7 @@ const TrackAi = () => {
                 className={`p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:border-${f.accent} transition-colors flex flex-col gap-2`}
               >
                 <div className="flex items-center gap-2">
-                  <span className={`material-symbols-outlined text-${f.accent} text-xl`}>
-                    {f.icon}
-                  </span>
+                  <Icon name={f.icon} className={`text-${f.accent} text-xl`} />
                   <h4 className="text-sm font-bold text-white">{f.title}</h4>
                 </div>
                 <p className="text-xs text-white/80 leading-relaxed">{f.desc}</p>

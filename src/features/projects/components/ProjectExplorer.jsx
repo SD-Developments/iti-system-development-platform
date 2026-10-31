@@ -98,7 +98,7 @@ const ProjectExplorer = () => {
               DIGITAL ENGINEERING GALLERY
             </div>
 
-            <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-sd-navy sm:text-4xl">
               Explore SD Projects
             </h2>
 

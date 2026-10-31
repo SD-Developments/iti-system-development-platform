@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 const ACCENTS = {
   red: {
     border: 'border-[#E03531]',
@@ -60,7 +61,7 @@ const TeamCard = ({ member }) => {
             ${accent.glow}
           `}
         >
-          <span className="material-symbols-outlined text-[18px]">{member.icon}</span>
+          <Icon name={member.icon} className="text-[18px]" />
         </span>
       </div>
 
@@ -100,7 +101,7 @@ const TeamCard = ({ member }) => {
               title="LinkedIn"
               className="text-muted-foreground transition hover:text-sd-teal"
             >
-              <span className="material-symbols-outlined">share</span>
+              <Icon name="share" />
             </a>
           )}
 
@@ -110,7 +111,7 @@ const TeamCard = ({ member }) => {
               title="GitHub"
               className="text-muted-foreground transition hover:text-sd-red"
             >
-              <span className="material-symbols-outlined">code</span>
+              <Icon name="code" />
             </a>
           )}
         </div>

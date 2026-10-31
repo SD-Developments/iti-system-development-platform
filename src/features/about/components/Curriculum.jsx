@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 const Curriculum = () => {
   return (
     <section className="w-full bg-muted py-20 border-b border-border">
@@ -22,9 +23,7 @@ const Curriculum = () => {
                 <span className="font-mono text-xs font-black px-2.5 py-1 rounded bg-primary/10 text-primary">
                   STAGE 01
                 </span>
-                <span className="material-symbols-outlined text-muted-foreground text-xl">
-                  code_blocks
-                </span>
+                <Icon name="code_blocks" className="text-muted-foreground text-xl" />
               </div>
               <h3 className="text-lg font-bold text-foreground">Programming Foundations</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -50,9 +49,7 @@ const Curriculum = () => {
                 <span className="font-mono text-xs font-black px-2.5 py-1 rounded bg-accent/15 text-accent">
                   STAGE 02
                 </span>
-                <span className="material-symbols-outlined text-muted-foreground text-xl">
-                  account_tree
-                </span>
+                <Icon name="account_tree" className="text-muted-foreground text-xl" />
               </div>
               <h3 className="text-lg font-bold text-foreground">Core Engineering</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -78,9 +75,7 @@ const Curriculum = () => {
                 <span className="font-mono text-xs font-black px-2.5 py-1 rounded bg-primary text-primary-foreground">
                   STAGE 03 • AI
                 </span>
-                <span className="material-symbols-outlined text-primary text-xl animate-pulse">
-                  auto_awesome
-                </span>
+                <Icon name="auto_awesome" className="text-primary text-xl animate-pulse" />
               </div>
               <h3 className="text-lg font-bold text-foreground">AI Integration</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -106,7 +101,7 @@ const Curriculum = () => {
                 <span className="font-mono text-xs font-black px-2.5 py-1 rounded bg-white/20 text-white">
                   STAGE 04
                 </span>
-                <span className="material-symbols-outlined text-accent text-xl">cloud_sync</span>
+                <Icon name="cloud_sync" className="text-accent text-xl" />
               </div>
               <h3 className="text-lg font-bold text-white">Production Experience</h3>
               <p className="text-xs text-white/80 leading-relaxed">

@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import { faqs } from '@/features/home/data';
 
 const FAQ = () => {
@@ -37,7 +38,7 @@ const FAQ = () => {
           <div className="mt-4 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-sd-bg-light p-6 sm:flex-row">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <span className="material-symbols-outlined text-[22px]">calendar_today</span>
+                <Icon name="calendar_today" className="text-[22px]" />
               </div>
 
               <div className="flex flex-col">

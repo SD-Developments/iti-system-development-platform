@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import { itpFacts, itpSprints, technicalLanes } from '@/features/home/data';
 import programsHero2 from '../../../assets/images/hero/hero1.png';
 
@@ -16,7 +17,7 @@ const Month4Section = () => {
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3 border-b border-border pb-6">
               <div className="inline-flex w-max items-center gap-2 rounded border border-accent/20 bg-accent/10 px-3 py-1">
-                <span className="material-symbols-outlined text-[15px] text-accent">bolt</span>
+                <Icon name="bolt" className="text-[15px] text-accent" />
 
                 <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-accent">
                   CHAPTER 02 // RAPID CAREER TRANSITION ACCELERATOR
@@ -69,7 +70,7 @@ const Month4Section = () => {
                       }
                     `}
                   >
-                    <span className="material-symbols-outlined text-[24px]">{fact.icon}</span>
+                    <Icon name={fact.icon} className="text-[24px]" />
                   </div>
 
                   <div className="flex flex-col">
@@ -104,7 +105,7 @@ const Month4Section = () => {
             <div className="flex flex-col justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-end">
               <div className="flex flex-col gap-2">
                 <div className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-accent">
-                  <span className="material-symbols-outlined text-[18px]">reorder</span>
+                  <Icon name="reorder" className="text-[18px]" />
                   CONTINUOUS HIGH-VELOCITY SPRINT PIPELINE
                 </div>
 
@@ -185,9 +186,7 @@ const Month4Section = () => {
             <div className="flex flex-col gap-4 lg:col-span-7">
               <div className="flex items-center justify-between border-b border-border pb-3">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[22px] text-accent">
-                    view_timeline
-                  </span>
+                  <Icon name="view_timeline" className="text-[22px] text-accent" />
 
                   <h3 className="font-heading text-xl font-bold text-foreground sm:text-2xl">
                     Technical Velocity Lanes
@@ -303,7 +302,7 @@ const Month4Section = () => {
                     >
                       <span>Syllabus</span>
 
-                      <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                      <Icon name="arrow_forward" className="text-[14px]" />
                     </a>
                   </div>
                 ))}
@@ -339,7 +338,7 @@ const Month4Section = () => {
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                      <span className="material-symbols-outlined text-[20px]">group</span>
+                      <Icon name="group" className="text-[20px]" />
                     </div>
 
                     <div className="flex flex-col">
@@ -375,9 +374,7 @@ const Month4Section = () => {
                   </div>
                 </div>
 
-                <span className="material-symbols-outlined text-[24px] text-accent">
-                  trending_up
-                </span>
+                <Icon name="trending_up" className="text-[24px] text-accent" />
               </div>
             </div>
           </div>
@@ -445,7 +442,7 @@ const Month4Section = () => {
             >
               <span>Apply for 4-Month</span>
 
-              <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+              <Icon name="arrow_forward" className="text-[16px]" />
             </a>
           </div>
         </div>

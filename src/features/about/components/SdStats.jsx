@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 const SdStats = () => {
   return (
     <section className="w-full bg-background py-16 border-b border-border">
@@ -9,7 +10,7 @@ const SdStats = () => {
               <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">
                 01 // SPECIALIZATION
               </span>
-              <span className="material-symbols-outlined text-primary text-2xl">stacks</span>
+              <Icon name="stacks" className="text-primary text-2xl" />
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-5xl font-black text-foreground tracking-tight">3</span>
@@ -28,7 +29,7 @@ const SdStats = () => {
               <span className="font-mono text-xs font-bold text-accent tracking-wider uppercase">
                 02 // CAPSTONE DEFENSE
               </span>
-              <span className="material-symbols-outlined text-accent text-2xl">timer</span>
+              <Icon name="timer" className="text-accent text-2xl" />
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-5xl font-black text-foreground tracking-tight">
@@ -49,7 +50,7 @@ const SdStats = () => {
               <span className="font-mono text-xs font-bold text-foreground tracking-wider uppercase">
                 03 // FORMAT
               </span>
-              <span className="material-symbols-outlined text-foreground text-2xl">school</span>
+              <Icon name="school" className="text-foreground text-2xl" />
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-5xl font-black text-foreground tracking-tight">75 / 25</span>
@@ -68,7 +69,7 @@ const SdStats = () => {
               <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">
                 04 // ADMISSIONS
               </span>
-              <span className="material-symbols-outlined text-primary text-2xl">verified</span>
+              <Icon name="verified" className="text-primary text-2xl" />
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-5xl font-black text-foreground tracking-tight">Good+</span>

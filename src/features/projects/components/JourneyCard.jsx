@@ -34,7 +34,7 @@ const JourneyCard = ({ stage }) => {
           </span>
         </div>
 
-        <h3 className={`mb-2 text-sm font-bold ${stage.active ? 'text-white' : 'text-navy'}`}>
+        <h3 className={`mb-2 text-sm font-bold ${stage.active ? 'text-white' : 'text-sd-navy'}`}>
           {stage.title}
         </h3>
 

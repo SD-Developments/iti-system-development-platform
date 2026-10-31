@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import { useState } from 'react';
 import { tracks } from '@/features/tracks/data';
 
@@ -525,9 +526,7 @@ const BranchHubsSection = () => {
                     </div>
 
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-sd-teal/10">
-                      <span className="material-symbols-outlined text-[19px] text-sd-teal">
-                        location_on
-                      </span>
+                      <Icon name="location_on" className="text-[19px] text-sd-teal" />
                     </div>
                   </div>
 
@@ -595,9 +594,7 @@ const BranchHubsSection = () => {
                       </div>
                     ) : (
                       <div className="rounded-xl border border-dashed border-white/10 bg-white/[0.025] px-4 py-6 text-center">
-                        <span className="material-symbols-outlined text-[24px] text-white/20">
-                          route
-                        </span>
+                        <Icon name="route" className="text-[24px] text-white/20" />
 
                         <p className="mt-2 text-xs font-semibold text-white/55">
                           Track information is not available yet for this branch.

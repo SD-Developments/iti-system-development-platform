@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import { useLenis } from '@/hooks/useLenis';
 import { X } from 'lucide-react';
 import { useEffect } from 'react';
@@ -126,7 +127,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                 rel="noopener noreferrer"
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-border bg-muted px-5 py-3 text-sm font-bold text-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
               >
-                <span className="material-symbols-outlined text-[20px]">code</span>
+                <Icon name="code" className="text-[20px]" />
                 GitHub
               </a>
             )}
@@ -138,7 +139,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                 rel="noopener noreferrer"
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition-colors hover:bg-accent"
               >
-                <span className="material-symbols-outlined text-[20px]">open_in_new</span>
+                <Icon name="open_in_new" className="text-[20px]" />
                 Live Demo
               </a>
             )}

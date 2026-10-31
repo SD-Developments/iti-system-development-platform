@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon';
 import { ArrowRight } from 'lucide-react';
 import aboutCtaImage from '../assets/images/hero/about_hero_section.png';
 
@@ -33,15 +34,16 @@ function AboutCta() {
             href="/tracks"
           >
             <span>Explore Academic Tracks</span>
-            <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">
-              arrow_forward
-            </span>
+            <Icon
+              name="arrow_forward"
+              className="text-[20px] group-hover:translate-x-1 transition-transform"
+            />
           </a>
           <a
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold text-sm hover:bg-white/20 transition-all shadow-md"
             href="/projects"
           >
-            <span className="material-symbols-outlined text-[20px] text-accent">code</span>
+            <Icon name="code" className="text-[20px] text-accent" />
             <span>View Student Projects</span>
           </a>
         </div>
