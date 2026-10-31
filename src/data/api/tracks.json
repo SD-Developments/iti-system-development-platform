@@ -1,0 +1,323 @@
+[
+  {
+    "id": "cross-platform-mobile-ai",
+    "category": "mobile",
+    "title": {
+      "en": "Cross-Platform Mobile Applications Development with AI Integration"
+    },
+    "shortTitle": {
+      "en": "Cross-Platform Mobile + AI"
+    },
+    "summary": {
+      "en": "Build cross-platform mobile applications with Flutter, React Native, and .NET MAUI, supported by full-stack development and Generative AI foundations."
+    },
+    "programId": "ptp",
+    "hours": 1137,
+    "projectHours": null,
+    "technologies": [
+      "Flutter",
+      "React Native",
+      ".NET MAUI",
+      "Firebase",
+      "React",
+      "Node.js",
+      "RAG",
+      "AI Agents"
+    ],
+    "jobProfiles": [
+      "Flutter Developer",
+      "React Native Developer",
+      "Full-Stack Web Developer",
+      "Generative AI Application Developer",
+      ".NET MAUI Developer"
+    ],
+    "branchIds": ["smart-village-hq"],
+    "icon": "smartphone",
+    "status": "published"
+  },
+  {
+    "id": "dotnet-enterprise-ai",
+    "category": "net-enterprise",
+    "title": {
+      "en": ".NET Enterprise Solutions Development & Architecture Foundations with AI Integration"
+    },
+    "shortTitle": {
+      "en": ".NET Enterprise + AI"
+    },
+    "summary": {
+      "en": "Design and build scalable enterprise applications with .NET, backend engineering, software architecture, cloud technologies, BI, CRM, and Generative AI."
+    },
+    "programId": "ptp",
+    "hours": 1032,
+    "projectHours": null,
+    "technologies": [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework",
+      "SQL Server",
+      "Microservices",
+      "Azure",
+      "Power BI",
+      "Dynamics 365",
+      "RAG",
+      "AI Agents"
+    ],
+    "jobProfiles": [
+      ".NET Full-Stack Developer",
+      "Enterprise Application Developer",
+      "Backend / Microservices Engineer",
+      "Generative AI Application Developer",
+      "Business Intelligence Developer"
+    ],
+    "branchIds": ["smart-village-hq", "alexandria-tech-campus", "ismailia-hub", "creativa-aswan"],
+    "icon": "workflow",
+    "status": "published"
+  },
+  {
+    "id": "fullstack-web-ui-ai",
+    "category": "web-ui",
+    "title": {
+      "en": "Full-Stack Web Development & UI Engineering with AI Integration"
+    },
+    "shortTitle": {
+      "en": "Full-Stack Web + UI + AI"
+    },
+    "summary": {
+      "en": "Build modern full-stack web applications and digital experiences using JavaScript and TypeScript frameworks, UI/UX engineering, DevOps, and Generative AI."
+    },
+    "programId": "ptp",
+    "hours": 1098,
+    "projectHours": null,
+    "technologies": [
+      "React",
+      "Angular",
+      "Vue",
+      "Next.js",
+      "Node.js",
+      "NestJS",
+      "UI/UX",
+      "Docker",
+      "Kubernetes",
+      "RAG",
+      "AI Agents"
+    ],
+    "jobProfiles": [
+      "Full-Stack JavaScript Developer",
+      "Frontend Developer",
+      "UI/UX Developer",
+      "Generative AI Application Developer"
+    ],
+    "branchIds": ["smart-village-hq", "ismailia-hub"],
+    "icon": "code-2",
+    "status": "published"
+  },
+  {
+    "id": "front-end-cross-platform-mobile-genai",
+    "category": "mobile-front-end",
+    "title": {
+      "en": "Front-End and Cross-Platform Mobile Development with Gen AI Integration"
+    },
+    "shortTitle": {
+      "en": "Front-End + Mobile + Gen AI"
+    },
+    "summary": {
+      "en": "Build responsive front-end applications and cross-platform mobile solutions using modern JavaScript, Flutter, Firebase, Next.js, and Generative AI technologies."
+    },
+    "programId": "itp",
+    "hours": 570,
+    "projectHours": 90,
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Next.js",
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "PWA",
+      "Material UI",
+      "Docker",
+      "Gen AI",
+      "RAG",
+      "AI Agents"
+    ],
+    "jobProfiles": [],
+    "branchIds": ["smart-village-hq"],
+    "icon": "smartphone",
+    "status": "published"
+  },
+  {
+    "id": "fullstack-dotnet-genai",
+    "category": "net-full-stack",
+    "title": {
+      "en": "Full-Stack Web & Generative AI Development using .NET"
+    },
+    "shortTitle": {
+      "en": ".NET Full Stack + Gen AI"
+    },
+    "summary": {
+      "en": "Develop full-stack web applications using C#, ASP.NET Core, SQL Server, Entity Framework, frontend technologies, Docker, and Generative AI."
+    },
+    "programId": "itp",
+    "hours": 594,
+    "projectHours": 90,
+    "technologies": [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework",
+      "SQL Server",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Docker",
+      "Design Patterns",
+      "Gen AI",
+      "RAG",
+      "AI Agents"
+    ],
+    "jobProfiles": [],
+    "branchIds": ["smart-village-hq"],
+    "icon": "workflow",
+    "status": "published"
+  },
+  {
+    "id": "fullstack-mearn-genai",
+    "category": "web-full-stack",
+    "title": {
+      "en": "Full-Stack Web & Generative AI Development using MEARN"
+    },
+    "shortTitle": {
+      "en": "MEARN Full Stack + Gen AI"
+    },
+    "summary": {
+      "en": "Build modern JavaScript full-stack applications using Angular, React, Next.js, NestJS, GraphQL, and Generative AI development techniques."
+    },
+    "programId": "itp",
+    "hours": 570,
+    "projectHours": 90,
+    "technologies": [
+      "JavaScript",
+      "Angular",
+      "React",
+      "Next.js",
+      "NestJS",
+      "GraphQL",
+      "Material UI",
+      "HTML5",
+      "CSS3",
+      "Docker",
+      "Gen AI",
+      "RAG",
+      "AI Agents"
+    ],
+    "jobProfiles": [],
+    "branchIds": ["smart-village-hq"],
+    "icon": "code-2",
+    "status": "published"
+  },
+  {
+    "id": "power-bi-developer",
+    "category": "data-bi",
+    "title": {
+      "en": "Power BI Developer"
+    },
+    "shortTitle": {
+      "en": "Power BI Developer"
+    },
+    "summary": {
+      "en": "Develop business intelligence and analytics solutions using SQL Server, data warehousing, data modeling, Power BI, DAX, Tableau, and supporting data technologies."
+    },
+    "programId": "itp",
+    "hours": 456,
+    "projectHours": 60,
+    "technologies": [
+      "Power BI",
+      "DAX",
+      "SQL Server",
+      "Data Warehousing",
+      "Data Modeling",
+      "Excel",
+      "Tableau",
+      "Python",
+      "NoSQL",
+      "Big Data",
+      "Data Mining"
+    ],
+    "jobProfiles": [],
+    "branchIds": [],
+    "icon": "database",
+    "status": "published"
+  },
+  {
+    "id": "software-fundamentals",
+    "category": "software-fundamentals",
+    "title": {
+      "en": "Software Fundamentals"
+    },
+    "shortTitle": {
+      "en": "Software Fundamentals"
+    },
+    "summary": {
+      "en": "Build a broad software engineering foundation covering programming, operating systems, databases, networks, algorithms, object-oriented programming, web technologies, testing, and secure development."
+    },
+    "programId": "itp",
+    "hours": 420,
+    "projectHours": 60,
+    "technologies": [
+      "C",
+      "C++",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "OOP",
+      "Data Structures",
+      "Algorithms",
+      "Databases",
+      "Linux",
+      "Windows",
+      "Networks",
+      "Docker"
+    ],
+    "jobProfiles": [],
+    "branchIds": [],
+    "icon": "terminal",
+    "status": "published"
+  },
+  {
+    "id": "uiux-developer-genai",
+    "category": "ui-ux",
+    "title": {
+      "en": "UI/UX Developer with GenAI Integration"
+    },
+    "shortTitle": {
+      "en": "UI/UX + Gen AI"
+    },
+    "summary": {
+      "en": "Design and prototype digital experiences while building practical front-end skills, combining UI/UX methods, responsive web development, JavaScript, TypeScript, and Generative AI."
+    },
+    "programId": "itp",
+    "hours": 540,
+    "projectHours": 90,
+    "technologies": [
+      "UI/UX",
+      "Wireframing",
+      "Design Thinking",
+      "Visual Design",
+      "Prototyping",
+      "Photoshop",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Bootstrap",
+      "Gen AI",
+      "RAG",
+      "AI Agents"
+    ],
+    "jobProfiles": [],
+    "branchIds": [],
+    "icon": "palette",
+    "status": "published"
+  }
+]

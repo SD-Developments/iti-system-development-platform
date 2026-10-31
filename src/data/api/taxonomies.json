@@ -1,0 +1,73 @@
+{
+  "projectDomains": [
+    {
+      "id": "web-ui",
+      "label": {
+        "en": "Web & UI"
+      }
+    },
+    {
+      "id": "ui-ux",
+      "label": {
+        "en": "UI & UX Design"
+      }
+    },
+    {
+      "id": "mobile",
+      "label": {
+        "en": "Mobile & Cross-Platform"
+      }
+    },
+    {
+      "id": "healthcare",
+      "label": {
+        "en": "Healthcare Tech"
+      }
+    },
+    {
+      "id": "ai-ml",
+      "label": {
+        "en": "AI & Machine Learning"
+      }
+    }
+  ],
+  "regions": [
+    {
+      "id": "cairo",
+      "label": {
+        "en": "Greater Cairo & Capital"
+      },
+      "description": {
+        "en": "Central command for cloud architecture, fintech, and distributed enterprise engineering."
+      }
+    },
+    {
+      "id": "alex",
+      "label": {
+        "en": "Mediterranean Coast"
+      },
+      "description": {
+        "en": "Automotive embedded systems, coastal software exports, and academic bridging studios."
+      }
+    },
+    {
+      "id": "delta",
+      "label": {
+        "en": "Nile Delta Belt"
+      },
+      "description": {
+        "en": "Industrial hardware engineering legacy, high-volume backend talent, and mobile frameworks."
+      }
+    },
+    {
+      "id": "upper",
+      "label": {
+        "en": "Upper Egypt & Canal"
+      },
+      "description": {
+        "en": "High-density remote talent corridor spanning Assiut, Aswan, Ismailia, Minya, Sohag & Qena."
+      }
+    }
+  ],
+  "newsTypes": ["news", "event", "workshop", "achievement", "announcement", "student-activity"]
+}

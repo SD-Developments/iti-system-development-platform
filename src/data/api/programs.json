@@ -1,0 +1,251 @@
+[
+  {
+    "id": "ptp",
+    "code": "PTP",
+    "name": {
+      "en": "Professional Training Program"
+    },
+    "kind": "diploma",
+    "tagline": {
+      "en": "Professional Software Diploma"
+    },
+    "summary": {
+      "en": "An intensive development journey combining technical foundations, specialization, teamwork, and real graduation projects."
+    },
+    "duration": {
+      "min": 9,
+      "max": 9,
+      "unit": "months"
+    },
+    "contactHours": {
+      "min": 1200,
+      "max": null
+    },
+    "schedule": {
+      "en": "Mon–Fri, 8:30–16:30"
+    },
+    "academicCycle": {
+      "en": "October – June"
+    },
+    "cohortsPerYear": null,
+    "targetAudience": {
+      "en": "STEM university graduates (less than 5 years post-graduation)"
+    },
+    "capstone": {
+      "en": "Enterprise production MVP with CTO jury defense"
+    },
+    "careerOutcome": {
+      "en": "Senior-ready junior"
+    },
+    "cost": {
+      "type": "free",
+      "note": {
+        "en": "Fully funded by MCIT"
+      }
+    },
+    "phases": [
+      {
+        "order": 1,
+        "title": {
+          "en": "Foundations"
+        },
+        "period": {
+          "en": "MONTHS 01–03"
+        },
+        "summary": {
+          "en": "Master low-level architectural paradigms, memory management, algorithmic design, and rigorous data modeling standards."
+        },
+        "topics": [
+          "Algorithms & OOP",
+          "Data Structures",
+          "Memory Management",
+          "Design Patterns",
+          "Relational Modeling"
+        ]
+      },
+      {
+        "order": 2,
+        "title": {
+          "en": "Specialization"
+        },
+        "period": {
+          "en": "MONTHS 04–06"
+        },
+        "summary": {
+          "en": "Transition into target industrial tracks with high-throughput cloud stacks, microservices architecture, and modern distributed pipelines."
+        },
+        "topics": ["Enterprise Stacks", "Microservices", "Cloud Native", "DevOps", "CI/CD"]
+      },
+      {
+        "order": 3,
+        "title": {
+          "en": "Capstone"
+        },
+        "period": {
+          "en": "MONTHS 07–09"
+        },
+        "summary": {
+          "en": "Full-scale engineering delivery under production SLAs, enterprise practices, and rigorous technical CTO panel jury reviews."
+        },
+        "topics": ["8-Week Industry MVP", "Live Defense", "Production SLAs", "Enterprise Practices"]
+      }
+    ],
+    "trackIds": ["cross-platform-mobile-ai", "dotnet-enterprise-ai", "fullstack-web-ui-ai"],
+    "brochureUrl": null,
+    "status": "published"
+  },
+  {
+    "id": "itp",
+    "code": "ITP",
+    "name": {
+      "en": "Intensive Training Program"
+    },
+    "kind": "accelerator",
+    "tagline": {
+      "en": "4-Month Accelerator"
+    },
+    "summary": {
+      "en": "A focused, accelerated program designed around specialized technical skills and practical software development."
+    },
+    "duration": {
+      "min": 4,
+      "max": 4,
+      "unit": "months"
+    },
+    "contactHours": {
+      "min": 500,
+      "max": null
+    },
+    "schedule": {
+      "en": "Hybrid sprints"
+    },
+    "academicCycle": null,
+    "cohortsPerYear": 3,
+    "targetAudience": {
+      "en": "Graduates pivoting to specialized stacks"
+    },
+    "capstone": {
+      "en": "Production sprint deployment (CI/CD)"
+    },
+    "careerOutcome": {
+      "en": "Direct role specialist"
+    },
+    "cost": {
+      "type": "free",
+      "note": {
+        "en": "Funded by MCIT"
+      }
+    },
+    "phases": [
+      {
+        "order": 1,
+        "title": {
+          "en": "Fast-Track Fundamentals"
+        },
+        "period": {
+          "en": "Weeks 1–4"
+        },
+        "summary": {
+          "en": "Core language paradigms, algorithmic syntax, clean OOP structures, and branch management hygiene."
+        },
+        "topics": []
+      },
+      {
+        "order": 2,
+        "title": {
+          "en": "Stack Immersion"
+        },
+        "period": {
+          "en": "Weeks 5–8"
+        },
+        "summary": {
+          "en": "Enterprise frameworks, async event processing, relational/NoSQL state handling, and RESTful APIs."
+        },
+        "topics": []
+      },
+      {
+        "order": 3,
+        "title": {
+          "en": "Agile Team Sprints"
+        },
+        "period": {
+          "en": "Weeks 9–12"
+        },
+        "summary": {
+          "en": "Multi-developer full-stack delivery sprints with automated unit test suites, Docker containers, and CI pipelines."
+        },
+        "topics": []
+      },
+      {
+        "order": 4,
+        "title": {
+          "en": "Deployment & Hiring"
+        },
+        "period": {
+          "en": "Weeks 13–16"
+        },
+        "summary": {
+          "en": "Live technical portfolio defense, system design mock interviews, and interviews with hiring partners."
+        },
+        "topics": []
+      }
+    ],
+    "trackIds": [
+      "front-end-cross-platform-mobile-genai",
+      "fullstack-dotnet-genai",
+      "fullstack-mearn-genai",
+      "power-bi-developer",
+      "software-fundamentals",
+      "uiux-developer-genai"
+    ],
+    "brochureUrl": null,
+    "status": "published"
+  },
+  {
+    "id": "summer",
+    "code": "SUMMER",
+    "name": {
+      "en": "Summer Tech Academies"
+    },
+    "kind": "summer",
+    "tagline": {
+      "en": "Pre-graduation camps"
+    },
+    "summary": {
+      "en": "Foundational industry workshops and clean code coaching for undergraduate talent."
+    },
+    "duration": {
+      "min": 4,
+      "max": 8,
+      "unit": "weeks"
+    },
+    "contactHours": {
+      "min": 120,
+      "max": 180
+    },
+    "schedule": {
+      "en": "July – August"
+    },
+    "academicCycle": null,
+    "cohortsPerYear": 1,
+    "targetAudience": {
+      "en": "Active university undergraduates (years 2–4)"
+    },
+    "capstone": {
+      "en": "Summer hackathon showcase and repository"
+    },
+    "careerOutcome": {
+      "en": "Diploma fast-track"
+    },
+    "cost": {
+      "type": "free",
+      "note": {
+        "en": "Sponsored by MCIT fellowship grant"
+      }
+    },
+    "phases": [],
+    "trackIds": [],
+    "brochureUrl": null,
+    "status": "published"
+  }
+]

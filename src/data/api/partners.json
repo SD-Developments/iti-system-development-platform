@@ -1,0 +1,58 @@
+[
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "type": "industry",
+    "logo": null,
+    "url": null,
+    "status": "published"
+  },
+  {
+    "id": "valeo",
+    "name": "Valeo",
+    "type": "industry",
+    "logo": null,
+    "url": null,
+    "status": "published"
+  },
+  {
+    "id": "dell-tech",
+    "name": "Dell Tech",
+    "type": "industry",
+    "logo": null,
+    "url": null,
+    "status": "published"
+  },
+  {
+    "id": "fawry",
+    "name": "Fawry",
+    "type": "industry",
+    "logo": null,
+    "url": null,
+    "status": "published"
+  },
+  {
+    "id": "vodafone",
+    "name": "Vodafone",
+    "type": "industry",
+    "logo": null,
+    "url": null,
+    "status": "published"
+  },
+  {
+    "id": "instabug",
+    "name": "Instabug",
+    "type": "industry",
+    "logo": null,
+    "url": null,
+    "status": "published"
+  },
+  {
+    "id": "ibm",
+    "name": "IBM",
+    "type": "industry",
+    "logo": null,
+    "url": null,
+    "status": "published"
+  }
+]

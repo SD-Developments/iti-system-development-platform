@@ -1,0 +1,312 @@
+[
+  {
+    "id": "smart-village-hq",
+    "code": "HUB-01",
+    "name": {
+      "en": "Smart Village HQ Software Studio"
+    },
+    "region": "cairo",
+    "city": "Giza",
+    "address": {
+      "en": "KM 28 Cairo-Alex Desert Road, Smart Village, Giza"
+    },
+    "description": {
+      "en": "Flagship engineering environment for enterprise architecture & distributed systems. Houses 14 specialized software tracks, principal architects, and corporate tech defense stages."
+    },
+    "coordinates": null,
+    "isFlagship": true,
+    "labs": 14,
+    "seats": 850,
+    "focus": [".NET Cloud", "Distributed Go", "AI Systems"],
+    "programIds": ["ptp", "itp"],
+    "trackIds": [
+      "cross-platform-mobile-ai",
+      "dotnet-enterprise-ai",
+      "fullstack-web-ui-ai",
+      "front-end-cross-platform-mobile-genai",
+      "fullstack-dotnet-genai",
+      "fullstack-mearn-genai"
+    ],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "creativa-new-capital",
+    "code": "HUB-02",
+    "name": {
+      "en": "Creativa New Administrative Capital"
+    },
+    "region": "cairo",
+    "city": "New Capital",
+    "address": {
+      "en": "Knowledge City Tech District"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 4,
+    "seats": 400,
+    "focus": ["FinTech", "Microservices", "RegTech"],
+    "programIds": [],
+    "trackIds": [],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "alexandria-tech-campus",
+    "code": "HUB-03",
+    "name": {
+      "en": "Alexandria Tech Campus"
+    },
+    "region": "alex",
+    "city": "Alexandria",
+    "address": {
+      "en": "Borg El-Arab Tech Park & Sultan Hussein, Alexandria"
+    },
+    "description": {
+      "en": "Regional hub connecting students with automotive embedded systems, web architectures, and maritime logistics tech. Directly aligned with European off-shoring partners."
+    },
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 9,
+    "seats": 480,
+    "focus": ["AUTOSAR Linux", "Next.js / Node", "Maritime SW"],
+    "programIds": ["ptp"],
+    "trackIds": ["dotnet-enterprise-ai"],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "alexandria-univ-creativa-node",
+    "code": "NODE-ALX",
+    "name": {
+      "en": "Alexandria Univ Creativa Node"
+    },
+    "region": "alex",
+    "city": "Alexandria Univ",
+    "address": {
+      "en": "Faculty of Engineering Campus"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 2,
+    "seats": 120,
+    "focus": ["Undergrad Bridge", "Open Source"],
+    "programIds": [],
+    "trackIds": [],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "mansoura-university-hub",
+    "code": "HUB-04",
+    "name": {
+      "en": "Mansoura University Hub"
+    },
+    "region": "delta",
+    "city": "Dakahlia",
+    "address": {
+      "en": "Mansoura University Tech Park"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 4,
+    "seats": 310,
+    "focus": ["ASP.NET Core", "Database Tuning", "DevOps"],
+    "programIds": [],
+    "trackIds": [],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "menofia-tech-center",
+    "code": "HUB-05",
+    "name": {
+      "en": "Menofia Tech Center"
+    },
+    "region": "delta",
+    "city": "Menoufia",
+    "address": {
+      "en": "Menouf Faculty of Electronic Engineering"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 3,
+    "seats": 220,
+    "focus": ["Embedded Linux", "C++ Core", "Kernel Dev"],
+    "programIds": [],
+    "trackIds": [],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "tanta-creativa-hub",
+    "code": "HUB-10",
+    "name": {
+      "en": "Tanta Creativa Hub"
+    },
+    "region": "delta",
+    "city": "Gharbia",
+    "address": {
+      "en": "Tanta University Campus"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 2,
+    "seats": 150,
+    "focus": ["Cross-Platform Mobile", "Flutter", "React.js"],
+    "programIds": [],
+    "trackIds": [],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "assiut-tech-zone",
+    "code": "HUB-07",
+    "name": {
+      "en": "Assiut Tech Zone"
+    },
+    "region": "upper",
+    "city": "Assiut",
+    "address": {
+      "en": "New Assiut Technology Park, Upper Egypt"
+    },
+    "description": {
+      "en": "Powerhouse of high-density algorithmic talent, cloud backends, and open-source systems serving national tier-1 enterprises and high-velocity remote engineering teams."
+    },
+    "coordinates": null,
+    "isFlagship": true,
+    "labs": 5,
+    "seats": 420,
+    "focus": ["Cloud DevOps", "Python Web", "Slurm Compute"],
+    "programIds": [],
+    "trackIds": [],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "creativa-aswan",
+    "code": "HUB-11",
+    "name": {
+      "en": "Creativa Aswan"
+    },
+    "region": "upper",
+    "city": "Aswan",
+    "address": {
+      "en": "Aswan University Sahari Campus"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 3,
+    "seats": 210,
+    "focus": ["Full Stack JS", "African FinTech", "IoT Tech"],
+    "programIds": ["ptp"],
+    "trackIds": ["dotnet-enterprise-ai"],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "ismailia-hub",
+    "code": "HUB-06",
+    "name": {
+      "en": "Ismailia Hub (Suez Canal)"
+    },
+    "region": "upper",
+    "city": "Suez Canal",
+    "address": {
+      "en": "Suez Canal University Campus"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 3,
+    "seats": 260,
+    "focus": ["Maritime Systems", "Supply Chain APIs", "Cyber Security"],
+    "programIds": ["ptp"],
+    "trackIds": ["dotnet-enterprise-ai", "fullstack-web-ui-ai"],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  },
+  {
+    "id": "minya-sohag-qena-hubs",
+    "code": "HUB-08/09/12",
+    "name": {
+      "en": "Minya, Sohag & Qena Hubs"
+    },
+    "region": "upper",
+    "city": "Mid-Upper Egypt",
+    "address": {
+      "en": "Minya Univ, New Sohag Tech & South Valley Qena"
+    },
+    "description": null,
+    "coordinates": null,
+    "isFlagship": false,
+    "labs": 6,
+    "seats": 430,
+    "focus": ["Full Stack .NET", "Android Kotlin", "Python Automation"],
+    "programIds": [],
+    "trackIds": [],
+    "image": null,
+    "contact": {
+      "email": null,
+      "phone": null,
+      "mapUrl": null
+    },
+    "status": "published"
+  }
+]

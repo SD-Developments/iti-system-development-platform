@@ -1,0 +1,406 @@
+[
+  {
+    "id": "welcome-to-intake-48",
+    "slug": "welcome-to-intake-48",
+    "type": "news",
+    "title": {
+      "en": "Welcome to Intake 48"
+    },
+    "summary": {
+      "en": "A new generation of software developers begins their journey at SD."
+    },
+    "body": null,
+    "publishedAt": "2026-09-10",
+    "event": null,
+    "tags": [],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "building-ai-powered-web-applications",
+    "slug": "building-ai-powered-web-applications",
+    "type": "workshop",
+    "title": {
+      "en": "Building AI-Powered Web Applications"
+    },
+    "summary": {
+      "en": "React × Node.js × RAG hands-on workshop session."
+    },
+    "body": null,
+    "publishedAt": "2026-09-08",
+    "event": null,
+    "tags": [],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "sd-students-at-techstars-hackathon",
+    "slug": "sd-students-at-techstars-hackathon",
+    "type": "student-activity",
+    "title": {
+      "en": "SD Students at Techstars Hackathon"
+    },
+    "summary": {
+      "en": "Innovative ideas. Real impact."
+    },
+    "body": null,
+    "publishedAt": "2026-08-28",
+    "event": null,
+    "tags": [],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "sd-team-wins-1st-place",
+    "slug": "sd-team-wins-1st-place",
+    "type": "achievement",
+    "title": {
+      "en": "SD Team Wins 1st Place"
+    },
+    "summary": {
+      "en": "Congratulations to our students for winning the AI Innovation Challenge."
+    },
+    "body": null,
+    "publishedAt": "2026-08-20",
+    "event": null,
+    "tags": [],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "registration-for-fall-workshops-is-open",
+    "slug": "registration-for-fall-workshops-is-open",
+    "type": "announcement",
+    "title": {
+      "en": "Registration for Fall Workshops is Open"
+    },
+    "summary": {
+      "en": "Join our upcoming technical sessions."
+    },
+    "body": null,
+    "publishedAt": "2026-08-15",
+    "event": null,
+    "tags": [],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "sd-career-day",
+    "slug": "sd-career-day",
+    "type": "event",
+    "title": {
+      "en": "SD Career Day"
+    },
+    "summary": {
+      "en": "Meet industry experts and explore career opportunities at SD."
+    },
+    "body": null,
+    "publishedAt": "2026-09-10",
+    "event": {
+      "startDate": "2026-09-28",
+      "endDate": null,
+      "location": "Smart Village, Cairo",
+      "format": "in-person",
+      "level": null,
+      "durationHours": null,
+      "registerUrl": null
+    },
+    "tags": ["career"],
+    "branchId": null,
+    "image": null,
+    "featured": true,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "project-showcase",
+    "slug": "project-showcase",
+    "type": "event",
+    "title": {
+      "en": "Project Showcase"
+    },
+    "summary": {
+      "en": "Students present their capstone projects."
+    },
+    "body": null,
+    "publishedAt": "2026-09-16",
+    "event": {
+      "startDate": "2026-10-03",
+      "endDate": null,
+      "location": "SD Headquarters",
+      "format": "in-person",
+      "level": null,
+      "durationHours": null,
+      "registerUrl": null
+    },
+    "tags": ["presentation"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "cloud-and-devops-workshop",
+    "slug": "cloud-and-devops-workshop",
+    "type": "event",
+    "title": {
+      "en": "Cloud & DevOps Workshop"
+    },
+    "summary": {
+      "en": "Online hands-on cloud session with real-world labs."
+    },
+    "body": null,
+    "publishedAt": "2026-09-20",
+    "event": {
+      "startDate": "2026-10-15",
+      "endDate": null,
+      "location": null,
+      "format": "online",
+      "level": null,
+      "durationHours": null,
+      "registerUrl": null
+    },
+    "tags": ["workshop"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "alumni-panel",
+    "slug": "alumni-panel",
+    "type": "event",
+    "title": {
+      "en": "Alumni Panel"
+    },
+    "summary": {
+      "en": "Career stories and insights from SD alumni."
+    },
+    "body": null,
+    "publishedAt": "2026-08-26",
+    "event": {
+      "startDate": "2026-10-24",
+      "endDate": null,
+      "location": "Smart Village, Cairo",
+      "format": "in-person",
+      "level": null,
+      "durationHours": null,
+      "registerUrl": null
+    },
+    "tags": ["talk"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "git-and-github-for-teams",
+    "slug": "git-and-github-for-teams",
+    "type": "workshop",
+    "title": {
+      "en": "Git & GitHub for Teams"
+    },
+    "summary": {
+      "en": "Best practices for collaborative development."
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": {
+      "startDate": "2026-09-16",
+      "endDate": null,
+      "location": null,
+      "format": null,
+      "level": "beginner",
+      "durationHours": 2,
+      "registerUrl": null
+    },
+    "tags": ["workshop"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "system-design-basics",
+    "slug": "system-design-basics",
+    "type": "workshop",
+    "title": {
+      "en": "System Design Basics"
+    },
+    "summary": {
+      "en": "Learn how to design scalable systems."
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": {
+      "startDate": "2026-09-22",
+      "endDate": null,
+      "location": null,
+      "format": null,
+      "level": "intermediate",
+      "durationHours": 2,
+      "registerUrl": null
+    },
+    "tags": ["technical-talk"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "mobile-development-with-flutter",
+    "slug": "mobile-development-with-flutter",
+    "type": "workshop",
+    "title": {
+      "en": "Mobile Development with Flutter"
+    },
+    "summary": {
+      "en": "Build cross-platform apps with clean architecture."
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": {
+      "startDate": "2026-09-26",
+      "endDate": null,
+      "location": null,
+      "format": null,
+      "level": "intermediate",
+      "durationHours": 3,
+      "registerUrl": null
+    },
+    "tags": ["workshop"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "preparing-for-technical-interviews",
+    "slug": "preparing-for-technical-interviews",
+    "type": "workshop",
+    "title": {
+      "en": "Preparing for Technical Interviews"
+    },
+    "summary": {
+      "en": "Tips, practice, and real examples from tech leads."
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": {
+      "startDate": "2026-10-05",
+      "endDate": null,
+      "location": null,
+      "format": null,
+      "level": "all-levels",
+      "durationHours": 2,
+      "registerUrl": null
+    },
+    "tags": ["career-session"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "intake-48-orientation-schedule",
+    "slug": "intake-48-orientation-schedule",
+    "type": "announcement",
+    "title": {
+      "en": "Intake 48 Orientation Schedule"
+    },
+    "summary": {
+      "en": "September 21, 2026"
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": null,
+    "tags": ["new"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "registration-for-ai-workshop-is-now-open",
+    "slug": "registration-for-ai-workshop-is-now-open",
+    "type": "announcement",
+    "title": {
+      "en": "Registration for AI Workshop is Now Open"
+    },
+    "summary": {
+      "en": "Limited seats available."
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": null,
+    "tags": ["important"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "sd-students-complete-google-cloud-certifications",
+    "slug": "sd-students-complete-google-cloud-certifications",
+    "type": "achievement",
+    "title": {
+      "en": "SD students complete Google Cloud certifications"
+    },
+    "summary": {
+      "en": "SD students complete Google Cloud certifications."
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": null,
+    "tags": ["certification"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  },
+  {
+    "id": "our-team-reaches-the-finals-in-egypt-tech-challenge",
+    "slug": "our-team-reaches-the-finals-in-egypt-tech-challenge",
+    "type": "achievement",
+    "title": {
+      "en": "Our team reaches the finals in Egypt Tech Challenge"
+    },
+    "summary": {
+      "en": "Our team reaches the finals in Egypt Tech Challenge."
+    },
+    "body": null,
+    "publishedAt": null,
+    "event": null,
+    "tags": ["competition"],
+    "branchId": null,
+    "image": null,
+    "featured": false,
+    "pinned": false,
+    "status": "published"
+  }
+]
