@@ -5,6 +5,9 @@
     "name": {
       "en": "Smart Village HQ Software Studio"
     },
+    "shortName": {
+      "en": "Smart Village"
+    },
     "region": "cairo",
     "city": "Giza",
     "address": {
@@ -41,6 +44,9 @@
     "name": {
       "en": "Creativa New Administrative Capital"
     },
+    "shortName": {
+      "en": "New Capital"
+    },
     "region": "cairo",
     "city": "New Capital",
     "address": {
@@ -67,6 +73,9 @@
     "code": "HUB-03",
     "name": {
       "en": "Alexandria Tech Campus"
+    },
+    "shortName": {
+      "en": "Alexandria"
     },
     "region": "alex",
     "city": "Alexandria",
@@ -97,6 +106,9 @@
     "name": {
       "en": "Alexandria Univ Creativa Node"
     },
+    "shortName": {
+      "en": "Alex Univ"
+    },
     "region": "alex",
     "city": "Alexandria Univ",
     "address": {
@@ -123,6 +135,9 @@
     "code": "HUB-04",
     "name": {
       "en": "Mansoura University Hub"
+    },
+    "shortName": {
+      "en": "Mansoura"
     },
     "region": "delta",
     "city": "Dakahlia",
@@ -151,6 +166,9 @@
     "name": {
       "en": "Menofia Tech Center"
     },
+    "shortName": {
+      "en": "Menofia"
+    },
     "region": "delta",
     "city": "Menoufia",
     "address": {
@@ -178,6 +196,9 @@
     "name": {
       "en": "Tanta Creativa Hub"
     },
+    "shortName": {
+      "en": "Tanta"
+    },
     "region": "delta",
     "city": "Gharbia",
     "address": {
@@ -204,6 +225,9 @@
     "code": "HUB-07",
     "name": {
       "en": "Assiut Tech Zone"
+    },
+    "shortName": {
+      "en": "Assiut"
     },
     "region": "upper",
     "city": "Assiut",
@@ -234,6 +258,9 @@
     "name": {
       "en": "Creativa Aswan"
     },
+    "shortName": {
+      "en": "Aswan"
+    },
     "region": "upper",
     "city": "Aswan",
     "address": {
@@ -261,6 +288,9 @@
     "name": {
       "en": "Ismailia Hub (Suez Canal)"
     },
+    "shortName": {
+      "en": "Suez Canal"
+    },
     "region": "upper",
     "city": "Suez Canal",
     "address": {
@@ -287,6 +317,9 @@
     "code": "HUB-08/09/12",
     "name": {
       "en": "Minya, Sohag & Qena Hubs"
+    },
+    "shortName": {
+      "en": "Minya, Sohag & Qena"
     },
     "region": "upper",
     "city": "Mid-Upper Egypt",

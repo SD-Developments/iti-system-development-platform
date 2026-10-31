@@ -27,39 +27,13 @@ function PathSection({ showProgram, setShowProgram }) {
       start();
     };
   }, [showProgram, stop, start]);
-  // useGSAP(
-  //   () => {
-  //     if (!containerRef.current) return;
 
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: containerRef.current,
-  //         start: 'top 70%',
-  //         end: 'top 35%',
-  //         scrub: 0.4,
-  //       },
-  //     });
-  //     tl.fromTo(
-  //       '.leftprogram',
-  //       { x: -100, autoAlpha: 0 },
-  //       { x: 0, autoAlpha: 1, ease: 'none' }
-  //     ).fromTo(
-  //       '.rightprogram',
-  //       { x: 100, autoAlpha: 0 },
-  //       { x: 0, autoAlpha: 1, ease: 'none' },
-  //       '<+=0.15'
-  //     );
-  //   },
-  //   {
-  //     scope: containerRef,
-  //   }
-  // );
   return (
     <section ref={containerRef} className="relative overflow-hidden bg-sd-bg-light py-16 lg:py-24">
       {/* Background */}
-      <div className="pointer-events-none absolute -start-40 top-24 h-96 w-96 rounded-full bg-accent/5 blur-[110px]" />
+      <div className="pointer-events-none absolute -inset-s-40 top-24 h-96 w-96 rounded-full bg-accent/5 blur-[110px]" />
 
-      <div className="pointer-events-none absolute -end-40 bottom-0 h-96 w-96 rounded-full bg-primary/5 blur-[110px]" />
+      <div className="pointer-events-none absolute -inset-e-40 bottom-0 h-96 w-96 rounded-full bg-primary/5 blur-[110px]" />
 
       <div className="relative mx-auto w-[90%] max-w-7xl">
         {/* ==================================================
@@ -95,15 +69,15 @@ function PathSection({ showProgram, setShowProgram }) {
                 cursor-pointer
                 ${
                   program.featured
-                    ? 'border-sd-navy bg-sd-navy text-sd-white leftprogram'
-                    : 'border-border bg-card text-card-foreground rightprogram'
+                    ? 'border-sd-navy bg-sd-navy text-sd-white'
+                    : 'border-border bg-card text-card-foreground'
                 }
               `}
             >
               {/* decorative circle */}
               <div
                 className={`
-                  absolute end-0 top-0
+                  absolute inset-e-0 top-0
                   h-40 w-40
                   translate-x-1/3
                   -translate-y-1/3
@@ -298,7 +272,7 @@ function PathSection({ showProgram, setShowProgram }) {
               onClick={() => {
                 setShowProgram(null);
               }}
-              className="absolute end-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
+              className="absolute inset-e-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
               aria-label="Close project details"
             >
               <X size={20} />
@@ -328,7 +302,7 @@ function PathSection({ showProgram, setShowProgram }) {
               onClick={() => {
                 setShowProgram(null);
               }}
-              className="absolute end-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
+              className="absolute inset-e-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
               aria-label="Close project details"
             >
               <X size={20} />
@@ -407,7 +381,7 @@ function TrackCard({ track, index }) {
         className={`
           pointer-events-none
           absolute
-          end-3
+          inset-e-3
           top-3
           select-none
           text-[90px]

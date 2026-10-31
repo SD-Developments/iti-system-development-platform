@@ -1,9 +1,9 @@
 [
   {
-    "id": "ptp-intake-45",
+    "id": "ptp-intake-48",
     "programId": "ptp",
-    "number": 45,
-    "applicationStatus": null,
+    "number": 48,
+    "applicationStatus": "upcoming",
     "applicationOpens": null,
     "applicationDeadline": null,
     "startDate": null,
@@ -11,6 +11,6 @@
     "branchIds": [],
     "applyUrl": null,
     "selectionStages": [],
-    "status": "draft"
+    "status": "published"
   }
 ]

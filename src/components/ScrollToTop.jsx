@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 
 const HASH_RETRY_MS = 50;
-const HASH_MAX_WAIT_MS = 3000;
+const HASH_MAX_WAIT_MS = 2000;
 const HEADER_OFFSET = -80;
 
 function ScrollToTop() {

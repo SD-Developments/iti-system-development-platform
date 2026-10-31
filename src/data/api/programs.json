@@ -12,14 +12,17 @@
     "summary": {
       "en": "An intensive development journey combining technical foundations, specialization, teamwork, and real graduation projects."
     },
+    "bestFor": {
+      "en": "Learners who want in-depth specialization and a job-ready portfolio."
+    },
     "duration": {
       "min": 9,
       "max": 9,
       "unit": "months"
     },
     "contactHours": {
-      "min": 1200,
-      "max": null
+      "min": 1032,
+      "max": 1137
     },
     "schedule": {
       "en": "Mon–Fri, 8:30–16:30"
@@ -107,14 +110,17 @@
     "summary": {
       "en": "A focused, accelerated program designed around specialized technical skills and practical software development."
     },
+    "bestFor": {
+      "en": "Learners who want a fast, targeted path into a specific technology."
+    },
     "duration": {
       "min": 4,
       "max": 4,
       "unit": "months"
     },
     "contactHours": {
-      "min": 500,
-      "max": null
+      "min": 420,
+      "max": 594
     },
     "schedule": {
       "en": "Hybrid sprints"
@@ -214,6 +220,7 @@
     "summary": {
       "en": "Foundational industry workshops and clean code coaching for undergraduate talent."
     },
+    "bestFor": null,
     "duration": {
       "min": 4,
       "max": 8,

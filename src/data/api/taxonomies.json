@@ -69,5 +69,61 @@
       }
     }
   ],
-  "newsTypes": ["news", "event", "workshop", "achievement", "announcement", "student-activity"]
+  "newsTypes": ["news", "event", "workshop", "achievement", "announcement", "student-activity"],
+  "trackCategories": [
+    {
+      "id": "mobile",
+      "label": {
+        "en": "Mobile"
+      }
+    },
+    {
+      "id": "net-enterprise",
+      "label": {
+        "en": ".NET / Enterprise"
+      }
+    },
+    {
+      "id": "web-ui",
+      "label": {
+        "en": "Web / UI"
+      }
+    },
+    {
+      "id": "mobile-front-end",
+      "label": {
+        "en": "Mobile / Front-End"
+      }
+    },
+    {
+      "id": "net-full-stack",
+      "label": {
+        "en": ".NET / Full Stack"
+      }
+    },
+    {
+      "id": "web-full-stack",
+      "label": {
+        "en": "Web / Full Stack"
+      }
+    },
+    {
+      "id": "data-bi",
+      "label": {
+        "en": "Data / BI"
+      }
+    },
+    {
+      "id": "software-fundamentals",
+      "label": {
+        "en": "Software Fundamentals"
+      }
+    },
+    {
+      "id": "ui-ux",
+      "label": {
+        "en": "UI / UX"
+      }
+    }
+  ]
 }

@@ -27,11 +27,19 @@
       "en": "Building AI-Powered Web Applications"
     },
     "summary": {
-      "en": "React × Node.js × RAG hands-on workshop session."
+      "en": "React Ã— Node.js Ã— RAG hands-on workshop session."
     },
     "body": null,
     "publishedAt": "2026-09-08",
-    "event": null,
+    "event": {
+      "startDate": "2026-09-08",
+      "endDate": null,
+      "location": null,
+      "format": null,
+      "level": null,
+      "durationHours": null,
+      "registerUrl": null
+    },
     "tags": [],
     "branchId": null,
     "image": null,
@@ -72,7 +80,7 @@
     "body": null,
     "publishedAt": "2026-08-20",
     "event": null,
-    "tags": [],
+    "tags": ["project-award"],
     "branchId": null,
     "image": null,
     "featured": false,
@@ -340,7 +348,7 @@
     "branchId": null,
     "image": null,
     "featured": false,
-    "pinned": false,
+    "pinned": true,
     "status": "published"
   },
   {
@@ -360,7 +368,7 @@
     "branchId": null,
     "image": null,
     "featured": false,
-    "pinned": false,
+    "pinned": true,
     "status": "published"
   },
   {
