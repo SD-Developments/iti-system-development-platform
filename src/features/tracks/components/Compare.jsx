@@ -69,7 +69,7 @@ function Compare() {
   const activeProgram = programs.find((p) => p.id === filter);
 
   return (
-    <section id="compare" className="py-20 lg:py-28">
+    <section id="compare" className="py-16 lg:py-24">
       <div className="mx-auto w-[90%] max-w-7xl">
         <SectionHeader
           eyebrow="Compare"
@@ -79,7 +79,7 @@ function Compare() {
 
         {/* Program filter */}
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="inline-flex w-fit rounded-2xl border border-border bg-card p-1.5 shadow-sm">
+          <div className="inline-flex w-fit rounded-xl border border-border bg-card p-1.5 shadow-sm">
             {FILTERS.map((item) => (
               <Button
                 key={item}
@@ -106,7 +106,7 @@ function Compare() {
               type="button"
               onClick={() => setFilter(filter === program.id ? 'All' : program.id)}
               className={cn(
-                'rounded-2xl border p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md',
+                'rounded-xl border p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md',
                 filter === program.id
                   ? 'border-primary bg-primary/5 shadow-md'
                   : 'border-border bg-card'

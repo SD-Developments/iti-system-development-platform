@@ -3,7 +3,7 @@ import { partnerCompanies, testimonials } from '@/features/home/data';
 const Outcomes = () => {
   return (
     <>
-      <section className="w-full border-b border-border bg-sd-bg-light py-20">
+      <section className="w-full border-b border-border bg-sd-bg-light py-16 lg:py-24">
         <div className="mx-auto flex max-w-7xl flex-col gap-12 px-6">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
@@ -23,7 +23,7 @@ const Outcomes = () => {
           </div>
 
           {/* Companies */}
-          <div className="flex flex-col gap-6 rounded-2xl border border-border bg-card p-8">
+          <div className="flex flex-col gap-6 rounded-xl border border-border bg-card p-8">
             <span className="text-center font-mono text-xs uppercase tracking-wider text-muted-foreground">
               Trusted by Multinational &amp; Sovereign Engineering Teams
             </span>
@@ -45,7 +45,7 @@ const Outcomes = () => {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="flex flex-col justify-between rounded-2xl border border-border bg-card p-6"
+                className="flex flex-col justify-between rounded-xl border border-border bg-card p-6"
               >
                 <p className="text-sm leading-relaxed text-foreground italic">
                   {testimonial.quote}

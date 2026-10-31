@@ -21,7 +21,7 @@ function BuiltSection() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-sd-navy py-20 text-sd-white lg:py-28">
+    <section className="relative overflow-hidden bg-sd-navy py-16 lg:py-24 text-sd-white">
       {/* Background atmosphere */}
       <div className="pointer-events-none absolute -right-48 -top-48 h-[430px] w-[430px] rounded-full bg-sd-teal/10 blur-[120px]" />
 
@@ -168,7 +168,7 @@ function ProjectShowcaseCard({ project, index }) {
         group relative
         h-full
         overflow-hidden
-        rounded-[26px]
+        rounded-3xl
         border border-sd-white/10
         bg-sd-white/[0.045]
         transition-all duration-300

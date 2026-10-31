@@ -26,7 +26,7 @@ const TeamCard = ({ member }) => {
     <div
       className="
         flex flex-col gap-4
-        rounded-2xl border border-border
+        rounded-xl border border-border
         bg-card p-5
         shadow-lg
         transition-all duration-300

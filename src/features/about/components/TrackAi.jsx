@@ -3,7 +3,7 @@ import about4 from '../../../assets/images/hero/hero1.png';
 
 const TrackAi = () => {
   return (
-    <section className="w-full bg-sd-navy py-20 text-white relative overflow-hidden">
+    <section className="w-full bg-sd-navy py-16 lg:py-24 text-white relative overflow-hidden">
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
       <div className="relative max-w-7xl mx-auto px-6 flex flex-col gap-12">
@@ -74,7 +74,7 @@ const TrackAi = () => {
             ].map((f) => (
               <div
                 key={f.title}
-                className={`p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 hover:border-${f.accent} transition-colors flex flex-col gap-2`}
+                className={`p-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 hover:border-${f.accent} transition-colors flex flex-col gap-2`}
               >
                 <div className="flex items-center gap-2">
                   <Icon name={f.icon} className={`text-${f.accent} text-xl`} />

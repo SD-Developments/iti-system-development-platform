@@ -4,7 +4,7 @@ import aboutCtaImage from '../assets/images/hero/about_hero_section.png';
 
 function AboutCta() {
   return (
-    <section className="relative w-full bg-sd-navy py-24 overflow-hidden text-white">
+    <section className="relative w-full bg-sd-navy py-16 lg:py-24 overflow-hidden text-white">
       <div
         className="absolute inset-0 opacity-70 bg-cover bg-center"
         style={{ backgroundImage: `url(${aboutCtaImage})` }}
@@ -55,8 +55,8 @@ function AboutCta() {
 function TracksCta() {
   return (
     <>
-      <section className="px-4 py-16 lg:px-8 lg:py-20">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-4xl bg-sd-navy px-7 py-12 text-sd-white sm:px-12 lg:px-16 lg:py-16">
+      <section className="px-4 py-16 lg:py-24 lg:px-8">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-sd-navy px-7 py-12 text-sd-white sm:px-12 lg:px-16 lg:py-16">
           <div className="absolute -right-20 -top-28 h-80 w-80 rounded-full bg-sd-teal/15 blur-3xl" />
 
           <div className="absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />

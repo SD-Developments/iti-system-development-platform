@@ -3,7 +3,7 @@ import ImpactItem from './ImpactItem';
 const Impact = () => {
   return (
     <>
-      <section className="border-b border-border bg-sd-bg-light py-16">
+      <section className="border-b border-border bg-sd-bg-light py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:divide-x-2 md:divide-border">
             <ImpactItem

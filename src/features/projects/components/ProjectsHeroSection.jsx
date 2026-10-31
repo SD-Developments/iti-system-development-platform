@@ -126,7 +126,7 @@ const ProjectsHeroSection = () => {
               />
 
               {/* Image Card */}
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
+              <div className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-2xl">
                 <div className="relative h-95 w-full overflow-hidden sm:h-120">
                   <img
                     src="https://lh3.googleusercontent.com/aida/AEtjO1VcPHQUEvaBoK45hcodYm8nNJTwj-vfdIR50_9N85onybQLGDADMVRX2CyFEyHYUP5I01pyv8GLc6Xaw-gtFMwc8y9PwNQs3co_kqbf1VDEPZbyoHSL6sXeOPvv5_IL99d3E1I_ptJEng4GL6dRRy4yJ034Z-Trg8VCX7sY1NS6O4Onzg27jo5g3us0_pBvskzU210j7Lxzp46Nx8Zqq2EvFeeScGi1Zv_-P_fMU59qjbKDSI2cLPpy-54D"

@@ -34,7 +34,7 @@ const Meta = ({ item }) => (
 );
 
 const NewsCard = ({ item }) => (
-  <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sd-red/30 hover:shadow-xl">
+  <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sd-red/30 hover:shadow-xl">
     <div className="relative aspect-16/10 overflow-hidden bg-muted">
       <img
         alt={item.title}
@@ -134,7 +134,7 @@ const LatestSection = ({ category = 'All', sort = 'Latest', search = '', filterB
       ) : (
         <p
           role="status"
-          className="rounded-2xl border border-dashed border-border bg-card px-6 py-12 text-center text-sm text-muted-foreground"
+          className="rounded-xl border border-dashed border-border bg-card px-6 py-12 text-center text-sm text-muted-foreground"
         >
           {emptyMessage}
         </p>

@@ -87,7 +87,7 @@ const ProjectExplorer = () => {
   };
 
   return (
-    <section id="projects-grid" className="border-b border-border bg-sd-bg-light py-20 lg:py-24">
+    <section id="projects-grid" className="border-b border-border bg-sd-bg-light py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* =========================================
             HEADER
@@ -196,7 +196,7 @@ const ProjectExplorer = () => {
             EMPTY STATE
         ========================================= */}
         {filteredProjects.length === 0 && (
-          <div className="flex min-h-60 items-center justify-center rounded-2xl border border-border bg-card">
+          <div className="flex min-h-60 items-center justify-center rounded-xl border border-border bg-card">
             <div className="text-center">
               <h3 className="text-lg font-bold text-foreground">No projects found</h3>
 

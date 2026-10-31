@@ -25,7 +25,7 @@ export default class ErrorBoundary extends Component {
           role="alert"
           className="flex min-h-[70vh] flex-col items-center justify-center bg-background px-6 py-20 text-center"
         >
-          <span className="flex size-14 items-center justify-center rounded-2xl bg-destructive/10 text-destructive">
+          <span className="flex size-14 items-center justify-center rounded-xl bg-destructive/10 text-destructive">
             <TriangleAlert className="size-7" aria-hidden="true" />
           </span>
 

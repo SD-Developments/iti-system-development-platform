@@ -6,7 +6,7 @@ const TeamSection = () => {
   const bottomRow = teamMembers.slice(4);
 
   return (
-    <section id="faculty" className="w-full bg-background py-20 transition-colors">
+    <section id="faculty" className="w-full bg-background py-16 lg:py-24 transition-colors">
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-6">
         {/* Header */}
         <div className="flex flex-col items-center gap-4 text-center">

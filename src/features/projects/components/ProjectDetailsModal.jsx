@@ -24,7 +24,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
     >
       <div
         data-lenis-prevent
-        className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
+        className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-xl border border-border bg-card shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -45,7 +45,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
             <div className="absolute inset-0 bg-linear-to-t from-sd-navy via-sd-navy/30 to-transparent" />
 
             <div className="absolute bottom-5 left-6 right-6">
-              <span className="mb-2 inline-block rounded-md bg-accent px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-white">
+              <span className="mb-2 inline-block rounded-lg bg-accent px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-white">
                 {project.category}
               </span>
 

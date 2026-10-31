@@ -7,7 +7,7 @@ const Month4Section = () => {
     <>
       <section
         id="four-month"
-        className="w-full border-y border-border bg-background py-20 text-foreground"
+        className="w-full border-y border-border bg-background py-16 lg:py-24 text-foreground"
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-14 px-6">
           {/* ==================================================
@@ -43,7 +43,7 @@ const Month4Section = () => {
                   key={fact.value}
                   className="
                     flex items-center gap-4
-                    rounded-2xl
+                    rounded-xl
                     border border-border
                     bg-card
                     p-5
@@ -135,7 +135,7 @@ const Month4Section = () => {
                   className="
                     group
                     flex flex-col justify-between
-                    rounded-2xl
+                    rounded-xl
                     border border-white/10
                     bg-white/5
                     p-5
@@ -208,7 +208,7 @@ const Month4Section = () => {
                       flex-col
                       justify-between
                       gap-4
-                      rounded-2xl
+                      rounded-xl
                       border border-border
                       bg-card
                       p-4
@@ -359,7 +359,7 @@ const Month4Section = () => {
               </div>
 
               {/* Velocity Card */}
-              <div className="flex items-center justify-between rounded-2xl border border-border bg-card p-5 shadow-xs">
+              <div className="flex items-center justify-between rounded-xl border border-border bg-card p-5 shadow-xs">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 font-mono text-sm font-bold text-accent">
                     4x
@@ -390,7 +390,7 @@ const Month4Section = () => {
               items-center
               justify-between
               gap-4
-              rounded-2xl
+              rounded-xl
               border-2 border-accent/30
               bg-card
               p-5

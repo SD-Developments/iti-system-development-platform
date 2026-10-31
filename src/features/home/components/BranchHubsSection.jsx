@@ -19,7 +19,7 @@ const BranchHubsSection = () => {
 
   return (
     <>
-      <section className="w-full border-b border-border bg-card py-16 sm:py-20">
+      <section className="w-full border-b border-border bg-card py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           {/* ==================================================
               HEADER
@@ -512,7 +512,7 @@ const BranchHubsSection = () => {
 
                 {/* Selected Branch */}
                 {/* Selected Branch */}
-                <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5">
                   {/* Header */}
                   <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
                     <div>

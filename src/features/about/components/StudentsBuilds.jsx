@@ -59,7 +59,7 @@ const ACCENT_CLASSES = {
 
 const StudentsBuilds = () => {
   return (
-    <section className="w-full bg-background py-20 border-b border-border">
+    <section className="w-full bg-background py-16 lg:py-24 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 flex flex-col gap-12">
         <div className="flex flex-col gap-3 max-w-3xl">
           <span className="font-mono text-xs font-bold text-primary uppercase tracking-widest">
@@ -83,7 +83,7 @@ const StudentsBuilds = () => {
                 src={about4}
               />
               <div className="absolute inset-0 bg-linear-to-t from-sd-navy/90 via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-card/95 backdrop-blur-md border border-border shadow-lg">
+              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-card/95 backdrop-blur-md border border-border shadow-lg">
                 <span className="font-mono text-[11px] font-bold text-primary uppercase tracking-wider block mb-1">
                   Standard Operating Principle
                 </span>
@@ -100,7 +100,7 @@ const StudentsBuilds = () => {
               return (
                 <div
                   key={c.title}
-                  className={`p-5 rounded-2xl bg-muted border border-border ${a.border} hover:bg-card hover:shadow-md transition-all flex items-start gap-4 group`}
+                  className={`p-5 rounded-xl bg-muted border border-border ${a.border} hover:bg-card hover:shadow-md transition-all flex items-start gap-4 group`}
                 >
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${a.iconBg}`}

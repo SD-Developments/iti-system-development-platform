@@ -21,7 +21,7 @@ const ACCENT = {
 
 const Leadership = () => {
   return (
-    <section className="w-full bg-background py-20 border-b border-border">
+    <section className="w-full bg-background py-16 lg:py-24 border-b border-border">
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col gap-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="flex flex-col gap-3 max-w-2xl">
@@ -47,7 +47,7 @@ const Leadership = () => {
             return (
               <div
                 key={name}
-                className={`p-6 rounded-2xl bg-muted border border-border flex flex-col items-center justify-center text-center group hover:bg-card ${a.border} hover:shadow-md transition-all h-28`}
+                className={`p-6 rounded-xl bg-muted border border-border flex flex-col items-center justify-center text-center group hover:bg-card ${a.border} hover:shadow-md transition-all h-28`}
               >
                 <span
                   className={`font-black text-lg text-muted-foreground tracking-tight transition-colors ${a.text}`}

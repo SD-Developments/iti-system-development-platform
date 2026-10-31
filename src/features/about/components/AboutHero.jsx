@@ -23,17 +23,17 @@ const AboutHero = () => {
             </p>
             {/* Metadata Indicators */}
             <div className="flex flex-wrap gap-2.5 pt-1">
-              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
+              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-lg bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
                 <Icon name="history_edu" className="text-[11px] text-primary" /> Since 1993
               </span>
-              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
+              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-lg bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
                 <Icon name="workspace_premium" className="text-[15px] text-accent" /> Professional
                 Training Program
               </span>
-              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
+              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-lg bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
                 <Icon name="auto_awesome" className="text-[15px] text-primary" /> AI Integration
               </span>
-              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-md bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
+              <span className="font-mono text-[11px] font-semibold px-3 py-1.5 rounded-lg bg-card border border-border text-foreground flex items-center gap-1.5 shadow-sm">
                 <Icon name="hub" className="text-[15px] text-accent" /> Blended Learning
               </span>
             </div>
@@ -73,7 +73,7 @@ const AboutHero = () => {
                 </span>
               </div>
               {/* Floating Telemetry Glass Card */}
-              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-card/95 backdrop-blur-md shadow-xl border border-border flex items-center justify-between gap-4">
+              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-card/95 backdrop-blur-md shadow-xl border border-border flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-mono text-sm font-black shadow-md">
                     SD

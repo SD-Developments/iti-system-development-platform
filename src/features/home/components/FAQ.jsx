@@ -4,7 +4,7 @@ import { faqs } from '@/features/home/data';
 const FAQ = () => {
   return (
     <>
-      <section id="intake-status" className="w-full bg-background py-20">
+      <section id="intake-status" className="w-full bg-background py-16 lg:py-24">
         <div className="mx-auto flex max-w-[1000px] flex-col gap-12 px-6">
           <div className="flex flex-col items-center gap-2 text-center">
             <span className="font-mono text-xs font-semibold uppercase text-primary">
@@ -35,7 +35,7 @@ const FAQ = () => {
           </div>
 
           {/* Timeline */}
-          <div className="mt-4 flex flex-col items-center justify-between gap-4 rounded-2xl border border-border bg-sd-bg-light p-6 sm:flex-row">
+          <div className="mt-4 flex flex-col items-center justify-between gap-4 rounded-xl border border-border bg-sd-bg-light p-6 sm:flex-row">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <Icon name="calendar_today" className="text-[22px]" />
@@ -65,7 +65,7 @@ const FAQ = () => {
       {/* =========================================================
           FINAL CTA
       ========================================================= */}
-      <section className="w-full bg-background py-20">
+      <section className="w-full bg-background py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="relative flex flex-col items-center justify-between gap-8 overflow-hidden rounded-3xl border border-sd-navy bg-linear-to-r from-sd-navy via-[#0b3850] to-sd-navy p-10 text-white shadow-2xl lg:flex-row lg:p-16">
             <div className="relative z-10 flex max-w-2xl flex-col gap-4">

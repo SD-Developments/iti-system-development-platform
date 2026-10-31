@@ -1,7 +1,7 @@
 function JourneyRow({ number, label, value, highlight = false }) {
   return (
     <div
-      className={`flex items-center gap-5 rounded-2xl border p-4 ${
+      className={`flex items-center gap-5 rounded-xl border p-4 ${
         highlight ? 'border-accent/30 bg-accent/5' : 'border-border bg-card'
       }`}
     >

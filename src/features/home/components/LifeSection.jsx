@@ -5,7 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 function LifeSection() {
   return (
     <>
-      <section className="py-20 lg:py-28 border-y border-border">
+      <section className="py-16 lg:py-24 border-y border-border">
         <div className="mx-auto w-[90%] max-w-7xl">
           <SectionHeader
             eyebrow="The Community"
@@ -42,7 +42,7 @@ function LifeSection() {
                 return (
                   <article
                     key={activity.title}
-                    className="group overflow-hidden rounded-2xl border border-border bg-card"
+                    className="group overflow-hidden rounded-xl border border-border bg-card"
                   >
                     <div className="relative h-36 overflow-hidden bg-secondary">
                       <img

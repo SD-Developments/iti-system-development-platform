@@ -66,7 +66,7 @@ const HeroSectionBackPattern = () => (
             </span>
           </div>
           <div className="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7">
-            <div className="inline-flex max-w-full flex-col gap-2 rounded-2xl bg-slate-950/35 px-4 py-3 shadow-lg shadow-black/10 backdrop-blur-md sm:px-5 sm:py-4">
+            <div className="inline-flex max-w-full flex-col gap-2 rounded-xl bg-slate-950/35 px-4 py-3 shadow-lg shadow-black/10 backdrop-blur-md sm:px-5 sm:py-4">
               <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-sd-teal sm:text-[10px]">
                 Ideas in motion
               </span>

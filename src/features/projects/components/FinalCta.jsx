@@ -1,7 +1,7 @@
 const FinalCta = () => {
   return (
     <>
-      <section className="relative overflow-hidden bg-sd-navy py-20 text-white">
+      <section className="relative overflow-hidden bg-sd-navy py-16 lg:py-24 text-white">
         <div
           className="pointer-events-none absolute inset-0 opacity-99"
           style={{

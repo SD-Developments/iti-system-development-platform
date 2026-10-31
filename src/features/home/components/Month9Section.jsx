@@ -2,7 +2,7 @@ import Icon from '@/components/Icon';
 const Month9Section = () => {
   return (
     <>
-      <section className="w-full bg-background py-20 text-foreground" id="nine-month">
+      <section className="w-full bg-background py-16 lg:py-24 text-foreground" id="nine-month">
         <div className="mx-auto flex max-w-7xl flex-col gap-16 px-6">
           {/* ==================================================
               1. HEADER & OVERVIEW
@@ -32,7 +32,7 @@ const Month9Section = () => {
             ================================================== */}
 
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs transition-all hover:border-primary/40">
+              <div className="flex items-center gap-4 rounded-xl border border-border bg-card p-5 shadow-xs transition-all hover:border-primary/40">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Icon name="timer" className="text-[24px]" />
                 </div>
@@ -44,7 +44,7 @@ const Month9Section = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs transition-all hover:border-accent/40">
+              <div className="flex items-center gap-4 rounded-xl border border-border bg-card p-5 shadow-xs transition-all hover:border-accent/40">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                   <Icon name="schedule" className="text-[24px]" />
                 </div>
@@ -58,7 +58,7 @@ const Month9Section = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs transition-all hover:border-foreground/30">
+              <div className="flex items-center gap-4 rounded-xl border border-border bg-card p-5 shadow-xs transition-all hover:border-foreground/30">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-secondary text-foreground">
                   <Icon name="calendar_month" className="text-[24px]" />
                 </div>
@@ -72,7 +72,7 @@ const Month9Section = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs transition-all hover:border-accent/40">
+              <div className="flex items-center gap-4 rounded-xl border border-border bg-card p-5 shadow-xs transition-all hover:border-accent/40">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                   <Icon name="verified" className="text-[24px]" />
                 </div>
@@ -114,7 +114,7 @@ const Month9Section = () => {
                   PHASE 01
               ================================================== */}
 
-              <div className="group flex flex-col justify-between rounded-2xl border-2 border-border bg-card p-6 shadow-xs transition-all hover:border-foreground/30 lg:col-span-3">
+              <div className="group flex flex-col justify-between rounded-xl border-2 border-border bg-card p-6 shadow-xs transition-all hover:border-foreground/30 lg:col-span-3">
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
                     <span className="rounded bg-foreground px-2.5 py-1 font-mono text-[11px] font-bold tracking-wider text-background">
@@ -148,7 +148,7 @@ const Month9Section = () => {
                   ].map((item) => (
                     <span
                       key={item}
-                      className="rounded-md bg-secondary px-2.5 py-1 font-mono text-[11px] font-medium text-secondary-foreground"
+                      className="rounded-lg bg-secondary px-2.5 py-1 font-mono text-[11px] font-medium text-secondary-foreground"
                     >
                       {item}
                     </span>
@@ -167,7 +167,7 @@ const Month9Section = () => {
                   PHASE 02
               ================================================== */}
 
-              <div className="group flex flex-col justify-between rounded-2xl border-2 border-accent/40 bg-card p-6 shadow-xs transition-all hover:border-accent lg:col-span-3">
+              <div className="group flex flex-col justify-between rounded-xl border-2 border-accent/40 bg-card p-6 shadow-xs transition-all hover:border-accent lg:col-span-3">
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
                     <span className="rounded bg-accent px-2.5 py-1 font-mono text-[11px] font-bold tracking-wider text-accent-foreground">
@@ -196,7 +196,7 @@ const Month9Section = () => {
                     (item) => (
                       <span
                         key={item}
-                        className="rounded-md bg-accent/10 px-2.5 py-1 font-mono text-[11px] font-semibold text-accent"
+                        className="rounded-lg bg-accent/10 px-2.5 py-1 font-mono text-[11px] font-semibold text-accent"
                       >
                         {item}
                       </span>
@@ -216,7 +216,7 @@ const Month9Section = () => {
                   PHASE 03
               ================================================== */}
 
-              <div className="group flex flex-col justify-between rounded-2xl border-2 border-primary/40 bg-card p-6 shadow-xs transition-all hover:border-primary lg:col-span-3">
+              <div className="group flex flex-col justify-between rounded-xl border-2 border-primary/40 bg-card p-6 shadow-xs transition-all hover:border-primary lg:col-span-3">
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
                     <span className="rounded bg-primary px-2.5 py-1 font-mono text-[11px] font-bold tracking-wider text-primary-foreground">
@@ -249,7 +249,7 @@ const Month9Section = () => {
                   ].map((item) => (
                     <span
                       key={item}
-                      className="rounded-md bg-primary/10 px-2.5 py-1 font-mono text-[11px] font-semibold text-primary"
+                      className="rounded-lg bg-primary/10 px-2.5 py-1 font-mono text-[11px] font-semibold text-primary"
                     >
                       {item}
                     </span>
@@ -356,7 +356,7 @@ const Month9Section = () => {
 
               <div className="flex flex-col gap-3.5 pt-2">
                 {/* Card 1 */}
-                <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs transition-colors hover:border-primary/40">
+                <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-xs transition-colors hover:border-primary/40">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <Icon name="desktop_windows" className="text-[24px]" />
                   </div>
@@ -373,7 +373,7 @@ const Month9Section = () => {
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs transition-colors hover:border-accent/50">
+                <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-xs transition-colors hover:border-accent/50">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
                     <Icon name="group_work" className="text-[24px]" />
                   </div>
@@ -390,7 +390,7 @@ const Month9Section = () => {
                 </div>
 
                 {/* Card 3 */}
-                <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-xs transition-colors hover:border-primary/40">
+                <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-xs transition-colors hover:border-primary/40">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <Icon name="military_tech" className="text-[24px]" />
                   </div>

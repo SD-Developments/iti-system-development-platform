@@ -4,7 +4,7 @@ const FeaturedProject = () => {
     <>
       <section
         id="featured-spotlight"
-        className="relative overflow-hidden bg-sd-navy py-20 text-white"
+        className="relative overflow-hidden bg-sd-navy py-16 lg:py-24 text-white"
       >
         {/* Dark Technical Grid */}
 
@@ -46,7 +46,7 @@ const FeaturedProject = () => {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             {/* Featured Image */}
 
-            <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-950 shadow-2xl lg:col-span-7">
+            <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-slate-950 shadow-2xl lg:col-span-7">
               <div className="relative h-80 overflow-hidden sm:h-95">
                 <img
                   src={projectImage}
@@ -160,7 +160,7 @@ const FeaturedProject = () => {
                     (tech) => (
                       <span
                         key={tech}
-                        className="rounded-md border border-slate-700 bg-slate-800 px-2.5 py-1 text-white"
+                        className="rounded-lg border border-slate-700 bg-slate-800 px-2.5 py-1 text-white"
                       >
                         {tech}
                       </span>

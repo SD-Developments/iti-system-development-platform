@@ -1,7 +1,7 @@
 import { timeline } from '../data';
 
 const TimelineSection = () => (
-  <section className="relative isolate mt-6 overflow-hidden border-y border-slate-800 bg-sd-navy py-14 text-white sm:py-20">
+  <section className="relative isolate mt-6 overflow-hidden border-y border-slate-800 bg-sd-navy py-16 lg:py-24 text-white">
     <div
       aria-hidden="true"
       className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-64 w-3/4 -translate-x-1/2 rounded-full bg-sd-red/10 blur-3xl"

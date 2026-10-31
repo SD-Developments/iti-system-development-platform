@@ -197,7 +197,7 @@ function SlideItem({ slide, total, index }) {
           <div className="hero-stagger mt-9 flex flex-col gap-4 sm:flex-row">
             <Link
               to={slide.primaryHref}
-              className="inline-flex min-h-13 items-center justify-center gap-2 rounded-[14px] bg-primary px-6 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition hover:-translate-y-0.5"
+              className="inline-flex min-h-13 items-center justify-center gap-2 rounded-lg bg-primary px-6 font-bold text-primary-foreground shadow-lg shadow-primary/10 transition hover:-translate-y-0.5"
             >
               {slide.primaryCta}
               <ArrowRight size={18} />
@@ -209,7 +209,7 @@ function SlideItem({ slide, total, index }) {
               min-h-13
               items-center
               justify-center
-              rounded-[14px]
+              rounded-lg
               border border-border
               bg-card
               px-6
@@ -238,7 +238,7 @@ function HeroVisual({ type }) {
   if (type === 'programs') {
     return (
       <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2">
-        <div className="min-h-95 rounded-[28px] bg-sd-navy p-8 text-sd-white shadow-xl">
+        <div className="min-h-95 rounded-3xl bg-sd-navy p-8 text-sd-white shadow-xl">
           <span className="font-extrabold text-sd-teal">PTP</span>
 
           <h3 className="mt-5 text-4xl font-bold leading-tight text-sd-white">9-Month Program</h3>
@@ -252,7 +252,7 @@ function HeroVisual({ type }) {
           </button>
         </div>
 
-        <div className="min-h-95 rounded-[28px] border border-border bg-card p-8 text-card-foreground shadow-xl shadow-foreground/5">
+        <div className="min-h-95 rounded-3xl border border-border bg-card p-8 text-card-foreground shadow-xl shadow-foreground/5">
           <span className="font-extrabold text-primary">ITP</span>
 
           <h3 className="mt-5 text-4xl font-bold leading-tight text-card-foreground">
@@ -273,7 +273,7 @@ function HeroVisual({ type }) {
 
   if (type === 'project') {
     return (
-      <div className="w-full max-w-175 rounded-[30px] border border-background/10 bg-sd-navy p-5 shadow-2xl shadow-black/30 lg:-rotate-1">
+      <div className="w-full max-w-175 rounded-3xl border border-background/10 bg-sd-navy p-5 shadow-2xl shadow-black/30 lg:-rotate-1">
         <div className="flex gap-2 pb-5">
           <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/50" />
           <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/50" />
@@ -313,7 +313,7 @@ function HeroVisual({ type }) {
               ['12', 'User Stories'],
               ['6', 'Team Members'],
             ].map(([value, label]) => (
-              <div key={label} className="rounded-2xl border border-sd-white/10 bg-sd-white/5 p-4">
+              <div key={label} className="rounded-xl border border-sd-white/10 bg-sd-white/5 p-4">
                 <strong className="block text-2xl text-sd-white">{value}</strong>
 
                 <span className="mt-1 block text-xs text-sd-white/55">{label}</span>
@@ -331,11 +331,11 @@ function HeroVisual({ type }) {
         {['Tech Talks', 'Hackathons', 'Company Visits', 'Workshops'].map((title) => (
           <div
             key={title}
-            className="rounded-[22px] border border-border bg-card shadow-lg shadow-foreground/5"
+            className="rounded-3xl border border-border bg-card shadow-lg shadow-foreground/5"
           >
             <div className="h-40 relative">
-              <div className="absolute rounded-t-[22px] bg-linear-to-br from-secondary/10 to-accent/50 w-full h-full"></div>
-              <img src={hero1} className="rounded-t-[22px] w-full h-full object-cover" alt="" />
+              <div className="absolute rounded-t-3xl bg-linear-to-br from-secondary/10 to-accent/50 w-full h-full"></div>
+              <img src={hero1} className="rounded-t-3xl w-full h-full object-cover" alt="" />
             </div>
 
             <div className="p-4 font-bold text-card-foreground">{title}</div>
@@ -347,12 +347,12 @@ function HeroVisual({ type }) {
 
   return (
     <div className="relative min-h-117.5 w-full max-w-180">
-      <div className="relative ml-auto flex h-100 w-full items-center justify-center rounded-[28px] text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
-        <div className="absolute inset-0 bg-linear-to-tl rounded-[28px] from-secondary/10 to-accent/50" />
-        <img src={hero1} className="h-full w-full rounded-[28px] object-cover" alt="" />{' '}
+      <div className="relative ml-auto flex h-100 w-full items-center justify-center rounded-3xl text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
+        <div className="absolute inset-0 bg-linear-to-tl rounded-3xl from-secondary/10 to-accent/50" />
+        <img src={hero1} className="h-full w-full rounded-3xl object-cover" alt="" />{' '}
       </div>
 
-      <div className="absolute left-0 top-16 flex flex-wrap gap-2 rounded-2xl bg-card/95 p-3 shadow-xl backdrop-blur">
+      <div className="absolute left-0 top-16 flex flex-wrap gap-2 rounded-xl bg-card/95 p-3 shadow-xl backdrop-blur">
         {['.NET', 'React', 'JavaScript', 'AI'].map((tag) => (
           <span
             key={tag}
@@ -363,7 +363,7 @@ function HeroVisual({ type }) {
         ))}
       </div>
 
-      <div className="absolute bottom-8 right-0 min-w-42.5 rounded-2xl bg-card/95 p-5 shadow-xl backdrop-blur">
+      <div className="absolute bottom-8 right-0 min-w-42.5 rounded-xl bg-card/95 p-5 shadow-xl backdrop-blur">
         <span className="block text-xs text-muted-foreground">Ideas</span>
 
         <strong className="mt-1 block text-lg text-card-foreground">into Impact</strong>

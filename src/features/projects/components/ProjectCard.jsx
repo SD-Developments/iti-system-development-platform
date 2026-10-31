@@ -8,7 +8,7 @@ const ProjectCard = ({ project, onClick }) => {
     <>
       <article
         onClick={onClick}
-        className={`group flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card shadow-lg transition-all duration-300 hover:-translate-y-1 ${
+        className={`group flex cursor-pointer flex-col justify-between overflow-hidden rounded-xl border border-border bg-card shadow-lg transition-all duration-300 hover:-translate-y-1 ${
           project.typeColor === 'red' ? 'hover:border-primary' : 'hover:border-accent'
         } ${spanClass}`}
       >

@@ -62,10 +62,10 @@ function Hero() {
                 <img
                   src={hero1}
                   alt="System Development students collaborating"
-                  className="aspect-4/3 w-full rounded-[20px] object-cover"
+                  className="aspect-4/3 w-full rounded-3xl object-cover"
                 />
 
-                <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/30 bg-card/90 p-4 shadow-lg backdrop-blur-lg">
+                <div className="absolute inset-x-6 bottom-6 rounded-xl border border-white/30 bg-card/90 p-4 shadow-lg backdrop-blur-lg">
                   <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                       <Code2 size={21} />

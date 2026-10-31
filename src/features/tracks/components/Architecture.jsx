@@ -5,7 +5,7 @@ function Architecture() {
     <>
       <section
         id="track-architecture"
-        className="relative overflow-hidden bg-sd-navy py-20 text-sd-white lg:py-28"
+        className="relative overflow-hidden bg-sd-navy py-16 lg:py-24 text-sd-white"
       >
         {/* decorative glow */}
         <div className="pointer-events-none absolute -right-40 -top-24 h-130 w-130 rounded-full bg-sd-teal/10 blur-[120px]" />
@@ -51,7 +51,7 @@ function Architecture() {
                   <article
                     key={stage.number}
                     className="
-                        group relative rounded-[26px]
+                        group relative rounded-3xl
                         border border-sd-white/10
                         bg-sd-white/4.5
                         p-6
@@ -73,7 +73,7 @@ function Architecture() {
                         relative z-10
                         flex h-19 w-19
                         items-center justify-center
-                        rounded-[22px]
+                        rounded-3xl
                         border border-sd-teal/20
                         bg-sd-navy
                         text-sd-teal
@@ -111,7 +111,7 @@ function Architecture() {
             </div>
           </div>
           {/* Architecture footer */}
-          <div className="mt-12 grid gap-4 rounded-[28px] border border-sd-white/10 bg-sd-white/[0.035] p-6 md:grid-cols-4">
+          <div className="mt-12 grid gap-4 rounded-3xl border border-sd-white/10 bg-sd-white/[0.035] p-6 md:grid-cols-4">
             <ArchitectureSummary number="01" title="Learn" text="Establish the engineering core." />
 
             <ArchitectureSummary

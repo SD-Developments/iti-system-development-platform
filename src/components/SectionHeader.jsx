@@ -16,7 +16,7 @@ function SectionHeader({ eyebrow, title, description, action, href = '#', varian
         {action && (
           <a
             href={href}
-            className="group inline-flex shrink-0 items-center gap-1.5 rounded-sm text-sm font-bold text-primary transition-colors hover:text-sd-red focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sd-red"
+            className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg text-sm font-bold text-primary transition-colors hover:text-sd-red focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sd-red"
           >
             {action}
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />

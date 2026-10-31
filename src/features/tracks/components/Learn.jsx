@@ -9,7 +9,7 @@ function Learn() {
   let tracksArr = useMemo(() => tracks.slice(0, extend) || [], [extend]);
   const disBtn = tracksArr.length === tracks.length;
   return (
-    <section className="relative overflow-hidden border-y border-border bg-secondary/30 py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/30 py-16 lg:py-24">
       {/* subtle background decoration */}
       <div className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
       <div className="pointer-events-none absolute -left-32 bottom-10 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
@@ -66,7 +66,7 @@ function TrackLearningRow({ track, index }) {
   return (
     <article
       className="
-        group relative overflow-hidden rounded-[28px]
+        group relative overflow-hidden rounded-3xl
         border border-border bg-card
         transition-all duration-300
         hover:-translate-y-1
@@ -83,7 +83,7 @@ function TrackLearningRow({ track, index }) {
             <div
               className="
                 flex h-14 w-14 shrink-0 items-center justify-center
-                rounded-2xl bg-accent/10 text-accent
+                rounded-xl bg-accent/10 text-accent
                 ring-1 ring-accent/10
                 transition
                 group-hover:bg-accent
@@ -164,7 +164,7 @@ function TrackLearningRow({ track, index }) {
           {track.jobProfiles?.length > 0 ? (
             <div
               className="
-                rounded-2xl border border-border
+                rounded-xl border border-border
                 bg-secondary/50 p-4
                 transition
                 group-hover:border-primary/20
@@ -200,7 +200,7 @@ function TrackLearningRow({ track, index }) {
               )}
             </div>
           ) : (
-            <div className="rounded-2xl border border-dashed border-border p-4">
+            <div className="rounded-xl border border-dashed border-border p-4">
               <div className="text-xs text-muted-foreground">
                 Role information will be added soon.
               </div>

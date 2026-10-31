@@ -1,11 +1,11 @@
 import Icon from '@/components/Icon';
 const SdStats = () => {
   return (
-    <section className="w-full bg-background py-16 border-b border-border">
+    <section className="w-full bg-background py-16 lg:py-24 border-b border-border">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Metric 1 */}
-          <div className="p-7 rounded-2xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-primary/40 hover:shadow-md transition-all">
+          <div className="p-7 rounded-xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-primary/40 hover:shadow-md transition-all">
             <div className="flex items-center justify-between mb-4">
               <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">
                 01 // SPECIALIZATION
@@ -24,7 +24,7 @@ const SdStats = () => {
             </div>
           </div>
           {/* Metric 2 */}
-          <div className="p-7 rounded-2xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-accent/40 hover:shadow-md transition-all">
+          <div className="p-7 rounded-xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-accent/40 hover:shadow-md transition-all">
             <div className="flex items-center justify-between mb-4">
               <span className="font-mono text-xs font-bold text-accent tracking-wider uppercase">
                 02 // CAPSTONE DEFENSE
@@ -45,7 +45,7 @@ const SdStats = () => {
             </div>
           </div>
           {/* Metric 3 */}
-          <div className="p-7 rounded-2xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-sd-navy/40 hover:shadow-md transition-all">
+          <div className="p-7 rounded-xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-sd-navy/40 hover:shadow-md transition-all">
             <div className="flex items-center justify-between mb-4">
               <span className="font-mono text-xs font-bold text-foreground tracking-wider uppercase">
                 03 // FORMAT
@@ -64,7 +64,7 @@ const SdStats = () => {
             </div>
           </div>
           {/* Metric 4 */}
-          <div className="p-7 rounded-2xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-primary/40 hover:shadow-md transition-all">
+          <div className="p-7 rounded-xl bg-muted border border-border shadow-sm flex flex-col justify-between hover:border-primary/40 hover:shadow-md transition-all">
             <div className="flex items-center justify-between mb-4">
               <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">
                 04 // ADMISSIONS

@@ -4,7 +4,7 @@ import IndustryCard from './IndustryCard';
 const IndustryCollaboration = () => {
   return (
     <>
-      <section className="border-b border-border bg-card py-20">
+      <section className="border-b border-border bg-card py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto mb-14 max-w-2xl text-center">
             <div className="mb-2 font-mono text-xs font-bold uppercase tracking-widest text-accent">

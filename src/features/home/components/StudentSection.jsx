@@ -5,14 +5,14 @@ import img2 from '../../../assets/images/hero/hero1.png';
 function StudentSection() {
   return (
     <>
-      <section className="bg-secondary/40 py-20 lg:py-28">
+      <section className="bg-secondary/40 py-16 lg:py-24">
         <div className="mx-auto w-[90%] max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <div className="relative overflow-hidden rounded-3xl bg-muted">
                 <img src={img2} alt="SD alumni" className="aspect-4/5 w-full object-cover" />
 
-                <div className="absolute inset-x-5 bottom-5 rounded-2xl bg-sd-navy/90 p-5 text-sd-white backdrop-blur">
+                <div className="absolute inset-x-5 bottom-5 rounded-xl bg-sd-navy/90 p-5 text-sd-white backdrop-blur">
                   <span className="font-mono text-[10px] uppercase tracking-wider text-sd-teal">
                     Alumni Story
                   </span>

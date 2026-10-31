@@ -56,7 +56,7 @@ function PathSection() {
   //   }
   // );
   return (
-    <section ref={containerRef} className="relative overflow-hidden bg-sd-bg-light py-20 lg:py-28">
+    <section ref={containerRef} className="relative overflow-hidden bg-sd-bg-light py-16 lg:py-24">
       {/* Background */}
       <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-accent/5 blur-[110px]" />
 
@@ -143,7 +143,7 @@ function PathSection() {
 
                   <div
                     className={`
-                      rounded-2xl
+                      rounded-xl
                       p-3
                       shadow-sm
                       ${
@@ -288,7 +288,7 @@ function PathSection() {
         >
           <div
             data-lenis-prevent
-            className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
+            className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-xl border border-border bg-card shadow-2xl"
 
             onClick={(e) => {
               e.stopPropagation();
@@ -318,7 +318,7 @@ function PathSection() {
         >
           <div
             data-lenis-prevent
-            className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-2xl border border-border bg-card shadow-2xl"
+            className="relative max-h-[90vh] w-[80%]  overflow-y-auto rounded-xl border border-border bg-card shadow-2xl"
 
             onClick={(e) => {
               e.stopPropagation();
@@ -390,7 +390,7 @@ function TrackCard({ track, index }) {
         min-h-82.5
         flex-col
         overflow-hidden
-        rounded-[26px]
+        rounded-3xl
         border border-border
         bg-card
         transition-all
@@ -428,7 +428,7 @@ function TrackCard({ track, index }) {
             flex h-12 w-12
             items-center
             justify-center
-            rounded-2xl
+            rounded-xl
             ${style.icon}
           `}
         >

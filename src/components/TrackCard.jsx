@@ -20,7 +20,7 @@ function TrackCard({ track }) {
         />
 
         <div className="relative flex items-start justify-between">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-card text-accent shadow-sm ring-1 ring-border transition duration-300 group-hover:bg-accent group-hover:text-white group-hover:ring-accent">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-card text-accent shadow-sm ring-1 ring-border transition duration-300 group-hover:bg-accent group-hover:text-white group-hover:ring-accent">
             <Icon size={26} />
           </div>
 
@@ -46,7 +46,7 @@ function TrackCard({ track }) {
         <p className="text-sm leading-6 text-muted-foreground">{track.description}</p>
 
         {/* Quick stats */}
-        <div className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border">
+        <div className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border">
           <Stat icon={<Clock size={14} />} label="Duration" value={track.duration} />
           <Stat icon={<Sparkles size={14} />} label="Hours" value={track.hours ?? '—'} />
         </div>
@@ -120,7 +120,7 @@ function TrackCard({ track }) {
         {/* CTA */}
         <a
           href={`/tracks/${track.id}`}
-          className="mt-auto flex items-center justify-between rounded-2xl border border-border bg-secondary/40 px-4 py-3 pt-3 text-sm font-bold text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+          className="mt-auto flex items-center justify-between rounded-xl border border-border bg-secondary/40 px-4 py-3 pt-3 text-sm font-bold text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
           style={{ marginTop: '1.5rem' }}
         >
           Explore Track

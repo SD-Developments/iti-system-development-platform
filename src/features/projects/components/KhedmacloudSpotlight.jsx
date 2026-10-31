@@ -1,7 +1,7 @@
 const KhedmacloudSpotlight = () => {
   return (
     <>
-      <section className="border-b border-border bg-background py-20">
+      <section className="border-b border-border bg-background py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
             <div className="space-y-6 lg:col-span-6">
@@ -74,7 +74,7 @@ const KhedmacloudSpotlight = () => {
             {/* Khedma Image */}
 
             <div className="lg:col-span-6">
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
+              <div className="group relative overflow-hidden rounded-xl border border-border bg-card shadow-2xl">
                 <img
                   src="https://lh3.googleusercontent.com/aida/AEtjO1UKr7T0jAxdQflL4aHs3Iw8Qib_0xrUxybiMpTyCeq8hGfYgO4g57VaZeRlw9b8saFt97FC0KvZRuvdU-hdkQDBk29oFHka_ZhYe6LbIe7-NxOxjrHcp3QCoN4J9T40Q92p1wFvx2JHG-H9ryLtGXqe4Rp8Ct9hDSPISSSVTGyPceZNKj6VHXZ5ZrRrKUim2ykXGm7tslcL4ovu8rjdLB8Du63bLCT9IsUkdnDNdrBGaZFA77fSAp8WmyIK"
                   alt="System Development Capstone engineers collaborating on monitors in lab"

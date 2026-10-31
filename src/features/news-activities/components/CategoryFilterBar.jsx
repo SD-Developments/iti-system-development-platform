@@ -11,7 +11,7 @@ const CategoryFilterBar = ({
   search = '',
   onSearchChange,
 }) => (
-  <section className="mb-6 rounded-2xl border border-border bg-card p-3 shadow-sm sm:p-4">
+  <section className="mb-6 rounded-xl border border-border bg-card p-3 shadow-sm sm:p-4">
     <div className="flex flex-wrap items-center justify-between gap-3">
       <div
         role="group"

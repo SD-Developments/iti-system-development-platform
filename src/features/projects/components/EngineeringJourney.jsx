@@ -6,7 +6,7 @@ const EngineeringJourney = () => {
     <>
       <section
         id="engineering-journey"
-        className="relative overflow-hidden border-b border-border bg-card py-20 lg:py-24"
+        className="relative overflow-hidden border-b border-border bg-card py-16 lg:py-24"
       >
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto mb-16 max-w-3xl text-center">

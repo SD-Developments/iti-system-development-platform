@@ -1,7 +1,7 @@
 import Icon from '@/components/Icon';
 const Curriculum = () => {
   return (
-    <section className="w-full bg-muted py-20 border-b border-border">
+    <section className="w-full bg-muted py-16 lg:py-24 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 flex flex-col gap-14">
         <div className="flex flex-col gap-3 max-w-3xl">
           <span className="font-mono text-xs font-bold text-primary uppercase tracking-widest">
