@@ -1,3 +1,4 @@
+import { branchCount } from '@/data/siteFacts';
 // About feature data.
 
 export const coreValues = [
@@ -95,7 +96,7 @@ export const milestones = [
     year: 'YEAR 2020',
     variant: 'neutral',
     title: 'Creativa Innovation Hubs Rollout',
-    meta: '11 SATELLITE CAMPUSES',
+    meta: `${branchCount} SATELLITE CAMPUSES`,
     description:
       'Nationwide rollout across university-embedded Creativa Centers in Aswan, Minya, Mansoura, Assiut, Menofia, and Suez, connecting local youth directly with international software markets.',
   },

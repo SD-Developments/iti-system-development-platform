@@ -1,5 +1,7 @@
 // Home feature data. This file is .jsx because heroHomeSlides contains JSX.
 import { BriefcaseBusiness, Code2, Presentation, Trophy } from 'lucide-react';
+import { branchHubsLabel, itpHours, ptpHours } from '@/data/siteFacts';
+import { tracks } from '@/features/tracks/data';
 
 export const heroHomeSlides = [
   {
@@ -134,7 +136,7 @@ export const activities = [
 
 export const heroStats = [
   {
-    value: '1,200+',
+    value: ptpHours,
     label: 'Instructional Lab Hours',
     accent: false,
   },
@@ -144,7 +146,7 @@ export const heroStats = [
     accent: true,
   },
   {
-    value: '11 Hubs',
+    value: branchHubsLabel,
     label: 'Governorates Served',
     accent: false,
   },
@@ -159,7 +161,7 @@ export const itpFacts = [
   },
   {
     icon: 'speed',
-    value: '500+ Sprint Hours',
+    value: `${itpHours} Sprint Hours`,
     label: 'Lab & Project Studio',
     accent: 'teal',
   },
@@ -220,45 +222,19 @@ export const itpSprints = [
   },
 ];
 
-export const technicalLanes = [
-  {
-    number: '01',
-    category: 'Frontend Engineering // 500h',
-    title: 'Modern Web with Angular & React',
-    description:
-      'State machines (NgRx & Redux Toolkit), RxJS, WebSockets, lighthouse web performance tuning, plus an AI session: Copilot/Cursor-assisted React development, prompt patterns for components, and RAG chatbot integration.',
-    tags: ['Angular', 'React', 'TypeScript', 'Tailwind', 'Copilot', 'RAG'],
-    accent: 'teal',
-  },
-  {
-    number: '02',
-    category: 'Backend Architecture // 500h',
-    title: 'Python Enterprise & FastAPI',
-    description:
-      'Microservices architecture, asynchronous event loops with Celery & Redis, PostgreSQL, and Docker.',
-    tags: ['FastAPI', 'Celery', 'Redis', 'PostgreSQL'],
-    accent: 'navy',
-  },
-  {
-    number: '03',
-    category: 'Cross-Platform Mobile // 500h',
-    title: 'Flutter & Dart Mobile Architecture',
-    description:
-      'Clean Architecture with Bloc/Cubit state machines, native platform method channels, and offline-first storage.',
-    tags: ['Flutter', 'Dart', 'Bloc', 'SQLite'],
-    accent: 'primary',
-  },
-  {
-    number: '04',
-    category: 'Reliability & Quality // 500h',
-    title: 'Software Quality Assurance & Automation',
-    description:
-      'Automated test harnesses with Cypress, Playwright, API stress testing with Apache JMeter, and CI gates.',
-    tags: ['Playwright', 'Cypress', 'JMeter', 'CI/CD'],
-    accent: 'green',
-  },
-];
+const laneAccents = ['teal', 'navy', 'primary', 'green'];
 
+// Derived from the ITP tracks in features/tracks/data.js so the lists never drift.
+export const technicalLanes = tracks
+  .filter((track) => track.program === 'ITP')
+  .map((track, index) => ({
+    number: String(index + 1).padStart(2, '0'),
+    category: `${track.category} // ${track.hours}`,
+    title: track.title,
+    description: track.description,
+    tags: track.technologies.slice(0, 6),
+    accent: laneAccents[index % laneAccents.length],
+  }));
 export const tenets = [
   {
     number: '01',

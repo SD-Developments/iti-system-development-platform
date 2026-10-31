@@ -78,18 +78,18 @@ const KhedmacloudSpotlight = () => {
                 <img
                   src="https://lh3.googleusercontent.com/aida/AEtjO1UKr7T0jAxdQflL4aHs3Iw8Qib_0xrUxybiMpTyCeq8hGfYgO4g57VaZeRlw9b8saFt97FC0KvZRuvdU-hdkQDBk29oFHka_ZhYe6LbIe7-NxOxjrHcp3QCoN4J9T40Q92p1wFvx2JHG-H9ryLtGXqe4Rp8Ct9hDSPISSSVTGyPceZNKj6VHXZ5ZrRrKUim2ykXGm7tslcL4ovu8rjdLB8Du63bLCT9IsUkdnDNdrBGaZFA77fSAp8WmyIK"
                   alt="System Development Capstone engineers collaborating on monitors in lab"
-                  className="h-[380px] w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 sm:h-[460px]"
+                  className="h-95 w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 sm:h-115"
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-sd-navy/80 via-transparent to-transparent" />
 
-                <div className="absolute start-4 top-4 inline-flex items-center gap-2 rounded-lg border border-white/20 bg-sd-navy/85 px-3 py-1.5 font-mono text-xs text-white shadow-lg backdrop-blur-md">
+                <div className="absolute inset-s-4 top-4 inline-flex items-center gap-2 rounded-lg border border-white/20 bg-sd-navy/85 px-3 py-1.5 font-mono text-xs text-white shadow-lg backdrop-blur-md">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
 
                   <span>zk-SNARK Circuit Validated • 0x00 VALID</span>
                 </div>
 
-                <div className="absolute bottom-4 start-4 end-4 flex flex-col justify-between gap-3 rounded-xl border border-white/10 bg-sd-navy/90 p-4 text-white backdrop-blur-md sm:flex-row sm:items-center">
+                <div className="absolute bottom-4 inset-s-4 inset-e-4 flex flex-col justify-between gap-3 rounded-xl border border-white/10 bg-sd-navy/90 p-4 text-white backdrop-blur-md sm:flex-row sm:items-center">
                   <div>
                     <div className="font-mono text-[10px] font-semibold uppercase tracking-wider text-accent">
                       PRODUCTION SPRINT // INTAKE 45

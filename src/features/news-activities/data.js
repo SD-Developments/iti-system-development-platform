@@ -1,3 +1,4 @@
+import { currentIntake } from '@/data/siteFacts';
 // News & activities feature data.
 
 export const stitchImages = {
@@ -47,7 +48,7 @@ export const newsCategories = [
 
 export const latestNews = [
   {
-    title: 'Welcome to Intake 48',
+    title: `Welcome to Intake ${currentIntake}`,
     type: 'NEWS',
     date: 'SEP 10, 2026',
     description: 'A new generation of software developers begins their journey at SD.',
@@ -243,7 +244,7 @@ export const featuredProjects = [
 export const announcements = [
   {
     status: 'NEW',
-    title: 'Intake 48 Orientation Schedule',
+    title: `Intake ${currentIntake} Orientation Schedule`,
     detail: 'September 21, 2026',
     tone: 'red',
   },
@@ -267,6 +268,6 @@ export const timeline = [
   { month: 'JUN', title: 'Graduation Projects' },
   { month: 'JUL', title: 'AI Workshop Series' },
   { month: 'AUG', title: 'Project Showcase' },
-  { month: 'SEP', title: 'Intake 48 Begins', active: true },
+  { month: 'SEP', title: `Intake ${currentIntake} Begins`, active: true },
   { month: 'OCT', title: 'Career Day' },
 ];

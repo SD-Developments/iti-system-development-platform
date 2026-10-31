@@ -1,3 +1,4 @@
+import { currentIntake } from '@/data/siteFacts';
 import Icon from '@/components/Icon';
 import { faqs } from '@/features/home/data';
 
@@ -47,7 +48,7 @@ const FAQ = () => {
                 </span>
 
                 <span className="text-sm font-bold text-foreground">
-                  Intake 45 Online Application Window Opens Early July
+                  Intake {currentIntake} Online Application Window Opens Early July
                 </span>
               </div>
             </div>
@@ -89,7 +90,7 @@ const FAQ = () => {
                 href="#intake-status"
                 className="w-full rounded-xl  hover:bg-white   text-primary-foreground  bg-primary px-8 py-4 text-center text-sm font-bold uppercase tracking-wider hover:text-sd-navy shadow-lg transition-all  sm:w-auto"
               >
-                Apply for Intake 45
+                Apply for Intake {currentIntake}
               </a>
             </div>
           </div>

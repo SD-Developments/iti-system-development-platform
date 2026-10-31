@@ -4,6 +4,7 @@
 // To change the production domain, set VITE_SITE_URL in .env:
 //   VITE_SITE_URL=https://sd.iti.gov.eg
 // Falls back to the canonical ITI SD URL below.
+import { ptpHours } from '@/data/siteFacts';
 
 const rawSiteUrl =
   (import.meta.env?.VITE_SITE_URL ?? 'https://sd.iti.gov.eg').trim() || 'https://sd.iti.gov.eg';
@@ -74,7 +75,9 @@ export const PAGE_SEO = {
   about: {
     title: 'About SD | Mission, Curriculum, Faculty & Culture Since 1993',
     description:
-      'About ITI Software Development Department: pioneering software talent since 1993 with 1,200+ instructional hours, AI-integrated curriculum, production capstones, expert faculty and a nationwide Build • Learn • Grow culture.',
+      'About ITI Software Development Department: pioneering software talent since 1993 with ' +
+      ptpHours +
+      ' instructional hours, AI-integrated curriculum, production capstones, expert faculty and a nationwide Build • Learn • Grow culture.',
     keywords: [
       'about ITI SD',
       'ITI history 1993',

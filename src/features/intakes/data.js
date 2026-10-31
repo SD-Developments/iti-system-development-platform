@@ -1,3 +1,4 @@
+import { branchCount, currentIntake, itpHours, ptpHours, summerHours } from '@/data/siteFacts';
 // Program (PTP / ITP / summer) comparison and phase data for the Intakes page.
 
 export const diplomaPhases = [
@@ -15,41 +16,6 @@ export const diplomaPhases = [
     label: 'PHASE 03 • CAPSTONE',
     title: 'Live Defense',
     description: '8-week industry sponsored MVP defended before multinational engineering juries.',
-  },
-];
-
-export const itpTracks = [
-  {
-    category: 'FRONTEND ENGINEERING',
-    hours: '500h',
-    title: 'Modern Web with Angular & React',
-    description:
-      'State management (NgRx / Redux), RxJS observables, WebSockets, accessibility, progressive web apps, performance audits, plus an AI session: AI-assisted React/Angular development with Copilot/Cursor and RAG-powered UI features.',
-    outcome: 'Frontend Engineer',
-  },
-  {
-    category: 'BACKEND ARCHITECTURE',
-    hours: '500h',
-    title: 'Python Enterprise & FastApi',
-    description:
-      'Asynchronous microservices, Dockerized packaging, PostgreSQL caching layers, OAuth2 security, and production test suites.',
-    outcome: 'Backend Specialist',
-  },
-  {
-    category: 'CROSS-PLATFORM',
-    hours: '500h',
-    title: 'Flutter & Dart Mobile Architecture',
-    description:
-      'Bloc/Cubit patterns, native platform channels, offline persistence, automated CI/CD for App Store & Play Store deployments.',
-    outcome: 'Mobile App Dev',
-  },
-  {
-    category: 'RELIABILITY & QUALITY',
-    hours: '500h',
-    title: 'Software Quality Assurance Automation',
-    description:
-      'Selenium, Cypress, Playwright, API performance benchmarking with JMeter, CI pipeline integration, and ISTQB certification.',
-    outcome: 'QA Automation Lead',
   },
 ];
 
@@ -91,8 +57,8 @@ export const summerStats = [
     label: 'Partner Universities',
   },
   {
-    value: '120h',
-    label: 'Average Intensive Track',
+    value: `${summerHours}h`,
+    label: 'Intensive Track Hours',
   },
   {
     value: '0 EGP',
@@ -110,14 +76,14 @@ export const comparisonPrograms = [
     description:
       'The flagship postgraduate immersion preparing engineers for top-tier enterprise roles.',
     specs: [
-      ['Contact Hours', '1,200+ Hours'],
+      ['Contact Hours', `${ptpHours} Hours`],
       ['Duration & Schedule', '9 Mo • Mon-Fri 8:30-16:30'],
       ['Target Audience', 'STEM University Grads (< 5y post grad)'],
       ['Capstone Requirement', 'Enterprise Production MVP + CTO Jury Defense'],
-      ['Branch Availability', '11 Branches Nationwide'],
+      ['Branch Availability', `${branchCount} Branches Nationwide`],
     ],
     career: 'Senior-Ready Junior',
-    action: 'Apply for 9-Month Intake 45',
+    action: `Apply for 9-Month Intake ${currentIntake}`,
     href: '#intake-status',
   },
   {
@@ -128,7 +94,7 @@ export const comparisonPrograms = [
     description:
       'High-velocity tech skills transfer focused directly on rapid corporate deployment.',
     specs: [
-      ['Contact Hours', '500+ Hours'],
+      ['Contact Hours', `${itpHours} Hours`],
       ['Duration & Schedule', '4 Mo • Hybrid Sprints'],
       ['Target Audience', 'Graduates pivoting to specialized stacks'],
       ['Capstone Requirement', 'Production Sprint Deployment (CI/CD)'],
@@ -167,7 +133,7 @@ export const diplomaFacts = [
   },
   {
     icon: 'schedule',
-    value: '1,200+ Contact Hours',
+    value: `${ptpHours} Contact Hours`,
     label: 'Labs & Studio',
     accent: 'navy',
   },
@@ -224,27 +190,6 @@ export const diplomaStages = [
   },
 ];
 
-export const diplomaTracks = [
-  {
-    icon: 'terminal',
-    title: 'Full-Stack Web Solutions Development',
-    subtitle: 'UI Engineering • AI Integration',
-    accent: 'primary',
-  },
-  {
-    icon: 'smartphone',
-    title: 'Cross-Platform Mobile App Development',
-    subtitle: 'Mobile Engineering • AI Integration',
-    accent: 'navy',
-  },
-  {
-    icon: 'architecture',
-    title: '.NET Enterprise Solutions Development',
-    subtitle: 'Enterprise Architecture • AI Integration',
-    accent: 'navy',
-  },
-];
-
 export const experienceItems = [
   {
     icon: 'desktop_windows',
@@ -293,7 +238,7 @@ export const summerFacts = [
   {
     icon: 'hub',
     value: '32 Universities',
-    label: '+ 272 Hubs',
+    label: `+ ${branchCount} Hubs`,
     accent: 'teal',
   },
 ];
@@ -312,8 +257,8 @@ export const summerImpact = [
     accent: 'navy',
   },
   {
-    value: '120h',
-    title: 'Average Intensive Track',
+    value: `${summerHours}h`,
+    title: 'Intensive Track Hours',
     description: 'Hands-on lab workshops',
     accent: 'teal',
   },
@@ -391,14 +336,14 @@ export const matrixPrograms = [
       'The flagship postgraduate immersion preparing engineers for top-tier enterprise roles.',
     accent: 'primary',
     rows: [
-      ['Contact Hours', '1,200+ Hours'],
+      ['Contact Hours', `${ptpHours} Hours`],
       ['Duration & Schedule', '9 Mo • Mon-Fri 8:30-16:30'],
       ['Target Audience', 'STEM University Grads (< 5y post grad)'],
       ['Capstone Requirement', 'Enterprise Production MVP + CTO Jury Defense'],
-      ['Branch Availability', '11 Branches Nationwide'],
+      ['Branch Availability', `${branchCount} Branches Nationwide`],
       ['Career Trajectory', 'Senior-Ready Junior'],
     ],
-    button: 'Apply for 9-Month Intake 45',
+    button: `Apply for 9-Month Intake ${currentIntake}`,
     href: '#intake-status',
     featured: true,
   },
@@ -409,7 +354,7 @@ export const matrixPrograms = [
       'High-velocity tech skills transfer focused directly on rapid corporate deployment.',
     accent: 'teal',
     rows: [
-      ['Contact Hours', '500+ Hours'],
+      ['Contact Hours', `${itpHours} Hours`],
       ['Duration & Schedule', '4 Mo • Hybrid Sprints'],
       ['Target Audience', 'Graduates pivoting to specialized stacks'],
       ['Capstone Requirement', 'Production Sprint Deployment (CI/CD)'],

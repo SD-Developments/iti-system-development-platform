@@ -1,3 +1,4 @@
+import { ptpHours } from '@/data/siteFacts';
 import Icon from '@/components/Icon';
 import img from '../../../assets/images/hero/hero1.png';
 
@@ -83,7 +84,7 @@ const AboutHero = () => {
                       Intensive Professional Diploma
                     </span>
                     <span className="font-mono text-xs text-muted-foreground">
-                      1,200+ Instructional &amp; Practical Hours
+                      {ptpHours} Instructional &amp; Practical Hours
                     </span>
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+import { ptpHours } from '@/data/siteFacts';
 import Icon from '@/components/Icon';
 import about4 from '../../../assets/images/hero/hero1.png';
 
@@ -20,8 +21,8 @@ const cards = [
     icon: 'terminal',
     accent: 'accent',
     title: 'Hands-on Labs',
-    tag: '1,200+ HOURS',
-    desc: '1,200+ hours of live coding, test-driven development, peer reviews, bug triage, and automated CI/CD pipelines.',
+    tag: `${ptpHours} HOURS`,
+    desc: `${ptpHours} hours of live coding, test-driven development, peer reviews, bug triage, and automated CI/CD pipelines.`,
   },
   {
     icon: 'psychology',

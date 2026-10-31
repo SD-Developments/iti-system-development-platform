@@ -1,3 +1,4 @@
+import { branchCount } from '@/data/siteFacts';
 // Branch-hub data. Preserved from the removed Branches page; currently unreferenced.
 
 import heroImage from '../../assets/images/hero/hero1.png';
@@ -341,7 +342,7 @@ export const branchesData = [
 export const filterOptions = [
   {
     value: 'all',
-    label: 'All 11 Hubs',
+    label: `All ${branchCount} Hubs`,
   },
   {
     value: 'cairo',

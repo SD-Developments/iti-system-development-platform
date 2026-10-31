@@ -1,3 +1,4 @@
+import { ptpHours } from '@/data/siteFacts';
 import Icon from '@/components/Icon';
 const Month9Section = () => {
   return (
@@ -51,7 +52,7 @@ const Month9Section = () => {
 
                 <div className="flex flex-col">
                   <span className="font-heading text-base font-bold text-foreground">
-                    1,200+ Contact Hours
+                    {ptpHours} Contact Hours
                   </span>
 
                   <span className="font-mono text-xs text-muted-foreground">Labs & Studio</span>

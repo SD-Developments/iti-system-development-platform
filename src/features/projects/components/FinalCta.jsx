@@ -1,3 +1,4 @@
+import { branchCount } from '@/data/siteFacts';
 const FinalCta = () => {
   return (
     <>
@@ -38,7 +39,7 @@ const FinalCta = () => {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 pt-8 font-mono text-xs text-slate-400">
-            <span>✔ 11 Nationwide Hubs Across Egypt</span>
+            <span>✔ {branchCount} Nationwide Hubs Across Egypt</span>
             <span>✔ Zero IP Royalties Retained</span>
             <span>✔ Direct Ministry &amp; Dean Oversight</span>
           </div>
