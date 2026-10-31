@@ -33,7 +33,7 @@ const ProjectsHeroSection = () => {
                   Real Problems.
                   <svg
                     aria-hidden="true"
-                    className="absolute -bottom-3 left-0 h-3 w-full overflow-visible"
+                    className="absolute -bottom-3 start-0 h-3 w-full overflow-visible"
                     viewBox="0 0 300 12"
                     preserveAspectRatio="none"
                   >
@@ -116,13 +116,13 @@ const ProjectsHeroSection = () => {
               {/* Decorative Corner - Top Right */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute -right-4 -top-4 h-12 w-12 border-r-2 border-t-2 border-accent/40"
+                className="pointer-events-none absolute -end-4 -top-4 h-12 w-12 border-e-2 border-t-2 border-accent/40"
               />
 
               {/* Decorative Corner - Bottom Left */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute -bottom-4 -left-4 h-12 w-12 border-b-2 border-l-2 border-primary/40"
+                className="pointer-events-none absolute -bottom-4 -start-4 h-12 w-12 border-b-2 border-s-2 border-primary/40"
               />
 
               {/* Image Card */}
@@ -138,7 +138,7 @@ const ProjectsHeroSection = () => {
                   <div className="absolute inset-0 bg-linear-to-t from-sd-navy/85 via-sd-navy/30 to-transparent" />
 
                   {/* Top Badges */}
-                  <div className="absolute left-5 right-5 top-5 flex items-center justify-between gap-3">
+                  <div className="absolute start-5 end-5 top-5 flex items-center justify-between gap-3">
                     <div className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-sd-navy/80 px-3.5 py-1.5 text-white shadow-lg backdrop-blur-md">
                       <span className="live-pulse h-2 w-2 rounded-full bg-accent" />
 
@@ -153,7 +153,7 @@ const ProjectsHeroSection = () => {
                   </div>
 
                   {/* Hero HUD */}
-                  <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/20 bg-sd-navy/90 p-4 text-white shadow-2xl backdrop-blur-md">
+                  <div className="absolute bottom-5 start-5 end-5 rounded-xl border border-white/20 bg-sd-navy/90 p-4 text-white shadow-2xl backdrop-blur-md">
                     {/* HUD Header */}
                     <div className="mb-2 flex items-center justify-between gap-3 border-b border-white/10 pb-2">
                       <div>

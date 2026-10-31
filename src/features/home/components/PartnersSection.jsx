@@ -6,7 +6,7 @@ function PartnersSection() {
       <section className="bg-card py-12">
         <div className="mx-auto w-[90%] max-w-7xl">
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-start">
               <span className="font-mono text-[11px] font-bold uppercase tracking-[0.17em] text-primary">
                 Industry Connection
               </span>

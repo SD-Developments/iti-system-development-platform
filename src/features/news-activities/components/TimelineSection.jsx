@@ -8,7 +8,7 @@ const TimelineSection = () => (
     />
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute -bottom-24 right-0 -z-10 h-56 w-1/2 rounded-full bg-sd-teal/10 blur-3xl"
+      className="pointer-events-none absolute -bottom-24 end-0 -z-10 h-56 w-1/2 rounded-full bg-sd-teal/10 blur-3xl"
     />
     <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.035] bg-grid2" />
     <div className="mx-auto max-w-335 px-4 sm:px-6 lg:px-8">
@@ -34,12 +34,12 @@ const TimelineSection = () => (
         />
         <div
           aria-hidden="true"
-          className="absolute bottom-6 left-2.5 top-6 w-0.5 -translate-x-1/2 rounded-full bg-linear-to-b from-sd-teal/60 via-slate-600 to-sd-red/60 md:hidden"
+          className="absolute bottom-6 start-2.5 top-6 w-0.5 -translate-x-1/2 rounded-full bg-linear-to-b from-sd-teal/60 via-slate-600 to-sd-red/60 md:hidden"
         />
         <div className="relative z-10 grid grid-cols-1 gap-5 md:grid-cols-5 md:gap-6">
           {timeline.map((item) => (
-            <div key={item.month} className="group relative pl-10 md:pl-0">
-              <div className="absolute left-0 top-4 flex size-5 items-center justify-center md:relative md:top-0 md:mx-auto">
+            <div key={item.month} className="group relative ps-10 md:ps-0">
+              <div className="absolute start-0 top-4 flex size-5 items-center justify-center md:relative md:top-0 md:mx-auto">
                 {item.active && (
                   <span className="absolute inline-flex size-full rounded-full bg-sd-red/60 motion-safe:animate-ping" />
                 )}
@@ -51,14 +51,14 @@ const TimelineSection = () => (
               </div>
               <div
                 aria-hidden="true"
-                className={`absolute left-5 top-[25px] h-0.5 w-5 md:hidden ${item.active ? 'bg-sd-red/70' : 'bg-slate-700 group-hover:bg-sd-teal/70'}`}
+                className={`absolute start-5 top-[25px] h-0.5 w-5 md:hidden ${item.active ? 'bg-sd-red/70' : 'bg-slate-700 group-hover:bg-sd-teal/70'}`}
               />
               <div
                 aria-hidden="true"
                 className={`mx-auto hidden h-5 w-0.5 md:block ${item.active ? 'bg-linear-to-b from-sd-red to-sd-red/10' : 'bg-linear-to-b from-slate-600 to-slate-800 group-hover:from-sd-teal'}`}
               />
               <div
-                className={`rounded-xl border p-4 text-left transition-all duration-300 group-hover:-translate-y-1 md:text-center ${item.active ? 'border-sd-red/40 bg-slate-900 shadow-lg shadow-sd-red/10' : 'border-slate-800 bg-slate-900/80 group-hover:border-sd-teal/50 group-hover:bg-slate-900'}`}
+                className={`rounded-xl border p-4 text-start transition-all duration-300 group-hover:-translate-y-1 md:text-center ${item.active ? 'border-sd-red/40 bg-slate-900 shadow-lg shadow-sd-red/10' : 'border-slate-800 bg-slate-900/80 group-hover:border-sd-teal/50 group-hover:bg-slate-900'}`}
               >
                 <span
                   className={`block font-mono text-xs font-bold uppercase tracking-wider ${item.active ? 'text-sd-red' : 'text-sd-teal'}`}

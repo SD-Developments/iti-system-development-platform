@@ -422,7 +422,7 @@ const Month9Section = () => {
 
                 <div className="absolute inset-0 bg-linear-to-t from-sd-navy/85 via-transparent to-transparent" />
 
-                <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-xl border border-border bg-card/95 p-4 shadow-lg backdrop-blur-md">
+                <div className="absolute bottom-5 start-5 end-5 flex items-center justify-between rounded-xl border border-border bg-card/95 p-4 shadow-lg backdrop-blur-md">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Icon name="verified" className="text-[22px]" />

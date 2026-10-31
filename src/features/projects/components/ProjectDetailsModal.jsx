@@ -31,7 +31,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
+          className="absolute end-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
           aria-label="Close project details"
         >
           <X size={20} />
@@ -44,7 +44,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
 
             <div className="absolute inset-0 bg-linear-to-t from-sd-navy via-sd-navy/30 to-transparent" />
 
-            <div className="absolute bottom-5 left-6 right-6">
+            <div className="absolute bottom-5 start-6 end-6">
               <span className="mb-2 inline-block rounded-lg bg-accent px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-white">
                 {project.category}
               </span>

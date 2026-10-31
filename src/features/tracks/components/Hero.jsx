@@ -6,8 +6,8 @@ function Hero() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border bg-secondary/40 py-14 lg:py-24">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary/8 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-accent/8 blur-3xl" />
+        <div className="pointer-events-none absolute -end-32 -top-32 h-96 w-96 rounded-full bg-primary/8 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 start-1/3 h-72 w-72 rounded-full bg-accent/8 blur-3xl" />
 
         <div className="relative mx-auto w-[90%] max-w-7xl">
           <div className="mb-10 flex items-center gap-2 text-xs text-muted-foreground">

@@ -347,12 +347,12 @@ function HeroVisual({ type }) {
 
   return (
     <div className="relative min-h-117.5 w-full max-w-180">
-      <div className="relative ml-auto flex h-100 w-full items-center justify-center rounded-3xl text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
+      <div className="relative ms-auto flex h-100 w-full items-center justify-center rounded-3xl text-muted-foreground shadow-2xl shadow-foreground/10 lg:w-[86%]">
         <div className="absolute inset-0 bg-linear-to-tl rounded-3xl from-secondary/10 to-accent/50" />
         <img src={hero1} className="h-full w-full rounded-3xl object-cover" alt="" />{' '}
       </div>
 
-      <div className="absolute left-0 top-16 flex flex-wrap gap-2 rounded-xl bg-card/95 p-3 shadow-xl backdrop-blur">
+      <div className="absolute start-0 top-16 flex flex-wrap gap-2 rounded-xl bg-card/95 p-3 shadow-xl backdrop-blur">
         {['.NET', 'React', 'JavaScript', 'AI'].map((tag) => (
           <span
             key={tag}
@@ -363,7 +363,7 @@ function HeroVisual({ type }) {
         ))}
       </div>
 
-      <div className="absolute bottom-8 right-0 min-w-42.5 rounded-xl bg-card/95 p-5 shadow-xl backdrop-blur">
+      <div className="absolute bottom-8 end-0 min-w-42.5 rounded-xl bg-card/95 p-5 shadow-xl backdrop-blur">
         <span className="block text-xs text-muted-foreground">Ideas</span>
 
         <strong className="mt-1 block text-lg text-card-foreground">into Impact</strong>

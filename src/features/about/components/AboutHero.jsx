@@ -67,13 +67,13 @@ const AboutHero = () => {
               />
               <div className="absolute inset-0 bg-linear-to-t from-sd-navy/90 via-sd-navy/20 to-transparent"></div>
               {/* Handwritten Accent Overlay */}
-              <div className="absolute top-5 left-6 bg-card/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg border border-white/50 -rotate-2">
+              <div className="absolute top-5 start-6 bg-card/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg border border-white/50 -rotate-2">
                 <span className="text-2xl text-primary font-bold tracking-wide">
                   Build • Learn • Grow
                 </span>
               </div>
               {/* Floating Telemetry Glass Card */}
-              <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-card/95 backdrop-blur-md shadow-xl border border-border flex items-center justify-between gap-4">
+              <div className="absolute bottom-5 start-5 end-5 p-4 rounded-xl bg-card/95 backdrop-blur-md shadow-xl border border-border flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-mono text-sm font-black shadow-md">
                     SD

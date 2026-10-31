@@ -18,9 +18,9 @@ const FeaturedProject = () => {
           }}
         />
 
-        <div className="pointer-events-none absolute left-120 -top-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
+        <div className="pointer-events-none absolute start-120 -top-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
 
-        <div className="pointer-events-none absolute -bottom-32 right-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-32 end-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="mb-12 flex items-center justify-between gap-6 border-b border-white/10 pb-6">
@@ -56,7 +56,7 @@ const FeaturedProject = () => {
 
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/60 to-transparent" />
 
-                <div className="absolute left-4 right-4 top-4 flex items-center justify-between gap-3">
+                <div className="absolute start-4 end-4 top-4 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-sd-navy/90 px-3 py-1 text-xs font-mono">
                     <span className="h-2.5 w-2.5 rounded-full bg-primary" />
                     <span>KEMETHEALTH AI // DEFENSE PANEL</span>
@@ -67,7 +67,7 @@ const FeaturedProject = () => {
                   </span>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2.5">
+                <div className="absolute bottom-4 start-4 end-4 grid grid-cols-3 gap-2.5">
                   <div className="rounded-xl border border-white/10 bg-slate-900/85 p-3 backdrop-blur-md">
                     <div className="font-mono text-[10px] uppercase text-slate-400">
                       Bed Match Speed
@@ -131,7 +131,7 @@ const FeaturedProject = () => {
               </h3>
 
               <div className="space-y-4 text-sm leading-relaxed text-slate-300">
-                <div className="border-l-2 border-primary pl-4">
+                <div className="border-s-2 border-primary ps-4">
                   <span className="mb-1 block font-mono text-xs font-bold uppercase text-white">
                     The Critical Problem
                   </span>
@@ -140,7 +140,7 @@ const FeaturedProject = () => {
                   respiratory events.
                 </div>
 
-                <div className="border-l-2 border-accent pl-4">
+                <div className="border-s-2 border-accent ps-4">
                   <span className="mb-1 block font-mono text-xs font-bold uppercase text-white">
                     The SD Solution
                   </span>

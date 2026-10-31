@@ -8,7 +8,7 @@ const NewsActivitiesHero = () => (
     />
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute -bottom-24 right-0 -z-10 h-56 w-1/2 rounded-full bg-sd-teal/10 blur-3xl"
+      className="pointer-events-none absolute -bottom-24 end-0 -z-10 h-56 w-1/2 rounded-full bg-sd-teal/10 blur-3xl"
     />
     <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.035] bg-grid2" />
     <div className="max-w-335 mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

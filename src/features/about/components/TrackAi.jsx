@@ -4,8 +4,8 @@ import about4 from '../../../assets/images/hero/hero1.png';
 const TrackAi = () => {
   return (
     <section className="w-full bg-sd-navy py-16 lg:py-24 text-white relative overflow-hidden">
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -top-40 -end-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -bottom-40 -start-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
       <div className="relative max-w-7xl mx-auto px-6 flex flex-col gap-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="flex flex-col gap-3 max-w-2xl">

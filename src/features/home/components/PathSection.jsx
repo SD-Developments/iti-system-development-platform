@@ -58,9 +58,9 @@ function PathSection() {
   return (
     <section ref={containerRef} className="relative overflow-hidden bg-sd-bg-light py-16 lg:py-24">
       {/* Background */}
-      <div className="pointer-events-none absolute -left-40 top-24 h-96 w-96 rounded-full bg-accent/5 blur-[110px]" />
+      <div className="pointer-events-none absolute -start-40 top-24 h-96 w-96 rounded-full bg-accent/5 blur-[110px]" />
 
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-primary/5 blur-[110px]" />
+      <div className="pointer-events-none absolute -end-40 bottom-0 h-96 w-96 rounded-full bg-primary/5 blur-[110px]" />
 
       <div className="relative mx-auto w-[90%] max-w-7xl">
         {/* ==================================================
@@ -104,7 +104,7 @@ function PathSection() {
               {/* decorative circle */}
               <div
                 className={`
-                  absolute right-0 top-0
+                  absolute end-0 top-0
                   h-40 w-40
                   translate-x-1/3
                   -translate-y-1/3
@@ -299,7 +299,7 @@ function PathSection() {
               onClick={() => {
                 setShowProgram(null);
               }}
-              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
+              className="absolute end-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
               aria-label="Close project details"
             >
               <X size={20} />
@@ -329,7 +329,7 @@ function PathSection() {
               onClick={() => {
                 setShowProgram(null);
               }}
-              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
+              className="absolute end-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-sd-navy/80 text-white backdrop-blur-md transition-colors hover:bg-primary"
               aria-label="Close project details"
             >
               <X size={20} />
@@ -408,7 +408,7 @@ function TrackCard({ track, index }) {
         className={`
           pointer-events-none
           absolute
-          right-3
+          end-3
           top-3
           select-none
           text-[90px]

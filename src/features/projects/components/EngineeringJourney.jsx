@@ -28,7 +28,7 @@ const EngineeringJourney = () => {
           {/* Timeline */}
 
           <div className="relative">
-            <div className="absolute left-8 right-8 top-7 hidden h-0.5 bg-linear-to-r from-accent via-primary to-emerald-500 opacity-40 md:block" />
+            <div className="absolute start-8 end-8 top-7 hidden h-0.5 bg-linear-to-r from-accent via-primary to-emerald-500 opacity-40 md:block" />
 
             <div className="relative z-10 grid grid-cols-1 gap-3 md:grid-cols-7">
               {journeyStages.map((stage) => (

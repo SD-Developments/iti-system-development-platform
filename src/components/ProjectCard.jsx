@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
 
         <div className="absolute inset-0 bg-linear-to-t from-sd-navy/90 via-transparent to-transparent" />
 
-        <div className="absolute bottom-4 left-4 rounded-full bg-sd-navy/80 px-3 py-1.5 font-mono text-[10px] text-sd-teal backdrop-blur">
+        <div className="absolute bottom-4 start-4 rounded-full bg-sd-navy/80 px-3 py-1.5 font-mono text-[10px] text-sd-teal backdrop-blur">
           {project.track}
         </div>
       </div>

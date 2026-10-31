@@ -37,7 +37,7 @@ const CategoryFilterBar = ({
         <div role="search" className="relative min-w-36 flex-1 sm:w-48 sm:flex-none lg:w-56">
           <Search
             aria-hidden="true"
-            className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+            className="pointer-events-none absolute start-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
           />
           <input
             type="search"
@@ -45,14 +45,14 @@ const CategoryFilterBar = ({
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search news..."
             aria-label="Search news and activities"
-            className="w-full rounded-full border border-border bg-muted py-1.5 pl-9 pr-8 text-xs font-medium text-foreground placeholder:text-muted-foreground transition-colors hover:border-sd-red/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-sd-red/60 [&::-webkit-search-cancel-button]:appearance-none"
+            className="w-full rounded-full border border-border bg-muted py-1.5 ps-9 pe-8 text-xs font-medium text-foreground placeholder:text-muted-foreground transition-colors hover:border-sd-red/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-sd-red/60 [&::-webkit-search-cancel-button]:appearance-none"
           />
           {search && (
             <button
               type="button"
               aria-label="Clear search"
               onClick={() => onSearchChange('')}
-              className="absolute right-2.5 top-1/2 flex size-5 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary2 hover:text-foreground focus-visible:outline-2 focus-visible:outline-sd-red"
+              className="absolute end-2.5 top-1/2 flex size-5 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary2 hover:text-foreground focus-visible:outline-2 focus-visible:outline-sd-red"
             >
               <X aria-hidden="true" className="size-3.5" />
             </button>
@@ -64,7 +64,7 @@ const CategoryFilterBar = ({
             <select
               value={sort}
               onChange={(e) => onSortChange(e.target.value)}
-              className="cursor-pointer appearance-none rounded-full border border-border bg-muted py-1.5 pl-3 pr-8 text-xs font-semibold text-foreground transition-colors hover:border-sd-red/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-sd-red/60"
+              className="cursor-pointer appearance-none rounded-full border border-border bg-muted py-1.5 ps-3 pe-8 text-xs font-semibold text-foreground transition-colors hover:border-sd-red/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-sd-red/60"
             >
               {sortOptions.map((option) => (
                 <option key={option}>{option}</option>
@@ -72,7 +72,7 @@ const CategoryFilterBar = ({
             </select>
             <ChevronDown
               aria-hidden="true"
-              className="pointer-events-none absolute right-2.5 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground"
+              className="pointer-events-none absolute end-2.5 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground"
             />
           </span>
         </label>

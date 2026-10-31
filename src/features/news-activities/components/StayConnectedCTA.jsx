@@ -6,11 +6,11 @@ const StayConnectedCTA = () => (
       <div className="relative isolate flex flex-col items-start justify-between gap-8 overflow-hidden rounded-3xl border border-slate-800 bg-sd-navy p-8 text-white shadow-2xl shadow-sd-navy/30 sm:p-10 md:flex-row md:items-center lg:p-12">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-16 -top-24 -z-10 h-64 w-64 rounded-full bg-sd-red/15 blur-3xl"
+          className="pointer-events-none absolute -start-16 -top-24 -z-10 h-64 w-64 rounded-full bg-sd-red/15 blur-3xl"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-24 right-0 -z-10 h-64 w-72 rounded-full bg-sd-teal/15 blur-3xl"
+          className="pointer-events-none absolute -bottom-24 end-0 -z-10 h-64 w-72 rounded-full bg-sd-teal/15 blur-3xl"
         />
         <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.035] bg-grid2" />
         <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-sd-red/70 to-transparent" />
@@ -47,7 +47,7 @@ const StayConnectedCTA = () => (
             View Upcoming Events
           </a>
         </div>
-        <div className="hidden border-l border-slate-700 pl-6 text-right font-mono text-[10px] leading-relaxed tracking-[0.3em] text-slate-400 lg:block">
+        <div className="hidden border-s border-slate-700 ps-6 text-end font-mono text-[10px] leading-relaxed tracking-[0.3em] text-slate-400 lg:block">
           BUILD
           <br />
           <span className="text-sd-teal">LEARN</span>

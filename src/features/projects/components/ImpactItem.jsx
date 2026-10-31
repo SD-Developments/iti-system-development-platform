@@ -3,7 +3,7 @@ const ImpactItem = ({ number, title, description, color }) => {
     color === 'teal' ? 'text-accent' : color === 'red' ? 'text-primary' : 'text-sd-navy';
 
   return (
-    <div className="px-0 pt-4 md:px-6 md:pt-0 first:md:pl-0">
+    <div className="px-0 pt-4 md:px-6 md:pt-0 first:md:ps-0">
       <div
         className={`font-mono text-4xl font-extrabold tracking-tight sm:text-5xl ${numberColor}`}
       >

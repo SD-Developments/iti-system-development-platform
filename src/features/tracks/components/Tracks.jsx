@@ -45,7 +45,7 @@ function Tracks() {
               <div className="relative flex items-center gap-3 rounded-xl border border-border bg-background">
                 <Search
                   size={18}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 text-muted-foreground"
+                  className="absolute start-2 top-1/2 -translate-y-1/2 text-muted-foreground"
                 />
                 <Input
                   type="text"
@@ -54,7 +54,7 @@ function Tracks() {
                   }}
                   value={searchQuery}
                   placeholder="Search tracks or technologies..."
-                  className="h-12 pl-10 w-full border-0 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground focus:ring-0"
+                  className="h-12 ps-10 w-full border-0 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground focus:ring-0"
                 />
               </div>
 

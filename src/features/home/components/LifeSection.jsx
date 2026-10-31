@@ -24,7 +24,7 @@ function LifeSection() {
               />
 
               <div className="absolute inset-0 bg-linear-to-t from-sd-navy via-sd-navy/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-7 text-sd-white lg:p-8">
+              <div className="absolute bottom-0 start-0 end-0 p-7 text-sd-white lg:p-8">
                 <Badge>Together at SD</Badge>
                 <h3 className="mt-2 text-3xl font-extrabold">Learn together. Build together.</h3>
                 <p className="mt-3 max-w-lg text-sm leading-6 text-sd-white/70">
@@ -51,7 +51,7 @@ function LifeSection() {
                         className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                       />
 
-                      <div className="absolute left-4 top-4 rounded-xl bg-card/90 p-2 text-primary shadow-sm backdrop-blur">
+                      <div className="absolute start-4 top-4 rounded-xl bg-card/90 p-2 text-primary shadow-sm backdrop-blur">
                         <Icon size={18} />
                       </div>
                     </div>

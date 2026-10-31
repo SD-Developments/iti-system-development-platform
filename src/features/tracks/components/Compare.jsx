@@ -106,7 +106,7 @@ function Compare() {
               type="button"
               onClick={() => setFilter(filter === program.id ? 'All' : program.id)}
               className={cn(
-                'rounded-xl border p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md',
+                'rounded-xl border p-5 text-start transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md',
                 filter === program.id
                   ? 'border-primary bg-primary/5 shadow-md'
                   : 'border-border bg-card'
@@ -143,13 +143,13 @@ function Compare() {
             }}
           >
             {/* Header row */}
-            <div className="sticky left-0 z-10 border-b border-border bg-secondary p-5 font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">
+            <div className="sticky start-0 z-10 border-b border-border bg-secondary p-5 font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">
               Compare
             </div>
             {visibleTracks.map((track) => {
               const Icon = track.icon;
               return (
-                <div key={track.id} className="border-b border-l border-border bg-secondary/60 p-5">
+                <div key={track.id} className="border-b border-s border-border bg-secondary/60 p-5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
                     {Icon && <Icon size={19} />}
                   </div>
@@ -218,13 +218,13 @@ function Compare() {
 function Row({ row, tracks }) {
   return (
     <>
-      <div className="sticky left-0 z-10 border-b border-border bg-secondary p-5 text-sm font-bold last-of-type:border-b-0">
+      <div className="sticky start-0 z-10 border-b border-border bg-secondary p-5 text-sm font-bold last-of-type:border-b-0">
         {row.label}
       </div>
       {tracks.map((track) => (
         <div
           key={track.id}
-          className="border-b border-l border-border p-5 text-sm text-muted-foreground transition-colors hover:bg-primary/3"
+          className="border-b border-s border-border p-5 text-sm text-muted-foreground transition-colors hover:bg-primary/3"
         >
           {row.render(track)}
         </div>

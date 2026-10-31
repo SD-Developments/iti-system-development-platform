@@ -11,8 +11,8 @@ function Learn() {
   return (
     <section className="relative overflow-hidden border-y border-border bg-secondary/30 py-16 lg:py-24">
       {/* subtle background decoration */}
-      <div className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
-      <div className="pointer-events-none absolute -left-32 bottom-10 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -end-32 top-20 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
+      <div className="pointer-events-none absolute -start-32 bottom-10 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
 
       <div className="relative mx-auto w-[90%] max-w-7xl">
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
@@ -76,7 +76,7 @@ function TrackLearningRow({ track, index }) {
       "
     >
       {/* accent line */}
-      <div className="absolute inset-y-0 left-0 w-1 bg-primary" />
+      <div className="absolute inset-y-0 start-0 w-1 bg-primary" />
       <div className="grid gap-7 p-6 sm:p-7 lg:grid-cols-12 lg:items-center lg:p-8">
         <div className="lg:col-span-4">
           <div className="flex items-start gap-4">

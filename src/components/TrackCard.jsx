@@ -16,7 +16,7 @@ function TrackCard({ track }) {
         <Icon
           size={150}
           strokeWidth={1}
-          className="pointer-events-none absolute -right-8 -top-8 text-accent/10 transition duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:text-accent/20"
+          className="pointer-events-none absolute -end-8 -top-8 text-accent/10 transition duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:text-accent/20"
         />
 
         <div className="relative flex items-start justify-between">
@@ -91,7 +91,7 @@ function TrackCard({ track }) {
             </ul>
 
             {roles.length > 2 && (
-              <p className="mt-2 pl-1 text-[10px] font-semibold text-muted-foreground">
+              <p className="mt-2 ps-1 text-[10px] font-semibold text-muted-foreground">
                 +{roles.length - 2} more roles
               </p>
             )}

@@ -3,7 +3,7 @@ import { stitchImages } from '../data';
 
 const HeroSectionBackPattern = () => (
   <div id="featured" className="grid scroll-mt-40 grid-cols-12 items-center gap-10 lg:gap-12">
-    <div className="relative z-10 col-span-12 pr-0 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-6 motion-safe:duration-700 lg:col-span-6 lg:pr-6">
+    <div className="relative z-10 col-span-12 pe-0 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-6 motion-safe:duration-700 lg:col-span-6 lg:pe-6">
       <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-300 backdrop-blur-sm sm:text-xs">
         <span className="size-1.5 rounded-full bg-sd-teal shadow-[0_0_12px_var(--color-sd-teal)]" />
         <span>SD Department / News &amp; Activities</span>
@@ -59,13 +59,13 @@ const HeroSectionBackPattern = () => (
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_75%_15%,rgba(0,176,176,0.22),transparent_45%)] opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/5 to-black/20" />
           <div className="absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-black/25 to-transparent" />
-          <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full bg-slate-950/55 px-3.5 py-2 shadow-lg shadow-black/10 backdrop-blur-lg sm:right-5 sm:top-5">
+          <div className="absolute end-4 top-4 flex items-center gap-2 rounded-full bg-slate-950/55 px-3.5 py-2 shadow-lg shadow-black/10 backdrop-blur-lg sm:end-5 sm:top-5">
             <span className="size-2 rounded-full bg-sd-teal shadow-[0_0_12px_var(--color-sd-teal)] motion-safe:animate-pulse" />
             <span className="font-mono text-[9px] font-bold uppercase tracking-[0.16em] text-white sm:text-[10px]">
               FEATURED EVENT
             </span>
           </div>
-          <div className="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7">
+          <div className="absolute bottom-5 start-5 end-5 sm:bottom-7 sm:start-7 sm:end-7">
             <div className="inline-flex max-w-full flex-col gap-2 rounded-xl bg-slate-950/35 px-4 py-3 shadow-lg shadow-black/10 backdrop-blur-md sm:px-5 sm:py-4">
               <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-sd-teal sm:text-[10px]">
                 Ideas in motion

@@ -68,10 +68,10 @@ const TechnicalProjectVisual = ({ project }) => {
 
           <div className="font-bold text-[10px] text-emerald-400">Deterministic Preemption: OK</div>
 
-          <div className="mt-1 text-right text-[9px] text-slate-500">ARM Cortex-M7</div>
+          <div className="mt-1 text-end text-[9px] text-slate-500">ARM Cortex-M7</div>
         </div>
 
-        <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[10px] text-slate-400">
+        <div className="absolute bottom-4 start-4 end-4 flex justify-between font-mono text-[10px] text-slate-400">
           <span>STM32H7 Core</span>
           <span>Smart Village Lab</span>
         </div>
@@ -92,7 +92,7 @@ const TechnicalProjectVisual = ({ project }) => {
           </span>
         </div>
 
-        <div className="absolute left-4 right-4 top-20 rounded border border-slate-800 bg-black/60 p-2.5 font-mono">
+        <div className="absolute start-4 end-4 top-20 rounded border border-slate-800 bg-black/60 p-2.5 font-mono">
           <div className="text-[10px] text-accent">[EMBED-RERANK]</div>
 
           <div className="truncate text-xs text-slate-300">14,000 Supreme Court Precedents</div>
@@ -100,7 +100,7 @@ const TechnicalProjectVisual = ({ project }) => {
           <div className="text-[10px] text-emerald-400">Cross-Encoder Arabic Guard Active</div>
         </div>
 
-        <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[10px] text-slate-400">
+        <div className="absolute bottom-4 start-4 end-4 flex justify-between font-mono text-[10px] text-slate-400">
           <span>Assiut Hub</span>
           <span>Qdrant + Llama 3</span>
         </div>
@@ -121,7 +121,7 @@ const TechnicalProjectVisual = ({ project }) => {
           </span>
         </div>
 
-        <div className="absolute left-4 right-4 top-20 rounded border border-slate-800 bg-black/60 p-2.5 font-mono">
+        <div className="absolute start-4 end-4 top-20 rounded border border-slate-800 bg-black/60 p-2.5 font-mono">
           <div className="text-[10px] text-accent">[KERNEL-PROBE: XDP]</div>
 
           <div className="text-xs text-slate-300">Sub-microsecond packet classification</div>
@@ -129,7 +129,7 @@ const TechnicalProjectVisual = ({ project }) => {
           <div className="text-[10px] text-emerald-400">Zero syscall overhead active</div>
         </div>
 
-        <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-[10px] text-slate-400">
+        <div className="absolute bottom-4 start-4 end-4 flex justify-between font-mono text-[10px] text-slate-400">
           <span>New Capital Campus</span>
           <span>Linux Kernel 6.8</span>
         </div>

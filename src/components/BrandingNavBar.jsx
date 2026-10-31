@@ -95,7 +95,7 @@ function ThemeToggleMobile({ theme, setTheme }) {
 
 function DesktopNavLinks() {
   return (
-    <ul className="ml-8 hidden w-1/2 items-center justify-end gap-1 xl:flex">
+    <ul className="ms-8 hidden w-1/2 items-center justify-end gap-1 xl:flex">
       {brandingNavLinks.map((link) => (
         <li key={link.id}>
           <NavLink
@@ -123,7 +123,7 @@ function DesktopNavLinks() {
             {({ isActive }) => (
               <>
                 {isActive && (
-                  <span className="mr-2 h-1.5 w-1.5 rounded-full bg-primary dark:bg-sd-teal" />
+                  <span className="me-2 h-1.5 w-1.5 rounded-full bg-primary dark:bg-sd-teal" />
                 )}
                 {link.title}
               </>
@@ -203,7 +203,7 @@ function ContactDropdown() {
             <span
               className="
                 absolute
-                left-10
+                start-10
                 z-10
                 flex
                 h-10
@@ -219,7 +219,7 @@ function ContactDropdown() {
                 transition-all
                 duration-200
                 p-1
-                group-hover:left-9
+                group-hover:start-9
                 group-hover:text-foreground
               "
             >
@@ -228,7 +228,7 @@ function ContactDropdown() {
             <span
               className="
                 absolute
-                left-3
+                start-3
                 z-20
                 flex
                 h-10
@@ -244,7 +244,7 @@ function ContactDropdown() {
                 transition-all
                 duration-200
                 p-1
-                group-hover:left-4
+                group-hover:start-4
                 group-hover:text-foreground
               "
             >
@@ -265,7 +265,7 @@ function ContactDropdown() {
                 rel="noreferrer"
                 className="flex font-semibold w-full"
               >
-                <img src={socialIcons[social.id]} alt={social.label} className="mr-2 w-5 h-5" />
+                <img src={socialIcons[social.id]} alt={social.label} className="me-2 w-5 h-5" />
                 {social.label}
               </a>
             </DropdownMenuItem>
@@ -302,7 +302,7 @@ function MobileSocialRow() {
               border-border
               bg-background
               p-1
-              ${i > 0 ? '-ml-2' : ''}
+              ${i > 0 ? '-ms-2' : ''}
             `}
           >
             <img src={socialIcons[social.id]} alt={social.label} />
@@ -375,7 +375,7 @@ function BrandingNavBar() {
         {/* Desktop Navigation */}
         <DesktopNavLinks />
         {/* Right Controls */}
-        <div className="ml-auto flex items-center gap-3">
+        <div className="ms-auto flex items-center gap-3">
           <ContactDropdown />
           <ThemeToggleDesktop theme={theme} setTheme={setTheme} />
 
@@ -434,7 +434,7 @@ function BrandingNavBar() {
           <div
             className="
               absolute
-              left-0
+              start-0
               top-full
               z-40
               flex

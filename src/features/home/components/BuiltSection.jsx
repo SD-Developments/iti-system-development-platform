@@ -23,9 +23,9 @@ function BuiltSection() {
   return (
     <section className="relative overflow-hidden bg-sd-navy py-16 lg:py-24 text-sd-white">
       {/* Background atmosphere */}
-      <div className="pointer-events-none absolute -right-48 -top-48 h-[430px] w-[430px] rounded-full bg-sd-teal/10 blur-[120px]" />
+      <div className="pointer-events-none absolute -end-48 -top-48 h-[430px] w-[430px] rounded-full bg-sd-teal/10 blur-[120px]" />
 
-      <div className="pointer-events-none absolute -bottom-48 left-[20%] h-[420px] w-[420px] rounded-full bg-primary/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-48 start-[20%] h-[420px] w-[420px] rounded-full bg-primary/15 blur-[120px]" />
 
       <div
         className="
@@ -65,7 +65,7 @@ function BuiltSection() {
             <Link
               to={'/projects'}
               className="
-                mr-2 hidden items-center gap-2
+                me-2 hidden items-center gap-2
                 text-sm font-bold text-sd-teal
                 transition-all
                 hover:gap-3
@@ -119,7 +119,7 @@ function BuiltSection() {
         ================================================== */}
 
         <div ref={emblaRef} className="mt-12 overflow-hidden">
-          <div className="-ml-4 flex">
+          <div className="-ms-4 flex">
             {projects.slice(0, 6).map((project, index) => (
               <div
                 key={`${project.title}-${index}`}
@@ -128,7 +128,7 @@ function BuiltSection() {
                   shrink-0
                   grow-0
                   basis-[86%]
-                  pl-4
+                  ps-4
                   sm:basis-[52%]
                   lg:basis-[34%]
                   xl:basis-[28%]
@@ -198,14 +198,14 @@ function ProjectShowcaseCard({ project, index }) {
         <div className="absolute inset-0 bg-linear-to-t from-sd-navy/95 via-sd-navy/15 to-transparent" />
 
         {/* card number */}
-        <span className="absolute right-4 top-4 font-mono text-[9px] font-bold text-sd-white/35">
+        <span className="absolute end-4 top-4 font-mono text-[9px] font-bold text-sd-white/35">
           {String(index + 1).padStart(2, '0')}
         </span>
 
         {/* Best badge */}
         <div
           className="
-            absolute left-4 top-4
+            absolute start-4 top-4
             inline-flex items-center gap-1.5
             rounded-full
             border border-sd-teal/20
@@ -222,7 +222,7 @@ function ProjectShowcaseCard({ project, index }) {
         </div>
 
         {/* Category over image */}
-        <div className="absolute bottom-4 left-4 right-4">
+        <div className="absolute bottom-4 start-4 end-4">
           <span className="font-mono text-[8px] font-bold uppercase tracking-[0.14em] text-sd-teal">
             {project.category}
           </span>
@@ -338,7 +338,7 @@ function ProjectShowcaseCard({ project, index }) {
       {/* Hover bottom accent */}
       <div
         className="
-          absolute bottom-0 left-0
+          absolute bottom-0 start-0
           h-0.5 w-0
           bg-primary
           transition-all duration-500

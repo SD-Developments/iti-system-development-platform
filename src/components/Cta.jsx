@@ -57,9 +57,9 @@ function TracksCta() {
     <>
       <section className="px-4 py-16 lg:py-24 lg:px-8">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-sd-navy px-7 py-12 text-sd-white sm:px-12 lg:px-16 lg:py-16">
-          <div className="absolute -right-20 -top-28 h-80 w-80 rounded-full bg-sd-teal/15 blur-3xl" />
+          <div className="absolute -end-20 -top-28 h-80 w-80 rounded-full bg-sd-teal/15 blur-3xl" />
 
-          <div className="absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
+          <div className="absolute -bottom-32 start-1/3 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
 
           <div className="relative flex flex-col justify-between gap-10 lg:flex-row lg:items-center">
             <div className="max-w-2xl">

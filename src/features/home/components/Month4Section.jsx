@@ -198,7 +198,7 @@ const Month4Section = () => {
                 </span>
               </div>
 
-              <div className="scrollbar-thin flex max-h-155 flex-col gap-3 overflow-y-auto pr-2">
+              <div className="scrollbar-thin flex max-h-155 flex-col gap-3 overflow-y-auto pe-2">
                 {technicalLanes.map((lane) => (
                   <div
                     key={lane.number}
@@ -326,7 +326,7 @@ const Month4Section = () => {
                 <div
                   className="
                     absolute
-                    bottom-4 left-4 right-4
+                    bottom-4 start-4 end-4
                     flex items-center justify-between
                     rounded-xl
                     border border-border

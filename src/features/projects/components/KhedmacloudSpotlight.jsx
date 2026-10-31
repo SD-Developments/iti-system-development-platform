@@ -83,13 +83,13 @@ const KhedmacloudSpotlight = () => {
 
                 <div className="absolute inset-0 bg-linear-to-t from-sd-navy/80 via-transparent to-transparent" />
 
-                <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-lg border border-white/20 bg-sd-navy/85 px-3 py-1.5 font-mono text-xs text-white shadow-lg backdrop-blur-md">
+                <div className="absolute start-4 top-4 inline-flex items-center gap-2 rounded-lg border border-white/20 bg-sd-navy/85 px-3 py-1.5 font-mono text-xs text-white shadow-lg backdrop-blur-md">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
 
                   <span>zk-SNARK Circuit Validated • 0x00 VALID</span>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 flex flex-col justify-between gap-3 rounded-xl border border-white/10 bg-sd-navy/90 p-4 text-white backdrop-blur-md sm:flex-row sm:items-center">
+                <div className="absolute bottom-4 start-4 end-4 flex flex-col justify-between gap-3 rounded-xl border border-white/10 bg-sd-navy/90 p-4 text-white backdrop-blur-md sm:flex-row sm:items-center">
                   <div>
                     <div className="font-mono text-[10px] font-semibold uppercase tracking-wider text-accent">
                       PRODUCTION SPRINT // INTAKE 45
@@ -100,7 +100,7 @@ const KhedmacloudSpotlight = () => {
                     </div>
                   </div>
 
-                  <div className="text-left sm:text-right">
+                  <div className="text-start sm:text-end">
                     <span className="rounded bg-white/10 px-2 py-1 font-mono text-[11px] text-slate-200">
                       Smart Village Campus
                     </span>

@@ -340,8 +340,7 @@ samp {
   &::after {
     content: '';
     position: absolute;
-    left: -2%;
-    right: -2%;
+    inset-inline: -2%;
     bottom: -7px;
     height: 4px;
     background-color: color-mix(in srgb, var(--sd-red) 30%, transparent);

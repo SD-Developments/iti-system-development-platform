@@ -83,7 +83,7 @@ const StudentsBuilds = () => {
                 src={about4}
               />
               <div className="absolute inset-0 bg-linear-to-t from-sd-navy/90 via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-card/95 backdrop-blur-md border border-border shadow-lg">
+              <div className="absolute bottom-6 start-6 end-6 p-5 rounded-xl bg-card/95 backdrop-blur-md border border-border shadow-lg">
                 <span className="font-mono text-[11px] font-bold text-primary uppercase tracking-wider block mb-1">
                   Standard Operating Principle
                 </span>

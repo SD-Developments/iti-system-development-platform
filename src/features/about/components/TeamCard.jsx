@@ -54,7 +54,7 @@ const TeamCard = ({ member }) => {
 
         <span
           className={`
-            absolute bottom-3 right-3
+            absolute bottom-3 end-3
             flex h-9 w-9 items-center justify-center
             rounded-full text-white
             ${accent.badgeBg}

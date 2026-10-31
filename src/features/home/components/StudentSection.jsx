@@ -22,7 +22,7 @@ function StudentSection() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 lg:pl-6">
+            <div className="lg:col-span-7 lg:ps-6">
               <span className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-primary">
                 The Journey Continues
               </span>

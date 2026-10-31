@@ -531,7 +531,7 @@ const BranchHubsSection = () => {
                   </div>
 
                   {/* Scrollable Tracks */}
-                  <div className="max-h-[280px] overflow-y-auto p-4 pr-2">
+                  <div className="max-h-[280px] overflow-y-auto p-4 pe-2">
                     <div className="mb-3 flex items-center justify-between">
                       <span className="font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-white/40">
                         Available Tracks

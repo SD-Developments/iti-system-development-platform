@@ -25,7 +25,7 @@ const ProjectCard = ({ project, onClick }) => {
 
               <div className="absolute inset-0 bg-linear-to-t from-sd-navy via-sd-navy/30 to-transparent" />
 
-              <div className="absolute left-3.5 right-3.5 top-3.5 flex items-center justify-between gap-2">
+              <div className="absolute start-3.5 end-3.5 top-3.5 flex items-center justify-between gap-2">
                 <span
                   className={`rounded px-2 py-0.5 font-mono text-[11px] font-bold uppercase tracking-wider text-white ${
                     project.typeColor === 'red' ? 'bg-primary/90' : 'bg-accent/90'
@@ -39,7 +39,7 @@ const ProjectCard = ({ project, onClick }) => {
                 </span>
               </div>
 
-              <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between font-mono text-[10px] text-slate-300">
+              <div className="absolute bottom-3 start-3.5 end-3.5 flex items-center justify-between font-mono text-[10px] text-slate-300">
                 <span>
                   {project.metaLeft ?? project.meta ?? `${project.program} · ${project.branch}`}
                 </span>
